@@ -1,0 +1,14 @@
+{
+  "name": "alexandre-website",
+  "version": "1.0.0",
+  "description": "Alexandre Djerbetian - personal website",
+  "scripts": {
+    "bootstrap": "npm i && lerna bootstrap"
+  },
+  "dependencies": {
+    "lerna": "^3.20.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.4"
+  }
+}

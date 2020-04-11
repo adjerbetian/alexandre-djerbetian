@@ -1,0 +1,27 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="e2e" type="CypressConfigurationType" factoryName="Cypress" show_console_on_std_err="false" show_console_on_std_out="false">
+    <option name="allowRunningInParallel" value="false" />
+    <option name="envs">
+      <map />
+    </option>
+    <option name="passParentEnvs" value="true" />
+    <option name="programParameters" value="" />
+    <option name="workingDirectory" value="$PROJECT_DIR$/packages/e2e" />
+    <option name="textRange" />
+    <option name="allNames" />
+    <option name="specsDir" value="$PROJECT_DIR$/packages/e2e/cypress/features" />
+    <option name="specFile" />
+    <option name="testName" />
+    <option name="workingDirectory" value="file://$PROJECT_DIR$/packages/e2e" />
+    <option name="envs">
+      <map />
+    </option>
+    <option name="additionalParams" value="" />
+    <option name="passParentEnvs" value="true" />
+    <option name="nodeJsRef" value="project" />
+    <option name="npmRef" value="Project" />
+    <option name="kind" value="DIRECTORY" />
+    <option name="interactive" value="false" />
+    <method v="2" />
+  </configuration>
+</component>

@@ -1,5 +1,7 @@
-describe('My First Test', () => {
-    it('Does not do much!', () => {
-        expect(true).to.equal(true)
-    })
-})
+describe("Home page", () => {
+    it("should print the welcome message", () => {
+        cy.visit("/");
+
+        cy.contains("Welcome to Your Vue.js App");
+    });
+});

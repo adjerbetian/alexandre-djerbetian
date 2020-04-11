@@ -1,9 +1,9 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="cypress:run" type="js.build_tools.npm" nameIsGenerated="true">
-    <package-json value="$PROJECT_DIR$/packages/e2e/package.json" />
+  <configuration default="false" name="client - serve" type="js.build_tools.npm">
+    <package-json value="$PROJECT_DIR$/packages/client/package.json" />
     <command value="run" />
     <scripts>
-      <script value="cypress:run" />
+      <script value="serve" />
     </scripts>
     <node-interpreter value="project" />
     <envs />

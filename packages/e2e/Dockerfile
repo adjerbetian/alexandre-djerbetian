@@ -2,10 +2,7 @@ FROM cypress/included:4.3.0
 
 WORKDIR /app
 
-COPY package.json .
-COPY package-lock.json .
-
-#ENV CI=1
+COPY package.json package-lock.json ./
 RUN npm ci
 
 COPY . .

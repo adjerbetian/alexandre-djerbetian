@@ -1,0 +1,19 @@
+version: '3'
+services:
+  client:
+    container_name: client
+    build:
+      context: ./packages/client
+    ports:
+      - "8080:8080"
+
+  e2e:
+    container_name: cypress
+    build: ./packages/e2e
+    depends_on:
+      - client
+    environment:
+      - CYPRESS_baseUrl=http://client:8080
+    command: npx cypress run
+    volumes:
+      - ./packages/e2e/cypress:/app/cypress

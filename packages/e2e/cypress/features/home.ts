@@ -1,7 +1,8 @@
 describe("Home page", () => {
-    it("should print the welcome message", () => {
+    it("should print my name", () => {
         cy.visit("/");
 
-        cy.contains("Welcome to Your Vue.js App");
+        cy.title().should("equal", "Alexandre Djerbetian");
+        cy.contains("Alexandre Djerbetian");
     });
 });

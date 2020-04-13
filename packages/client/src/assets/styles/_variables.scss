@@ -1,0 +1,22 @@
+@function primary($lightness: 0) {
+    @return lighten(#140905, $lightness);
+}
+
+@function yellow($lightness: 0) {
+    @return lighten(#261e00, $lightness);
+}
+
+$yellow-light: yellow(90);
+
+$background-color: cornsilk;
+$quote-background-color: white;
+
+$screen-size-xxl: 1600px;
+$screen-size-xl: 1250px;
+$screen-size-l: 1080px;
+$screen-size-m: 920px;
+$screen-size-s: 680px;
+$screen-size-xs: 380px;
+
+$navbarSmallWidth: 100px;
+$navbarFullWidth: 330px;

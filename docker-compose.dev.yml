@@ -6,6 +6,6 @@ services:
       context: ./packages/client
       dockerfile: Dockerfile-dev
     volumes:
-      - ./packages/client/src:/app/src
+      - ./packages/client:/app
     ports:
       - "8080:8080"

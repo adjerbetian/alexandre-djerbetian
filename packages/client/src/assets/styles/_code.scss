@@ -1,0 +1,32 @@
+@import "variables";
+
+@mixin code {
+    &.code {
+        border-radius: 10px;
+        margin: 20px 0;
+        overflow: auto;
+
+        & > * {
+            margin: 0;
+        }
+
+        code {
+            display: block;
+            padding: 1em 1.5em;
+        }
+    }
+}
+
+.light {
+    @import "code-theme-light";
+    @include code;
+
+    .hljs {
+        background-color: transparent;
+    }
+}
+
+.dark {
+    @import "code-theme-dark";
+    @include code;
+}

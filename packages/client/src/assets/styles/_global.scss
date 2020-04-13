@@ -1,0 +1,87 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');
+
+$line-height: 1.45;
+$line-height-rem: #{$line-height}rem;
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 112%;
+    line-height: $line-height;
+}
+
+body {
+    margin: 0;
+    font-size: 18px;
+    background-color: #fffae6;
+    word-wrap: break-word;
+}
+
+blockquote {
+    *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    margin-top: 0;
+    line-height: 1.1;
+    margin-bottom: $line-height-rem;
+}
+
+hr {
+    margin-bottom: calc(#{$line-height-rem} - 1px);
+    height: 1px;
+    border: none;
+}
+
+p {
+    margin: 0 0 $line-height-rem;
+}
+
+ol, ul {
+    padding: 0;
+    margin: 0 0 $line-height-rem $line-height-rem;
+}
+
+li {
+    margin-bottom: calc(#{$line-height-rem} / 2);
+}
+
+a {
+    text-decoration: none;
+    color: primary(30);
+}
+
+code {
+    line-height: $line-height-rem;
+    font-size: 0.85rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+strong {
+    color: primary(30);
+}
+
+span[title] {
+    border-bottom: 1px dotted #000;
+    cursor: help;
+}
+
+@media (max-width: $screen-size-l) {
+    h1 {
+        text-align: center;
+    }
+}
+
+iframe {
+    border:0;
+}

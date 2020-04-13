@@ -1,4 +1,4 @@
 {
-    "integrationFolder": "cypress/features",
+    "integrationFolder": "features",
     "baseUrl": "http://localhost:8080"
 }

@@ -9,7 +9,7 @@
     <option name="workingDirectory" value="$PROJECT_DIR$/packages/e2e" />
     <option name="textRange" />
     <option name="allNames" />
-    <option name="specsDir" value="$PROJECT_DIR$/packages/e2e/cypress/features" />
+    <option name="specsDir" value="$PROJECT_DIR$/packages/e2e/features" />
     <option name="specFile" />
     <option name="testName" />
     <option name="workingDirectory" value="file://$PROJECT_DIR$/packages/e2e" />

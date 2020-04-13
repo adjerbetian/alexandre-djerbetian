@@ -1,138 +1,60 @@
 <template>
-    <div class="main">
-        <div class="right-align-row">
-            <div class="splash">
-                <h1>Alexandre Djerbetian</h1>
-                <hr />
-                <h2>Software Engineer</h2>
+    <main>
+        <h1>Bienvenue&nbsp;!</h1>
 
-                <div class="buttons">
-                    <router-link to="/home" class="red">Enter</router-link>
-                    <a class="blue" href="https://drive.google.com/open?id=1XrMLYQ3-6v9i2ezMk6KeM0oBNfYDDiAN">
-                        <font-awesome-icon pull="left" class="pull-down" icon="arrow-circle-down" />
-                        <span class="larges-screen">Download resume</span>
-                        <span class="small-screen">Resume</span>
-                    </a>
-                </div>
-            </div>
+        <div class="pitch">
+            <p>I am a JS developer, slightly obsessed by clean code.</p>
+            <p>
+                I created this site mainly to help me take notes on the coding books I'm reading. If it can help you
+                too, I'll be glad!
+            </p>
         </div>
-    </div>
+    </main>
 </template>
 
 <script>
 import HelloWorld from "@/components/HelloWorld.vue";
+import NavBar from "@/components/navbar/NavBar";
 
 export default {
     name: "Home",
     components: {
-        HelloWorld
+        HelloWorld,
+        NavBar
     }
 };
 </script>
 
 <style lang="scss" scoped>
-.main {
+@import "../assets/styles/variables";
+
+main {
+    position: relative;
     height: 100vh;
-    width: 100%;
-    /*background: #95c9ee no-repeat left center;*/
-    background: #95c9ee url("../assets/images/home/index.jpg") no-repeat left center;
+    padding: 70px;
+    max-width: none !important;
+    background: url("../assets/images/home/home.jpg") bottom right no-repeat;
     background-size: cover;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+}
+h1 {
+    font-size: 2.3em;
+}
+.pitch {
+    font-size: 1.3em;
 }
 
-.right-align-row {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-}
-
-.splash {
-    text-align: center;
-    max-width: 700px;
-
-    hr {
-        border-top: 1px solid white;
+@media (max-width: $screen-size-l) {
+    main {
+        padding: 40px;
     }
-
     h1 {
-        color: white;
-        font-size: 64px;
-        font-weight: 700;
-        margin: 10px 0;
-    }
-
-    h2 {
-        color: white;
-        font-size: 32px;
-        font-weight: 400;
-        margin: 10px 0;
+        text-align: center;
     }
 }
 
-.buttons {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-
-    a {
-        border: white 1px solid;
-        padding: 15px 25px;
-        margin: 0 10px;
-
-        &.blue {
-            background-color: #5999ff;
-            color: white;
-        }
-
-        &.red {
-            background-color: #c12f26;
-            color: white;
-        }
-
-        .pull-down {
-            margin-top: 3px;
-        }
-    }
-}
-
-.small-screen {
-    display: none;
-}
-
-@media (max-width: 1400px) {
-    .splash h1 {
-        font-size: 48px;
-    }
-
-    .splash h2 {
-        font-size: 24px;
-    }
-}
-
-@media (max-width: 1080px) {
-    .main {
-        justify-content: flex-start;
-    }
-
-    .larges-screen {
-        display: none;
-    }
-
-    .small-screen {
-        display: unset;
-    }
-}
-
-@media (max-width: 700px) {
-    .splash h1 {
-        font-size: 32px;
-    }
-
-    .splash h2 {
-        font-size: 20px;
+@media (max-width: $screen-size-xs) {
+    .pitch {
+        font-size: 1em;
     }
 }
 </style>

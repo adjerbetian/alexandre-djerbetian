@@ -15,3 +15,14 @@ services:
       - SERVER=http://server:3000
     ports:
       - "80:80"
+
+  e2e:
+    container_name: cypress
+    build: ./packages/e2e
+    depends_on:
+      - client
+    environment:
+      - CYPRESS_BASE_URL=http://client
+    command: npx cypress run
+    volumes:
+      - ./packages/e2e/cypress:/app/cypress

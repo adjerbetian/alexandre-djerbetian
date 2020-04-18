@@ -11,4 +11,7 @@ describe("Movies page", () => {
 
         cy.url().should("include", "/movies");
     });
+    it("display the title", () => {
+        cy.contains("h1", "List of directed short movies");
+    });
 });

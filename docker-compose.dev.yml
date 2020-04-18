@@ -1,11 +1,25 @@
 version: '3'
 services:
+  server:
+    container_name: server
+    build:
+      context: ./packages/server
+      dockerfile: Dockerfile-dev
+    volumes:
+      - ./packages/server/src:/app/src
+    ports:
+      - "3000:3000"
+
   client:
     container_name: client
     build:
       context: ./packages/client
       dockerfile: Dockerfile-dev
+    depends_on:
+      - server
+    environment:
+      - SERVER=http://server:3000
     volumes:
       - ./packages/client/src:/app/src
     ports:
-      - "8080:8080"
+      - "80:8080"

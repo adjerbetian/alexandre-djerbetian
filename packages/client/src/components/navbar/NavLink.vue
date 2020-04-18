@@ -5,19 +5,22 @@
     </router-link>
 </template>
 
-<script>
-import NavIcon from "./NavIcon";
+<script lang="ts">
+import { Vue, Component, Prop } from "vue-property-decorator";
+import NavIcon from "./NavIcon.vue";
 
-export default {
-    name: "NavLink",
+@Component({
     components: {
         NavIcon
-    },
-    props: {
-        icon: [String, Array],
-        to: String
     }
-};
+})
+export default class NavLink extends Vue {
+    @Prop([String, Array])
+    icon!: string | string[];
+
+    @Prop(String)
+    to!: string;
+}
 </script>
 
 <style scoped lang="scss">

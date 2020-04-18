@@ -26,19 +26,18 @@
     </nav>
 </template>
 
-<script>
-import NavIcon from "@/components/navbar/NavIcon";
-import NavLink from "@/components/navbar/NavLink";
-export default {
-    name: "NavBar",
+<script lang="ts">
+import { Vue, Component } from "vue-property-decorator";
+import NavIcon from "@/components/navbar/NavIcon.vue";
+import NavLink from "@/components/navbar/NavLink.vue";
+
+@Component({
     components: {
-        NavLink,
-        NavIcon
-    },
-    props: {
-        expanded: Boolean
+        NavIcon,
+        NavLink
     }
-};
+})
+export default class NavBar extends Vue {}
 </script>
 
 <style lang="scss" scoped>

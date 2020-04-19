@@ -3,28 +3,31 @@
         <h1>List of directed short movies</h1>
 
         <div class="movies">
-            <Movie v-for="movie in movies" :movie="movie" />
+            <MovieComponent v-for="movie in movies" :movie="movie" />
         </div>
     </main>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import Movie from "../components/movies/Movie.vue";
+import MovieComponent from "@/components/movies/Movie.vue";
+import { fetchAllMovies } from "@/services/movieService";
+import { Movie } from "entities";
 
 export default Vue.extend({
-    components: { Movie },
+    components: { MovieComponent },
     data() {
         return {
-            movies: [
-                { title: `Chaque homme doit inventer son chemin` },
-                { title: `Le monde à l'envers` },
-                { title: `Royale with Cheese` },
-                { title: `120 ans d'histoire` },
-                { title: `The snowman and the Bee` },
-                { title: `Maxi Best Of` }
-            ]
+            movies: [] as Movie[]
         };
+    },
+    async mounted() {
+        this.fetchMovies();
+    },
+    methods: {
+        async fetchMovies() {
+            this.movies = await fetchAllMovies();
+        }
     }
 });
 </script>

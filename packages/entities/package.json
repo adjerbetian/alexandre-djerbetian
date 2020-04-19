@@ -6,10 +6,9 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "build": "rm -rf ./dist && tsc",
-        "prepublish": "npm run build"
+        "postinstall": "npm run build"
     },
-    "dependencies": {},
-    "devDependencies": {
+    "dependencies": {
         "@types/node": "^13.13.0",
         "ts-node": "^8.8.2",
         "typescript": "^3.8.3"

@@ -1,0 +1,4 @@
+packages/*/node_modules
+packages/*/dist
+packages/e2e/cypress/screenshots
+packages/e2e/cypress/videos

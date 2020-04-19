@@ -2,16 +2,18 @@ version: '3'
 services:
   server:
     container_name: server
-    build: ./packages/server
+    build:
+      context: .
+      dockerfile: Dockerfile.server.prod
     ports:
       - "3000:3000"
 
   client:
     container_name: client
-    build: ./packages/client
-    depends_on:
-      - server
-    environment:
-      - SERVER=http://server:3000
+    build:
+      context: .
+      dockerfile: Dockerfile.client.prod
+      args:
+        - VUE_APP_SERVER=http://localhost:3000
     ports:
       - "80:80"

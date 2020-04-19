@@ -1,0 +1,10 @@
+FROM cypress/included:4.4.0
+
+WORKDIR /app
+
+COPY packages/e2e/package.json packages/e2e/package-lock.json ./
+RUN npm ci
+
+COPY packages/e2e .
+
+RUN npx cypress verify

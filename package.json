@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Alexandre Djerbetian - personal website",
   "scripts": {
-    "bootstrap": "lerna exec -- npm i",
-    "postinstall": "lerna clean --yes && lerna exec -- npm ci",
+    "bootstrap": "lerna exec --concurrency 1 -- npm i",
+    "postinstall": "lerna clean --yes && lerna exec --concurrency 1 -- npm ci",
     "dev": "docker-compose --file docker-compose.dev.yml up --build",
     "e2e": "docker-compose --file docker-compose.e2e.yml up --build --exit-code-from e2e",
     "prod": "docker-compose up --build"

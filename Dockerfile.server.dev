@@ -1,0 +1,12 @@
+FROM node:12
+
+WORKDIR /app/packages
+COPY packages/entities entities
+
+WORKDIR /app/packages/server
+COPY packages/server/package*.json ./
+RUN npm ci
+COPY packages/server .
+
+EXPOSE 3000
+CMD [ "npm", "run", "serve" ]

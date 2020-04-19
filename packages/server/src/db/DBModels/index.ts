@@ -1,0 +1,1 @@
+export { MovieDBModel } from "./MovieDBModel";

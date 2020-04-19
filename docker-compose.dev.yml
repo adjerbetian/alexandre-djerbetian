@@ -3,23 +3,21 @@ services:
   server:
     container_name: server
     build:
-      context: ./packages/server
-      dockerfile: Dockerfile-dev
+      context: .
+      dockerfile: Dockerfile.server.dev
     volumes:
-      - ./packages/server/src:/app/src
+      - ./packages/server/src:/app/packages/server/src
     ports:
       - "3000:3000"
 
   client:
     container_name: client
     build:
-      context: ./packages/client
-      dockerfile: Dockerfile-dev
-    depends_on:
-      - server
+      context: .
+      dockerfile: Dockerfile.client.dev
     environment:
-      - SERVER=http://server:3000
+      - VUE_APP_SERVER=http://localhost:3000
     volumes:
-      - ./packages/client/src:/app/src
+      - ./packages/client/src:/app/packages/client/src
     ports:
       - "80:8080"

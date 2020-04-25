@@ -21,14 +21,14 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/styles/variables";
+@import "../../assets/styles/variables";
 
 main {
     position: relative;
     height: 100vh;
     padding: 70px;
     max-width: none !important;
-    background: url("../assets/images/home/home.jpg") bottom right no-repeat;
+    background: url("../../assets/images/home/home.jpg") bottom right no-repeat;
     background-size: cover;
 }
 h1 {

@@ -2,5 +2,11 @@
   "packages": [
     "packages/*"
   ],
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "command": {
+    "exec": {
+      "concurrency": 1,
+      "reject-cycles": true
+    }
+  }
 }

@@ -2,7 +2,7 @@
     <router-link :to="`/movies/${movie.id}`" class="movie">
         <h3>{{ movie.title }}</h3>
         <div class="image">
-            <img :alt="movie.title" :src="image" />
+            <BaseImage type="movies" :alt="movie.title" :name="movie.id" />
         </div>
     </router-link>
 </template>
@@ -10,16 +10,14 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import { Movie } from "entities";
-import { imageService } from "../../services";
+import BaseImage from "@/components/utils/BaseImage.vue";
 
-@Component
+@Component({
+    components: { BaseImage }
+})
 export default class MovieComponent extends Vue {
     @Prop(Object)
     movie!: Movie;
-
-    get image() {
-        return imageService.getImage("movies", this.movie.id);
-    }
 }
 </script>
 

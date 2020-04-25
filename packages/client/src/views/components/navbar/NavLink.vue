@@ -24,7 +24,7 @@ export default class NavLink extends Vue {
 </script>
 
 <style scoped lang="scss">
-@import "./navbar";
+@import "navbar";
 
 .nav-link {
     border-radius: 5px;

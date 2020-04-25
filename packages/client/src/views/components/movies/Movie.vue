@@ -10,7 +10,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import { Movie } from "entities";
-import BaseImage from "@/components/utils/BaseImage.vue";
+import BaseImage from "@/views/components/utils/BaseImage.vue";
 
 @Component({
     components: { BaseImage }

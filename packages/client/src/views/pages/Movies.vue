@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import MovieComponent from "@/components/movies/Movie.vue";
+import MovieComponent from "@/views/components/movies/Movie.vue";
 import { fetchAllMovies } from "@/services/movieService";
 import { Movie } from "entities";
 import { Component } from "vue-property-decorator";
@@ -30,7 +30,7 @@ export default class MoviesPage extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/styles/variables";
+@import "../../assets/styles/variables";
 
 .movies {
     display: flex;

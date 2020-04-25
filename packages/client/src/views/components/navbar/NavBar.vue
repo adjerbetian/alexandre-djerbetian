@@ -2,7 +2,7 @@
     <nav>
         <div class="profile">
             <router-link to="/" class="profileLink">
-                <img src="../../assets/images/home/profile.jpg" alt="profile image" />
+                <img src="../../../assets/images/home/profile.jpg" alt="profile image" />
             </router-link>
             <h2>Alexandre Djerbetian</h2>
         </div>
@@ -28,8 +28,8 @@
 
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
-import NavIcon from "@/components/navbar/NavIcon.vue";
-import NavLink from "@/components/navbar/NavLink.vue";
+import NavIcon from "@/views/components/navbar/NavIcon.vue";
+import NavLink from "@/views/components/navbar/NavLink.vue";
 
 @Component({
     components: {
@@ -41,7 +41,7 @@ export default class NavBar extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-@import "./navbar";
+@import "navbar";
 
 nav {
     color: beige;

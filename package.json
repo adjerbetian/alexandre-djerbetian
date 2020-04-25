@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Alexandre Djerbetian - personal website",
   "scripts": {
-    "bootstrap": "lerna exec --concurrency 1 -- npm i",
-    "postinstall": "lerna clean --yes && lerna exec --concurrency 1 -- npm ci",
+    "mono:echo": "lerna exec --concurrency 1 -- 'pwd'",
+    "mono:install": "npm install && lerna exec -- 'pwd && rm -f package-lock.json && rm -rf node_modules && npm install --silent && echo done'",
+    "mono:ci": "npm ci && lerna exec -- npm ci",
+    "mono:update": "npm update && lerna exec -- npm update",
     "dev": "docker-compose --file docker-compose.dev.yml up --build",
     "e2e": "docker-compose --file docker-compose.e2e.yml up --build --exit-code-from e2e",
     "prod": "docker-compose up --build"
@@ -16,12 +18,12 @@
     "@typescript-eslint/eslint-plugin": "^2.29.0",
     "@typescript-eslint/parser": "^2.29.0",
     "@vue/eslint-config-typescript": "^5.0.2",
-    "eslint": "^6.0.0",
+    "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-chai-friendly": "^0.6.0",
     "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-vue": "^6.0.0",
-    "prettier": "^2.0.4",
+    "eslint-plugin-vue": "^6.2.2",
+    "prettier": "^2.0.5",
     "typescript": "^3.8.3"
   }
 }

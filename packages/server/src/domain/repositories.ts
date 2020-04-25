@@ -6,4 +6,5 @@ export interface Repositories {
 
 export interface MovieRepository {
     fetchAll(): Movie[];
+    fetchById(id: string): Movie;
 }

@@ -9,6 +9,9 @@ export function buildMovieUseCases({ movieRepository }: Dependencies) {
     return {
         getAllMovies(): Movie[] {
             return movieRepository.fetchAll();
+        },
+        getMovie(id: string): Movie {
+            return movieRepository.fetchById(id);
         }
     };
 }

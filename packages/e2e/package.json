@@ -9,6 +9,7 @@
   "dependencies": {
     "cypress": "^4.4.0",
     "cypress-intellij-reporter": "0.0.4",
+    "entities": "file:../entities",
     "ts-loader": "^7.0.0",
     "typescript": "^3.8.3",
     "webpack": "^4.42.1"

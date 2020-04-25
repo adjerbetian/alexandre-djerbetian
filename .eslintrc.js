@@ -25,6 +25,7 @@ module.exports = {
         // eslint
         "no-unused-vars": ["error", { args: "after-used" }],
         "no-shadow": "error",
+        "prefer-template": "error",
 
         // import
         "import/no-unresolved": "error",

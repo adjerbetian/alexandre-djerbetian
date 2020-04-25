@@ -3,3 +3,5 @@ declare module "*.vue" {
     // noinspection JSDuplicatedDeclaration
     export default Vue;
 }
+declare module "*.png" {}
+declare module "*.jpg" {}

@@ -1,12 +1,12 @@
 <template>
-    <main v-if="movie">
+    <div v-if="movie">
         <h1>{{ movie.title }}</h1>
         <Youtube :id="movie.youtubeId" :title="movie.title" />
         <ul>
             <li><strong>Année :</strong> {{ movie.year }}</li>
             <li><strong>Direction :</strong> {{ movie.direction }}</li>
         </ul>
-    </main>
+    </div>
 </template>
 
 <script lang="ts">

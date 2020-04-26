@@ -10,7 +10,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
-import MovieComponent from "@/views/components/Movie.vue";
+import { MovieComponent } from "@/views/components";
 import { movieService } from "@/services";
 import { Movie } from "entities";
 

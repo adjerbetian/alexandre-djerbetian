@@ -12,7 +12,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
-import VideoComponent from "@/views/components/Video.vue";
+import { VideoComponent } from "@/views/components";
 import { videoService } from "@/services";
 import { Video } from "entities";
 
@@ -28,6 +28,4 @@ export default class VideosPage extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "../../assets/styles/variables";
-</style>
+<style lang="scss" scoped></style>

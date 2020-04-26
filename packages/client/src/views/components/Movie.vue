@@ -1,7 +1,7 @@
 <template>
     <router-link :to="`/movies/${movie.id}`" class="movie">
         <h3>{{ movie.title }}</h3>
-        <div class="image">
+        <div class="cover">
             <BaseImage type="movies" :alt="movie.title" :name="movie.id" />
         </div>
     </router-link>
@@ -22,7 +22,7 @@ export default class MovieComponent extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.image {
+.cover {
     padding-top: 56.25%;
     position: relative;
     img {

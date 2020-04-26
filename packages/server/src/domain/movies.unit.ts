@@ -8,7 +8,8 @@ describe("movies use cases", () => {
 
     beforeEach(() => {
         movieRepository = buildStubFor({
-            fetchAll: true
+            fetchAll: true,
+            fetchById: true
         });
         useCases = buildMovieUseCases({ movieRepository });
     });

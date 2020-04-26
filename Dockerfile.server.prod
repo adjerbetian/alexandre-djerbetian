@@ -1,14 +1,13 @@
 FROM node:12
 
 WORKDIR /app/packages
-COPY packages/micro micro
-COPY packages/entities entities
+FROM node:12
+
+WORKDIR /app
+COPY . .
 
 WORKDIR /app/packages/server
-COPY packages/server/package*.json ./
 RUN npm ci
-COPY packages/server .
-
 RUN npm run build
 
 EXPOSE 3000

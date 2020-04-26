@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="server" type="mocha-javascript-test-runner">
+    <node-interpreter>project</node-interpreter>
+    <node-options />
+    <mocha-package>$PROJECT_DIR$/packages/server/node_modules/mocha</mocha-package>
+    <working-directory>$PROJECT_DIR$/packages/server</working-directory>
+    <pass-parent-env>true</pass-parent-env>
+    <ui>bdd</ui>
+    <extra-mocha-options />
+    <test-kind>PATTERN</test-kind>
+    <test-pattern />
+    <method v="2">
+      <option name="TypeScript.Before.Run" enabled="true" FAIL_ON_ERROR="true" CONFIG_PATH="$PROJECT_DIR$/packages/server/tsconfig.json" />
+    </method>
+  </configuration>
+</component>

@@ -28,6 +28,11 @@ const router = new VueRouter({
             path: "/movies/:id",
             name: "Movie",
             component: () => import("./views/pages/Movie.vue")
+        },
+        {
+            path: "/videos",
+            name: "Videos",
+            component: () => import("./views/pages/Videos.vue")
         }
     ]
 });

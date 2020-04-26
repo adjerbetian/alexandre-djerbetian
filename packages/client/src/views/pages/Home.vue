@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page">
         <h1>Bienvenue&nbsp;!</h1>
 
         <div class="pitch">
@@ -23,7 +23,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @import "../../assets/styles/variables";
 
-main {
+.page {
     position: relative;
     height: 100vh;
     padding: 70px;

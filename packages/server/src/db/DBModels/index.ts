@@ -1,1 +1,2 @@
-export { MovieDBModel } from "./MovieDBModel";
+export * from "./MovieDBModel";
+export * from "./VideoDBModel";

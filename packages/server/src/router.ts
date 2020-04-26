@@ -15,5 +15,7 @@ export function buildRouter(controllers: ReturnType<typeof buildControllers>): E
     app.get("/movies", controllers.movies.getAllMovies);
     app.get("/movies/:id", controllers.movies.getMovie);
 
+    app.get("/videos", controllers.videos.getAllVideos);
+
     return app;
 }

@@ -28,7 +28,6 @@ export default class Youtube extends Vue {
 @import "../../assets/styles/variables";
 
 .wrapper {
-    margin: 20px 0;
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
 

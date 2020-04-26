@@ -5,6 +5,7 @@ RUN npm install -g http-server
 
 WORKDIR /app/packages
 COPY packages/entities entities
+COPY packages/micro micro
 
 WORKDIR /app/packages/client
 COPY packages/client/package*.json ./

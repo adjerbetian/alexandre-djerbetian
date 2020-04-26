@@ -1,9 +1,11 @@
 <template>
     <div class="app">
-        <NavBar class="navbar" />
-        <div class="main-container">
-            <router-view />
-        </div>
+        <nav>
+            <NavBar class="navbar" />
+        </nav>
+        <main>
+            <router-view class="page" />
+        </main>
     </div>
 </template>
 
@@ -19,23 +21,23 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "./assets/styles/variables";
 
-body {
+main {
     background: url("./assets/images/background.png") fixed;
+    margin-left: 330px;
 }
 
 nav {
     position: fixed;
     z-index: 1;
+    height: 100vh;
+    padding: 0;
+    overflow-y: auto;
 }
 
-.main-container {
-    margin-left: 330px;
-}
-
-main {
+.page {
     min-height: 100vh;
     padding: 50px;
     max-width: 1300px;

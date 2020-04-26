@@ -1,10 +1,10 @@
 <template>
-    <main>
+    <div>
         <h1>List of directed short movies</h1>
         <div class="movies">
             <MovieComponent v-for="movie in movies" :key="movie.id" :movie="movie" />
         </div>
-    </main>
+    </div>
 </template>
 
 <script lang="ts">

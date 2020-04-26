@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <div>
         <h1>Bienvenue&nbsp;!</h1>
 
         <div class="pitch">
@@ -9,7 +9,7 @@
                 too, I'll be glad!
             </p>
         </div>
-    </main>
+    </div>
 </template>
 
 <script lang="ts">

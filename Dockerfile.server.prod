@@ -1,6 +1,7 @@
 FROM node:12
 
 WORKDIR /app/packages
+COPY packages/micro micro
 COPY packages/entities entities
 
 WORKDIR /app/packages/server

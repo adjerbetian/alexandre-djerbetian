@@ -1,11 +1,11 @@
 <template>
-    <div class="video">
+    <div>
         <h2>
             {{ video.title }} - <em class="details">{{ video.speaker }} {{ video.year }}</em>
         </h2>
         <div class="description">
             <Youtube class="youtube" :title="video.title" :id="video.youtubeId" />
-            <CommentsComponent class="side" :video="video" />
+            <CommentsComponent v-if="!isSmall" class="side" :video="video" />
         </div>
     </div>
 </template>
@@ -22,20 +22,15 @@ import CommentsComponent from "./Comments.vue";
 export default class VideoComponent extends Vue {
     @Prop(Object)
     video!: Video;
+
+    get isSmall() {
+        return !this.video.comments && this.video.moments.length === 0;
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 @import "../../../assets/styles/variables";
-
-.video {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border: 2px solid primary(30);
-    border-radius: 20px;
-    padding: 30px;
-    background-color: white;
-}
 
 h2 .details {
     font-size: 0.8em;

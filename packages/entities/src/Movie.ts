@@ -1,5 +1,11 @@
 export function buildMovie(dto: MovieDTO): Movie {
-    return Object.freeze(dto);
+    return Object.freeze({
+        id: dto.id,
+        title: dto.title,
+        youtubeId: dto.youtubeId,
+        year: dto.year,
+        direction: dto.direction
+    });
 }
 
 export interface Movie extends Readonly<MovieDTO> {}

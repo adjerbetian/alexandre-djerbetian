@@ -4,18 +4,18 @@
     "private": true,
     "scripts": {
         "start": "node dist/server.js",
-        "build": "tsc --project tsconfig.build.json",
+        "build": "rm -rf ./dist && tsc --project tsconfig.build.json",
         "serve": "nodemon",
         "test": "mocha"
     },
     "dependencies": {
+        "entities": "file:../entities",
+        "micro": "file:../micro",
         "cookie-parser": "^1.4.5",
         "cors": "^2.8.5",
         "debug": "^4.1.1",
-        "entities": "file:../entities",
         "express": "^4.17.1",
         "lodash": "^4.17.15",
-        "micro": "file:../micro",
         "morgan": "^1.10.0"
     },
     "devDependencies": {

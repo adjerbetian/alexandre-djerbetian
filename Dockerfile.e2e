@@ -1,9 +1,7 @@
 FROM cypress/included:4.4.0
 
-WORKDIR /app/packages
-COPY packages/micro micro
-COPY packages/entities entities
-COPY packages/e2e e2e
+WORKDIR /app
+COPY . .
 
 WORKDIR /app/packages/e2e
 RUN npm ci

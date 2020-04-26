@@ -3,15 +3,11 @@ ARG VUE_APP_SERVER
 
 RUN npm install -g http-server
 
-WORKDIR /app/packages
-COPY packages/entities entities
-COPY packages/micro micro
+WORKDIR /app
+COPY . .
 
 WORKDIR /app/packages/client
-COPY packages/client/package*.json ./
 RUN npm ci
-COPY packages/client .
-
 ENV VUE_APP_SERVER "$VUE_APP_SERVER"
 RUN npm run build
 

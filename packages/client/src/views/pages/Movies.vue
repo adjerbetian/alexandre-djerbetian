@@ -9,10 +9,10 @@
 
 <script lang="ts">
 import Vue from "vue";
-import MovieComponent from "@/views/components/movies/Movie.vue";
-import { fetchAllMovies } from "@/services/movieService";
-import { Movie } from "entities";
 import { Component } from "vue-property-decorator";
+import MovieComponent from "@/views/components/Movie.vue";
+import { movieService } from "@/services";
+import { Movie } from "entities";
 
 @Component({
     components: { MovieComponent }
@@ -21,10 +21,7 @@ export default class MoviesPage extends Vue {
     movies: Movie[] = [];
 
     async mounted() {
-        await this.fetchMovies();
-    }
-    async fetchMovies() {
-        this.movies = await fetchAllMovies();
+        this.movies = await movieService.fetchAllMovies();
     }
 }
 </script>

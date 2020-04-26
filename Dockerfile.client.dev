@@ -1,13 +1,10 @@
 FROM node:12
 
-WORKDIR /app/packages
-COPY packages/entities entities
-COPY packages/micro micro
+WORKDIR /app
+COPY . .
 
 WORKDIR /app/packages/client
-COPY packages/client/package*.json ./
 RUN npm ci
-COPY packages/client .
 
 EXPOSE 8080
 CMD [ "npm", "run", "serve" ]

@@ -1,17 +1,8 @@
 {
+    "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "target": "es5",
-        "sourceMap": true,
-        "strict": true,
-        "experimentalDecorators": true,
         "baseUrl": ".",
-        "outDir": "dist/",
-        "noImplicitAny": true,
-        "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true,
-        "noEmit": true
+        "outDir": "dist/"
     },
     "include": [
         "src/**/*.ts"

@@ -7,6 +7,6 @@ module.exports = {
         project: path.resolve(__dirname, "tsconfig.json")
     },
     rules: {
-        "import/no-internal-modules": ["error", { allow: ["test/unit"] }]
+        "import/no-internal-modules": ["error", { allow: ["test/unit", "test/integration"] }]
     }
 };

@@ -1,2 +1,2 @@
-import * as µ from "./micro";
-export default µ;
+import * as micro from "./micro";
+export const µ = micro;

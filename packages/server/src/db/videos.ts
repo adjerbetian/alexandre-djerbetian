@@ -36,6 +36,12 @@ export const videos: VideoDBModel[] = [
         speaker: "Martin Fowler"
     },
     {
+        title: "Composition vs Inheritance",
+        youtubeId: "wfMtDGfHWpA",
+        year: 2015,
+        speaker: "Fun Fun Function"
+    },
+    {
         title: "3X",
         youtubeId: "YX2XR73LnRY",
         year: 2016,
@@ -46,12 +52,6 @@ export const videos: VideoDBModel[] = [
             Kent Beck also puts into question his own Extreme Programming theory which he says only applies to a
             certain stage of a company life.
         `
-    },
-    {
-        title: "Programmation fonctionnelle",
-        youtubeId: "IQ1kDpGeoCk",
-        year: 2017,
-        speaker: "Xavier Detant"
     },
     {
         title: "Making Architecture Matter",
@@ -94,10 +94,10 @@ export const videos: VideoDBModel[] = [
         ]
     },
     {
-        title: "Composition vs Inheritance",
-        youtubeId: "wfMtDGfHWpA",
-        year: 2015,
-        speaker: "Fun Fun Function"
+        title: "Programmation fonctionnelle",
+        youtubeId: "IQ1kDpGeoCk",
+        year: 2017,
+        speaker: "Xavier Detant"
     },
     {
         title: "What Does Tech Excellence Look Like?",

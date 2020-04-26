@@ -1,9 +1,11 @@
-import { Movie } from "entities";
+import { buildMovie, MovieDTO } from "entities";
 import { api } from "@/services/api";
 
-export async function fetchAllMovies(): Promise<Movie[]> {
-    return api.get("/movies");
+export async function fetchAllMovies() {
+    const dtos: MovieDTO[] = await api.get("/movies");
+    return dtos.map((dto) => buildMovie(dto));
 }
 export async function fetchMovie(id: string) {
-    return api.get(`/movies/${id}`);
+    const dto: MovieDTO = await api.get(`/movies/${id}`);
+    return buildMovie(dto);
 }

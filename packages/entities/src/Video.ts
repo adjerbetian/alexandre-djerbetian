@@ -1,8 +1,25 @@
-export function buildVideo(dto: VideoDTO): Video {
-    return Object.freeze(dto);
+export function buildVideo(dto: VideoDTO) {
+    return Object.freeze({
+        id: dto.id,
+        title: dto.title,
+        youtubeId: dto.youtubeId,
+        year: dto.year,
+        speaker: dto.speaker,
+        comments: dto.comments || "",
+        moments: (dto.moments || []).map((m) =>
+            Object.freeze({
+                time: m.time,
+                content: m.content
+            })
+        ),
+
+        isSmall() {
+            return !this.comments && this.moments.length === 0;
+        }
+    });
 }
 
-export interface Video extends Readonly<VideoDTO> {}
+export interface Video extends ReturnType<typeof buildVideo> {}
 
 export interface VideoDTO {
     id: string;

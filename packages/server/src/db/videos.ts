@@ -42,18 +42,6 @@ export const videos: VideoDBModel[] = [
         speaker: "Fun Fun Function"
     },
     {
-        title: "3X",
-        youtubeId: "YX2XR73LnRY",
-        year: 2016,
-        speaker: "Kent Beck",
-        comments: `
-            This is not so much about coding as it is about product management. In this video Kent Beck explains his
-            understanding of a life of a company, from the beginnings as a startup to the success like Facebook.
-            Kent Beck also puts into question his own Extreme Programming theory which he says only applies to a
-            certain stage of a company life.
-        `
-    },
-    {
         title: "Making Architecture Matter",
         youtubeId: "DngAZyWMGR0",
         year: 2015,
@@ -68,6 +56,46 @@ export const videos: VideoDBModel[] = [
                 content: "functionality over time depending on architecture"
             }
         ]
+    },
+    {
+        title: "The Many Meanings of Event-Driven Architecture",
+        youtubeId: "STKCRSUsyP0",
+        year: 2017,
+        speaker: "Martin Fowler",
+        moments: [
+            {
+                time: "3m18s",
+                content: "**1 - *Events as notifications***"
+            },
+            {
+                time: "8m43s",
+                content: "*events or commands*: a nice discussion about the definitions or events"
+            },
+            {
+                time: "14m55s",
+                content: "**2 - *Event-carried State Transfer***"
+            },
+            {
+                time: "20m53s",
+                content: "**3 - *Event Sourcing***"
+            },
+            {
+                time: "43m35s",
+                content: "**4 - *CQRS***"
+            }
+        ]
+    },
+    {
+        title: "3X",
+        youtubeId: "YX2XR73LnRY",
+        year: 2016,
+        speaker: "Kent Beck",
+        comments: `
+            This is not so much about coding as it is about product management. In this video Kent Beck explains his
+            understanding of a life of a company, from the beginnings as a startup to the success like Facebook.
+            Kent Beck also puts into question his own Extreme Programming theory which he says only applies to a
+            certain stage of a company life.
+        `
     },
     {
         title: "Refactoring: Second Edition",

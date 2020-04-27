@@ -1,10 +1,16 @@
 version: '3'
 services:
+  builder:
+    image: builder
+    build:
+      context: .
+      dockerfile: Dockerfile.builder.dev
+
   server:
     container_name: server
     build:
       context: .
-      dockerfile: Dockerfile.server.dev
+      dockerfile: packages/server/Dockerfile.dev
     volumes:
       - ./packages/server/src:/app/packages/server/src
     ports:
@@ -14,7 +20,7 @@ services:
     container_name: client
     build:
       context: .
-      dockerfile: Dockerfile.client.dev
+      dockerfile: packages/client/Dockerfile.dev
     environment:
       - VUE_APP_SERVER=http://localhost:3000
     volumes:

@@ -17,5 +17,5 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm run mono:ci
+      - run: npm run bootstrap
       - run: npm test

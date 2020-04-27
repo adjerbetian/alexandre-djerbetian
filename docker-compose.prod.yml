@@ -8,6 +8,8 @@ services:
 
   server:
     container_name: server
+    depends_on:
+      - builder
     build:
       context: .
       dockerfile: packages/server/Dockerfile.prod
@@ -17,6 +19,7 @@ services:
   client:
     container_name: client
     depends_on:
+      - builder
       - server
     build:
       context: .

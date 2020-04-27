@@ -1,4 +1,6 @@
-export function buildVideo(dto: VideoDTO) {
+import { asEntityBuilder } from "./entity";
+
+export const buildVideo = asEntityBuilder((dto: VideoDTO) => {
     return Object.freeze({
         id: dto.id,
         title: dto.title,
@@ -6,18 +8,20 @@ export function buildVideo(dto: VideoDTO) {
         year: dto.year,
         speaker: dto.speaker,
         comments: dto.comments || "",
-        moments: (dto.moments || []).map((m) =>
-            Object.freeze({
-                time: m.time,
-                content: m.content
-            })
+        moments: Object.freeze(
+            dto.moments.map((m) =>
+                Object.freeze({
+                    time: m.time,
+                    content: m.content
+                })
+            )
         ),
 
         isSmall() {
             return !this.comments && this.moments.length === 0;
         }
     });
-}
+});
 
 export interface Video extends ReturnType<typeof buildVideo> {}
 

@@ -1,8 +1,12 @@
 .git
-*/*/Dockerfile*
+.dockerignore
+.idea
+node_modules
+Dockerfile*
 docker-compose*
 
-*/*/node_modules*
-*/dist*
+*/*/Dockerfile*
+*/*/node_modules
+*/*/dist
 packages/e2e/cypress/screenshots
 packages/e2e/cypress/videos

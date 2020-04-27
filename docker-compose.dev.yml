@@ -4,7 +4,7 @@ services:
     image: builder
     build:
       context: .
-      dockerfile: Dockerfile.builder.dev
+      dockerfile: Dockerfile.builder
 
   server:
     container_name: server
@@ -18,6 +18,8 @@ services:
 
   client:
     container_name: client
+    depends_on:
+      - server
     build:
       context: .
       dockerfile: packages/client/Dockerfile.dev

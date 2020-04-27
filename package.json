@@ -3,17 +3,17 @@
   "version": "1.0.0",
   "description": "Alexandre Djerbetian - personal website",
   "scripts": {
-    "bootstrap": "npm run mono:ci && npm run mono:compile",
+    "bootstrap": "npm run mono:ci && npm run compile",
     "mono:i": "npm i && lerna exec -- 'rm -f package-lock.json && rm -rf node_modules && npm i --silent'",
     "mono:ci": "npm ci && lerna exec -- 'npm ci --silent'",
     "mono:update": "npm update && lerna exec -- npm update",
-    "mono:build": "lerna run build",
-    "mono:compile": "lerna run compile",
-    "mono:clean": "lerna clean --yes && lerna exec -- 'rm -rf dist/'",
+    "build": "lerna run build",
+    "compile": "lerna run compile",
+    "clean": "lerna clean --yes && lerna exec -- 'rm -rf dist/'",
     "test": "lerna run test",
     "dev": "docker-compose --file docker-compose.dev.yml up --build",
-    "e2e": "docker-compose --file docker-compose.e2e.yml up --build --exit-code-from e2e",
-    "prod": "docker-compose --file docker-compose.prod.yml up --build"
+    "prod": "docker-compose --file docker-compose.prod.yml up --build",
+    "e2e": "docker-compose --file docker-compose.e2e.yml up --build e2e"
   },
   "dependencies": {
     "lerna": "^3.20.2"

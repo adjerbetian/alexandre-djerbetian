@@ -5,8 +5,8 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "build": "rm -rf ./dist && tsc --project tsconfig.build.json",
-        "postinstall": "npm run build"
+        "build": "rm -rf ./dist && npm run compile",
+        "compile": "tsc --project tsconfig.build.json"
     },
     "dependencies": {
         "@types/node": "^13.13.2",

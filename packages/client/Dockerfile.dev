@@ -1,10 +1,5 @@
-FROM node:12
-
-WORKDIR /app
-COPY . .
+FROM builder
 
 WORKDIR /app/packages/client
-RUN npm ci
-
 EXPOSE 8080
 CMD [ "npm", "run", "serve" ]

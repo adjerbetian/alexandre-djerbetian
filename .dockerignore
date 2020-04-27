@@ -1,4 +1,8 @@
-packages/*/node_modules
-packages/*/dist
+.git
+*/*/Dockerfile*
+docker-compose*
+
+*/*/node_modules*
+*/dist*
 packages/e2e/cypress/screenshots
 packages/e2e/cypress/videos

@@ -1,13 +1,6 @@
-FROM node:12
-
-WORKDIR /app/packages
-FROM node:12
-
-WORKDIR /app
-COPY . .
+FROM builder
 
 WORKDIR /app/packages/server
-RUN npm ci
 RUN npm run build
 
 EXPOSE 3000

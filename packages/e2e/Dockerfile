@@ -1,9 +1,6 @@
 FROM cypress/included:4.4.0
 
-WORKDIR /app
-COPY . .
+COPY --from=builder /app /app
 
 WORKDIR /app/packages/e2e
-RUN npm ci
-
 RUN npx cypress verify

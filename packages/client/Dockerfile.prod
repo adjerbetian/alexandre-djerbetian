@@ -1,13 +1,7 @@
-FROM node:12 as build-stage
+FROM builder as build-stage
 ARG VUE_APP_SERVER
 
-RUN npm install -g http-server
-
-WORKDIR /app
-COPY . .
-
 WORKDIR /app/packages/client
-RUN npm ci
 ENV VUE_APP_SERVER "$VUE_APP_SERVER"
 RUN npm run build
 

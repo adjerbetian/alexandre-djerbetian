@@ -3,17 +3,17 @@
   "version": "1.0.0",
   "description": "Alexandre Djerbetian - personal website",
   "scripts": {
-    "bootstrap": "npm run mono:ci && npm run compile",
-    "mono:i": "npm i && lerna exec -- 'rm -f package-lock.json && rm -rf node_modules && npm i --silent'",
-    "mono:ci": "npm ci && lerna exec -- 'npm ci --silent'",
-    "mono:update": "npm update && lerna exec -- npm update",
+    "bootstrap": "npm ci && npm run mono:ci && npm run compile",
+    "mono:i": "lerna exec -- 'rm -f package-lock.json && rm -rf node_modules && npm i --silent'",
+    "mono:ci": "lerna exec -- 'npm ci --silent'",
+    "mono:update": "lerna exec -- npm update",
     "build": "lerna run build",
     "compile": "lerna run compile",
     "clean": "lerna clean --yes && lerna exec -- 'rm -rf dist/'",
     "test": "lerna run test",
-    "dev": "docker-compose --file docker-compose.dev.yml up --build",
-    "prod": "docker-compose --file docker-compose.prod.yml up --build",
-    "e2e": "docker-compose --file docker-compose.e2e.yml build && docker-compose --file docker-compose.e2e.yml up e2e && && docker-compose --file docker-compose.e2e.yml stop"
+    "dev": "docker-compose -f docker-compose.dev.yml up --build",
+    "prod": "docker-compose -f docker-compose.prod.yml up --build",
+    "e2e": "./e2e.sh build && ./e2e.sh run && ./e2e.sh stop"
   },
   "dependencies": {
     "lerna": "^3.20.2"

@@ -1,28 +1,9 @@
 version: '3'
 services:
-  builder:
-    image: builder
-    build:
-      context: .
-      dockerfile: Dockerfile.builder
-
-  server:
-    container_name: server
-    build:
-      context: .
-      dockerfile: packages/server/Dockerfile.prod
-    ports:
-      - "3000:3000"
-
   client:
-    container_name: client
     build:
-      context: .
-      dockerfile: packages/client/Dockerfile.prod
       args:
         - VUE_APP_SERVER=http://server:3000
-    ports:
-      - "80:80"
 
   e2e:
     container_name: cypress
@@ -31,9 +12,8 @@ services:
       dockerfile: packages/e2e/Dockerfile
     depends_on:
       - client
-      - server
     environment:
       - CYPRESS_BASE_URL=http://client
-    command: npx cypress run
     volumes:
       - ./packages/e2e/cypress:/app/cypress
+    ipc: host

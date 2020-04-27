@@ -10,5 +10,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker-compose --file docker-compose.e2e.yml up --build e2e
+
+    - run: chmod +x ./e2e.sh
+    - run: ./e2e.sh build
+    - run: ./e2e.sh run
+    - run: ./e2e.sh stop

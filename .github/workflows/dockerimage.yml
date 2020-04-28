@@ -14,4 +14,3 @@ jobs:
     - run: chmod +x ./e2e.sh
     - run: ./e2e.sh build
     - run: ./e2e.sh run
-    - run: ./e2e.sh stop

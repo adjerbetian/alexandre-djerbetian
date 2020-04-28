@@ -1,28 +1,11 @@
 version: '3'
 services:
-  builder:
-    image: builder
-    build:
-      context: .
-      dockerfile: Dockerfile.builder
-
   server:
-    container_name: server
-    depends_on:
-      - builder
     build:
-      context: .
       dockerfile: packages/server/Dockerfile.prod
-    ports:
-      - "3000:3000"
 
   client:
-    container_name: client
-    depends_on:
-      - builder
-      - server
     build:
-      context: .
       dockerfile: packages/client/Dockerfile.prod
       args:
         - VUE_APP_SERVER=http://localhost:3000

@@ -4,17 +4,18 @@ build() {
     compose build
 }
 up() {
-    compose "up -d"
+    compose up
 }
 run() {
     compose "run e2e 'npx cypress run'"
 }
 stop() {
-    compose "stop"
+    compose stop
 }
 compose() {
     command=$1
-    docker-compose -f docker-compose.prod.yml -f docker-compose.e2e.yml ${command}
+    # We need the project name here otherwise the container names conflict with the regular configuration
+    docker-compose --project-name e2e -f docker-compose.yml -f docker-compose.prod.yml -f docker-compose.e2e.yml ${command}
 }
 
 

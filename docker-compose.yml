@@ -1,0 +1,22 @@
+version: '3'
+services:
+  builder:
+    image: builder
+    build:
+      context: .
+      dockerfile: Dockerfile.builder
+
+  server:
+    depends_on:
+      - builder
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+
+  client:
+    depends_on:
+      - builder
+      - server
+    build:
+      context: .

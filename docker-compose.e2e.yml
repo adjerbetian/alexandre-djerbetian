@@ -11,9 +11,10 @@ services:
       context: .
       dockerfile: packages/e2e/Dockerfile
     depends_on:
+      - server
       - client
     environment:
       - CYPRESS_BASE_URL=http://client
     volumes:
-      - ./packages/e2e/cypress:/app/cypress
+      - ./packages/e2e/cypress:/app/packages/e2e/cypress
     ipc: host

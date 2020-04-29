@@ -1,7 +1,7 @@
 FROM node:12
 
 WORKDIR /app
-COPY package.json package-lock.json lerna.json tsconfig.json ./
+COPY package.json package-lock.json lerna.json tsconfig.base.json ./
 RUN npm ci
 
 COPY packages packages

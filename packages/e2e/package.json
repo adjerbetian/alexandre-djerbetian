@@ -7,7 +7,7 @@
     "cypress:run": "cypress run"
   },
   "dependencies": {
-    "cypress": "^4.4.0",
+    "cypress": "^4.5.0",
     "cypress-intellij-reporter": "0.0.4",
     "entities": "file:../entities",
     "ts-loader": "^7.0.0",

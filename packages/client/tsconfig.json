@@ -14,7 +14,8 @@
             "@/*": ["src/*"]
         },
         "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "noEmit": true
     },
     "include": [
         "src/**/*.ts",

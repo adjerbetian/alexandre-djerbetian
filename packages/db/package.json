@@ -1,0 +1,16 @@
+{
+    "name": "db",
+    "version": "0.0.0",
+    "private": true,
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "start": "node dist/server.js",
+        "build": "rm -rf ./dist && npm run compile",
+        "compile": "tsc --project tsconfig.build.json"
+    },
+    "devDependencies": {
+        "@types/node": "^13.13.2",
+        "typescript": "^3.8.3"
+    }
+}

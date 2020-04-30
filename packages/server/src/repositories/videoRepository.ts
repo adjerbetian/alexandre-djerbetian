@@ -1,7 +1,7 @@
 import { buildVideo } from "entities";
 import { µ } from "micro";
+import * as db from "db";
 import { VideoRepository } from "../domain";
-import * as db from "../db";
 
 export const videoRepository: VideoRepository = {
     fetchAll() {

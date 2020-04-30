@@ -44,18 +44,27 @@ export default class BooksPage extends Vue {
 <style lang="scss" scoped>
 @import "../../assets/styles/variables";
 
+.books {
+    max-width: 900px;
+}
+
 .book {
+    background-color: white;
+    border: solid 1px primary(20);
+    border-radius: 20px;
+
     display: flex;
-    margin: 10px 0;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 20px;
 
     .cover {
         max-width: 100px;
         min-width: 100px;
         margin-right: 20px;
-    }
-    .description {
+
+        img {
+            display: block;
+        }
     }
 }
 </style>

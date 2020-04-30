@@ -1,6 +1,6 @@
 import { buildMovie } from "entities";
+import * as db from "db";
 import { MovieRepository } from "../domain";
-import * as db from "../db";
 import { NotFound } from "./errors";
 
 export const movieRepository: MovieRepository = {

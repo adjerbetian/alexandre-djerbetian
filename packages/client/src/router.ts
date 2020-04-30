@@ -33,6 +33,11 @@ const router = new VueRouter({
             path: "/videos",
             name: "Videos",
             component: () => import("./views/pages/Videos.vue")
+        },
+        {
+            path: "/books",
+            name: "Books",
+            component: () => import("./views/pages/Books.vue")
         }
     ]
 });

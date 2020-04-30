@@ -6,13 +6,13 @@ describe("books", () => {
 
         expect(res.body).to.have.length.greaterThan(6);
         expect(res.body[0]).to.deep.equal({
-            amazon: "https://www.amazon.fr/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882",
-            authors: ["Robert C. Martin"],
             id: "clean-code",
+            title: "Clean Code",
+            authors: ["Robert C. Martin"],
             notes: {},
             rating: 5,
             releaseYear: 2008,
-            title: "Clean Code"
+            amazon: "https://www.amazon.fr/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882"
         });
     });
 });

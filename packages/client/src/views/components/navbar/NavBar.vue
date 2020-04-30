@@ -12,7 +12,7 @@
             <h3><NavIcon icon="code" />Coding</h3>
             <div class="menuItems">
                 <NavLink to="/articles/" icon="pencil-alt">Articles</NavLink>
-                <NavLink to="/books/" icon="book">Book Notes</NavLink>
+                <NavLink to="/books/" icon="book">Books</NavLink>
                 <NavLink to="/quotes/" icon="comment">Quotes</NavLink>
                 <NavLink to="/videos/" :icon="['fab', 'youtube']">Videos</NavLink>
             </div>

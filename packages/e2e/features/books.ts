@@ -22,8 +22,21 @@ describe("Books page", () => {
         cy.contains("Test Driven Development");
     });
     it("should display the books ratings", () => {
-        cy.contains("Clean Code").closest(".book").contains(".rating", 5);
-        cy.contains("The Lean Startup").closest(".book").contains(".rating", 1.5);
+        // 5
+        cy.contains("Clean Code")
+            .closest(".book")
+            .within(() => {
+                cy.get("[data-test-id=star-1]").should("have.length", 5);
+            });
+
+        // 1.5
+        cy.contains("The Lean Startup")
+            .closest(".book")
+            .within(() => {
+                cy.get('[data-test-id="star-1"]').should("have.length", 1);
+                cy.get('[data-test-id="star-0.5"]').should("have.length", 1);
+                cy.get('[data-test-id="star-0"]').should("have.length", 3);
+            });
     });
     it("should display the books main author", () => {
         cy.contains("Clean Code").closest(".book").contains(".author", "Robert C. Martin");

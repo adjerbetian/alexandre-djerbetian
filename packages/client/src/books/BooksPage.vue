@@ -3,22 +3,14 @@
         <h1>Coding books library</h1>
 
         <div class="books">
-            <router-link
-                :to="`/books/${book.id}`"
-                class="book"
-                v-for="book in books"
-                :key="book.id"
-            >
-                <div class="cover">
-                    <img :src="getCover(book)" alt="cover" />
+            <div v-for="book in books" :key="book.id">
+                <router-link v-if="book.hasNotes()" :to="`/books/${book.id}`">
+                    <BookListItem :book="book" />
+                </router-link>
+                <div v-else>
+                    <BookListItem :book="book" />
                 </div>
-                <div class="description">
-                    <h2>{{ book.title }}</h2>
-                    <Rating class="rating" :rating="book.rating" />
-                    <div class="author">{{ book.authors.join(", ") }}</div>
-                    <div class="year">{{ book.releaseYear }}</div>
-                </div>
-            </router-link>
+            </div>
         </div>
     </div>
 </template>
@@ -28,21 +20,17 @@ import Vue from "vue";
 import { Component } from "vue-property-decorator";
 import { Book } from "entities";
 import { fetchAll } from "./bookService";
-import { imageService } from "@/utils";
 import Rating from "./Rating.vue";
+import BookListItem from "@/books/BookListItem.vue";
 
 @Component({
-    components: { Rating }
+    components: { BookListItem, Rating }
 })
 export default class BooksPage extends Vue {
     books: Book[] = [];
 
     async mounted() {
         this.books = (await fetchAll()).sort((b1, b2) => b2.rating - b1.rating);
-    }
-
-    getCover(book: Book): string {
-        return imageService.getImage("books", book.id);
     }
 }
 </script>
@@ -52,27 +40,9 @@ export default class BooksPage extends Vue {
 
 .books {
     max-width: 900px;
-}
 
-.book {
-    background-color: white;
-    border: solid 1px primary(20);
-    border-radius: 20px;
-
-    color: inherit;
-
-    display: flex;
-    margin: 10px;
-    padding: 20px;
-
-    .cover {
-        max-width: 100px;
-        min-width: 100px;
-        margin-right: 20px;
-
-        img {
-            display: block;
-        }
+    & > div > * {
+        display: block;
     }
 }
 </style>

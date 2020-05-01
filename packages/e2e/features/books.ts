@@ -23,14 +23,14 @@ describe("Books page", () => {
     });
     it("should display the books ratings", () => {
         // 5
-        cy.contains("Clean Code")
+        cy.contains("h2", "Clean Code")
             .closest(".book")
             .within(() => {
                 cy.get("[data-test-id=star-1]").should("have.length", 5);
             });
 
         // 1.5
-        cy.contains("The Lean Startup")
+        cy.contains("h2", "The Lean Startup")
             .closest(".book")
             .within(() => {
                 cy.get('[data-test-id="star-1"]').should("have.length", 1);
@@ -39,7 +39,11 @@ describe("Books page", () => {
             });
     });
     it("should display the books main author", () => {
-        cy.contains("Clean Code").closest(".book").contains(".author", "Robert C. Martin");
-        cy.contains("The Lean Startup").closest(".book").contains(".author", "Erich Ries");
+        cy.contains("h2", "Clean Code")
+            .closest(".book")
+            .contains(".author", "Robert C. Martin");
+        cy.contains("h2", "The Lean Startup")
+            .closest(".book")
+            .contains(".author", "Erich Ries");
     });
 });

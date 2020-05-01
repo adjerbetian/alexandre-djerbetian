@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "./views/pages/Home.vue";
+import { HomePage } from "./home";
 
 Vue.use(VueRouter);
 
@@ -11,38 +11,39 @@ const router = new VueRouter({
         {
             path: "/",
             name: "Home",
-            component: Home
+            component: HomePage
         },
         {
             path: "/resume",
             beforeEnter() {
-                window.location.href = "https://drive.google.com/open?id=1XrMLYQ3-6v9i2ezMk6KeM0oBNfYDDiAN";
+                window.location.href =
+                    "https://drive.google.com/open?id=1XrMLYQ3-6v9i2ezMk6KeM0oBNfYDDiAN";
             }
         },
         {
             path: "/movies",
             name: "Movies",
-            component: () => import("./views/pages/Movies.vue")
+            component: () => import("./movies/MoviesPage.vue")
         },
         {
             path: "/movies/:id",
             name: "Movie",
-            component: () => import("./views/pages/Movie.vue")
+            component: () => import("./movies/MoviePage.vue")
         },
         {
             path: "/videos",
             name: "Videos",
-            component: () => import("./views/pages/Videos.vue")
+            component: () => import("./videos/VideosPage.vue")
         },
         {
             path: "/books",
             name: "Books",
-            component: () => import("./views/pages/Books.vue")
+            component: () => import("./books/BooksPage.vue")
         },
         {
             path: "/books/:id",
             name: "Book",
-            component: () => import("./views/pages/Book.vue")
+            component: () => import("./books/BookPage.vue")
         }
     ]
 });

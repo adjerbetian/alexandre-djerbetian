@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { NavBar } from "@/views/components";
+import { NavBar } from "@/navbar";
 
 export default Vue.extend({
     name: "App",

@@ -50,7 +50,7 @@ $spacing: 10px;
 
 .video {
     margin: $spacing;
-    border: 2px solid primary(30);
+    border: 2px solid $primary;
     border-radius: 20px;
     padding: 30px;
     background-color: white;

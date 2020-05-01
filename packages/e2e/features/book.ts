@@ -22,6 +22,11 @@ describe("Book page", () => {
         cy.contains("Authors: Martin Fowler, Kent Beck");
         itShouldHaveHaveTheRating(4);
     });
+    it("should display the reviews", () => {
+        cy.contains("h2", "General review");
+        cy.contains("h2", "What I liked especially");
+        cy.contains("h2", "What I liked less");
+    });
 });
 
 function itShouldHaveHaveTheRating(rating: number) {

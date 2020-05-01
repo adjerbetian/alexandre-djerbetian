@@ -6,6 +6,7 @@
     @return lighten(#261e00, $lightness);
 }
 
+$primary: primary(30);
 $yellow-light: yellow(90);
 
 $background-color: cornsilk;

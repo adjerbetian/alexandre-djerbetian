@@ -4,7 +4,6 @@ export interface BookDTO {
     id: string;
     title: string;
     authors: string[];
-    amazon: string;
     releaseYear: number;
     rating: number;
     notes: {
@@ -19,7 +18,6 @@ export const buildBook = asEntityBuilder((dto: BookDTO) => {
         id: dto.id,
         title: dto.title,
         authors: Object.freeze([...dto.authors]),
-        amazon: dto.amazon,
         releaseYear: dto.releaseYear,
         rating: dto.rating,
         notes: Object.freeze({

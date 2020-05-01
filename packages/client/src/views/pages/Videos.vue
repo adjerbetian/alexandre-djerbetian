@@ -46,6 +46,7 @@ $spacing: 10px;
     justify-content: space-between;
     margin: -$spacing;
     position: relative;
+    max-width: 1200px;
 }
 
 .video {

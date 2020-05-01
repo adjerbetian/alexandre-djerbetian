@@ -1,8 +1,9 @@
-import { buildBook, Book } from "entities";
+import { buildBook, Book, BookDTO } from "entities";
 import * as db from "db";
 import { BookDBModel } from "db";
 import { BookRepository } from "../domain";
 import { NotFound } from "./errors";
+import { µ } from "micro";
 
 export const bookRepository: BookRepository = {
     fetchAll() {
@@ -19,6 +20,14 @@ export const bookRepository: BookRepository = {
 function buildEntity(dbModel: BookDBModel): Book {
     return buildBook({
         ...dbModel,
-        notes: dbModel.notes || {}
+        notes: buildNotes(dbModel.notes)
     });
+
+    function buildNotes(notes: BookDBModel["notes"]): BookDTO["notes"] {
+        return {
+            pre: µ.trimCommonIndentation(notes?.pre || ""),
+            good: µ.trimCommonIndentation(notes?.good || ""),
+            lessGood: µ.trimCommonIndentation(notes?.lessGood || "")
+        };
+    }
 }

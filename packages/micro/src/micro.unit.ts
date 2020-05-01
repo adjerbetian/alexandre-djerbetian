@@ -19,19 +19,40 @@ describe("trimCommonIndentation", () => {
         expect(result).to.equal("a\nb");
     });
     it("should trim a two line with same indentation", () => {
-        const line1 = "    a    ";
-        const line2 = "        b    ";
-        const text = [line1, line2].join("\n");
+        // prettier-ignore
+        const text = [
+            "    a    ",
+            "        b    ",
+        ].join("\n");
 
         const result = trimCommonIndentation(text);
 
         expect(result).to.equal("a\n    b");
     });
-    it("should ignore the empty lines", () => {
-        const text = "\n\n    a    \n            \n";
+    it("should remove the empty lines at the beginning and at the end", () => {
+        // prettier-ignore
+        const text = [
+            "",
+            "",
+            "    a    ",
+            "",
+        ].join("\n");
 
         const result = trimCommonIndentation(text);
 
         expect(result).to.equal("a");
+    });
+    it("should ignore the ident of the empty lines", () => {
+        // prettier-ignore
+        const text = [
+            "    a    ",
+            "",
+            "             ",
+            "        b    "
+        ].join("\n");
+
+        const result = trimCommonIndentation(text);
+
+        expect(result).to.equal("a\n\n\n    b");
     });
 });

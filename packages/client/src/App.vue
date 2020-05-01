@@ -40,8 +40,6 @@ nav {
 .page {
     min-height: 100vh;
     padding: 50px;
-    max-width: 1300px;
-    margin: auto;
 
     @media (max-width: $screen-size-l) {
         padding: 50px 30px;

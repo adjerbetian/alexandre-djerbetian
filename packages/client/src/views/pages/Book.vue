@@ -8,9 +8,12 @@
             </div>
             <Rating class="rating" :rating="book.rating" />
             <div class="author">
-                <strong>{{ authorWording }}:</strong> {{ book.authors.join(", ") }}
+                <strong>{{ authorWording }}:</strong>
+                {{ book.authors.join(", ") }}
             </div>
-            <div class="year"><strong>Year:</strong> {{ book.releaseYear }}</div>
+            <div class="year">
+                <strong>Year:</strong> {{ book.releaseYear }}
+            </div>
         </aside>
 
         <div class="reviews">
@@ -18,14 +21,17 @@
 
             <div class="review">
                 <h2>General review</h2>
+                <div v-html="parse(book.notes.pre)"></div>
             </div>
 
             <div class="review">
                 <h2>What I liked especially</h2>
+                <div v-html="parse(book.notes.good)"></div>
             </div>
 
             <div class="review">
                 <h2>What I liked less</h2>
+                <div v-html="parse(book.notes.lessGood)"></div>
             </div>
         </div>
     </div>
@@ -34,7 +40,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
-import { bookService, imageService } from "@/services";
+import { bookService, imageService, textService } from "@/services";
 import { Book } from "entities";
 import Rating from "@/views/components/books/Rating.vue";
 
@@ -59,6 +65,10 @@ export default class BookPage extends Vue {
         const nAuthors = this.book?.authors.length || 0;
         return nAuthors > 1 ? "Authors" : "Author";
     }
+
+    parse(text: string): string {
+        return textService.parseText(text);
+    }
 }
 </script>
 
@@ -76,7 +86,7 @@ export default class BookPage extends Vue {
         align-items: flex-start;
         .reviews {
             flex: 1;
-            margin-right: 20px;
+            margin-right: 50px;
         }
     }
     .when-small {

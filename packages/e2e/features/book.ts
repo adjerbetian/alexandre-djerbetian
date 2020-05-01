@@ -23,9 +23,21 @@ describe("Book page", () => {
         itShouldHaveHaveTheRating(4);
     });
     it("should display the reviews", () => {
-        cy.contains("h2", "General review");
-        cy.contains("h2", "What I liked especially");
-        cy.contains("h2", "What I liked less");
+        cy.contains("h2", "General review")
+            .closest(".review")
+            .within(() => {
+                cy.contains("This book is really the best coding book I've read.");
+            });
+        cy.contains("h2", "What I liked especially")
+            .closest(".review")
+            .within(() => {
+                cy.contains("Literally everything:");
+            });
+        cy.contains("h2", "What I liked less")
+            .closest(".review")
+            .within(() => {
+                cy.contains("Nothing really...");
+            });
     });
 });
 

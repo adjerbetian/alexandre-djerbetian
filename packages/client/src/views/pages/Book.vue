@@ -1,5 +1,7 @@
 <template>
-    <div v-if="book">
+    <div v-if="book" class="book">
+        <h1 class="when-small">{{ book.title }}</h1>
+
         <aside>
             <div class="cover">
                 <img :src="getCover()" alt="cover" />
@@ -10,7 +12,22 @@
             </div>
             <div class="year"><strong>Year:</strong> {{ book.releaseYear }}</div>
         </aside>
-        <h1>{{ book.title }}</h1>
+
+        <div class="reviews">
+            <h1 class="when-large">{{ book.title }}</h1>
+
+            <div class="review">
+                <h2>General review</h2>
+            </div>
+
+            <div class="review">
+                <h2>What I liked especially</h2>
+            </div>
+
+            <div class="review">
+                <h2>What I liked less</h2>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -48,6 +65,28 @@ export default class BookPage extends Vue {
 <style lang="scss" scoped>
 @import "../../assets/styles/variables";
 
+.when-large {
+    display: none;
+}
+
+@media (min-width: $screen-size-m) {
+    .book {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        .reviews {
+            flex: 1;
+            margin-right: 20px;
+        }
+    }
+    .when-small {
+        display: none;
+    }
+    .when-large {
+        display: inherit;
+    }
+}
+
 h1 {
     font-variant: small-caps;
     font-size: 52px;
@@ -57,42 +96,45 @@ h1 {
     }
 }
 
+h2 {
+    color: $primary;
+}
+
 aside {
     float: right;
-    width: 400px;
+    width: 30%;
+    max-width: 400px;
+    min-width: unquote("max(25%, 200px)");
+
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    @media (max-width: 1420px) {
-        width: calc(100% - 750px - 50px);
-        min-width: 25%;
-    }
-
-    @media (max-width: $screen-size-l) {
+    @media (max-width: $screen-size-m) {
         float: none;
         width: 300px;
         max-width: 90%;
         margin: 40px auto;
     }
 
-    & > a {
-        display: block;
-        text-align: center;
-
+    .cover {
         img {
             display: block;
         }
     }
-
     .rating {
-        font-size: 44px;
+        font-size: unquote("min(max(3vw, 32px),50px)");
         text-align: center;
         margin-bottom: 20px;
-
-        @media (max-width: $screen-size-xl) {
-            font-size: 32px;
-        }
     }
+}
+
+.review {
+    background-color: white;
+    border: 1px solid $primary;
+    border-radius: 20px;
+
+    padding: 20px;
+    margin: 20px 0;
 }
 </style>

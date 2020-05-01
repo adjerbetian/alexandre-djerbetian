@@ -53,6 +53,8 @@ export default class BooksPage extends Vue {
     border: solid 1px primary(20);
     border-radius: 20px;
 
+    color: inherit;
+
     display: flex;
     margin: 10px;
     padding: 20px;

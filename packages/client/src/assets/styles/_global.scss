@@ -59,7 +59,7 @@ li {
 
 a {
     text-decoration: none;
-    color: primary(30);
+    color: $primary;
 }
 
 code {
@@ -72,7 +72,7 @@ img {
 }
 
 strong {
-    color: primary(30);
+    color: $primary;
 }
 
 span[title] {

@@ -27,7 +27,7 @@ export default class CommentsComponent extends Vue {
     video!: Video;
 
     parse(text: string) {
-        return textService.parseText(text);
+        return textService.parseInlineText(text);
     }
 }
 </script>

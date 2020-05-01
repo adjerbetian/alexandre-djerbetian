@@ -4,6 +4,12 @@ export interface BookDBModel {
     authors: string[];
     releaseYear: number;
     rating: number;
-    notes?: null;
+    notes?: NotesDBModel;
     readingYear: number;
+}
+export interface NotesDBModel {
+    chapters: string[];
+    pre: string;
+    good: string;
+    lessGood: string;
 }

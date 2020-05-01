@@ -1,4 +1,14 @@
-import { VideoDBModel } from "./DBModels";
+export interface VideoDBModel {
+    title: string;
+    youtubeId: string;
+    year: number;
+    speaker: string;
+    comments?: string;
+    moments?: Array<{
+        time: string;
+        content: string;
+    }>;
+}
 
 export const videos: VideoDBModel[] = [
     {

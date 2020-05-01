@@ -26,17 +26,23 @@ describe("Book page", () => {
         cy.contains("h2", "General review")
             .closest(".review")
             .within(() => {
-                cy.contains("This book is really the best coding book I've read.");
+                cy.contains(
+                    "This is the best introduction to coding I've read"
+                );
             });
         cy.contains("h2", "What I liked especially")
             .closest(".review")
             .within(() => {
-                cy.contains("Literally everything:");
+                cy.contains(
+                    "It goes deep into the basics and details of writing good code"
+                );
             });
         cy.contains("h2", "What I liked less")
             .closest(".review")
             .within(() => {
-                cy.contains("Nothing really...");
+                cy.contains(
+                    "Some chapters are not as well written than others"
+                );
             });
     });
 });

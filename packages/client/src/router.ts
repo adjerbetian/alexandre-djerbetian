@@ -38,6 +38,11 @@ const router = new VueRouter({
             path: "/books",
             name: "Books",
             component: () => import("./views/pages/Books.vue")
+        },
+        {
+            path: "/books/:id",
+            name: "Book",
+            component: () => import("./views/pages/Book.vue")
         }
     ]
 });

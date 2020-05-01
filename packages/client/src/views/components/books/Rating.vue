@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="rating" aria-hidden="true">
+        <div class="stars" aria-hidden="true">
             <Star :data-test-id="`star-${value}`" v-for="(value, index) in fillings" :filling="value" :key="index" />
         </div>
         <span class="sr-only">Rating: {{ rating }}</span>
@@ -26,8 +26,7 @@ export default class RatingComponent extends Vue {
 <style lang="scss" scoped>
 @import "../../../assets/styles/variables";
 
-.rating {
+.stars {
     color: primary(40);
-    display: flex;
 }
 </style>

@@ -1,6 +1,6 @@
 import { expect, api } from "./test/integration";
 
-describe("movies", () => {
+describe("videos", () => {
     it("GET /videos", async () => {
         const res = await api.get("/videos");
 

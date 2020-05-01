@@ -5,6 +5,9 @@ services:
       dockerfile: packages/server/Dockerfile.dev
     volumes:
       - ./packages/server/src:/app/packages/server/src
+      - ./packages/db/dist:/app/packages/db/dist
+      - ./packages/entities/dist:/app/packages/entities/dist
+      - ./packages/micro/dist:/app/packages/micro/dist
 
   client:
     build:
@@ -13,5 +16,7 @@ services:
       - VUE_APP_SERVER=http://localhost:3000
     volumes:
       - ./packages/client/src:/app/packages/client/src
+      - ./packages/entities/dist:/app/packages/entities/dist
+      - ./packages/micro/dist:/app/packages/micro/dist
     ports:
       - "80:8080"

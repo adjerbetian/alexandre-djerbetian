@@ -1,5 +1,5 @@
 describe("Book page", () => {
-    before(() => {
+    beforeEach(() => {
         cy.viewport(1920, 1080);
         cy.visit(`/books/clean-code`);
     });
@@ -16,6 +16,11 @@ describe("Book page", () => {
         cy.contains("Author: Robert C. Martin");
         cy.contains("Year: 2008");
         itShouldHaveHaveTheRating(5);
+    });
+    it("should display the authors in plural when there are several authors", () => {
+        cy.visit(`/books/refactoring`);
+        cy.contains("Authors: Martin Fowler, Kent Beck");
+        itShouldHaveHaveTheRating(4);
     });
 });
 

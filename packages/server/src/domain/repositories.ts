@@ -15,4 +15,5 @@ export interface VideoRepository {
 }
 export interface BookRepository {
     fetchAll(): Book[];
+    fetchById(id: string): Book;
 }

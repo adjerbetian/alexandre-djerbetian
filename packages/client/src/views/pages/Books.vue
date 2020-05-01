@@ -3,7 +3,7 @@
         <h1>Coding books library</h1>
 
         <div class="books">
-            <div class="book" v-for="book in books" :key="book.id">
+            <router-link :to="`/books/${book.id}`" class="book" v-for="book in books" :key="book.id">
                 <div class="cover">
                     <img :src="getCover(book)" alt="cover" />
                 </div>
@@ -13,7 +13,7 @@
                     <div class="author">{{ book.authors.join(", ") }}</div>
                     <div class="year">{{ book.releaseYear }}</div>
                 </div>
-            </div>
+            </router-link>
         </div>
     </div>
 </template>

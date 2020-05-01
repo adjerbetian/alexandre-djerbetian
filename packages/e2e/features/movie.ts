@@ -3,7 +3,7 @@ import { buildMovie } from "entities";
 describe("Movie page", () => {
     const movie = getMovie();
 
-    before(() => {
+    beforeEach(() => {
         cy.viewport(1920, 1080);
         cy.visit(`/movies/${movie.id}`);
     });

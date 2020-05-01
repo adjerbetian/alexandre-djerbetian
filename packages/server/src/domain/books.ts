@@ -9,6 +9,9 @@ export function buildBookUseCases({ bookRepository }: Dependencies) {
     return {
         getAllBooks(): Book[] {
             return bookRepository.fetchAll();
+        },
+        getBook(id: string): Book {
+            return bookRepository.fetchById(id);
         }
     };
 }

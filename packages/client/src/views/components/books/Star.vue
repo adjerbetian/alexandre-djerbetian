@@ -28,6 +28,7 @@ export default class Star extends Vue {
 @import "../../../assets/styles/variables";
 
 .star {
+    display: inline-block;
     position: relative;
 
     .full {

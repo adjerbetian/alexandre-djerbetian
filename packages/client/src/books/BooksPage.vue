@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Coding books library</h1>
+        <h1>My library of coding books</h1>
 
         <div class="books">
             <div v-for="book in books" :key="book.id">

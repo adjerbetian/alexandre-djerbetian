@@ -10,7 +10,6 @@
             <div class="year">{{ book.releaseYear }}</div>
         </div>
         <div class="hasNotes" v-if="book.hasNotes()" title="go to notes">
-            <!--            &#x1F4DD;-->
             &#x1F5D2;
         </div>
     </div>

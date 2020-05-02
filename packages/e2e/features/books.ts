@@ -12,7 +12,7 @@ describe("Books page", () => {
         cy.url().should("include", "/books");
     });
     it("should display the title", () => {
-        cy.contains("h1", "Coding books library");
+        cy.contains("h1", "My library of coding books");
     });
     it("should display all the books", () => {
         cy.get(".book").should("have.length.greaterThan", 6);

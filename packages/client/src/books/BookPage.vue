@@ -3,17 +3,13 @@
         <h1 class="when-small">{{ book.title }}</h1>
 
         <aside>
-            <div class="cover">
-                <img :src="getCover()" alt="cover" />
-            </div>
+            <BookCover :book="book" />
             <Rating class="rating" :rating="book.rating" />
             <div class="author">
                 <strong>{{ authorWording }}:</strong>
                 {{ book.authors.join(", ") }}
             </div>
-            <div class="year">
-                <strong>Year:</strong> {{ book.releaseYear }}
-            </div>
+            <div class="year"><strong>Year:</strong> {{ book.releaseYear }}</div>
         </aside>
 
         <div class="reviews">
@@ -40,13 +36,14 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
-import { imageService, textService } from "@/utils";
-import { fetchBook } from "./bookService";
 import { Book } from "entities";
-import Rating from "@/books/Rating.vue";
+import { textService } from "@/utils";
+import { fetchBook } from "./bookService";
+import Rating from "./Rating.vue";
+import BookCover from "./Cover.vue";
 
 @Component({
-    components: { Rating }
+    components: { Rating, BookCover }
 })
 export default class BookPage extends Vue {
     book?: Book | null = null;
@@ -58,10 +55,6 @@ export default class BookPage extends Vue {
         this.book = await fetchBook(id);
     }
 
-    getCover(): string {
-        if (!this.book) return "";
-        return imageService.getImage("books", this.book.id);
-    }
     get authorWording() {
         const nAuthors = this.book?.authors.length || 0;
         return nAuthors > 1 ? "Authors" : "Author";
@@ -128,11 +121,6 @@ aside {
         margin: 40px auto;
     }
 
-    .cover {
-        img {
-            display: block;
-        }
-    }
     .rating {
         font-size: unquote("min(max(3vw, 32px),50px)");
         text-align: center;

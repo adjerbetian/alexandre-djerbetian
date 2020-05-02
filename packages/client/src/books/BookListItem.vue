@@ -1,8 +1,6 @@
 <template>
     <div class="book" :class="{ hover: book.hasNotes() }">
-        <div class="cover">
-            <img :src="cover" alt="cover" />
-        </div>
+        <BookCover class="cover" :book="book" />
         <div class="description">
             <h2>{{ book.title }}</h2>
             <Rating class="rating" :rating="book.rating" />
@@ -19,11 +17,12 @@
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
 import { Book } from "entities";
-import Rating from "./Rating.vue";
 import { imageService } from "@/utils";
+import Rating from "./Rating.vue";
+import BookCover from "./Cover.vue";
 
 @Component({
-    components: { Rating }
+    components: { Rating, BookCover }
 })
 export default class BookListItem extends Vue {
     @Prop(Object) book!: Book;
@@ -61,10 +60,6 @@ export default class BookListItem extends Vue {
         max-width: 100px;
         min-width: 100px;
         margin-right: 20px;
-
-        img {
-            display: block;
-        }
     }
     .description {
         flex: 1;

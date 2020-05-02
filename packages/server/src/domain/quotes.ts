@@ -7,8 +7,11 @@ interface Dependencies {
 
 export function buildQuoteUseCases({ quoteRepository }: Dependencies) {
     return {
-        getAllQuotes(): Quote[] {
-            return quoteRepository.fetchAll();
+        getAllQuotes(limit: number): Quote[] {
+            return quoteRepository
+                .fetchAll()
+                .sort((q1, q2) => q2.rating - q1.rating)
+                .slice(0, limit);
         }
     };
 }

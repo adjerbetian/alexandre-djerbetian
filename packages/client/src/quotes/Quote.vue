@@ -1,6 +1,6 @@
 <template>
-    <div class="quote">
-        <blockquote :id="quote.id">
+    <div class="quote" :id="quote.id">
+        <blockquote>
             <div class="quoteLink">
                 <a :href="`#${quote.id}`">
                     <font-awesome-icon icon="link" />
@@ -11,7 +11,7 @@
 
         <div class="caption">
             {{ quote.bookTitle }} -
-            <span v-if="!quote.isInIntroduction()">chapter {{ quote.chapter }} -</span>
+            <span v-if="!quote.isInIntroduction()">chapter {{ quote.chapter }} - </span>
             <em>{{ quote.chapterTitle }}</em
             >, p{{ quote.page }}
         </div>

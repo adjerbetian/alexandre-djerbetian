@@ -17,11 +17,14 @@ describe("Quotes page", () => {
     it("should display only 10 quotes on the page", () => {
         cy.get(".quote").should("have.length", 10);
     });
-    it("should include the best quote from Clean Code with the label", () => {
+    it("should include the best quotes first, and print their caption", () => {
         cy.contains("Clean code reads like well-written prose.")
             .closest(".quote")
+            .should("have.id", "clean-code-p8-bis")
             .within(() => {
                 cy.contains("Clean Code - chapter 1 - Clean Code, p8");
             });
+
+        cy.get("#clean-code-pxxvi").should("not.exist");
     });
 });

@@ -19,7 +19,7 @@ function getAllQuotes(): Quote[] {
                 chapter: dbModel.chapter,
                 chapterTitle: book.chapters![dbModel.chapter],
                 rating: dbModel.rating,
-                page: `${dbModel.rating}`,
+                page: `${dbModel.page}`,
                 content: µ.trimCommonIndentation(dbModel.content)
             })
         )

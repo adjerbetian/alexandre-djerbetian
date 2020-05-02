@@ -4,7 +4,9 @@ import logger from "morgan";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 
-export function buildRouter(controllers: ReturnType<typeof buildControllers>): Express {
+export function buildRouter(
+    controllers: ReturnType<typeof buildControllers>
+): Express {
     const app = express();
     app.use(logger("dev"));
     app.use(express.json());
@@ -19,6 +21,8 @@ export function buildRouter(controllers: ReturnType<typeof buildControllers>): E
 
     app.get("/books", controllers.books.getAllBooks);
     app.get("/books/:id", controllers.books.getBook);
+
+    app.get("/quotes", controllers.quotes.getAllQuotes);
 
     return app;
 }

@@ -2,6 +2,7 @@ import { Repositories } from "./repositories";
 import { buildMovieUseCases } from "./movies";
 import { buildVideoUseCases } from "./videos";
 import { buildBookUseCases } from "./books";
+import { buildQuoteUseCases } from "./quotes";
 
 export * from "./repositories";
 
@@ -11,6 +12,7 @@ export function buildDomain(repositories: Repositories) {
     return {
         movies: buildMovieUseCases(repositories),
         videos: buildVideoUseCases(repositories),
-        books: buildBookUseCases(repositories)
+        books: buildBookUseCases(repositories),
+        quotes: buildQuoteUseCases(repositories)
     };
 }

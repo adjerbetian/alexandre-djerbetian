@@ -1,24 +1,6 @@
 import { NotesDBModel } from "../dbModel";
 
 export const notes: NotesDBModel = {
-    chapters: [
-        "Preface",
-        "Refactoring, a First Example",
-        "Principles in Refactoring",
-        "Bad Smells in Code",
-        "Building Tests",
-        "Toward a Catalog of Refactorings",
-        "Composing Methods",
-        "Moving Features Between Objects",
-        "Organizing Data",
-        "Simplifying Conditional Expressions",
-        "Making Method Calls Simpler",
-        "Dealing with Generalization",
-        "Big Refactorings",
-        "Refactoring, Reuse, and Reality",
-        "Refactoring Tools",
-        "Putting It All Together"
-    ],
     pre: `
         Martin Fowler is a big name, and his book undeniably benefits from his renown. And the fact that Kent
         Beck also helped doesn't hurt...

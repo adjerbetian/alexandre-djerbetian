@@ -1,17 +1,6 @@
 import { NotesDBModel } from "../dbModel";
 
 export const notes: NotesDBModel = {
-    chapters: [
-        "PREFACE ",
-        "A PRAGMATIC PHILOSOPHY ",
-        "A PRAGMATIC APPROACH ",
-        "THE BASIC TOOLS ",
-        "PRAGMATIC PARANOIA ",
-        "BEND, OR BREAK ",
-        "WHILE YOU ARE CODING ",
-        "BEFORE THE PROJECT ",
-        "PRAGMATIC PROJECTS "
-    ],
     pre: `
         I am mitigated about this book. I can't say I didn't like it, but I don't feel it brought me as much as I expected.
     `,

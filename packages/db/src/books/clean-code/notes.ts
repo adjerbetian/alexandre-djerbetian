@@ -1,30 +1,6 @@
 import { NotesDBModel } from "../dbModel";
 
 export const notes: NotesDBModel = {
-    chapters: [
-        "Introduction",
-        "Clean Code",
-        "Meaningful Names",
-        "Functions",
-        "Comments",
-        "Formatting",
-        "Objects and Data Structures",
-        "Error Handling",
-        "Boundaries",
-        "Unit Tests",
-        "Classes",
-        "Systems",
-        "Emergence",
-        "Concurrency",
-        "Successive Refinement",
-        "JUnit Internals",
-        "Refactoring SerialDate",
-        "Smells and Heuristics",
-        "Appendix A: Concurrency II",
-        "Appendix B: org.jfree.date.SerialDate",
-        "Appendix C: Cross References of Heuristics",
-        "Epilogue"
-    ],
     pre: `
         This is the best introduction to coding I've read (it's also my first so I might be biased).
         This is the book that gave me the passion for craftsmanship and, well, *Clean Code*!

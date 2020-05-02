@@ -12,9 +12,13 @@ import {
     faComment,
     faFilm,
     faFile,
-    faHeart as fullHeart
+    faHeart as fullHeart,
+    faLink
 } from "@fortawesome/free-solid-svg-icons";
-import { faUser, faHeart as emptyHeart } from "@fortawesome/free-regular-svg-icons";
+import {
+    faUser,
+    faHeart as emptyHeart
+} from "@fortawesome/free-regular-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
@@ -28,5 +32,6 @@ library.add(
     faUser,
     faYoutube,
     fullHeart,
-    emptyHeart
+    emptyHeart,
+    faLink
 );

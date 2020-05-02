@@ -1,7 +1,6 @@
 import { NotesDBModel } from "../dbModel";
 
 export const notes: NotesDBModel = {
-    chapters: ["Introduction", "La démarche DevOps enfin expliquée"],
     pre: ` 
         C'est clairement **le pire livre que j'ai lu jusqu'ici**. Très prétentieux, ce livre est
         écrit par des anciens de chez Microsoft qui ne perdent aucune occasion pour nous le rappeler, d'abord

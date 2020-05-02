@@ -12,6 +12,9 @@ export function buildQuoteUseCases({ quoteRepository }: Dependencies) {
                 .fetchAll()
                 .sort((q1, q2) => q2.rating - q1.rating)
                 .slice(0, limit);
+        },
+        getQuote(id: string) {
+            return quoteRepository.fetchById(id);
         }
     };
 }

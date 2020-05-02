@@ -48,6 +48,9 @@ hr {
     &:last-child {
         margin-bottom: 0;
     }
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 p {
@@ -59,7 +62,7 @@ ol, ul {
     margin: 0 0 $line-height-rem $line-height-rem;
 }
 
-p,li+ul {
+p+ul, p+ul {
     margin-top: -0.7rem;
 }
 

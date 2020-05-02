@@ -11,7 +11,7 @@
 
         <div class="caption">
             {{ quote.bookTitle }} -
-            <span v-if="quote.isInIntroduction()">chapter {{ quote.chapter }}</span>
+            <span v-if="!quote.isInIntroduction()">chapter {{ quote.chapter }} -</span>
             <em>{{ quote.chapterTitle }}</em
             >, p{{ quote.page }}
         </div>
@@ -38,6 +38,8 @@ export default class QuoteComponent extends Vue {
 @import "../assets/styles/variables";
 
 .quote {
+    max-width: 900px;
+
     & > blockquote {
         border: 1px solid primary(30);
         border-radius: 15px;
@@ -45,25 +47,6 @@ export default class QuoteComponent extends Vue {
         background-color: $quote-background-color;
         margin: 0;
         position: relative;
-
-        &:before,
-        &:after {
-            position: absolute;
-            font-size: 44px;
-            color: #979797;
-        }
-
-        &:before {
-            content: "“";
-            top: 0;
-            left: 2px;
-        }
-
-        &:after {
-            content: "”";
-            bottom: -4px;
-            right: 7px;
-        }
 
         p {
             text-align: justify;

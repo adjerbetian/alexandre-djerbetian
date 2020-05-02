@@ -1,15 +1,6 @@
 import { NotesDBModel } from "../dbModel";
 
 export const notes: NotesDBModel = {
-    chapters: [
-        "Foreword",
-        "Introduction",
-        "A Case Study: Designing a Document Editor",
-        "Creational Patterns",
-        "Structural Patterns",
-        "Behavioral Patterns",
-        "Conclusion"
-    ],
     pre: `
         This book is a bible, or at least is considered such. I indeed think it's fundamental. But beware
         though, it's not an easy book as it looks more like an encyclopedia than like a story.

@@ -1,15 +1,6 @@
 import { NotesDBModel } from "../dbModel";
 
 export const notes: NotesDBModel = {
-    chapters: [
-        "Preface",
-        "Module Thinking",
-        "Modularity Principles",
-        "Module Design",
-        "Shaping Internals",
-        "Modular Patterns and Practices",
-        "Development Methodology and Philosophy"
-    ],
     pre: `The book is interesting, but not mind blowing.`,
     good: `The first chapter makes a very good history of modules in JS.`,
     lessGood: `

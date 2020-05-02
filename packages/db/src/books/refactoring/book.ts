@@ -1,5 +1,6 @@
 import { BookDBModel } from "../dbModel";
 import { notes } from "./notes";
+import { chapters, quotes } from "./quotes";
 
 export const refactoring: BookDBModel = {
     id: "refactoring",
@@ -8,5 +9,7 @@ export const refactoring: BookDBModel = {
     releaseYear: 2002,
     readingYear: 2018,
     rating: 4,
-    notes
+    notes,
+    chapters,
+    quotes
 };

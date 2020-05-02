@@ -1,9 +1,10 @@
-import { Movie, Video, Book } from "entities";
+import { Quote, Movie, Video, Book } from "entities";
 
 export interface Repositories {
     movieRepository: MovieRepository;
     videoRepository: VideoRepository;
     bookRepository: BookRepository;
+    quoteRepository: QuoteRepository;
 }
 
 export interface MovieRepository {
@@ -16,4 +17,7 @@ export interface VideoRepository {
 export interface BookRepository {
     fetchAll(): Book[];
     fetchById(id: string): Book;
+}
+export interface QuoteRepository {
+    fetchAll(): Quote[];
 }

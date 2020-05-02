@@ -1,5 +1,6 @@
 import { BookDBModel } from "../dbModel";
 import { notes } from "./notes";
+import { chapters, quotes } from "./quotes";
 
 export const masteringModularJavascript: BookDBModel = {
     id: "mastering-modular-javascript",
@@ -8,5 +9,7 @@ export const masteringModularJavascript: BookDBModel = {
     releaseYear: 2018,
     readingYear: 2019,
     rating: 3,
-    notes
+    notes,
+    chapters,
+    quotes
 };

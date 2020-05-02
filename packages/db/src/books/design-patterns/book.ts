@@ -1,5 +1,6 @@
 import { BookDBModel } from "../dbModel";
 import { notes } from "./notes";
+import { chapters, quotes } from "./quotes";
 
 export const designPatterns: BookDBModel = {
     id: "design-patterns",
@@ -8,5 +9,7 @@ export const designPatterns: BookDBModel = {
     releaseYear: 1994,
     readingYear: 2019,
     rating: 3.5,
-    notes
+    notes,
+    chapters,
+    quotes
 };

@@ -3,13 +3,29 @@ export interface BookDBModel {
     title: string;
     authors: string[];
     releaseYear: number;
+    readingYear: number;
     rating: number;
     notes?: NotesDBModel;
-    readingYear: number;
+    chapters?: string[];
+    quotes?: QuoteDBModel[];
 }
 export interface NotesDBModel {
-    chapters: string[];
     pre: string;
     good: string;
     lessGood: string;
+}
+
+export interface QuoteDBModel {
+    id: string;
+    chapter: number;
+    page: string;
+    content: string;
+    tags: QuoteTagDBModel[];
+    rating: number;
+    comments?: string;
+}
+
+export interface QuoteTagDBModel {
+    name: string;
+    description: string;
 }

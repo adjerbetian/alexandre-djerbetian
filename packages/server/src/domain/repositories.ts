@@ -20,4 +20,5 @@ export interface BookRepository {
 }
 export interface QuoteRepository {
     fetchAll(): Quote[];
+    fetchById(id: string): Quote;
 }

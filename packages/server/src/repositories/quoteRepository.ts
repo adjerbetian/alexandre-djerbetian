@@ -2,10 +2,16 @@ import { Quote, buildQuote } from "entities";
 import * as db from "db";
 import { QuoteRepository } from "../domain";
 import { µ } from "micro";
+import { NotFound } from "./errors";
 
 export const quoteRepository: QuoteRepository = {
     fetchAll() {
         return getAllQuotes();
+    },
+    fetchById(id) {
+        const quote = getAllQuotes().find((q) => q.id === id);
+        if (!quote) throw new NotFound(id);
+        return quote;
     }
 };
 

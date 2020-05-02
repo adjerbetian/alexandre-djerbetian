@@ -49,6 +49,11 @@ const router = new VueRouter({
             path: "/quotes",
             name: "Quotes",
             component: () => import("./quotes/QuotesPage.vue")
+        },
+        {
+            path: "/quotes/:id",
+            name: "Quote",
+            component: () => import("./quotes/QuotePage.vue")
         }
     ]
 });

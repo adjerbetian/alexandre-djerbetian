@@ -1,20 +1,13 @@
 <template>
     <div class="quote" :id="quote.id">
-        <blockquote>
-            <div class="quoteLink">
-                <a :href="`#${quote.id}`">
-                    <font-awesome-icon icon="link" />
-                </a>
-            </div>
-            <div v-html="parseContent(quote.content)"></div>
-        </blockquote>
+        <blockquote class="content" v-html="parseContent(quote.content)" />
 
-        <div class="caption">
+        <router-link :to="`/quotes/${quote.id}`" class="caption">
             {{ quote.bookTitle }} -
             <span v-if="!quote.isInIntroduction()">chapter {{ quote.chapter }} - </span>
             <em>{{ quote.chapterTitle }}</em
             >, p{{ quote.page }}
-        </div>
+        </router-link>
     </div>
 </template>
 
@@ -39,48 +32,29 @@ export default class QuoteComponent extends Vue {
 
 .quote {
     max-width: 900px;
+}
 
-    & > blockquote {
-        border: 1px solid primary(30);
-        border-radius: 15px;
-        padding: 20px;
-        background-color: $quote-background-color;
-        margin: 0;
-        position: relative;
+.content {
+    border: 1px solid primary(30);
+    border-radius: 15px;
+    padding: 20px;
+    background-color: $quote-background-color;
+    margin: 0;
+    position: relative;
 
-        p {
-            text-align: justify;
-        }
-
-        .quoteLink {
-            font-size: 13px;
-            position: absolute;
-            right: 6px;
-            top: 3px;
-
-            a {
-                color: primary(80);
-                transition: 0.5s;
-            }
-        }
-
-        &:hover {
-            .quoteLink {
-                a {
-                    color: primary(50);
-                }
-            }
-        }
-
-        & + div {
-            text-align: right;
-            color: primary(30);
-            margin-bottom: 30px;
-        }
-
-        blockquote {
-            font-style: italic;
-        }
+    p {
+        text-align: justify;
     }
+
+    blockquote {
+        font-style: italic;
+    }
+}
+
+.caption {
+    display: block;
+    text-align: right;
+    color: primary(30);
+    margin-bottom: 30px;
 }
 </style>

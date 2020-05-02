@@ -4,12 +4,12 @@
 
         <aside>
             <BookCover :book="book" />
-            <Rating class="rating" :rating="book.rating" />
-            <div class="author">
-                <strong>{{ authorWording }}:</strong>
-                {{ book.authors.join(", ") }}
-            </div>
-            <div class="year"><strong>Year:</strong> {{ book.releaseYear }}</div>
+            <!--            <Rating class="rating" :rating="book.rating" />-->
+            <!--            <div class="author">-->
+            <!--                <strong>{{ authorWording }}:</strong>-->
+            <!--                {{ book.authors.join(", ") }}-->
+            <!--            </div>-->
+            <!--            <div class="year"><strong>Year:</strong> {{ book.releaseYear }}</div>-->
         </aside>
 
         <div class="reviews">

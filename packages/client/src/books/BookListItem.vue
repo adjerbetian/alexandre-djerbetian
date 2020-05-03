@@ -1,15 +1,18 @@
 <template>
-    <div class="book" :class="{ hover: book.hasNotes() }">
-        <BookCover class="cover" :book="book" />
+    <div
+        class="book"
+        :class="{ hover: book.hasNotes() }"
+        @mouseover="hover = true"
+        @mouseleave="hover = false"
+    >
+        <BookCover class="cover" :class="{ hover }" :book="book" />
         <div class="description">
             <h2>{{ book.title }}</h2>
             <Rating class="rating" :rating="book.rating" />
             <div class="author">{{ book.authors.join(", ") }}</div>
             <div class="year">{{ book.releaseYear }}</div>
         </div>
-        <div class="hasNotes" v-if="book.hasNotes()" title="go to notes">
-            &#x1F5D2;
-        </div>
+        <div class="hasNotes" v-if="book.hasNotes()" title="go to notes">&#x1F5D2;</div>
     </div>
 </template>
 
@@ -26,6 +29,7 @@ import BookCover from "./Cover.vue";
 })
 export default class BookListItem extends Vue {
     @Prop(Object) book!: Book;
+    hover = false;
 
     get cover(): string {
         return imageService.getImage("books", this.book.id);

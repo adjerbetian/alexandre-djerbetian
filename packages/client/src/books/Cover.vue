@@ -46,7 +46,8 @@ $rotation: -20deg;
             rotateX(-6deg)
             rotateY($rotation);
 }
-.wrapper:hover {
+.wrapper:hover,
+.wrapper.hover {
     .book-cover {
         transform: none;
     }

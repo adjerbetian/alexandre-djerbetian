@@ -1,3 +1,3 @@
 export default {
-    port: parseInt(process.env.PORT || "3000", 10)
+    port: process.env.PORT || "3000"
 };

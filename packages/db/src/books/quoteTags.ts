@@ -3,12 +3,18 @@ import { QuoteTagDBModel } from "./dbModel";
 function asQuoteTags<T extends Record<string, string>>(
     tags: T
 ): { [K in keyof T]: QuoteTagDBModel } {
-    return Object.fromEntries(
+    return fromEntries(
         Object.keys(tags).map((name) => [
             name,
             { name, description: tags[name] }
         ])
     ) as any;
+}
+function fromEntries<T>(iterable: Array<[string, T]>): { [key: string]: T } {
+    return [...iterable].reduce<{ [key: string]: T }>((obj, [key, val]) => {
+        obj[key] = val;
+        return obj;
+    }, {});
 }
 
 // prettier-ignore

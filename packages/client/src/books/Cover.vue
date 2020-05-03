@@ -1,12 +1,14 @@
 <template>
     <div class="wrapper" :class="{ hover }">
-        <div class="book-cover">
-            <img :src="coverSrc" :alt="`cover of ${book.title}`" style="visibility: hidden;" />
+        <div>
+            <div class="book-cover">
+                <img :src="coverSrc" :alt="alt" style="visibility: hidden;" />
 
-            <img class="cover-page front-page" :src="coverSrc" :alt="`cover of ${book.title}`" />
-            <div class="hard-side"><img :src="coverSrc" :alt="`cover of ${book.title}`" /></div>
-            <div class="white-pages"></div>
-            <img class="cover-page final-page" :src="coverSrc" :alt="`cover of ${book.title}`" />
+                <img class="cover-page front-page" :src="coverSrc" :alt="alt" />
+                <div class="hard-side"><img :src="coverSrc" :alt="alt" /></div>
+                <div class="white-pages"></div>
+                <img class="cover-page final-page" :src="coverSrc" :alt="alt" />
+            </div>
         </div>
     </div>
 </template>
@@ -20,14 +22,14 @@ import { imageService } from "@/utils";
 @Component
 export default class BookCover extends Vue {
     @Prop(Object) book!: Book;
-    @Prop(Boolean) hover = true;
-
-    mounted() {
-        setTimeout(() => (this.hover = false), 100);
-    }
+    @Prop(Boolean) hover!: boolean;
 
     get coverSrc(): string {
         return imageService.getImage("books", this.book.id);
+    }
+
+    get alt(): string {
+        return `cover of ${this.book.title}`;
     }
 }
 </script>
@@ -38,6 +40,8 @@ export default class BookCover extends Vue {
 $rotation: -20deg;
 .wrapper {
     perspective: 2000px;
+    display: flex;
+    justify-content: center;
 }
 
 .book-cover {
@@ -45,6 +49,7 @@ $rotation: -20deg;
     transform-style: preserve-3d;
     transition: transform ease 0.5s;
 
+    animation: 1s appear;
     /* prettier-ignore */
     transform:
             translateZ(-100px)
@@ -54,6 +59,11 @@ $rotation: -20deg;
 .wrapper:hover,
 .wrapper.hover {
     .book-cover {
+        transform: none;
+    }
+}
+@keyframes appear {
+    from {
         transform: none;
     }
 }

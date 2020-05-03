@@ -1,17 +1,21 @@
 <template>
-    <div class="cover">
-        <img :src="coverSrc" :alt="`cover of ${book.title}`" style="visibility: hidden;" />
+    <div>
+        <div class="wrapper">
+            <div class="pages">
+                <img :src="coverSrc" :alt="`cover of ${book.title}`" style="visibility: hidden;" />
 
-        <div class="img front-page">
-            <img :src="coverSrc" :alt="`cover of ${book.title}`" />
-        </div>
-        <div class="page page-1"></div>
-        <div class="page page-2"></div>
-        <div class="page page-3"></div>
-        <div class="page page-4"></div>
-        <div class="page page-5"></div>
-        <div class="img final-page">
-            <img :src="coverSrc" :alt="`cover of ${book.title}`" />
+                <div class="img front-page">
+                    <img :src="coverSrc" :alt="`cover of ${book.title}`" />
+                </div>
+                <div class="page page-1"></div>
+                <div class="page page-2"></div>
+                <div class="page page-3"></div>
+                <div class="page page-4"></div>
+                <div class="page page-5"></div>
+                <div class="img final-page">
+                    <img :src="coverSrc" :alt="`cover of ${book.title}`" />
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -37,21 +41,25 @@ export default class BookCover extends Vue {
 
 $rotation: -20deg;
 
-.cover {
+.wrapper {
+    padding: 3% 1%;
+}
+
+.pages {
     display: flex;
     align-items: center;
     transform-style: preserve-3d;
     perspective: 2000px;
 }
 
-.cover .img {
+.pages .img {
     position: absolute;
     transform: rotateY($rotation);
     width: 100%;
     height: 100%;
 }
 
-.cover .img img {
+.pages .img img {
     width: 100%;
     height: 100%;
     display: block;
@@ -67,15 +75,17 @@ $rotation: -20deg;
     background: white;
 }
 
+$globalOffset: 4%;
 $offset: 0.8%;
 $sizeOffset: 1%;
 
 .img.front-page {
     z-index: 0;
+    right: 4%;
 }
 @mixin page($number) {
     height: 99% - $number * $sizeOffset;
-    right: 0.5% - $number * $offset;
+    right: $globalOffset + 0.5% - $number * $offset;
     z-index: -$number;
 }
 .page-1 {
@@ -96,7 +106,7 @@ $sizeOffset: 1%;
 
 .img.final-page {
     height: 101% - 6 * $sizeOffset;
-    right: -6 * $offset;
+    right: $globalOffset + -6 * $offset;
     z-index: -6;
     transform: rotateY($rotation) translateZ(-5px);
 }

@@ -96,7 +96,7 @@ $sizeOffset: 1%;
 
 .img.final-page {
     height: 101% - 6 * $sizeOffset;
-    right: -5.4 * $offset;
+    right: -6 * $offset;
     z-index: -6;
     transform: rotateY($rotation) translateZ(-5px);
 }

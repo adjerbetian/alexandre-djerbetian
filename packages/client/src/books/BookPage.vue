@@ -21,7 +21,7 @@
             </div>
 
             <div class="review">
-                <h2>What I liked especially</h2>
+                <h2>What I especially liked</h2>
                 <div v-html="parse(book.notes.good)"></div>
             </div>
 

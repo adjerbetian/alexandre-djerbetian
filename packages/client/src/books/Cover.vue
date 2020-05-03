@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="wrapper" :class="{ hover }">
         <div class="book-cover">
             <img :src="coverSrc" :alt="`cover of ${book.title}`" style="visibility: hidden;" />
 
@@ -20,6 +20,11 @@ import { imageService } from "@/utils";
 @Component
 export default class BookCover extends Vue {
     @Prop(Object) book!: Book;
+    @Prop(Boolean) hover = true;
+
+    mounted() {
+        setTimeout(() => (this.hover = false), 100);
+    }
 
     get coverSrc(): string {
         return imageService.getImage("books", this.book.id);

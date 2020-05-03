@@ -34,3 +34,25 @@ function isEmpty(line: string) {
 export function last<T>(array: T[]): T {
     return array[array.length - 1];
 }
+
+export function buildPromiseObserver(
+    promise: Promise<any> | (() => Promise<any>)
+): Promise<any> & { isDone(): boolean } {
+    const realPromise = typeof promise === "function" ? promise() : promise;
+    let done = false;
+    return Object.assign(
+        realPromise.then(() => (done = true)),
+        {
+            isDone() {
+                return done;
+            }
+        }
+    );
+}
+
+export async function pAll<T, U>(
+    array: T[],
+    callback: (value: T, index: number) => Promise<U>
+) {
+    return Promise.all(array.map(callback));
+}

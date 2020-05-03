@@ -1,5 +1,15 @@
 import { expect } from "chai";
-import { trimCommonIndentation } from "./micro";
+import { createSandbox, SinonFakeTimers } from "sinon";
+import {
+    buildPromiseObserver,
+    pAll,
+    sleep,
+    trimCommonIndentation
+} from "./micro";
+
+const sandbox = createSandbox();
+
+beforeEach(() => sandbox.restore());
 
 describe("trimCommonIndentation", () => {
     it("should trim a single line", () => {
@@ -54,5 +64,60 @@ describe("trimCommonIndentation", () => {
         const result = trimCommonIndentation(text);
 
         expect(result).to.equal("a\n\n\n    b");
+    });
+});
+describe("buildPromiseObserver", () => {
+    it("should set the done to true when the promise is done", async () => {
+        const promise = sleep(10);
+
+        const observer = buildPromiseObserver(promise);
+
+        let done = observer.isDone();
+        expect(done).to.be.false;
+
+        await observer;
+
+        done = observer.isDone();
+        expect(done).to.be.true;
+    });
+});
+describe("pAll", () => {
+    let clock: SinonFakeTimers;
+
+    beforeEach(() => {
+        clock = sandbox.useFakeTimers();
+    });
+
+    it("should wait for all the promises before returning", async () => {
+        const times = [10, 20, 30];
+
+        const observer = buildPromiseObserver(
+            pAll(times, async (time) => sleep(time))
+        );
+
+        expect(observer.isDone()).to.be.false;
+
+        await clock.tickAsync(10);
+        expect(observer.isDone()).to.be.false;
+
+        await clock.tickAsync(10);
+        expect(observer.isDone()).to.be.false;
+
+        await clock.tickAsync(10);
+        expect(observer.isDone()).to.be.true;
+    });
+    it("should return the results of the promises", async () => {
+        const values = [10, 20, 30];
+
+        const results = await pAll(values, async (v) => v);
+
+        expect(results).to.deep.equal(values);
+    });
+    it("should pass indices to the callback", async () => {
+        const values = [10, 20, 30];
+
+        const results = await pAll(values, async (v, i) => i);
+
+        expect(results).to.deep.equal([0, 1, 2]);
     });
 });

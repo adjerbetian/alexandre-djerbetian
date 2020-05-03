@@ -30,7 +30,7 @@ describe("Book page", () => {
                     "This is the best introduction to coding I've read"
                 );
             });
-        cy.contains("h2", "What I liked especially")
+        cy.contains("h2", "What I especially liked")
             .closest(".review")
             .within(() => {
                 cy.contains(

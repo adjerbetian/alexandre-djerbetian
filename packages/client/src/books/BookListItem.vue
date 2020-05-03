@@ -5,7 +5,7 @@
         @mouseover="hover = true"
         @mouseleave="hover = false"
     >
-        <BookCover class="cover" :class="{ hover }" :book="book" />
+        <BookCover class="cover" :hover="hover" :book="book" />
         <div class="description">
             <h2>{{ book.title }}</h2>
             <Rating class="rating" :rating="book.rating" />

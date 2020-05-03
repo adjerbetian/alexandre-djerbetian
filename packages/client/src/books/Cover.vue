@@ -5,11 +5,7 @@
                 <img :src="coverSrc" :alt="`cover of ${book.title}`" style="visibility: hidden;" />
 
                 <div class="cover-page front-page"><img :src="coverSrc" :alt="`cover of ${book.title}`" /></div>
-                <div class="white-page page-1"></div>
-                <div class="white-page page-2"></div>
-                <div class="white-page page-3"></div>
-                <div class="white-page page-4"></div>
-                <div class="white-page page-5"></div>
+                <div class="white-pages"></div>
                 <div class="cover-page final-page"><img :src="coverSrc" :alt="`cover of ${book.title}`" /></div>
             </div>
         </div>
@@ -35,69 +31,47 @@ export default class BookCover extends Vue {
 <style lang="scss" scoped>
 @import "../assets/styles/variables";
 
+$rotation: -20deg;
 .wrapper {
-    padding: 3% 1%;
-}
-.book-cover {
-    display: flex;
-    align-items: center;
-    transform-style: preserve-3d;
     perspective: 2000px;
 }
 
-$rotation: -20deg;
+.book-cover {
+    display: flex;
+    transform-style: preserve-3d;
+    perspective: 2000px;
+    transform: translateZ(-100px) rotateY($rotation);
+    transition: transform ease 0.5s;
+}
+.wrapper:hover {
+    .book-cover {
+        transform: rotateY(0);
+    }
+}
 .cover-page {
     position: absolute;
-    transform: rotateY($rotation);
-    width: 100%;
-    height: 100%;
+    img {
+        display: block;
+        border-radius: 0 2% 2% 0;
+    }
 }
-.cover-page img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    border-radius: 0 2% 2% 0;
-}
-.white-page {
-    width: 100%;
-    position: absolute;
-    box-shadow: inset 0px -1px 2px rgba(50, 50, 50, 0.2), inset -1px 0px 1px rgba(150, 150, 150, 0.1);
-    border-radius: 0 1% 1% 0;
-    transform: rotateY($rotation) translateZ(-5px);
-    background: white;
-}
-
-$globalOffset: 4%;
-$offset: 0.8%;
-$sizeOffset: 1%;
-.cover-page.front-page {
-    z-index: 0;
-    right: 4%;
-}
-@mixin page($number) {
-    height: 99% - $number * $sizeOffset;
-    right: $globalOffset + 0.5% - $number * $offset;
-    z-index: -$number;
-}
-.page-1 {
-    @include page(1);
-}
-.page-2 {
-    @include page(2);
-}
-.page-3 {
-    @include page(3);
-}
-.page-4 {
-    @include page(4);
-}
-.page-5 {
-    @include page(5);
-}
+$deep: 0.2;
 .cover-page.final-page {
-    height: 101% - 6 * $sizeOffset;
-    right: $globalOffset + -6 * $offset;
-    z-index: -6;
-    transform: rotateY($rotation) translateZ(-5px);
+    transform: rotateY(90deg) translateX($deep * 100%) rotateY(-90deg);
+    img {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    }
+}
+$page-ratio-x: 0.98;
+$page-ratio-y: 0.97;
+.white-pages {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: scaleY($page-ratio-y) translateX(50% * $page-ratio-x) rotateY(90deg) translateX($deep * 50%)
+        scaleX($deep);
+    background-color: white;
+    background-image: linear-gradient(to right, #e1e1e1 30%, #ccc);
+    background-size: 10%;
 }
 </style>

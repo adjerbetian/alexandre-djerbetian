@@ -14,6 +14,8 @@ export function buildRouter(
     app.use(cookieParser());
     app.use(cors());
 
+    app.get("/", (req, res) => res.send("coucou"));
+
     app.get("/movies", controllers.movies.getAllMovies);
     app.get("/movies/:id", controllers.movies.getMovie);
 

@@ -5,6 +5,7 @@
                 <img :src="coverSrc" :alt="`cover of ${book.title}`" style="visibility: hidden;" />
 
                 <div class="cover-page front-page"><img :src="coverSrc" :alt="`cover of ${book.title}`" /></div>
+                <div class="hard-side"><img :src="coverSrc" :alt="`cover of ${book.title}`" /></div>
                 <div class="white-pages"></div>
                 <div class="cover-page final-page"><img :src="coverSrc" :alt="`cover of ${book.title}`" /></div>
             </div>
@@ -40,7 +41,7 @@ $rotation: -20deg;
     display: flex;
     transform-style: preserve-3d;
     perspective: 2000px;
-    transform: translateZ(-100px) rotateY($rotation);
+    transform: translateZ(-100px) rotateX(-6deg) rotateY($rotation);
     transition: transform ease 0.5s;
 }
 .wrapper:hover {
@@ -73,5 +74,11 @@ $page-ratio-y: 0.97;
     background-color: white;
     background-image: linear-gradient(to right, #e1e1e1 30%, #ccc);
     background-size: 10%;
+}
+.hard-side {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translateX(-50%) rotateY(90deg) translateX($deep * 50%) scaleX($deep);
 }
 </style>

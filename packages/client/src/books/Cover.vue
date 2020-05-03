@@ -1,20 +1,16 @@
 <template>
     <div>
         <div class="wrapper">
-            <div class="pages">
+            <div class="book-cover">
                 <img :src="coverSrc" :alt="`cover of ${book.title}`" style="visibility: hidden;" />
 
-                <div class="img front-page">
-                    <img :src="coverSrc" :alt="`cover of ${book.title}`" />
-                </div>
-                <div class="page page-1"></div>
-                <div class="page page-2"></div>
-                <div class="page page-3"></div>
-                <div class="page page-4"></div>
-                <div class="page page-5"></div>
-                <div class="img final-page">
-                    <img :src="coverSrc" :alt="`cover of ${book.title}`" />
-                </div>
+                <div class="cover-page front-page"><img :src="coverSrc" :alt="`cover of ${book.title}`" /></div>
+                <div class="white-page page-1"></div>
+                <div class="white-page page-2"></div>
+                <div class="white-page page-3"></div>
+                <div class="white-page page-4"></div>
+                <div class="white-page page-5"></div>
+                <div class="cover-page final-page"><img :src="coverSrc" :alt="`cover of ${book.title}`" /></div>
             </div>
         </div>
     </div>
@@ -39,34 +35,30 @@ export default class BookCover extends Vue {
 <style lang="scss" scoped>
 @import "../assets/styles/variables";
 
-$rotation: -20deg;
-
 .wrapper {
     padding: 3% 1%;
 }
-
-.pages {
+.book-cover {
     display: flex;
     align-items: center;
     transform-style: preserve-3d;
     perspective: 2000px;
 }
 
-.pages .img {
+$rotation: -20deg;
+.cover-page {
     position: absolute;
     transform: rotateY($rotation);
     width: 100%;
     height: 100%;
 }
-
-.pages .img img {
+.cover-page img {
     width: 100%;
     height: 100%;
     display: block;
     border-radius: 0 2% 2% 0;
 }
-
-.page {
+.white-page {
     width: 100%;
     position: absolute;
     box-shadow: inset 0px -1px 2px rgba(50, 50, 50, 0.2), inset -1px 0px 1px rgba(150, 150, 150, 0.1);
@@ -78,8 +70,7 @@ $rotation: -20deg;
 $globalOffset: 4%;
 $offset: 0.8%;
 $sizeOffset: 1%;
-
-.img.front-page {
+.cover-page.front-page {
     z-index: 0;
     right: 4%;
 }
@@ -103,8 +94,7 @@ $sizeOffset: 1%;
 .page-5 {
     @include page(5);
 }
-
-.img.final-page {
+.cover-page.final-page {
     height: 101% - 6 * $sizeOffset;
     right: $globalOffset + -6 * $offset;
     z-index: -6;

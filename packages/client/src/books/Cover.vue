@@ -38,7 +38,7 @@ export default class BookCover extends Vue {
 @import "../assets/styles/variables";
 
 $rotation: -20deg;
-.wrapper {
+.wrapper > div {
     perspective: 2000px;
     display: flex;
     justify-content: center;

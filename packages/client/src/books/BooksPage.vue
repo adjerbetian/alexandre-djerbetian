@@ -3,7 +3,11 @@
         <h1>My library of coding books</h1>
 
         <div class="books">
-            <div v-for="book in books" :key="book.id">
+            <div
+                v-for="(book, n) in books"
+                :key="book.id"
+                :style="{ animationDelay: n * 100 + 'ms' }"
+            >
                 <router-link v-if="book.hasNotes()" :to="`/books/${book.id}`">
                     <BookListItem :book="book" />
                 </router-link>
@@ -18,7 +22,6 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
-import { µ } from "micro";
 import { Book } from "entities";
 import { fetchAll } from "./bookService";
 import Rating from "./Rating.vue";
@@ -31,12 +34,7 @@ export default class BooksPage extends Vue {
     books: Book[] = [];
 
     async mounted() {
-        const books = (await fetchAll()).sort((b1, b2) => b2.rating - b1.rating);
-
-        await µ.pAll(books, async (book, i) => {
-            await µ.sleep(i * 50);
-            this.books.push(book);
-        });
+        this.books = (await fetchAll()).sort((b1, b2) => b2.rating - b1.rating);
     }
 }
 </script>
@@ -51,8 +49,7 @@ export default class BooksPage extends Vue {
         display: block;
     }
     & > div {
-        opacity: 1;
-        animation: 1s appear;
+        animation: 1s appear both;
     }
 }
 @keyframes appear {

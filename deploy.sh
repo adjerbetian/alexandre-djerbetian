@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 sync() {
     from=$1
@@ -7,10 +8,8 @@ sync() {
     rsync -avz --delete --copy-links -e "ssh -p 5022" "${from}" "${HOST}:sites/alexandre-new/${to}"
 }
 
-#npm run bootstrap
 npm run compile
 (cd packages/client && NODE_ENV=prod;VUE_APP_SERVER=https://api.djerbetian.com npm run build)
-(cd packages/server && NODE_ENV=prod npm run build)
 
 USER=djerbeti
 IP=world-312.fr.planethoster.net

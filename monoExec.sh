@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 command=$1
 options="$2 $3 $4 $5"

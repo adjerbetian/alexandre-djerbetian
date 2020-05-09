@@ -1,9 +1,9 @@
-import { buildBook, Book, BookDTO } from "entities";
-import * as db from "db";
-import { BookDBModel } from "db";
+import { buildBook, Book, BookDTO } from "@alex/entities";
+import * as db from "@alex/db";
+import { BookDBModel } from "@alex/db";
 import { BookRepository } from "../domain";
 import { NotFound } from "./errors";
-import { µ } from "micro";
+import { µ } from "@alex/micro";
 
 export const bookRepository: BookRepository = {
     fetchAll() {

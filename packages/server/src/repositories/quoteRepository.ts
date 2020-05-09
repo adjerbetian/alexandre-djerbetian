@@ -1,7 +1,7 @@
-import { Quote, buildQuote } from "entities";
-import * as db from "db";
+import { Quote, buildQuote } from "@alex/entities";
+import * as db from "@alex/db";
 import { QuoteRepository } from "../domain";
-import { µ } from "micro";
+import { µ } from "@alex/micro";
 import { NotFound } from "./errors";
 
 export const quoteRepository: QuoteRepository = {

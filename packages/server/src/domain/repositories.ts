@@ -1,4 +1,4 @@
-import { Quote, Movie, Video, Book } from "entities";
+import { Quote, Movie, Video, Book } from "@alex/entities";
 
 export interface Repositories {
     movieRepository: MovieRepository;

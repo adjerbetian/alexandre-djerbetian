@@ -1,4 +1,4 @@
-import { Book } from "entities";
+import { Book } from "@alex/entities";
 import { BookRepository } from "./repositories";
 
 interface Dependencies {

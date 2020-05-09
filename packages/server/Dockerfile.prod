@@ -1,7 +1,5 @@
 FROM builder
 
 WORKDIR /app/packages/server
-RUN npm run build
-
 EXPOSE 3000
 CMD [ "npm" , "start"]

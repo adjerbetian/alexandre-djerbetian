@@ -1,22 +1,22 @@
 {
-    "name": "server",
+    "name": "@alex/server",
     "version": "0.0.0",
     "private": true,
     "scripts": {
         "start": "node dist/server.js",
-        "build": "rm -rf ./dist && tsc --project tsconfig.build.json",
+        "compile": "tsc --project tsconfig.build.json",
         "serve": "nodemon",
         "test": "mocha"
     },
     "dependencies": {
+        "@alex/db": "file:../db",
+        "@alex/entities": "file:../entities",
+        "@alex/micro": "file:../micro",
         "cookie-parser": "^1.4.5",
         "cors": "^2.8.5",
-        "db": "file:../db",
         "debug": "^4.1.1",
-        "entities": "file:../entities",
         "express": "^4.17.1",
         "lodash": "^4.17.15",
-        "micro": "file:../micro",
         "morgan": "^1.10.0"
     },
     "devDependencies": {

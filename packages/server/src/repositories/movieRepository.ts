@@ -1,5 +1,5 @@
-import { buildMovie } from "entities";
-import * as db from "db";
+import { buildMovie } from "@alex/entities";
+import * as db from "@alex/db";
 import { MovieRepository } from "../domain";
 import { NotFound } from "./errors";
 

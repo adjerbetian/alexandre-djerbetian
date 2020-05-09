@@ -1,4 +1,4 @@
-import { Movie } from "entities";
+import { Movie } from "@alex/entities";
 import { MovieRepository } from "./repositories";
 
 interface Dependencies {

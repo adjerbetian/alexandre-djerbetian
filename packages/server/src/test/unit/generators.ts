@@ -1,5 +1,5 @@
 import _ from "lodash";
-import { buildMovie, Movie, MovieDTO } from "entities";
+import { buildMovie, Movie, MovieDTO } from "@alex/entities";
 
 export const generateIndex = (() => {
     let index = _.random(1, 100);

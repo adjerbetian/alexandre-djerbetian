@@ -1,4 +1,4 @@
-import { QuoteDTO, buildQuote } from "entities";
+import { QuoteDTO, buildQuote } from "@alex/entities";
 import { api } from "@/utils";
 
 export async function fetchAll() {

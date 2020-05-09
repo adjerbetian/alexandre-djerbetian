@@ -2,11 +2,7 @@
     <div>
         <h1>List of directed short movies</h1>
         <div class="movies">
-            <MovieComponent
-                v-for="movie in movies"
-                :key="movie.id"
-                :movie="movie"
-            />
+            <MovieComponent v-for="movie in movies" :key="movie.id" :movie="movie" />
         </div>
     </div>
 </template>
@@ -16,7 +12,7 @@ import Vue from "vue";
 import { Component } from "vue-property-decorator";
 import MovieComponent from "./Movie.vue";
 import { fetchAllMovies } from "./movieService";
-import { Movie } from "entities";
+import { Movie } from "@alex/entities";
 
 @Component({
     components: { MovieComponent }

@@ -1,6 +1,6 @@
-import { buildVideo } from "entities";
-import { µ } from "micro";
-import * as db from "db";
+import { buildVideo } from "@alex/entities";
+import { µ } from "@alex/micro";
+import * as db from "@alex/db";
 import { VideoRepository } from "../domain";
 
 export const videoRepository: VideoRepository = {

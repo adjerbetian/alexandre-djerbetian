@@ -5,11 +5,7 @@
             <em class="details">{{ video.speaker }} {{ video.year }}</em>
         </h2>
         <div class="description">
-            <Youtube
-                class="youtube"
-                :title="video.title"
-                :id="video.youtubeId"
-            />
+            <Youtube class="youtube" :title="video.title" :id="video.youtubeId" />
             <CommentsComponent v-if="!isSmall" class="side" :video="video" />
         </div>
     </div>
@@ -17,7 +13,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import { Video } from "entities";
+import { Video } from "@alex/entities";
 import Youtube from "./Youtube.vue";
 import CommentsComponent from "./Comments.vue";
 

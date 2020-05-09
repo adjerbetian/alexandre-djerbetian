@@ -8,7 +8,7 @@ See https://alexandre.djerbetian.com
 ## Todo
 
 - **Infrastructure**
-    - [ ] [improve typescript in monorepo](https://medium.com/@NiGhTTraX/how-to-set-up-a-typescript-monorepo-with-lerna-c6acda7d4559)
+    - [X] [improve typescript in monorepo](https://medium.com/@NiGhTTraX/how-to-set-up-a-typescript-monorepo-with-lerna-c6acda7d4559)
     - [ ] try yarn 2
     - [ ] use [pre-rendering](https://github.com/chrisvfritz/prerender-spa-plugin)
 - **General**    

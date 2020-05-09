@@ -22,7 +22,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
-import { Book } from "entities";
+import { Book } from "@alex/entities";
 import { fetchAll } from "./bookService";
 import Rating from "./Rating.vue";
 import BookListItem from "./BookListItem.vue";

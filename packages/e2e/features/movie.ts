@@ -1,4 +1,4 @@
-import { buildMovie } from "entities";
+import { buildMovie } from "@alex/entities";
 
 describe("Movie page", () => {
     const movie = getMovie();

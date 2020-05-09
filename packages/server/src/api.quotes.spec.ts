@@ -1,5 +1,5 @@
-import { expect, api } from "./test/integration";
-import { QuoteDTO } from "entities";
+import { api, expect } from "./test/integration";
+import { QuoteDTO } from "@alex/entities";
 
 describe("quotes", () => {
     it("GET /quotes", async () => {

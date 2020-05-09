@@ -19,7 +19,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
-import { Book } from "entities";
+import { Book } from "@alex/entities";
 import { imageService } from "@/utils";
 import Rating from "./Rating.vue";
 import BookCover from "./Cover.vue";

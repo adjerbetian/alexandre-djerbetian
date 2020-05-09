@@ -1,4 +1,4 @@
-import { Quote } from "entities";
+import { Quote } from "@alex/entities";
 import { QuoteRepository } from "./repositories";
 
 interface Dependencies {

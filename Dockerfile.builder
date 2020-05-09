@@ -1,7 +1,7 @@
 FROM node:12
 
 WORKDIR /app
-COPY package.json package-lock.json lerna.json tsconfig.base.json monoExec.sh ./
+COPY package.json package-lock.json lerna.json tsconfig.build.json tsconfig.json monoExec.sh monoRun.sh ./
 RUN npm ci
 
 COPY packages/client/package.json packages/client/package-lock.json packages/client/

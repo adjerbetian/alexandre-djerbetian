@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { Movie } from "entities";
+import { Movie } from "@alex/entities";
 import { Component } from "vue-property-decorator";
 import { Youtube } from "@/videos";
 import { fetchMovie } from "./movieService";

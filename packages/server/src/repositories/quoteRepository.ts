@@ -16,7 +16,7 @@ export const quoteRepository: QuoteRepository = {
 };
 
 function getAllQuotes(): Quote[] {
-    return db.books.flatMap((book) =>
+    return flatMap(db.books, (book) =>
         (book.quotes || []).map((dbModel) =>
             buildQuote({
                 id: dbModel.id,
@@ -30,4 +30,12 @@ function getAllQuotes(): Quote[] {
             })
         )
     );
+}
+
+function flatMap<T, U>(array: T[], callback: (element: T) => U[]): U[] {
+    const result: U[] = [];
+    array.forEach((element) => {
+        result.push(...callback(element));
+    });
+    return result;
 }

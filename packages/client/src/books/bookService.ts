@@ -1,4 +1,4 @@
-import { BookDTO, buildBook } from "entities";
+import { BookDTO, buildBook } from "@alex/entities";
 import { api } from "@/utils";
 
 export async function fetchAll() {

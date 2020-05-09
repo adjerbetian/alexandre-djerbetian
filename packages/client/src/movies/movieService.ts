@@ -1,4 +1,4 @@
-import { buildMovie, MovieDTO } from "entities";
+import { buildMovie, MovieDTO } from "@alex/entities";
 import { api } from "@/utils";
 
 export async function fetchAllMovies() {

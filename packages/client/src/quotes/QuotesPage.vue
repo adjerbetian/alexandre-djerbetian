@@ -8,7 +8,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
-import { Quote } from "entities";
+import { Quote } from "@alex/entities";
 import { fetchAll } from "./quoteService";
 import QuoteComponent from "./Quote.vue";
 

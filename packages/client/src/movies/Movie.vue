@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import { Movie } from "entities";
+import { Movie } from "@alex/entities";
 import { BaseImage } from "@/utils";
 
 @Component({

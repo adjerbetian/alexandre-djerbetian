@@ -1,4 +1,4 @@
-import { buildVideo, VideoDTO } from "entities";
+import { buildVideo, VideoDTO } from "@alex/entities";
 import { api } from "@/utils";
 
 export async function fetchAllVideos() {

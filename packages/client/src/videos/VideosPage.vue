@@ -18,7 +18,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
-import { Video } from "entities";
+import { Video } from "@alex/entities";
 import { fetchAllVideos } from "./videoService";
 import VideoComponent from "./Video.vue";
 

@@ -1,4 +1,4 @@
-import { Video } from "entities";
+import { Video } from "@alex/entities";
 import { VideoRepository } from "./repositories";
 
 interface Dependencies {

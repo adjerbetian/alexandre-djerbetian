@@ -11,6 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - run: chmod +x ./e2e.sh ./monoExec.sh
+    - run: chmod +x ./e2e.sh ./monoExec.sh ./monoRun.sh
     - run: ./e2e.sh build
     - run: ./e2e.sh run

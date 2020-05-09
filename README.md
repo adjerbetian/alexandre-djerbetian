@@ -7,28 +7,24 @@ See https://alexandre.djerbetian.com
 
 ## Todo
 
-- **General**
+- **Infrastructure**
+    - [ ] [improve typescript in monorepo](https://medium.com/@NiGhTTraX/how-to-set-up-a-typescript-monorepo-with-lerna-c6acda7d4559)
+    - [ ] try yarn 2
+    - [ ] use [pre-rendering](https://github.com/chrisvfritz/prerender-spa-plugin)
+- **General**    
     - [ ] change the home page picture
     - [ ] add the navbar for mobile
     - [ ] curve the navbar
-    - [ ] try yarn 2
-    
-
 - **Content**
   - [ ] convert all quotes to the new format
   - [ ] add the quotes for the new books
-
-
 - **Quotes**
   - [ ] redesign the quote page
-  - [ ] add search possibility for the quotes
-
-
+  - [ ] add filters on quotes
+  - [ ] add search possibility on quotes
 - **Quote of the day**
   - [ ] add the "quote of the day" feature
   - [ ] add the subscription to the *quote of the day*
-
-
 - **Articles**
     - [ ] add an article section
 

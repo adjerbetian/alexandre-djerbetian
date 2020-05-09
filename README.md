@@ -3,12 +3,15 @@
 ![](https://github.com/adjerbetian/alexandre-djerbetian/workflows/End%20to%20end%20tests/badge.svg)
 ![](https://github.com/adjerbetian/alexandre-djerbetian/workflows/unit%20%26%20integration%20tests/badge.svg)
 
+See https://alexandre.djerbetian.com
+
 ## Todo
 
 - **General**
     - [ ] change the home page picture
     - [ ] add the navbar for mobile
     - [ ] curve the navbar
+    - [ ] try yarn 2
     
 
 - **Content**
@@ -28,3 +31,18 @@
 
 - **Articles**
     - [ ] add an article section
+
+## Install
+
+- prerequisites
+    - docker
+    - nodejs
+- to run the site in production mode locally
+    - `npm run prod`
+- to develop locally
+    - `npm run bootstrap`: install dependencies
+    - `npm run dev`: run in a container in watch mode
+- to run tests
+    - `npm run test`: unit / integration
+    - `npm run test:e2e`: e2e tests in a container
+    - `npm run cypress`: opens cypress (requires the website to run locally)

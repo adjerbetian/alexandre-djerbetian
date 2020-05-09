@@ -5,8 +5,8 @@
         <div class="pitch">
             <p>I am a JS developer, slightly obsessed by clean code.</p>
             <p>
-                I created this site mainly to help me take notes on the coding
-                books I'm reading. If it can help you too, I'll be glad!
+                I created this site mainly to help me take notes on the coding books I'm reading. If
+                it can help you too, I'll be glad!
             </p>
         </div>
     </div>

@@ -12,11 +12,15 @@
 <script lang="ts">
 import Vue from "vue";
 import { NavBar } from "@/navbar";
+import { api } from "@/utils";
 
 export default Vue.extend({
     name: "App",
     components: {
         NavBar
+    },
+    async mounted() {
+        await api.ping("/");
     }
 });
 </script>

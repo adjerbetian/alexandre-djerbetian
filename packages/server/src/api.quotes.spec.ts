@@ -23,6 +23,7 @@ describe("quotes", () => {
         it("should filter by the given book when provided", async () => {
             const res = await api.get("/quotes?books=refactoring");
 
+            expect(res.body).not.to.be.empty;
             expect(res.body).to.satisfy((quotes: QuoteDTO[]) =>
                 quotes.every((quote) => quote.bookId === "refactoring")
             );

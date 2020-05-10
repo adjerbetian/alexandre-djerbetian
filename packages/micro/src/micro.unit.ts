@@ -4,6 +4,7 @@ import {
     buildPromiseObserver,
     pAll,
     sleep,
+    toArray,
     trimCommonIndentation
 } from "./micro";
 
@@ -119,5 +120,21 @@ describe("pAll", () => {
         const results = await pAll(values, async (v, i) => i);
 
         expect(results).to.deep.equal([0, 1, 2]);
+    });
+});
+describe("toArray", () => {
+    it("should return the array filtered of falsy values", () => {
+        expect(toArray(["", "a", "b", null])).to.deep.equal(["a", "b"]);
+    });
+    it("should return an array containing the given value", () => {
+        expect(toArray("value")).to.deep.equal(["value"]);
+        expect(toArray({ a: 2 })).to.deep.equal([{ a: 2 }]);
+        expect(toArray(true)).to.deep.equal([true]);
+    });
+    it("should return an array when given falsy values", () => {
+        expect(toArray(undefined)).to.deep.equal([]);
+        expect(toArray(null)).to.deep.equal([]);
+        expect(toArray("")).to.deep.equal([]);
+        expect(toArray(false)).to.deep.equal([]);
     });
 });

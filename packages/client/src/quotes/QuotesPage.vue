@@ -16,7 +16,7 @@
                             type="checkbox"
                             v-model="bookFilters"
                             :value="book.id"
-                            @change="updateSearch"
+                            @change="onFilterUpdate"
                         />
                         {{ book.title }}
                     </label>
@@ -30,7 +30,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import _ from "lodash";
+import { µ } from "@alex/micro";
 import { Component } from "vue-property-decorator";
 import { Book, Quote } from "@alex/entities";
 import * as quoteService from "./quoteService";
@@ -44,29 +44,24 @@ export default class QuotesPage extends Vue {
     bookFilters: string[] = [];
 
     async mounted() {
-        this.initFiltersFromSearchQuery();
         this.books = await bookService.fetchAll();
-        this.quotes = await quoteService.fetchAll({ books: this.bookFilters });
 
+        await this.initFiltersFromSearchQuery();
         this.$watch("$route.query.books", this.initFiltersFromSearchQuery);
     }
-    initFiltersFromSearchQuery() {
+    async initFiltersFromSearchQuery() {
         this.bookFilters.length = 0;
-        this.bookFilters.push(...toArray(this.$route.query.books));
+        this.bookFilters.push(...µ.toArray(this.$route.query.books));
+        await this.refreshQuotes();
     }
-    async updateSearch() {
+    async onFilterUpdate() {
+        await this.refreshQuotes();
         await this.$router.push({ query: { books: this.bookFilters } });
     }
+    async refreshQuotes() {
+        this.quotes = await quoteService.fetchAll({ books: this.bookFilters });
+    }
 }
-
-function toArray(query: SearchQuery): string[] {
-    if (!query) return [];
-    if (typeof query === "string") return [query];
-
-    return query.map((q) => q || "").filter((q) => !_.isEmpty(q));
-}
-
-type SearchQuery = string | (string | null)[];
 </script>
 
 <style lang="scss" scoped>

@@ -45,8 +45,8 @@ export default class QuotesPage extends Vue {
 
     async mounted() {
         this.initFiltersFromSearchQuery();
-        this.quotes = await quoteService.fetchAll();
         this.books = await bookService.fetchAll();
+        this.quotes = await quoteService.fetchAll({ books: this.bookFilters });
 
         this.$watch("$route.query.books", this.initFiltersFromSearchQuery);
     }

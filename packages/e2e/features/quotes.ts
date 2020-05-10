@@ -78,7 +78,7 @@ describe("Quotes page", () => {
             cy.go("forward");
             checkboxFor("clean-architecture").should("be.checked");
         });
-        it.skip("should not show quotes from Clean Code when filtering for Refactoring", () => {
+        it("should not show quotes from Clean Code when filtering for Refactoring", () => {
             cy.contains("Clean Code - chapter 1");
 
             cy.contains("div", "Filters").within(() =>

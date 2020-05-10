@@ -2,22 +2,31 @@ import { api, expect } from "./test/integration";
 import { QuoteDTO } from "@alex/entities";
 
 describe("quotes", () => {
-    it("GET /quotes", async () => {
-        const res = await api.get("/quotes");
+    describe("GET /quotes", () => {
+        it("should return the best 10 quotes", async () => {
+            const res = await api.get("/quotes");
 
-        expect(res.body).to.have.lengthOf(10);
-        expect(res.body).to.satisfy((quotes: QuoteDTO[]) =>
-            quotes.some((quote) =>
-                doesQuoteMatch(quote, {
-                    id: "clean-code-p8-bis",
-                    bookId: "clean-code",
-                    chapter: 1,
-                    chapterTitle: "Clean Code",
-                    page: "8",
-                    content: "Clean code reads like well-written prose"
-                })
-            )
-        );
+            expect(res.body).to.have.lengthOf(10);
+            expect(res.body).to.satisfy((quotes: QuoteDTO[]) =>
+                quotes.some((quote) =>
+                    doesQuoteMatch(quote, {
+                        id: "clean-code-p8-bis",
+                        bookId: "clean-code",
+                        chapter: 1,
+                        chapterTitle: "Clean Code",
+                        page: "8",
+                        content: "Clean code reads like well-written prose"
+                    })
+                )
+            );
+        });
+        it("should filter by the given book when provided", async () => {
+            const res = await api.get("/quotes?books=refactoring");
+
+            expect(res.body).to.satisfy((quotes: QuoteDTO[]) =>
+                quotes.every((quote) => quote.bookId === "refactoring")
+            );
+        });
     });
     it("GET /quotes/:id", async () => {
         const res = await api.get("/quotes/clean-code-p8-bis");

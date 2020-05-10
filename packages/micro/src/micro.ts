@@ -56,3 +56,10 @@ export async function pAll<T, U>(
 ) {
     return Promise.all(array.map(callback));
 }
+
+export function toArray<T>(query: T | (T | null)[] | null | undefined): T[] {
+    if (!query) return [];
+    if (!Array.isArray(query)) return [query];
+
+    return query.filter((q): q is T => !!q);
+}

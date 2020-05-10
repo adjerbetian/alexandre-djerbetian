@@ -1,8 +1,8 @@
 import { QuoteDTO, buildQuote } from "@alex/entities";
 import { api } from "@/utils";
 
-export async function fetchAll() {
-    const dtos: QuoteDTO[] = await api.get("/quotes");
+export async function fetchAll({ books = [] }: { books?: string[] }) {
+    const dtos: QuoteDTO[] = await api.get("/quotes", { query: { books } });
     return dtos.map((dto) => buildQuote(dto));
 }
 export async function fetchQuote(id: string) {

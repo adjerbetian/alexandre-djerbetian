@@ -4,25 +4,23 @@
 
         <div class="menuGroup">
             <div class="menuItems">
-                <NavLink to="/resume/" icon="file">Resume</NavLink>
+                <NavLink to="/resume" icon="file">Resume</NavLink>
             </div>
         </div>
 
         <div class="menuGroup">
             <h3><NavIcon icon="code" />Coding</h3>
             <div class="menuItems">
-                <NavLink to="/books/" icon="book">Books</NavLink>
-                <NavLink to="/quotes/" icon="comment">Quotes</NavLink>
-                <NavLink to="/videos/" :icon="['fab', 'youtube']"
-                    >Videos</NavLink
-                >
+                <NavLink to="/books" icon="book">Books</NavLink>
+                <NavLink to="/quotes" icon="comment">Quotes</NavLink>
+                <NavLink to="/videos" :icon="['fab', 'youtube']">Videos</NavLink>
             </div>
         </div>
 
         <div class="menuGroup">
             <h3><NavIcon :icon="['far', 'user']" />Other</h3>
             <div class="menuItems">
-                <NavLink to="/movies/" icon="film">Short movies</NavLink>
+                <NavLink to="/movies" icon="film">Short movies</NavLink>
             </div>
         </div>
     </div>

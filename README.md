@@ -32,6 +32,7 @@ See https://alexandre.djerbetian.com
   - [ ] add an article section
   - [ ] add my video about Clean Architecture
   - [ ] add the slides of Clean Archi
+  - [ ] write an article about ["Fuck classes, use factories"](https://github.com/360Learning/platform/pull/546#discussion_r422938352)
 
 ## Install
 

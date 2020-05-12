@@ -8,6 +8,9 @@
         "start": "node dist/server.js",
         "compile": "tsc --project tsconfig.build.json"
     },
+    "dependencies": {
+        "@alex/micro": "file:../micro"
+    },
     "devDependencies": {
         "@types/node": "^13.13.2",
         "typescript": "^3.8.3"

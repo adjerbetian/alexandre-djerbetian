@@ -29,20 +29,39 @@ describe("quotes", () => {
             );
         });
     });
+    describe("GET /quotes/books", () => {
+        it("should return books which have quotes", async () => {
+            const res = await api.get("/quotes/books");
+
+            expect(hasBook(res.body, "clean-code")).to.be.true;
+            expect(hasBook(res.body, "refactoring")).to.be.true;
+        });
+        it("should not return books which don't have quotes", async () => {
+            const res = await api.get("/quotes/books");
+
+            expect(hasBook(res.body, "the-clean-coder")).to.be.false;
+            expect(hasBook(res.body, "clean-architecture")).to.be.false;
+        });
+
+        function hasBook(array: any[], bookId: string) {
+            return array.some((element) => element.id === bookId);
+        }
+    });
     it("GET /quotes/:id", async () => {
         const res = await api.get("/quotes/clean-code-p8-bis");
 
-        expect(res.body).to.deep.equal({
+        expect(res.body).to.deep.include({
             id: "clean-code-p8-bis",
             bookId: "clean-code",
             bookTitle: "Clean Code",
             chapter: 1,
             chapterTitle: "Clean Code",
-            content:
-                '**"_Clean code reads like well-written prose._"** [citation of Grady Booch]',
             page: "8",
             rating: 5
         });
+        expect(res.body.content).to.include(
+            "Clean code reads like well-written prose."
+        );
     });
 });
 

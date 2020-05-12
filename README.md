@@ -24,6 +24,7 @@ See https://alexandre.djerbetian.com
   - [ ] redesign the quote page
   - [ ] add book filters
   - [ ] add tag filters
+  - [ ] add test for id unicity
   - [ ] add textual search
 - **Quote of the day**
   - [ ] add the "quote of the day" feature

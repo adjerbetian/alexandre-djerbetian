@@ -34,7 +34,6 @@ import { µ } from "@alex/micro";
 import { Component } from "vue-property-decorator";
 import { Book, Quote } from "@alex/entities";
 import * as quoteService from "./quoteService";
-import { bookService } from "@/books";
 import QuoteComponent from "./Quote.vue";
 
 @Component({ components: { QuoteComponent } })
@@ -44,7 +43,7 @@ export default class QuotesPage extends Vue {
     bookFilters: string[] = [];
 
     async mounted() {
-        this.books = await bookService.fetchAll();
+        this.books = await quoteService.fetchAllBooks();
 
         await this.initFiltersFromSearchQuery();
         this.$watch("$route.query.books", this.initFiltersFromSearchQuery);

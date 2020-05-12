@@ -31,13 +31,14 @@ describe("Quotes page", () => {
         ).should("not.exist");
     });
     describe("book filters", () => {
-        it("should have one filter per book", () => {
+        it("should have one filter per book which have quotes", () => {
             cy.contains("div", "Filters").within(() => {
                 cy.contains("Clean Code");
-                cy.contains("The Clean Coder");
-                cy.contains("Clean Architecture");
                 cy.contains("Refactoring");
                 cy.contains("The Mythical Man-Month");
+
+                cy.contains("The Clean Coder").should("not.exist");
+                cy.contains("Clean Architecture").should("not.exist");
             });
         });
         it("should check the filter when clicking on the filter", () => {
@@ -52,31 +53,31 @@ describe("Quotes page", () => {
             clickOnFilter("Refactoring");
             cy.location("search").should("equal", "?books=refactoring");
 
-            clickOnFilter("Clean Architecture");
-            cy.location("search").should("equal", "?books=refactoring&books=clean-architecture");
+            clickOnFilter("Clean Code");
+            cy.location("search").should("equal", "?books=refactoring&books=clean-code");
 
             clickOnFilter("Refactoring");
-            cy.location("search").should("equal", "?books=clean-architecture");
+            cy.location("search").should("equal", "?books=clean-code");
 
-            clickOnFilter("Clean Architecture");
+            clickOnFilter("Clean Code");
             cy.location("search").should("be.empty");
         });
         it("should check the right filters when loading a page with a book query", () => {
-            cy.visit("/quotes?books=refactoring&books=clean-architecture");
+            cy.visit("/quotes?books=refactoring&books=clean-code");
 
             checkboxFor("refactoring").should("be.checked");
-            checkboxFor("clean-architecture").should("be.checked");
-            checkboxFor("clean-code").should("not.be.checked");
+            checkboxFor("clean-code").should("be.checked");
+            checkboxFor("design-patterns").should("not.be.checked");
         });
         it("should uncheck/recheck the right filter when navigating back and forth", () => {
-            clickOnFilter("Clean Architecture");
-            checkboxFor("clean-architecture").should("be.checked");
+            clickOnFilter("Refactoring");
+            checkboxFor("refactoring").should("be.checked");
 
             cy.go("back");
-            checkboxFor("clean-architecture").should("not.be.checked");
+            checkboxFor("refactoring").should("not.be.checked");
 
             cy.go("forward");
-            checkboxFor("clean-architecture").should("be.checked");
+            checkboxFor("refactoring").should("be.checked");
         });
         it("should not show quotes from Clean Code when filtering for Refactoring", () => {
             cy.contains("Clean Code - chapter 1");

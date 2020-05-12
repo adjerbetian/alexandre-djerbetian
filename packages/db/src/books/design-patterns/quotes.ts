@@ -95,7 +95,7 @@ export const quotes: QuoteDBModel[] = [
                 subsystems that it leads to the following principle of
                 reusable object-oriented design:
             </p>
-            ${centered(`
+            ${tip(`
                 <strong>Program to an interface, not an implementation.</strong>
             `)}
             <p>
@@ -204,7 +204,7 @@ export const quotes: QuoteDBModel[] = [
                 That leads us to our second principle of object-oriented
                 design:
             </p>
-            ${centered(`
+            ${tip(`
                 <strong>Favor object composition over class inheritance.</strong>
             `)}
             <p>
@@ -233,7 +233,7 @@ export const quotes: QuoteDBModel[] = [
         chapter: 1,
         page: "20",
         content: `
-            ${centered(`
+            ${tip(`
                 <strong>Favor object composition over class inheritance.</strong>
             `)}
             <p>
@@ -516,7 +516,7 @@ export const quotes: QuoteDBModel[] = [
     }
 ];
 
-function centered(content: string) {
+function tip(content: string) {
     return `
         <p style="margin-left: 40px; margin-right: 40px; font-style: italic;">
             ${content}

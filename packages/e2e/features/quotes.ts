@@ -24,11 +24,26 @@ describe("Quotes page", () => {
                 cy.contains("Clean Code - chapter 1 - Clean Code, p8")
             );
     });
-    it("should include the best quotes first (and not print the less good quotes)", () => {
-        cy.contains("Clean code reads like well-written prose.");
-        cy.contains(
-            "There are two parts to learning craftsmanship: knowledge and work."
-        ).should("not.exist");
+    describe("sorting", () => {
+        it("should print the best quotes first (and not print the less good quotes)", () => {
+            cy.contains("Clean code reads like well-written prose.");
+            cy.contains(
+                "There are two parts to learning craftsmanship: knowledge and work."
+            ).should("not.exist");
+        });
+        it("should print the short quotes first", () => {
+            const shortQuote = "Clean code reads like well-written prose.";
+
+            cy.get(".quote").then((quotes) => {
+                expect(getQuoteIndex(shortQuote)).to.equal(0);
+
+                function getQuoteIndex(content: string) {
+                    return quotes
+                        .toArray()
+                        .findIndex((q) => q.textContent?.includes(content));
+                }
+            });
+        });
     });
     describe("book filters", () => {
         it("should have one filter per book which have quotes", () => {

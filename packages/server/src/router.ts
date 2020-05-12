@@ -25,6 +25,7 @@ export function buildRouter(
     app.get("/books/:id", controllers.books.getBook);
 
     app.get("/quotes", controllers.quotes.getAllQuotes);
+    app.get("/quotes/books", controllers.quotes.getAllBooksWithQuotes);
     app.get("/quotes/:id", controllers.quotes.getQuote);
 
     return app;

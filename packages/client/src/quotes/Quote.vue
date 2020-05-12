@@ -1,6 +1,6 @@
 <template>
     <div class="quote" :id="quote.id">
-        <blockquote class="content" v-html="parseContent(quote.content)" />
+        <blockquote class="content" v-html="quote.content" />
 
         <router-link :to="`/quotes/${quote.id}`" class="caption">
             {{ quote.bookTitle }} -
@@ -15,15 +15,10 @@
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
 import { Quote } from "@alex/entities";
-import { textService } from "@/utils";
 
 @Component
 export default class QuoteComponent extends Vue {
     @Prop(Object) quote!: Quote;
-
-    parseContent() {
-        return textService.parseText(this.quote.content);
-    }
 }
 </script>
 

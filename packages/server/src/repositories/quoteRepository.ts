@@ -12,6 +12,9 @@ export const quoteRepository: QuoteRepository = {
         const quote = getAllQuotes().find((q) => q.id === id);
         if (!quote) throw new NotFound(id);
         return quote;
+    },
+    fetchFromBook(bookId) {
+        return getAllQuotes().filter((q) => q.bookId === bookId);
     }
 };
 

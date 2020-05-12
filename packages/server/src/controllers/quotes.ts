@@ -15,6 +15,10 @@ export function buildQuoteControllers(domain: Domain) {
         getQuote(req, res) {
             const quote = domain.quotes.getQuote(req.params.id);
             res.json(quote);
+        },
+        getAllBooksWithQuotes(req, res) {
+            const books = domain.quotes.getAllBooksWithQuotes();
+            res.json(books);
         }
     });
 }

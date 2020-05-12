@@ -1,5 +1,5 @@
 import { movieRepository } from "./movieRepository";
-import { buildMovieControllers } from "./controllers";
+import { buildMovieControllers } from "./movieControllers";
 import { buildMovieUseCases } from "./movies";
 
 const movieUseCases = buildMovieUseCases({ movieRepository });

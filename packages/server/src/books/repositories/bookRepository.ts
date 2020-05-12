@@ -1,8 +1,8 @@
 import { Book, BookDTO, buildBook } from "@alex/entities";
 import * as db from "@alex/db";
 import { BookDBModel } from "@alex/db";
-import { BookRepository } from "../domain";
-import { NotFound } from "../utils";
+import { BookRepository } from "../useCases";
+import { NotFound } from "../../utils";
 import { µ } from "@alex/micro";
 
 export const bookRepository: BookRepository = {

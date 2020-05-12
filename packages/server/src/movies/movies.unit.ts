@@ -1,6 +1,5 @@
 import { buildStubFor, expect, Stub, generators } from "../test/unit";
-import { buildMovieUseCases } from "./movies";
-import { MovieRepository } from "./repositories";
+import { buildMovieUseCases, MovieRepository } from "./movies";
 
 describe("movies use cases", () => {
     let movieRepository: Stub<MovieRepository>;

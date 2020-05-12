@@ -1,9 +1,28 @@
-import { buildRouter } from "./router";
-import { buildDomain } from "./domain";
-import * as repositories from "./repositories";
-import { buildControllers } from "./controllers";
+import express from "express";
+import logger from "morgan";
+import cookieParser from "cookie-parser";
+import cors from "cors";
+import { bookControllers } from "./books";
+import { movieControllers } from "./movies";
+import { videoControllers } from "./videos";
 
-const domain = buildDomain(repositories);
-const controllers = buildControllers(domain);
+export const app = express();
+app.use(logger("dev"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(cors());
 
-export const app = buildRouter(controllers);
+app.get("/", (req, res) => res.send("coucou"));
+
+app.get("/movies", movieControllers.getAllMovies);
+app.get("/movies/:id", movieControllers.getMovie);
+
+app.get("/videos", videoControllers.getAllVideos);
+
+app.get("/books", bookControllers.getAllBooks);
+app.get("/books/:id", bookControllers.getBook);
+
+app.get("/quotes", bookControllers.getAllQuotes);
+app.get("/quotes/books", bookControllers.getAllBooksWithQuotes);
+app.get("/quotes/:id", bookControllers.getQuote);

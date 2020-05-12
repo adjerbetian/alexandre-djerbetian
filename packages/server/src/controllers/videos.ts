@@ -1,4 +1,4 @@
-import { asControllers } from "./Controller";
+import { asControllers } from "../utils";
 import { Domain } from "../domain";
 
 export function buildVideoControllers(domain: Domain) {

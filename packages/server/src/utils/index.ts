@@ -1,0 +1,1 @@
+export { asControllers } from "./Controller";

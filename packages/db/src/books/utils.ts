@@ -6,6 +6,9 @@ export function java(content: string) {
 export function cpp(content: string) {
     return code("cpp", content);
 }
+export function javascript(content: string) {
+    return code("javascript", content);
+}
 
 function code(lang: string, content: string) {
     // prettier-ignore

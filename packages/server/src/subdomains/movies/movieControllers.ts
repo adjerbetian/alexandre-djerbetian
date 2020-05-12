@@ -1,4 +1,4 @@
-import { asControllers } from "../utils";
+import { asControllers } from "../../utils";
 import { MovieUseCases } from "./movies";
 
 export function buildMovieControllers(useCases: MovieUseCases) {

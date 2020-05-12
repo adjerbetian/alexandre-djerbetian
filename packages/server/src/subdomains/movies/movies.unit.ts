@@ -1,4 +1,4 @@
-import { buildStubFor, expect, Stub, generators } from "../test/unit";
+import { buildStubFor, expect, Stub, generators } from "../../test/unit";
 import { buildMovieUseCases, MovieRepository } from "./movies";
 
 describe("movies use cases", () => {

@@ -2,9 +2,11 @@ import express from "express";
 import logger from "morgan";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import { bookControllers } from "./books";
-import { movieControllers } from "./movies";
-import { videoControllers } from "./videos";
+import {
+    bookControllers,
+    movieControllers,
+    videoControllers
+} from "./subdomains";
 
 export const app = express();
 app.use(logger("dev"));

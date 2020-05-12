@@ -35,7 +35,7 @@ describe("Quotes page", () => {
             cy.contains("div", "Filters").within(() => {
                 cy.contains("Clean Code");
                 cy.contains("Refactoring");
-                cy.contains("The Mythical Man-Month");
+                cy.contains("Design Patterns");
 
                 cy.contains("The Clean Coder").should("not.exist");
                 cy.contains("Clean Architecture").should("not.exist");

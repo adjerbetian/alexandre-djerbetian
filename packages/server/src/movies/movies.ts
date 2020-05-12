@@ -1,9 +1,4 @@
 import { Movie } from "@alex/entities";
-import { MovieRepository } from "./repositories";
-
-interface Dependencies {
-    movieRepository: MovieRepository;
-}
 
 export function buildMovieUseCases({ movieRepository }: Dependencies) {
     return {
@@ -14,4 +9,13 @@ export function buildMovieUseCases({ movieRepository }: Dependencies) {
             return movieRepository.fetchById(id);
         }
     };
+}
+
+export type MovieUseCases = ReturnType<typeof buildMovieUseCases>;
+export interface MovieRepository {
+    fetchAll(): Movie[];
+    fetchById(id: string): Movie;
+}
+interface Dependencies {
+    movieRepository: MovieRepository;
 }

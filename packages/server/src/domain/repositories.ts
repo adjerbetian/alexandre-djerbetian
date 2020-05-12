@@ -1,16 +1,11 @@
-import { Quote, Movie, Video, Book } from "@alex/entities";
+import { Quote, Video, Book } from "@alex/entities";
 
 export interface Repositories {
-    movieRepository: MovieRepository;
     videoRepository: VideoRepository;
     bookRepository: BookRepository;
     quoteRepository: QuoteRepository;
 }
 
-export interface MovieRepository {
-    fetchAll(): Movie[];
-    fetchById(id: string): Movie;
-}
 export interface VideoRepository {
     fetchAll(): Video[];
 }

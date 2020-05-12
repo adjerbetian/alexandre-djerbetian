@@ -1,8 +1,8 @@
-import { Quote, buildQuote } from "@alex/entities";
+import { buildQuote, Quote } from "@alex/entities";
 import * as db from "@alex/db";
 import { QuoteRepository } from "../domain";
 import { µ } from "@alex/micro";
-import { NotFound } from "./errors";
+import { NotFound } from "../utils";
 
 export const quoteRepository: QuoteRepository = {
     fetchAll() {

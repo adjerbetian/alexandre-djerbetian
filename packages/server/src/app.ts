@@ -5,4 +5,5 @@ import { buildControllers } from "./controllers";
 
 const domain = buildDomain(repositories);
 const controllers = buildControllers(domain);
+
 export const app = buildRouter(controllers);

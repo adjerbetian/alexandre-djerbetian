@@ -1,8 +1,9 @@
 import express, { Express } from "express";
-import { buildControllers } from "./controllers";
 import logger from "morgan";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+import { buildControllers } from "./controllers";
+import { movieControllers } from "./movies";
 
 export function buildRouter(
     controllers: ReturnType<typeof buildControllers>
@@ -16,8 +17,8 @@ export function buildRouter(
 
     app.get("/", (req, res) => res.send("coucou"));
 
-    app.get("/movies", controllers.movies.getAllMovies);
-    app.get("/movies/:id", controllers.movies.getMovie);
+    app.get("/movies", movieControllers.getAllMovies);
+    app.get("/movies/:id", movieControllers.getMovie);
 
     app.get("/videos", controllers.videos.getAllVideos);
 

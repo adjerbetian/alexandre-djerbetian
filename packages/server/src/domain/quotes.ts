@@ -20,7 +20,10 @@ export function buildQuoteUseCases({
                         _.isEmpty(filters.books) ||
                         filters.books.some((id) => q.isFrom(id))
                 )
-                .sort((q1, q2) => q2.rating - q1.rating)
+                .sort(
+                    (q1, q2) =>
+                        q2.rating - q1.rating || q1.getLength() - q2.getLength()
+                )
                 .slice(0, filters.limit);
         },
         getQuote(id: string) {
@@ -29,7 +32,8 @@ export function buildQuoteUseCases({
         getAllBooksWithQuotes() {
             return bookRepository
                 .fetchAll()
-                .filter((b) => !_.isEmpty(quoteRepository.fetchFromBook(b.id)));
+                .filter((b) => !_.isEmpty(quoteRepository.fetchFromBook(b.id)))
+                .sort((b1, b2) => (b2.title > b1.title ? -1 : 1));
         }
     };
 }

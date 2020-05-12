@@ -29,7 +29,7 @@ export const chapters = [
 
 export const quotes: QuoteDBModel[] = [
     {
-        id: "clean-code-pxxvi",
+        id: "learning-craftsmanship-is-like-riding-a-bicycle",
         chapter: 0,
         page: "xxvi",
         content: `
@@ -81,7 +81,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 2
     },
     {
-        id: "clean-code-p3",
+        id: "cost-of-bad-code",
         chapter: 1,
         page: "3",
         content: `
@@ -104,7 +104,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 5
     },
     {
-        id: "clean-code-p5",
+        id: "bad-code-is-our-fault",
         chapter: 1,
         page: "5",
         content: `
@@ -130,7 +130,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 5
     },
     {
-        id: "clean-code-p6",
+        id: "take-the-time-to-go-fast",
         chapter: 1,
         page: "6",
         content: `
@@ -161,7 +161,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 5
     },
     {
-        id: "clean-code-p6-bis",
+        id: "clean-code-is-like-painting",
         chapter: 1,
         page: "6",
         content: `
@@ -178,7 +178,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 4
     },
     {
-        id: "clean-code-p8",
+        id: "clean-code-does-one-thing-well",
         chapter: 1,
         page: "8",
         content: `
@@ -203,7 +203,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 4
     },
     {
-        id: "clean-code-p8-bis",
+        id: "clean-code-reads-like-well-written-prose",
         chapter: 1,
         page: "8",
         content: `
@@ -221,7 +221,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 5
     },
     {
-        id: "clean-code-p9",
+        id: "code-without-tests-is-not-clean",
         chapter: 1,
         page: "9",
         content: `
@@ -239,7 +239,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 3
     },
     {
-        id: "clean-code-p11",
+        id: "clean-code-read-as-expected",
         chapter: 1,
         page: "11",
         content: `
@@ -253,7 +253,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 3
     },
     {
-        id: "clean-code-p12",
+        id: "clean-code-looks-ridiculously-simple",
         chapter: 1,
         page: "12",
         content: `
@@ -267,7 +267,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 3
     },
     {
-        id: "clean-code-p12-bis",
+        id: "clean-makes-the-langage-made-for-problem",
         chapter: 1,
         page: "12",
         content: `
@@ -286,7 +286,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 2
     },
     {
-        id: "clean-code-p14",
+        id: "if-you-want-your-code-to-be-easy-to-write-make-it-easy-to-read",
         chapter: 1,
         page: "14",
         content: `
@@ -313,7 +313,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 3
     },
     {
-        id: "clean-code-p14-bis",
+        id: "the-boy-scout-rule",
         chapter: 1,
         page: "14",
         content: `
@@ -356,7 +356,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 5
     },
     {
-        id: "clean-code-p15",
+        id: "practice-son-practice",
         chapter: 1,
         page: "15",
         content: `
@@ -377,7 +377,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 3
     },
     {
-        id: "clean-code-p18",
+        id: "good-names-dont-require-comments",
         chapter: 2,
         page: "18",
         content: `
@@ -392,7 +392,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 4
     },
     {
-        id: "clean-code-p18-bis",
+        id: "names-should-reveal-the-intent-explicitly",
         chapter: 2,
         page: "18",
         content: `
@@ -433,7 +433,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 3
     },
     {
-        id: "clean-code-p25",
+        id: "clarity-is-king",
         chapter: 2,
         page: "25",
         content: `
@@ -446,7 +446,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 4
     },
     {
-        id: "clean-code-p34",
+        id: "small-and-even-smaller",
         chapter: 3,
         page: "34",
         content: `
@@ -503,7 +503,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 4
     },
     {
-        id: "clean-code-p114",
+        id: "boundary-tension",
         chapter: 8,
         page: "114",
         content: `
@@ -521,7 +521,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 3
     },
     {
-        id: "clean-code-p115",
+        id: "boundary-interface",
         chapter: 8,
         page: "115",
         content: `
@@ -542,7 +542,7 @@ export const quotes: QuoteDBModel[] = [
                 }
             `)}
             <p>
-                <strong>The interface at the boundary ( Map ) is hidden.</strong>
+                <strong>The interface at the boundary (Map) is hidden.</strong>
                 It is able to evolve with very little impact on the rest of
                 the application. The use of generics is no longer a big
                 issue because the casting and type management is handled
@@ -564,7 +564,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 3
     },
     {
-        id: "clean-code-p116",
+        id: "learning-tests",
         chapter: 8,
         page: "116",
         content: `
@@ -607,7 +607,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 4
     },
     {
-        id: "clean-code-p122",
+        id: "the-three-laws-of-tdd",
         chapter: 9,
         page: "122",
         content: `
@@ -647,7 +647,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 3
     },
     {
-        id: "clean-code-p123",
+        id: "keeping-tests-clean",
         chapter: 9,
         page: "123",
         content: `
@@ -732,7 +732,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 5
     },
     {
-        id: "clean-code-p124",
+        id: "tests-give-confidence",
         chapter: 9,
         page: "124",
         content: `

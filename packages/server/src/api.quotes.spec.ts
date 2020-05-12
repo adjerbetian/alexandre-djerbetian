@@ -3,21 +3,37 @@ import { QuoteDTO } from "@alex/entities";
 
 describe("quotes", () => {
     describe("GET /quotes", () => {
-        it("should return the best 10 quotes", async () => {
+        it("should return an array of quotes", async () => {
+            const res = await api.get("/quotes");
+
+            expect(res.body).to.be.an("array");
+
+            const quote = res.body[0];
+            expect(quote).to.have.property("id");
+            expect(quote).to.have.property("bookId");
+            expect(quote).to.have.property("bookTitle");
+            expect(quote).to.have.property("chapter");
+            expect(quote).to.have.property("chapterTitle");
+            expect(quote).to.have.property("page");
+            expect(quote).to.have.property("rating");
+        });
+        it("should return 10 quotes", async () => {
             const res = await api.get("/quotes");
 
             expect(res.body).to.have.lengthOf(10);
+        });
+        it("should return the best quotes", async () => {
+            const res = await api.get("/quotes");
+
             expect(res.body).to.satisfy((quotes: QuoteDTO[]) =>
-                quotes.some((quote) =>
-                    doesQuoteMatch(quote, {
-                        id: "clean-code-p8-bis",
-                        bookId: "clean-code",
-                        chapter: 1,
-                        chapterTitle: "Clean Code",
-                        page: "8",
-                        content: "Clean code reads like well-written prose"
-                    })
-                )
+                quotes.every((quote) => quote.rating === 5)
+            );
+        });
+        it("should return the shortest quotes first", async () => {
+            const res = await api.get("/quotes");
+
+            expect(res.body[0].id).to.equal(
+                "clean-code-reads-like-well-written-prose"
             );
         });
         it("should filter by the given book when provided", async () => {
@@ -47,47 +63,22 @@ describe("quotes", () => {
             return array.some((element) => element.id === bookId);
         }
     });
-    it("GET /quotes/:id", async () => {
-        const res = await api.get("/quotes/clean-code-p8-bis");
+    describe("GET /quotes/:id", () => {
+        it("should return the quote", async () => {
+            const res = await api.get("/quotes/the-boy-scout-rule");
 
-        expect(res.body).to.deep.include({
-            id: "clean-code-p8-bis",
-            bookId: "clean-code",
-            bookTitle: "Clean Code",
-            chapter: 1,
-            chapterTitle: "Clean Code",
-            page: "8",
-            rating: 5
+            expect(res.body).to.deep.include({
+                id: "the-boy-scout-rule",
+                bookId: "clean-code",
+                bookTitle: "Clean Code",
+                chapter: 1,
+                chapterTitle: "Clean Code",
+                page: "14",
+                rating: 5
+            });
+            expect(res.body.content).to.include(
+                "Leave the campground cleaner than you found it."
+            );
         });
-        expect(res.body.content).to.include(
-            "Clean code reads like well-written prose."
-        );
     });
 });
-
-function doesQuoteMatch(quote: QuoteDTO, partialQuote: Partial<QuoteDTO>) {
-    // prettier-ignore
-    return (
-        doesFieldMatch("id") &&
-        doesFieldMatch("bookId") &&
-        doesFieldMatch("chapter") &&
-        doesFieldMatch("chapterTitle") &&
-        doesFieldMatch("page") &&
-        doesFieldInclude("content")
-    );
-
-    function doesFieldMatch(field: keyof QuoteDTO) {
-        if (!partialQuote[field]) return true;
-        return quote[field] === partialQuote[field];
-    }
-    function doesFieldInclude(field: keyof QuoteDTO) {
-        if (!partialQuote[field]) return true;
-
-        const actual = quote[field];
-        const expected = partialQuote[field];
-        if (typeof actual !== "string" || typeof expected !== "string")
-            return false;
-
-        return actual.includes(expected);
-    }
-}

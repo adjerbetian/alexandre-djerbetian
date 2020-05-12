@@ -1,10 +1,8 @@
 {
+    "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "strict": true,
-        "target": "es5",
-        "lib": ["es5", "dom"],
-        "types": ["cypress"],
-        "noEmit": true
+        "lib": ["es2019", "dom"],
+        "types": ["cypress"]
     },
     "include": [
         "**/*.ts"

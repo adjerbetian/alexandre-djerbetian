@@ -22,7 +22,7 @@ See https://alexandre.djerbetian.com
   - [ ] add the quotes for the new books
 - **Quotes**
   - [ ] redesign the quote page
-  - [ ] add book filters
+  - [X] add book filters
   - [ ] add tag filters
   - [ ] add test for id unicity
   - [ ] add textual search

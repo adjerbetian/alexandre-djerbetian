@@ -1,5 +1,5 @@
 import { Domain } from "./useCases";
-import { asControllers } from "../utils";
+import { asControllers } from "../../utils";
 import { µ } from "@alex/micro";
 
 export function buildControllers(domain: Domain) {

@@ -1,4 +1,4 @@
-import { asControllers } from "../utils";
+import { asControllers } from "../../utils";
 import { VideoUseCases } from "./videos";
 
 export function buildVideoControllers(useCases: VideoUseCases) {

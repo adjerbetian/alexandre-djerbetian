@@ -14,6 +14,7 @@ See https://alexandre.djerbetian.com
   - [ ] try yarn 2
   - [ ] use [pre-rendering](https://github.com/chrisvfritz/prerender-spa-plugin)
 - **General**    
+  - [ ] add a link to the source code repository on github
   - [ ] change the home page picture
   - [ ] add the navbar for mobile
   - [ ] curve the navbar
@@ -23,8 +24,10 @@ See https://alexandre.djerbetian.com
 - **Quotes**
   - [ ] redesign the quote page
   - [X] add book filters
+  - [ ] add pagination
   - [ ] add tag filters
   - [ ] add test for id unicity
+  - [ ] add code coloration
   - [ ] add textual search
 - **Quote of the day**
   - [ ] add the "quote of the day" feature

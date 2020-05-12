@@ -1,5 +1,5 @@
 import { µ } from "@alex/micro";
-import { asControllers } from "./Controller";
+import { asControllers } from "../utils";
 import { Domain } from "../domain";
 
 export function buildQuoteControllers(domain: Domain) {

@@ -1,9 +1,4 @@
 import { Video } from "@alex/entities";
-import { VideoRepository } from "./repositories";
-
-interface Dependencies {
-    videoRepository: VideoRepository;
-}
 
 export function buildVideoUseCases({ videoRepository }: Dependencies) {
     return {
@@ -11,4 +6,12 @@ export function buildVideoUseCases({ videoRepository }: Dependencies) {
             return videoRepository.fetchAll();
         }
     };
+}
+
+export type VideoUseCases = ReturnType<typeof buildVideoUseCases>;
+interface Dependencies {
+    videoRepository: VideoRepository;
+}
+export interface VideoRepository {
+    fetchAll(): Video[];
 }

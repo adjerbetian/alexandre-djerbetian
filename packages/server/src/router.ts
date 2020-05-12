@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import { buildControllers } from "./controllers";
 import { movieControllers } from "./movies";
+import { videoControllers } from "./videos";
 
 export function buildRouter(
     controllers: ReturnType<typeof buildControllers>
@@ -20,7 +21,7 @@ export function buildRouter(
     app.get("/movies", movieControllers.getAllMovies);
     app.get("/movies/:id", movieControllers.getMovie);
 
-    app.get("/videos", controllers.videos.getAllVideos);
+    app.get("/videos", videoControllers.getAllVideos);
 
     app.get("/books", controllers.books.getAllBooks);
     app.get("/books/:id", controllers.books.getBook);

@@ -2,7 +2,7 @@
     "name": "@alex/db",
     "version": "0.0.0",
     "private": true,
-    "main": "dist/index.js",
+    "main": "dist",
     "types": "dist/index.d.ts",
     "scripts": {
         "start": "node dist/server.js",

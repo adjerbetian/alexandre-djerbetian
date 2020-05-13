@@ -2,7 +2,7 @@
     "name": "@alex/entities",
     "version": "0.0.0",
     "private": true,
-    "main": "dist/index.js",
+    "main": "dist",
     "types": "dist/index.d.ts",
     "scripts": {
         "compile": "tsc --project tsconfig.build.json"

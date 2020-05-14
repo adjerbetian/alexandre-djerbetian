@@ -13,7 +13,8 @@
         "noImplicitAny": true,
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
-        "declaration": true
+        "declaration": true,
+        "skipLibCheck": true
     },
     "exclude": ["node_modules", "dist"]
 }

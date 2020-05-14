@@ -8,8 +8,8 @@ sync() {
     rsync -avz --delete --copy-links -e "ssh -p 5022" "${from}" "${HOST}:sites/alexandre-new/${to}"
 }
 
-npm run compile
-(cd packages/client && NODE_ENV=prod;VUE_APP_SERVER=https://api.djerbetian.com npm run build)
+yarn compile
+(cd packages/client && NODE_ENV=prod;VUE_APP_SERVER=https://api.djerbetian.com yarn build)
 
 USER=djerbeti
 IP=world-312.fr.planethoster.net

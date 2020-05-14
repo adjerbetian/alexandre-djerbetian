@@ -14,8 +14,8 @@ jobs:
         with:
           node-version: 12.x
       - run: chmod +x ./monoExec.sh ./monoRun.sh
-      - run: npm run bootstrap
-      - run: npm test
+      - run: yarn bootstrap
+      - run: yarn test
 
   tests_e2e:
     name: end to end tests
@@ -39,5 +39,5 @@ jobs:
           key: ${{ secrets.PLANETHOSTER_SSH_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
       - run: chmod +x ./deploy.sh ./monoExec.sh ./monoRun.sh
-      - run: npm run bootstrap
+      - run: yarn bootstrap
       - run: ./deploy.sh

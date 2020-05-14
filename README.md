@@ -45,11 +45,11 @@ See https://alexandre.djerbetian.com
   - docker
   - nodejs
 - to run the site in production mode locally
-  - `npm run prod`
+  - `yarn prod`
 - to develop locally
-  - `npm run bootstrap`: install dependencies
-  - `npm run dev`: run in a container in watch mode
+  - `yarn bootstrap`: install dependencies
+  - `yarn dev`: run in a container in watch mode
 - to run tests
-  - `npm run test`: unit / integration
-  - `npm run test:e2e`: e2e tests in a container
-  - `npm run cypress`: opens cypress (requires the website to run locally)
+  - `yarn test`: unit / integration
+  - `yarn test:e2e`: e2e tests in a container
+  - `yarn cypress`: opens cypress (requires the website to run locally)

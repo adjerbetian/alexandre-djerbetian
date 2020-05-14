@@ -2,6 +2,7 @@
     "name": "@alex/db",
     "version": "0.0.0",
     "private": true,
+    "license": "UNLICENSED",
     "main": "dist",
     "types": "dist/index.d.ts",
     "scripts": {
@@ -9,10 +10,10 @@
         "compile": "tsc --project tsconfig.build.json"
     },
     "dependencies": {
-        "@alex/micro": "file:../micro"
+        "@alex/micro": "0.0.0"
     },
     "devDependencies": {
         "@types/node": "^13.13.2",
-        "typescript": "^3.8.3"
+        "typescript": "~3.8.3"
     }
 }

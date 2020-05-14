@@ -6,8 +6,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test": "jest",
-    "lint": "vue-cli-service lint"
+    "test": "jest"
   },
   "dependencies": {
     "@alex/entities": "0.0.0",
@@ -36,7 +35,6 @@
     "@vue/test-utils": "^1.0.2",
     "eslint-import-resolver-webpack": "^0.12.1",
     "node-sass": "^4.14.0",
-    "prettier": "^1.19.1",
     "sass-loader": "^8.0.2",
     "typescript": "~3.8.3",
     "vue-template-compiler": "^2.6.11"

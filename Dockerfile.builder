@@ -1,7 +1,7 @@
 FROM node:12
 
 WORKDIR /app
-COPY package.json yarn.lock lerna.json tsconfig.build.json tsconfig.json monoExec.sh monoRun.sh ./
+COPY package.json yarn.lock ./
 COPY packages/client/package.json packages/client/
 COPY packages/db/package.json packages/db/
 COPY packages/e2e/package.json packages/e2e/
@@ -10,5 +10,6 @@ COPY packages/micro/package.json packages/micro/
 COPY packages/server/package.json packages/server/
 RUN yarn install
 
+COPY lerna.json tsconfig.build.json tsconfig.json monoExec.sh monoRun.sh ./
 COPY packages packages
 RUN yarn compile

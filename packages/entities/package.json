@@ -2,6 +2,7 @@
     "name": "@alex/entities",
     "version": "0.0.0",
     "private": true,
+    "license": "UNLICENSED",
     "main": "dist",
     "types": "dist/index.d.ts",
     "scripts": {
@@ -10,6 +11,6 @@
     "dependencies": {
         "@types/node": "^13.13.2",
         "ts-node": "^8.9.0",
-        "typescript": "^3.8.3"
+        "typescript": "~3.8.3"
     }
 }

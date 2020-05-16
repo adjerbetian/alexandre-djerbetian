@@ -1,9 +1,7 @@
 import { app } from "./app";
-import Debug from "debug";
 import http from "http";
 import config from "./config";
 
-const debug = Debug("server:server");
 launchServer();
 
 function launchServer() {
@@ -33,5 +31,5 @@ function onError(error: NodeJS.ErrnoException) {
 }
 
 function onListening() {
-    debug(`Listening on ${config.port}`);
+    console.log(`Listening on ${config.port}`);
 }

@@ -8,10 +8,9 @@
   ],
   "scripts": {
     "bootstrap": "yarn install --slient && yarn compile",
-    "mono:update": "./monoExec.sh 'yarn update'",
     "build": "./monoRun.sh build",
     "compile": "./monoRun.sh compile",
-    "clean": "lerna clean --yes && ./monoExec.sh 'rm -rf dist/'",
+    "clean": "rm -rf node_modules && lerna clean --yes && ./monoExec.sh 'rm -rf dist/'",
     "test": "./monoRun.sh test",
     "dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build",
     "prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up --build",

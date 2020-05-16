@@ -1,6 +1,6 @@
 {
     "name": "@alex/server",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "private": true,
     "scripts": {
         "start": "node dist/server.js",
@@ -9,9 +9,9 @@
         "test": "mocha"
     },
     "dependencies": {
-        "@alex/db": "0.0.0",
-        "@alex/entities": "0.0.0",
-        "@alex/micro": "0.0.0",
+        "@alex/db": "1.0.0",
+        "@alex/entities": "1.0.0",
+        "@alex/micro": "1.0.0",
         "cookie-parser": "^1.4.5",
         "cors": "^2.8.5",
         "express": "^4.17.1",

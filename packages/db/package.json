@@ -10,9 +10,7 @@
         "compile": "tsc --project tsconfig.build.json"
     },
     "dependencies": {
-        "@alex/micro": "1.0.0"
-    },
-    "devDependencies": {
+        "@alex/micro": "1.0.0",
         "@types/node": "^14.0.1",
         "typescript": "~3.8.3"
     }

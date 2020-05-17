@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "bootstrap": "yarn install --slient && yarn compile",
+    "bootstrap": "yarn install --silent && yarn compile",
     "build": "./monoRun.sh build",
     "compile": "./monoRun.sh compile",
     "clean": "rm -rf node_modules && lerna clean --yes && ./monoExec.sh 'rm -rf dist/'",

@@ -11,5 +11,6 @@ COPY packages/server/package.json packages/server/
 RUN yarn install
 
 COPY lerna.json tsconfig.build.json tsconfig.json monoExec.sh monoRun.sh ./
+COPY overrides overrides
 COPY packages packages
 RUN yarn compile

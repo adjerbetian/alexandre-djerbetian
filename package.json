@@ -7,7 +7,9 @@
     "packages/*"
   ],
   "scripts": {
-    "bootstrap": "yarn install --silent && yarn compile",
+    "bootstrap": "yarn install --silent && yarn install:overrides && yarn compile",
+    "install:overrides": "yarn install:overrides:mocha",
+    "install:overrides:mocha": "wget -O overrides/mocha/index.d.ts https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/mocha/index.d.ts",
     "build": "./monoRun.sh build",
     "compile": "./monoRun.sh compile",
     "clean": "rm -rf node_modules && lerna clean --yes && ./monoExec.sh 'rm -rf dist/'",

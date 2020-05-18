@@ -12,7 +12,7 @@
         "@alex/micro": "file:../micro"
     },
     "devDependencies": {
-        "@types/node": "^13.13.2",
+        "@types/node": "^14.0.1",
         "typescript": "^3.8.3"
     }
 }

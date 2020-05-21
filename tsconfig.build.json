@@ -13,7 +13,8 @@
         "noImplicitAny": true,
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
-        "declaration": true
+        "declaration": true,
+        "typeRoots": ["overrides", "node_modules/@types"]
     },
     "exclude": ["node_modules", "dist"]
 }

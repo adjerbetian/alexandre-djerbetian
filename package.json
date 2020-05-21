@@ -2,19 +2,22 @@
   "name": "alexandre-website",
   "version": "1.0.0",
   "description": "Alexandre Djerbetian - personal website",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "bootstrap": "npm ci && npm run mono:ci && npm run compile",
-    "mono:i": "./monoExec.sh 'rm -f package-lock.json && rm -rf node_modules && npm i --silent'",
-    "mono:ci": "./monoExec.sh 'npm ci --silent'",
-    "mono:update": "./monoExec.sh 'npm update'",
+    "bootstrap": "yarn install --silent && yarn install:overrides && yarn compile",
+    "install:overrides": "yarn install:overrides:mocha",
+    "install:overrides:mocha": "wget -O overrides/mocha/index.d.ts https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/mocha/index.d.ts",
     "build": "./monoRun.sh build",
     "compile": "./monoRun.sh compile",
-    "clean": "lerna clean --yes && lerna exec -- 'rm -rf dist/'",
-    "test": "lerna run test",
+    "clean": "rm -rf node_modules && lerna clean --yes && ./monoExec.sh 'rm -rf dist/'",
+    "test": "./monoRun.sh test",
     "dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build",
     "prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up --build",
     "e2e": "./e2e.sh build && (./e2e.sh run || ./e2e.sh stop) && ./e2e.sh stop",
-    "cypress": "(cd packages/e2e && npm run cypress:open)"
+    "cypress": "(cd packages/e2e && yarn cypress:open)"
   },
   "dependencies": {
     "lerna": "^3.20.2"
@@ -23,12 +26,12 @@
     "@typescript-eslint/eslint-plugin": "^2.29.0",
     "@typescript-eslint/parser": "^2.29.0",
     "@vue/eslint-config-typescript": "^5.0.2",
-    "eslint": "^6.8.0",
+    "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-chai-friendly": "^0.6.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^6.2.2",
     "prettier": "^2.0.5",
-    "typescript": "^3.8.3"
+    "typescript": "~3.8.3"
   }
 }

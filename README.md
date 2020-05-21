@@ -11,6 +11,7 @@ See https://alexandre.djerbetian.com
   - [X] [improve typescript in monorepo](https://medium.com/@NiGhTTraX/how-to-set-up-a-typescript-monorepo-with-lerna-c6acda7d4559)
   - [X] automatic deploy workflow
   - [X] separate the server by domain module
+  - [X] use yarn workspaces
   - [ ] try yarn 2
   - [ ] try koa or fastify instead of express
   - [ ] use [pre-rendering](https://github.com/chrisvfritz/prerender-spa-plugin)

@@ -1,6 +1,6 @@
 <template>
     <div class="quote" :id="quote.id">
-        <blockquote class="content" v-html="quote.content" />
+        <blockquote class="content" v-html="content" />
 
         <router-link :to="`/quotes/${quote.id}`" class="caption">
             {{ quote.bookTitle }} -
@@ -15,10 +15,18 @@
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
 import { Quote } from "@alex/entities";
+import { getImage } from "@/utils/imageService";
 
 @Component
 export default class QuoteComponent extends Vue {
     @Prop(Object) quote!: Quote;
+
+    get content() {
+        return this.quote.content.replace(
+            /src="([^"]+)"/g,
+            (_, file: string) => `src="${getImage("quotes", file)}"`
+        );
+    }
 }
 </script>
 

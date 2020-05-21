@@ -14,18 +14,23 @@ export interface NotesDBModel {
     good: string;
     lessGood: string;
 }
-
 export interface QuoteDBModel {
     id: string;
     chapter: number;
     page: string;
     content: string;
     tags: QuoteTagDBModel[];
-    rating: number;
+    rating: Rating;
     comments?: string;
 }
-
 export interface QuoteTagDBModel {
     name: string;
     description: string;
+}
+export enum Rating {
+    Interesting,
+    Good,
+    VeryGood,
+    Amazing,
+    ToBeRememberedByHeart
 }

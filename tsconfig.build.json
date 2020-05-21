@@ -14,7 +14,8 @@
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "declaration": true,
-        "typeRoots": ["overrides", "node_modules/@types"]
+        "typeRoots": ["overrides", "node_modules/@types"],
+        "incremental": true
     },
     "exclude": ["node_modules", "dist"]
 }

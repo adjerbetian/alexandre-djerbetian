@@ -6,13 +6,13 @@ IP=world-312.fr.planethoster.net
 HOST="${USER}@${IP}"
 
 syncAllDist() {
-    sync micro
-    sync entities
-    sync db
-    sync server
-    sync client
+    syncDistOf "micro"
+    syncDistOf "entities"
+    syncDistOf "db"
+    syncDistOf "server"
+    syncDistOf "client"
 }
-syncDist() {
+syncDistOf() {
     sync "packages/$1/dist"
 }
 sync() {

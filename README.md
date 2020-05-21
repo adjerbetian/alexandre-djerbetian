@@ -22,6 +22,7 @@ See https://alexandre.djerbetian.com
   - [ ] curve the navbar
 - **Content**
   - [ ] convert all quotes to the new format
+  - [ ] change quote rating from numbers to enum
   - [ ] add the quotes for the new books
 - **Quotes**
   - [ ] redesign the quote page

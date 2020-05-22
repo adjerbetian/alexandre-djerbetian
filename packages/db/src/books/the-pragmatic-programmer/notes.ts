@@ -5,7 +5,7 @@ export const notes: NotesDBModel = {
         I am mitigated about this book. I can't say I didn't like it, but I don't feel it brought me as much as I expected.
     `,
     good: `
-        This book has a lot of stories which illustrate well the points being discussed while also being funny.
+        This book has a **lot of stories while also being funny**.
     `,
     lessGood: `
         - The code examples and corrections are not always very clean.

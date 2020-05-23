@@ -7,7 +7,8 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "start": "node dist/server.js",
-        "compile": "tsc --project tsconfig.build.json"
+        "compile": "tsc --project tsconfig.build.json",
+        "test": "mocha"
     },
     "dependencies": {
         "@alex/micro": "1.0.0",
@@ -15,5 +16,14 @@
         "@types/highlight.js": "^9.12.4",
         "highlight.js": "^10.0.3",
         "typescript": "~3.9.3"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.2.11",
+        "@types/mocha": "^7.0.2",
+        "@types/sinon": "^9.0.0",
+        "chai": "^4.2.0",
+        "mocha": "^7.1.2",
+        "sinon": "^9.0.2",
+        "ts-node": "^8.9.0"
     }
 }

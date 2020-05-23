@@ -12,9 +12,28 @@ export function javascript(content: string) {
 }
 
 function code(content: string, lang: string) {
-    content = colorize(µ.trimCommonIndentation(content), lang);
+    content = boldify(colorize(µ.trimCommonIndentation(content), lang));
     return `<pre class="code light"><code class="hljs language-${lang}">${content}</code></pre>`;
 }
 function colorize(content: string, lang: string) {
     return hljs.highlight(lang, content).value;
+}
+
+export function boldify(text: string) {
+    const OPENING_BOLD_TAG = "**";
+    const CLOSING_BOLD_TAG = "**";
+
+    while (hasFullTag()) {
+        text = text.replace(OPENING_BOLD_TAG, "<b>");
+        text = text.replace(CLOSING_BOLD_TAG, "</b>");
+    }
+    return text;
+
+    function hasFullTag() {
+        const openingIndex = text.indexOf(OPENING_BOLD_TAG);
+        const closingIndex = text
+            .substring(openingIndex + OPENING_BOLD_TAG.length)
+            .indexOf(CLOSING_BOLD_TAG);
+        return closingIndex !== -1;
+    }
 }

@@ -30,7 +30,7 @@ See https://alexandre.djerbetian.com
   - [ ] add pagination
   - [ ] add tag filters
   - [ ] add test for id unicity
-  - [ ] add code coloration
+  - [X] add code coloration
   - [ ] add textual search
 - **Quote of the day**
   - [ ] add the "quote of the day" feature

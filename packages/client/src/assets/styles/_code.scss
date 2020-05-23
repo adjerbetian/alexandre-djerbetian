@@ -1,36 +1,30 @@
 @import "variables";
 
 @mixin code {
-    &.code {
-        border-radius: 10px;
-        margin: 20px 0;
-        overflow: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: auto;
 
-        & > * {
-            margin: 0;
-        }
+    & > * {
+        margin: 0;
+    }
 
-        code {
-            display: block;
-            padding: 1em 1.5em;
-        }
+    code {
+        display: block;
+        padding: 1em 1.5em;
     }
 }
 
-pre {
-    overflow: auto;
-}
-
-.light {
-    @import "code-theme-light";
+.code.light {
+    @import "../../node_modules/highlight.js/scss/idea";
     @include code;
 
-    .hljs {
-        background-color: transparent;
+    code.hljs {
+        background-color: #f6f6f6;
     }
 }
 
-.dark {
-    @import "code-theme-dark";
+.code.dark {
+    @import "../../node_modules/highlight.js/scss/androidstudio";
     @include code;
 }

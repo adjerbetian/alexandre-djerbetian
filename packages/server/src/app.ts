@@ -1,5 +1,4 @@
 import express from "express";
-import logger from "morgan";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import {
@@ -9,7 +8,6 @@ import {
 } from "./subdomains";
 
 export const app = express();
-app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());

@@ -26,6 +26,9 @@ export function cpp(content: string) {
 export function javascript(content: string) {
     return code(content, "javascript");
 }
+export function markdown(content: string) {
+    return code(content, "markdown");
+}
 
 function code(content: string, lang: string) {
     content = boldify(colorize(µ.trimCommonIndentation(content), lang));

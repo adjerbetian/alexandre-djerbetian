@@ -16,7 +16,7 @@ See https://alexandre.djerbetian.com
   - [ ] try koa or fastify instead of express
   - [ ] use [pre-rendering](https://github.com/chrisvfritz/prerender-spa-plugin)
   - [ ] use test reports in Github actions
-  - [ ] enable the video download of cypress in Github actions
+  - [X] enable the video download of cypress in Github actions
 - **General**
   - [ ] add a link to the source code repository on github
   - [ ] change the home page picture

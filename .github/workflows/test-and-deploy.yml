@@ -25,6 +25,8 @@ jobs:
       - run: chmod +x ./e2e.sh ./monoExec.sh ./monoRun.sh
       - run: ./e2e.sh build
       - run: ./e2e.sh run
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_KEY }}
 
   deploy:
     if: ${{ endsWith(github.ref, '/master') }}

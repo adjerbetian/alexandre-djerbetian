@@ -17,4 +17,5 @@ services:
       - CYPRESS_BASE_URL=http://client
     volumes:
       - ./packages/e2e/cypress:/app/packages/e2e/cypress
+      - .git:/app/.git
     ipc: host

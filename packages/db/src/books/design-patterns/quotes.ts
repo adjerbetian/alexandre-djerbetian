@@ -325,7 +325,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 3
     },
     {
-        id: "design-patterns-p44",
+        id: "design-patterns-p44-bis",
         chapter: 2,
         page: "44",
         content: `
@@ -339,7 +339,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 3
     },
     {
-        id: "design-patterns-p44",
+        id: "design-patterns-p44-ter",
         chapter: 2,
         page: "44",
         content: `
@@ -501,7 +501,7 @@ export const quotes: QuoteDBModel[] = [
         rating: 4
     },
     {
-        id: "design-patterns-p351",
+        id: "design-patterns-p351-bis",
         chapter: 6,
         page: "351",
         content: `

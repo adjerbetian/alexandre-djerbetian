@@ -29,7 +29,7 @@ See https://alexandre.djerbetian.com
   - [X] add book filters
   - [ ] add pagination
   - [ ] add tag filters
-  - [ ] add test for id unicity
+  - [X] add test for id unicity
   - [X] add code coloration
   - [ ] add textual search
 - **Quote of the day**

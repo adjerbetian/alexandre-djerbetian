@@ -15,11 +15,14 @@ See https://alexandre.djerbetian.com
   - [ ] try yarn 2
   - [ ] try koa or fastify instead of express
   - [ ] use [pre-rendering](https://github.com/chrisvfritz/prerender-spa-plugin)
-- **General**    
+  - [ ] use test reports in Github actions
+  - [ ] enable the video download of cypress in Github actions
+- **General**
   - [ ] add a link to the source code repository on github
   - [ ] change the home page picture
   - [ ] add the navbar for mobile
   - [ ] curve the navbar
+  - [ ] add a *Not Found* page
 - **Content**
   - [ ] convert all quotes to the new format
   - [ ] change quote rating from numbers to enum

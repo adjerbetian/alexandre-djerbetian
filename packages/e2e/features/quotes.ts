@@ -84,12 +84,14 @@ describe("Quotes page", () => {
             checkboxFor("clean-code").should("be.checked");
             checkboxFor("design-patterns").should("not.be.checked");
         });
-        it("should uncheck/recheck the right filter when navigating back and forth", () => {
+        it("should uncheck/recheck the right filter when navigating back and forth", function () {
             clickOnFilter("Refactoring");
             checkboxFor("refactoring").should("be.checked");
+            cy.wait(200); // for stability to avoid "Blocked a frame with origin "http://client" from accessing a cross-origin frame."
 
             cy.go("back");
             checkboxFor("refactoring").should("not.be.checked");
+            cy.wait(200);
 
             cy.go("forward");
             checkboxFor("refactoring").should("be.checked");

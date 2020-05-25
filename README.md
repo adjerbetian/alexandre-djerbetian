@@ -3,7 +3,9 @@
 ![](https://github.com/adjerbetian/alexandre-djerbetian/workflows/End%20to%20end%20tests/badge.svg)
 ![](https://github.com/adjerbetian/alexandre-djerbetian/workflows/unit%20%26%20integration%20tests/badge.svg)
 
-See https://alexandre.djerbetian.com
+## Links:
+- the website: https://alexandre.djerbetian.com
+- [Cypress dashboard](https://dashboard.cypress.io/projects/iwigtu/runs)
 
 ## Todo
 

@@ -79,7 +79,8 @@ export const videos: VideoDBModel[] = [
             },
             {
                 time: "8m43s",
-                content: "*events or commands*: a nice discussion about the definitions or events"
+                content:
+                    "*events or commands*: a nice discussion about the definitions or events"
             },
             {
                 time: "14m55s",
@@ -94,6 +95,18 @@ export const videos: VideoDBModel[] = [
                 content: "**4 - *CQRS***"
             }
         ]
+    },
+    {
+        title: "Power Use of Value Objects in Domain Driven Design",
+        youtubeId: "vh-LT1mkIz4",
+        year: 2010,
+        speaker: "Dan Bergh Johnsson",
+        comments: `
+            Great video about *Value Objects* where Dan Bergh Johnsson refactors
+            a big chunk of code only with Value Object.
+            
+            Very practical. 
+        `
     },
     {
         title: "3X",

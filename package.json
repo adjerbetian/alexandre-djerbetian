@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Alexandre Djerbetian - personal website",
   "private": true,
+  "license": "MIT",
   "workspaces": [
     "packages/*"
   ],

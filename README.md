@@ -14,11 +14,11 @@
   - [X] automatic deploy workflow
   - [X] separate the server by domain module
   - [X] use yarn workspaces
+  - [X] enable the video download of cypress in Github actions
   - [ ] try yarn 2
   - [ ] try koa or fastify instead of express
   - [ ] use [pre-rendering](https://github.com/chrisvfritz/prerender-spa-plugin)
   - [ ] use test reports in Github actions
-  - [X] enable the video download of cypress in Github actions
 - **General**
   - [X] add a link to the source code repository on github
   - [X] change the home page picture
@@ -30,12 +30,12 @@
   - [ ] change quote rating from numbers to enum
   - [ ] add the quotes for the new books
 - **Quotes**
-  - [ ] redesign the quote page
   - [X] add book filters
-  - [ ] add pagination
-  - [ ] add tag filters
   - [X] add test for id unicity
   - [X] add code coloration
+  - [ ] redesign the quote page
+  - [ ] add pagination
+  - [ ] add tag filters
   - [ ] add textual search
 - **Quote of the day**
   - [ ] add the "quote of the day" feature

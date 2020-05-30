@@ -13,13 +13,14 @@ const router = new VueRouter({
             name: "Home",
             component: HomePage
         },
-        {
-            path: "/resume",
-            beforeEnter() {
-                window.location.href =
-                    "https://drive.google.com/open?id=1XrMLYQ3-6v9i2ezMk6KeM0oBNfYDDiAN";
-            }
-        },
+        redirection(
+            "/resume",
+            "https://drive.google.com/open?id=1XrMLYQ3-6v9i2ezMk6KeM0oBNfYDDiAN"
+        ),
+        redirection(
+            "/github",
+            "https://github.com/adjerbetian/alexandre-djerbetian"
+        ),
         {
             path: "/movies",
             name: "Movies",
@@ -59,3 +60,12 @@ const router = new VueRouter({
 });
 
 export default router;
+
+function redirection(alias: string, route: string) {
+    return {
+        path: alias,
+        beforeEnter() {
+            window.location.href = route;
+        }
+    };
+}

@@ -3,22 +3,20 @@
         <Profile />
 
         <div class="menuGroup">
+            <h3 class="resume"><NavLink to="/resume">Resume</NavLink></h3>
+        </div>
+
+        <div class="menuGroup">
+            <h3>Coding</h3>
             <div class="menuItems">
-                <NavLink to="/resume" icon="file">Resume</NavLink>
+                <NavLink to="/books">Library</NavLink>
+                <NavLink to="/quotes">Quotes</NavLink>
+                <NavLink to="/videos">Videos</NavLink>
             </div>
         </div>
 
         <div class="menuGroup">
-            <h3><NavIcon icon="code" />Coding</h3>
-            <div class="menuItems">
-                <NavLink to="/books" icon="book">Books</NavLink>
-                <NavLink to="/quotes" icon="comment">Quotes</NavLink>
-                <NavLink to="/videos" :icon="['fab', 'youtube']">Videos</NavLink>
-            </div>
-        </div>
-
-        <div class="menuGroup">
-            <h3><NavIcon :icon="['far', 'user']" />Other</h3>
+            <h3>Hobbies</h3>
             <div class="menuItems">
                 <NavLink to="/movies" icon="film">Short movies</NavLink>
             </div>
@@ -50,7 +48,7 @@ export default class NavBar extends Vue {}
     width: $navbarFullWidth;
     background-color: $navbarBackground;
     min-height: 100vh;
-    padding: 0 20px 20px;
+    padding: 0 30px 30px;
     border-right: 1px solid $navbarBackgroundLight;
 }
 
@@ -59,12 +57,11 @@ export default class NavBar extends Vue {}
     h3 {
         padding-left: 15px;
         color: $navbarColor;
-        margin-bottom: 15px;
+        margin-bottom: 0;
     }
 }
 .menuItems {
-    background-color: $navbarBackgroundLight;
     border-radius: 5px;
-    margin-top: 10px;
+    padding-left: 40px;
 }
 </style>

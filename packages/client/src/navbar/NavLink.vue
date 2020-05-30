@@ -1,6 +1,5 @@
 <template>
-    <router-link :to="to" class="nav-link">
-        <NavIcon :icon="icon" />
+    <router-link :to="to" active-class="active" class="nav-link">
         <slot></slot>
     </router-link>
 </template>
@@ -15,9 +14,6 @@ import NavIcon from "./NavIcon.vue";
     }
 })
 export default class NavLink extends Vue {
-    @Prop([String, Array])
-    icon!: string | string[];
-
     @Prop(String)
     to!: string;
 }
@@ -29,6 +25,7 @@ export default class NavLink extends Vue {
 .nav-link {
     border-radius: 5px;
     color: $navbarColor;
+    margin-left: -20px;
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -36,5 +33,9 @@ export default class NavLink extends Vue {
     &:hover {
         background-color: $navbarBackgroundLightLight;
     }
+}
+
+.active {
+    color: lighten($navbarBackground, 50%);
 }
 </style>

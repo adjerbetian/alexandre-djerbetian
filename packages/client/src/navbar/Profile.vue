@@ -16,12 +16,6 @@ export default {
 <style lang="scss" scoped>
 @import "src/navbar/navbar";
 
-h3 {
-    padding-left: 15px;
-    color: $navbarColor;
-    margin-bottom: 15px;
-}
-
 .profile {
     padding: 60px 0;
     text-align: center;
@@ -29,7 +23,7 @@ h3 {
 
     img {
         display: inline-block;
-        width: 150px;
+        width: 110px;
         border-radius: 100%;
     }
 
@@ -37,6 +31,7 @@ h3 {
         margin-top: 30px;
         color: $navbarColor;
         justify-content: center;
+        font-size: 1.2em;
     }
 }
 </style>

@@ -1,4 +1,4 @@
-describe("Books page", () => {
+describe("Library page", () => {
     beforeEach(() => {
         cy.viewport(1920, 1080);
         cy.visit("/books");
@@ -7,7 +7,7 @@ describe("Books page", () => {
     it("should be accessible from the home page", () => {
         cy.visit("/");
 
-        cy.contains("Books").click();
+        cy.contains("Library").click();
 
         cy.url().should("include", "/books");
     });

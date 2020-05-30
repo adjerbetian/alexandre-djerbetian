@@ -12,7 +12,4 @@ describe("Home page", () => {
             cy.contains("Resume");
         });
     });
-    it("should have a welcome message", () => {
-        cy.contains("Bienvenue !");
-    });
 });

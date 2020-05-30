@@ -21,7 +21,7 @@
   - [X] enable the video download of cypress in Github actions
 - **General**
   - [ ] add a link to the source code repository on github
-  - [ ] change the home page picture
+  - [X] change the home page picture
   - [ ] add the navbar for mobile
   - [ ] curve the navbar
   - [ ] add a *Not Found* page

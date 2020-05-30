@@ -21,6 +21,12 @@
                 <NavLink to="/movies" icon="film">Short movies</NavLink>
             </div>
         </div>
+
+        <div class="footer">
+            <router-link to="/github">
+                <img width="20" src="../assets/images/github.svg" alt="github" />
+            </router-link>
+        </div>
     </div>
 </template>
 
@@ -50,6 +56,9 @@ export default class NavBar extends Vue {}
     min-height: 100vh;
     padding: 0 30px 30px;
     border-right: 1px solid $navbarBackgroundLight;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .menuGroup {
@@ -63,5 +72,12 @@ export default class NavBar extends Vue {}
 .menuItems {
     border-radius: 5px;
     padding-left: 40px;
+}
+
+.navbar > div:nth-last-child(2) {
+    flex-grow: 1;
+}
+.footer {
+    text-align: center;
 }
 </style>

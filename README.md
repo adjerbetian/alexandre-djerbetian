@@ -20,7 +20,7 @@
   - [ ] use test reports in Github actions
   - [X] enable the video download of cypress in Github actions
 - **General**
-  - [ ] add a link to the source code repository on github
+  - [X] add a link to the source code repository on github
   - [X] change the home page picture
   - [ ] add the navbar for mobile
   - [ ] curve the navbar

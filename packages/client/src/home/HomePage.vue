@@ -1,13 +1,9 @@
 <template>
-    <div class="page">
+    <div class="home">
         <h1>Bienvenue&nbsp;!</h1>
-
         <div class="pitch">
-            <p>I am a JS developer, slightly obsessed by clean code.</p>
-            <p>
-                I created this site mainly to help me take notes on the coding books I'm reading. If
-                it can help you too, I'll be glad!
-            </p>
+            <p>I am a JS developer, obsessed with clean code.</p>
+            <p>This site gathers my notes. Feel free to go around!</p>
         </div>
     </div>
 </template>
@@ -23,7 +19,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @import "../assets/styles/variables";
 
-.page {
+.home {
     position: relative;
     height: 100vh;
     padding: 70px;
@@ -33,6 +29,7 @@ export default Vue.extend({
 }
 h1 {
     font-size: 2.3em;
+    white-space: nowrap;
 }
 .pitch {
     font-size: 1.3em;
@@ -47,6 +44,11 @@ h1 {
     }
 }
 
+@media (max-width: $screen-size-s) {
+    .pitch {
+        font-size: 1.2em;
+    }
+}
 @media (max-width: $screen-size-xs) {
     .pitch {
         font-size: 1em;

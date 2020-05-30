@@ -37,9 +37,11 @@
   - [ ] add pagination
   - [ ] add tag filters
   - [ ] add textual search
-- **Quote of the day**
-  - [ ] add the "quote of the day" feature
-  - [ ] add the subscription to the *quote of the day*
+- **Quote of the week**
+  - [ ] add the "*quote of the week*" feature on a page
+    - one small quotes and one big quote, or 2 medium quotes
+  - [ ] add a small *quote of the week* on the home page
+  - [ ] add the subscription to the *quote of the week*
 - **Articles**
   - [ ] add an article section
   - [ ] add my video about Clean Architecture

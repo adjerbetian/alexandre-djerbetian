@@ -1,11 +1,5 @@
 <template>
-    <div class="home">
-        <h1>Bienvenue&nbsp;!</h1>
-        <div class="pitch">
-            <p>I am a JS developer, obsessed with clean code.</p>
-            <p>This site gathers my notes. Feel free to go around!</p>
-        </div>
-    </div>
+    <div class="home"></div>
 </template>
 
 <script lang="ts">
@@ -19,39 +13,17 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @import "../assets/styles/variables";
 
+$imageHeight: 1920 / 1371 * 100vh;
+
 .home {
     position: relative;
     height: 100vh;
-    padding: 70px;
-    max-width: none !important;
-    background: url("../assets/images/home/home.jpg") bottom right no-repeat;
+    background: #4c483c url("../assets/images/home/walter.jpg") no-repeat center left;
     background-size: cover;
 }
-h1 {
-    font-size: 2.3em;
-    white-space: nowrap;
-}
-.pitch {
-    font-size: 1.3em;
-}
-
-@media (max-width: $screen-size-l) {
-    main {
-        padding: 40px;
-    }
-    h1 {
-        text-align: center;
-    }
-}
-
 @media (max-width: $screen-size-s) {
-    .pitch {
-        font-size: 1.2em;
-    }
-}
-@media (max-width: $screen-size-xs) {
-    .pitch {
-        font-size: 1em;
+    .home {
+        background-position-x: calc(-#{$imageHeight} / 2.08);
     }
 }
 </style>

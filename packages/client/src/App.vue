@@ -30,7 +30,7 @@ export default Vue.extend({
 
 main {
     background: url("./assets/images/background.png") fixed;
-    margin-left: 330px;
+    margin-left: $navbarFullWidth;
 }
 
 nav {

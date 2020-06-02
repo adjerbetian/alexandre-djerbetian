@@ -1,4 +1,4 @@
-import { asEntityBuilder } from "./entity";
+import { asEntityFactory } from "./entity";
 
 export interface BookDTO {
     id: string;
@@ -13,7 +13,7 @@ export interface BookDTO {
     };
 }
 
-export const buildBook = asEntityBuilder((dto: BookDTO) => {
+export const buildBook = asEntityFactory((dto: BookDTO) => {
     return Object.freeze({
         id: dto.id,
         title: dto.title,

@@ -1,4 +1,4 @@
-export function asEntityBuilder<DTO, Entity extends DeepReadonly<DTO>>(builder: (dto: DTO) => Entity) {
+export function asEntityFactory<DTO, Entity extends DeepReadonly<DTO>>(builder: (dto: DTO) => Entity) {
     return builder;
 }
 

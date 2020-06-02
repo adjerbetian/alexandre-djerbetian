@@ -1,6 +1,6 @@
-import { asEntityBuilder } from "./entity";
+import { asEntityFactory } from "./entity";
 
-export const buildMovie = asEntityBuilder((dto: MovieDTO) => {
+export const buildMovie = asEntityFactory((dto: MovieDTO) => {
     return Object.freeze({
         id: dto.id,
         title: dto.title,

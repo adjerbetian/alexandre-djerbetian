@@ -1,7 +1,7 @@
 import { Book } from "./Book";
-import { asEntityBuilder } from "./entity";
+import { asEntityFactory } from "./entity";
 
-export const buildQuote = asEntityBuilder((dto: QuoteDTO) => {
+export const buildQuote = asEntityFactory((dto: QuoteDTO) => {
     return Object.freeze({
         id: dto.id,
         bookId: dto.bookId,

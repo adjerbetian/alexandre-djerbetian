@@ -1,6 +1,6 @@
 import { QuoteDBModel, Rating } from "../dbModel";
 import { quoteTags } from "../quoteTags";
-import { cpp } from "../utils";
+import { cpp, joinStyles } from "../utils";
 
 export const chapters = [
     "PREFACE ",
@@ -933,28 +933,30 @@ function tip(title: string, content: string) {
     `;
 
     function divStyle() {
-        return [
+        return joinStyles({
             ...centered(),
-            `border: 2px solid ${primary80()}`,
-            `border-top: 6px solid ${primary80()}`,
-            `border-radius: 10px`,
-            `position: relative`,
-            `padding: 7px 25px`
-        ].join(";");
+            border: `2px solid ${primary80()}`,
+            "border-top": `6px solid ${primary80()}`,
+            "border-radius": "10px",
+            position: "relative",
+            padding: "7px 25px"
+        });
     }
     function h4Style() {
-        return [
-            `position: absolute`,
-            `top: -20px`,
-            `left: 25px`,
-            `font-size: 12px`,
-            `background-color: ${primary80()}`,
-            `padding: 3px 25px`,
-            `border-radius: 10px 10px 0 0`
-        ].join(";");
+        return joinStyles({
+            position: "absolute",
+            top: "-20px",
+            left: "25px",
+            "font-size": "12px",
+            "background-color": `${primary80()}`,
+            padding: "3px 25px",
+            "border-radius": "10px 10px 0 0"
+        });
     }
     function pStyle() {
-        return [`margin: 0`].join(";");
+        return joinStyles({
+            margin: "0"
+        });
     }
 }
 function buildTable(head: string[], body: string[][]) {
@@ -966,7 +968,7 @@ function buildTable(head: string[], body: string[][]) {
             <tbody>
                 ${body.map((line) => buildLine(line))}
             </tbody>
-        </table>    
+        </table>
     `;
 
     function buildLine(content: string[], cellTag = "td") {
@@ -985,33 +987,31 @@ function buildTable(head: string[], body: string[][]) {
     }
 
     function tableStyle() {
-        return [
+        return joinStyles({
             ...centered(),
-            `border-top: 2px solid ${primary30()}`,
-            `border-bottom: 2px solid ${primary30()}`
-        ].join(";");
+            "border-top": `2px solid ${primary30()}`,
+            "border-bottom": `2px solid ${primary30()}`
+        });
     }
     function headStyle() {
-        //prettier-ignore
-        return [
-            `border-bottom: 1px solid ${primary30()}`
-        ].join(";");
+        return joinStyles({
+            "border-bottom": `1px solid ${primary30()}`
+        });
     }
     function cellStyle() {
-        //prettier-ignore
-        return [
-            `border: none`,
-            `padding: 5px 2px`
-        ].join(";");
+        return joinStyles({
+            border: "none",
+            padding: "5px 2px"
+        });
     }
 }
 function centered() {
-    return [
-        `margin: 25px auto`,
-        `width: 70%`,
-        `max-width: 100%`,
-        `min-width: min(300px, 100%)`
-    ];
+    return {
+        margin: "25px auto",
+        width: "70%",
+        "max-width": "100%",
+        "min-width": "min(300px, 100%)"
+    };
 }
 function primary80() {
     return "#f0cec1";

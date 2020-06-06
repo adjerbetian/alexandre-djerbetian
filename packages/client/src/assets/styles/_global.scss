@@ -1,5 +1,5 @@
 @import "variables";
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans");
 
 $line-height: 1.45;
 $line-height-rem: #{$line-height}rem;
@@ -9,7 +9,7 @@ $line-height-rem: #{$line-height}rem;
 }
 
 html {
-    font-family: 'Alegreya Sans', sans-serif;
+    font-family: "Alegreya Sans", sans-serif;
     font-size: 112%;
     line-height: $line-height;
 }
@@ -27,7 +27,12 @@ blockquote {
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 500;
     margin-top: 0;
     line-height: 1.1;
@@ -57,12 +62,14 @@ p {
     margin: 1rem 0 1rem;
 }
 
-ol, ul {
+ol,
+ul {
     padding: 0;
     margin: 0 0 $line-height-rem $line-height-rem;
 }
 
-p+ul, p+ul {
+p + ul,
+p + ul {
     margin-top: -0.7rem;
 }
 
@@ -88,11 +95,6 @@ strong {
     color: $primary;
 }
 
-span[title] {
-    border-bottom: 1px dotted #000;
-    cursor: help;
-}
-
 @media (max-width: $screen-size-l) {
     h1 {
         text-align: center;
@@ -100,5 +102,5 @@ span[title] {
 }
 
 iframe {
-    border:0;
+    border: 0;
 }

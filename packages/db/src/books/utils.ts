@@ -1,6 +1,16 @@
 import { µ } from "@alex/micro";
 import hljs from "highlight.js";
 
+export function titled(content: string, title: string) {
+    return `<span style="${styles()}" title="${title}">${content}</span>`;
+
+    function styles() {
+        return joinStyles({
+            "border-bottom": "#000 dotted 1px",
+            cursor: "help"
+        });
+    }
+}
 export function joinStyles(styles: Record<string, string>) {
     return Object.entries(styles)
         .map(([key, value]) => `${key}: ${value}`)

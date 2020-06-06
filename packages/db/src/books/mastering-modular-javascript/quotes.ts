@@ -1,6 +1,6 @@
 import { QuoteDBModel } from "../dbModel";
 import { quoteTags } from "../quoteTags";
-import { javascript } from "../utils";
+import { javascript, titled } from "../utils";
 
 export const chapters = [
     "Preface",
@@ -112,10 +112,11 @@ export const quotes: QuoteDBModel[] = [
             <h3>CRUST: Consistent, Resilient, Unambiguous, Simple, and Tiny</h3>
             <p>
                 A well-regarded API typically packs several of the following
-                traits. It is <i>consistent</i>, meaning it is <span 
-                    title="For a given set of inputs, an idempotent function always produces the same output." 
-                    style="border-bottom: #ccc dotted 1px"
-                >idempotent</span> and has a similar signature shape as that of 
+                traits. It is <i>consistent</i>, meaning it is 
+                ${titled(
+                    "idempotent",
+                    "For a given set of inputs, an idempotent function always produces the same output."
+                )} and has a similar signature shape as that of 
                 related functions. It is <i>resilient</i>, meaning its interface 
                 is flexible and accepts input expressed in a few ways, including 
                 optional parameters and overloading. Yet, it is <i>unambiguous</i>:

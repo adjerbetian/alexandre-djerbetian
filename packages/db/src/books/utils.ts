@@ -1,6 +1,12 @@
 import { µ } from "@alex/micro";
 import hljs from "highlight.js";
 
+export function joinStyles(styles: Record<string, string>) {
+    return Object.entries(styles)
+        .map(([key, value]) => `${key}: ${value}`)
+        .join(";");
+}
+
 export function java(content: string) {
     return code(content, "java");
 }

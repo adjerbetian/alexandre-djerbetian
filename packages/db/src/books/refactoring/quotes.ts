@@ -1,6 +1,6 @@
 import { QuoteDBModel } from "../dbModel";
 import { quoteTags } from "../quoteTags";
-import { java } from "../utils";
+import { java, joinStyles } from "../utils";
 
 export const chapters = [
     "Preface",
@@ -784,24 +784,24 @@ export const quotes: QuoteDBModel[] = [
 
 function createTip(message: string) {
     const margin = 10;
-    const style = [
-        `display: flex`,
-        `border-top: 1px solid #ccc`,
-        `border-bottom: 1px solid #ccc`,
-        `justify-content: space-between`,
-        `padding: ${margin}px`
-    ].join(";");
+    const styles = joinStyles({
+        display: "flex",
+        "border-top": "1px solid #ccc",
+        "border-bottom": "1px solid #ccc",
+        "justify-content": "space-between",
+        padding: `${margin}px`
+    });
 
     return `
-        <div style="${style}">
+        <div style="${styles}">
             <img 
-                style="display: block; margin: 10px" 
+                style="display: block; margin: ${margin}px" 
                 alt="Tip"
                 title="Tip"
                 height="50"
                 src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Noun_Project_lightbulb_icon_1263005_cc.svg" 
             />
-            <div style="margin: 10px">${message}</div>
+            <div style="margin: ${margin}px">${message}</div>
         </div>
     `;
 }

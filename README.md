@@ -34,6 +34,7 @@
   - [X] add test for id unicity
   - [X] add code coloration
   - [ ] redesign the quote page
+  - [ ] add the personal comments
   - [ ] add pagination
   - [ ] add tag filters
   - [ ] add textual search

@@ -23,8 +23,8 @@
   - [X] add a link to the source code repository on github
   - [X] change the home page picture
   - [X] update resume
+  - [X] add slide in / fade in animations on resume page
   - [ ] add the navbar for mobile
-  - [ ] add slide in / fade in animations on resume page
   - [ ] curve the navbar
   - [ ] add a *Not Found* page
 - **Content**

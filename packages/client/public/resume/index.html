@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Alexandre Djerbetian</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet" />
+        <style>
+            @font-face {
+                font-family: "Times New Roman";
+                src: url(./fonts/LiberationSerif-Regular.ttf) format("truetype");
+            }
+            @font-face {
+                font-family: "Times New Roman";
+                src: url(./fonts/LiberationSerif-Italic.ttf) format("truetype");
+                font-style: italic;
+            }
+            @font-face {
+                font-family: "Times New Roman";
+                src: url(./fonts/LiberationSerif-Bold.ttf) format("truetype");
+                font-weight: bold;
+            }
+            @font-face {
+                font-family: "Times New Roman";
+                src: url(./fonts/LiberationSerif-BoldItalic.ttf) format("truetype");
+                font-style: italic;
+                font-weight: bold;
+            }
+            body {
+                --primary: rgb(0, 40, 120);
+                --secondary: rgb(255, 110, 1);
+
+                font-family: "Times New Roman", sans-serif;
+                background-color: rgb(128, 128, 128);
+                color: rgb(56, 67, 71);
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            ul {
+                margin: 0;
+            }
+            ul {
+                padding-inline-start: 4mm;
+            }
+            .page {
+                --section-padding: 5mm;
+
+                box-shadow: 0 0 10px rgb(50, 50, 50);
+                position: relative;
+                background-color: white;
+                margin: 30px auto;
+                box-sizing: border-box;
+                width: 210mm;
+                height: 297mm;
+                padding: 16mm;
+                font-size: 3.6mm;
+            }
+            header {
+                display: flex;
+            }
+            header aside img {
+                width: 100%;
+                border-radius: 100%;
+            }
+            header h1 {
+                color: var(--primary);
+                font-size: 10mm;
+                font-weight: 700;
+            }
+            header h2 {
+                color: var(--secondary);
+                font-size: 5.8mm;
+            }
+            header .pitch {
+                margin-top: 3mm;
+                font-size: 4.5mm;
+                font-weight: 700;
+                color: var(--primary);
+            }
+            header .contact {
+                align-self: flex-end;
+                margin-top: 3mm;
+                font-size: 3.3mm;
+            }
+            header .contact i {
+                color: var(--secondary);
+            }
+            main,
+            footer {
+                margin: 0 calc(-1 * var(--section-padding));
+            }
+            main {
+                display: flex;
+            }
+            main > div {
+                flex: 1;
+            }
+            aside {
+                width: 40%;
+            }
+            section {
+                padding: var(--section-padding);
+            }
+            section h2 {
+                font-size: 6.5mm;
+                text-transform: uppercase;
+                color: var(--primary);
+                border-bottom: 0.7mm solid var(--primary);
+            }
+            article {
+                padding-top: var(--section-padding);
+            }
+            article > *:not(:first-child) {
+                margin-top: 0.7mm;
+            }
+            article h3 {
+                font-weight: lighter;
+                font-size: 5.7mm;
+                color: var(--primary);
+            }
+            article h4 {
+                font-size: 4mm;
+                color: var(--secondary);
+            }
+            article .period {
+                font-size: 3mm;
+            }
+            article.books ul {
+                list-style: none;
+                padding-inline-start: 0;
+            }
+            article.books ul li:not(:first-child) {
+                margin-top: 2mm;
+            }
+            article.books q {
+                font-style: italic;
+            }
+            article.books q:before,
+            article.books q:after {
+                content: "";
+            }
+            article.tools {
+                padding-top: 3mm;
+            }
+            article.tools span {
+                padding: 1mm;
+                margin-top: 0;
+                border-bottom: 0.2mm solid #a9a9a9;
+                display: inline-block;
+            }
+            article.projects > * {
+                display: block;
+            }
+            article.projects > *:not(:first-child) {
+                margin-top: 2mm;
+            }
+            article.interests {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            article.interests > * {
+                flex-basis: 45%;
+                flex-grow: 1;
+            }
+            article.interests i {
+                color: var(--secondary);
+            }
+            .actions {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 5mm;
+                font-size: 5mm;
+            }
+            .actions > * {
+                padding: 2mm;
+                cursor: pointer;
+                color: rgba(56, 67, 71, 0.3);
+                transition: color 0.1s linear;
+            }
+            .actions > *:hover {
+                cursor: pointer;
+                color: rgba(56, 67, 71, 1);
+            }
+        </style>
+        <style media="print">
+            body,
+            .page {
+                margin: 0;
+                box-shadow: none;
+            }
+            @page {
+                margin: 0;
+                size: A4;
+            }
+            .no-print {
+                display: none;
+            }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
+    </head>
+    <body>
+        <div class="page">
+            <div class="actions no-print">
+                <span title="download" onclick="window.location.href='/resume/resume.pdf'">
+                    <i class="far fa-file-pdf"></i>
+                </span>
+                <span title="print" onclick="window.print();">
+                    <i class="fas fa-print"></i>
+                </span>
+            </div>
+            <header>
+                <div style="flex: 1;">
+                    <h1>Alexandre Djerbetian</h1>
+                    <div style="display: flex;">
+                        <div style="width: 60%; margin-right: 3mm;">
+                            <h2>Full stack Architect</h2>
+                            <div class="pitch">
+                                My 2 distant goals are: give more seminars and write a coding book.
+                            </div>
+                        </div>
+                        <div class="contact">
+                            <div class="phone">
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:+33642578328">+33 6 42 57 83 28</a>
+                            </div>
+                            <div class="site">
+                                <i class="fas fa-globe"></i>
+                                <a href="https://alexandre.djerbetian.com">alexandre.djerbetian.com</a>
+                            </div>
+                            <div class="email">
+                                <i class="fas fa-at"></i>
+                                <a href="mailto:alexandre.djerbetian@gmail.com">alexandre.djerbetian@gmail.com </a>
+                            </div>
+                            <div class="github">
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/adjerbetian">adjerbetian</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <aside style="width: 20%;" aria-label="Profile picture">
+                    <img src="/resume/profile.jpg" alt="profile" />
+                </aside>
+            </header>
+            <main>
+                <div>
+                    <section>
+                        <h2>Experience</h2>
+                        <article>
+                            <h3>Software architect</h3>
+                            <h4>360Learning (30 developers)</h4>
+                            <div class="period">
+                                <i class="far fa-calendar-alt"></i>
+                                7/2018 – ongoing
+                            </div>
+                            <ul>
+                                <li>Improved code clarity by advocating clean code practices</li>
+                                <li>Increased test coverage from 25% to 70% with a simple testing framework</li>
+                                <li>Held monthly team seminars on code theory (DDD, Clean Architecture, TDD, …)</li>
+                                <li>
+                                    Empowered squads with domain driven design initiatives to clarify their scopes
+                                    (<em>ongoing</em>)
+                                </li>
+                            </ul>
+                        </article>
+                        <article>
+                            <h3>CTO</h3>
+                            <h4>Libheros (5 developers)</h4>
+                            <div class="period">
+                                <i class="far fa-calendar-alt"></i>
+                                1/2017 – 2/2018
+                            </div>
+                            <ul>
+                                <li>Structured 1 backend, 2 front ends, and 1 ionic mobile app</li>
+                                <li>Created a team spirit with a weekly reading seminar on Clean Code</li>
+                            </ul>
+                        </article>
+                        <article>
+                            <h3>Math Teacher</h3>
+                            <h4>Middle school (6th and 8th grade)</h4>
+                            <div class="period">
+                                <i class="far fa-calendar-alt"></i>
+                                9/2016 – 7/2017
+                            </div>
+                        </article>
+                        <article>
+                            <h3>Freelance Web Development</h3>
+                            <h4>PWC</h4>
+                            <div class="period">
+                                <i class="far fa-calendar-alt"></i>
+                                3/2016 – 9/2016
+                            </div>
+                        </article>
+                    </section>
+                    <section>
+                        <h2>Education</h2>
+                        <article>
+                            <h3>Master of Research in Geometry Processing</h3>
+                            <h4>Technion (Israel)</h4>
+                            <div class="period">
+                                <i class="far fa-calendar-alt"></i>
+                                9/2013 – 2/2016
+                            </div>
+                        </article>
+                        <article>
+                            <h3>Master of Science</h3>
+                            <h4>Ecole Polytechnique (Paris)</h4>
+                            <div class="period">
+                                <i class="far fa-calendar-alt"></i>
+                                9/2010 – 2/2016
+                            </div>
+                        </article>
+                    </section>
+                </div>
+                <aside aria-label="Timeless">
+                    <section>
+                        <h2>Some Projects</h2>
+                        <article class="projects">
+                            <a href="https://alexandre.djerbetian.com/quotes">
+                                <i class="fas fa-globe"></i>
+                                Site for coding books quotes
+                            </a>
+                            <a href="https://github.com/adjerbetian/bobs-payroll/tree/master/packages/e2e/src/features">
+                                <i class="fab fa-github"></i>
+                                The Payroll Case Study
+                            </a>
+                            <a href="https://youtu.be/bT4fnb7XcuA">
+                                <i class="fab fa-youtube"></i>
+                                Seminar on Clean Architecture / Domain Driven Design (French)
+                            </a>
+                        </article>
+                    </section>
+                    <section>
+                        <h2>Technologies</h2>
+                        <article class="tools">
+                            <span>TypeScript</span>
+                            <span>NodeJS</span>
+                            <span>VueJS</span>
+                            <span>Docker</span>
+                            <span>git (<em>rebase, migration to monorepo</em>)</span>
+                            <span>WebStorm</span>
+                            <span>Kotlin</span>
+                        </article>
+                    </section>
+                    <section>
+                        <h2>Favorite books</h2>
+                        <article class="books">
+                            <ul>
+                                <li><q>Clean Code</q> book series</li>
+                                <li><q>Test-Driven Development by Example</q></li>
+                                <li><q>Growing Object-Oriented Software, Guided by Tests</q></li>
+                                <li><q>Domain Driven Design</q></li>
+                                <li><q>Refactoring</q></li>
+                                <li><q>Design Patterns</q></li>
+                            </ul>
+                        </article>
+                    </section>
+                </aside>
+            </main>
+            <footer>
+                <section>
+                    <h2>Other interests</h2>
+                    <article class="interests">
+                        <div>
+                            <i class="fas fa-video"></i>
+                            <strong>Film directing</strong> (shorts movies, documentaries)
+                        </div>
+                        <div>
+                            <i class="fas fa-hands-helping"></i>
+                            <strong>Volunteering</strong> (especially for teaching math)
+                        </div>
+                        <div>
+                            <i class="fas fa-landmark"></i>
+                            <strong>Politics & Geopolitics</strong>
+                        </div>
+                        <div>
+                            <i class="fas fa-music"></i>
+                            <strong>Playing music</strong> (classical piano and rock)
+                        </div>
+                    </article>
+                </section>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -13,7 +13,7 @@ const router = new VueRouter({
             name: "Home",
             component: HomePage
         },
-        redirection("/resume", "/resume/"),
+        redirection("/resume", "/resume"),
         redirection(
             "/github",
             "https://github.com/adjerbetian/alexandre-djerbetian"

@@ -15,6 +15,7 @@ services:
     environment:
       - VUE_APP_SERVER=http://localhost:3000
     volumes:
+      - ./packages/client/public:/app/packages/client/public
       - ./packages/client/src:/app/packages/client/src
       - ./packages/entities/dist:/app/packages/entities/dist
       - ./packages/micro/dist:/app/packages/micro/dist

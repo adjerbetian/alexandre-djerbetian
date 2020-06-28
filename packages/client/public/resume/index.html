@@ -99,10 +99,10 @@
             main {
                 display: flex;
             }
-            main > div {
+            main > div:first-child {
                 flex: 1;
             }
-            aside {
+            main > div:last-child {
                 width: 40%;
             }
             section {
@@ -320,7 +320,7 @@
                         </article>
                     </section>
                 </div>
-                <aside aria-label="Timeless">
+                <div>
                     <section>
                         <h2>Some Projects</h2>
                         <article class="projects">
@@ -363,7 +363,7 @@
                             </ul>
                         </article>
                     </section>
-                </aside>
+                </div>
             </main>
             <footer>
                 <section>

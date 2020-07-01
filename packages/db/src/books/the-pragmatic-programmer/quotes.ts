@@ -692,8 +692,7 @@ export const quotes: QuoteDBModel[] = [
                             `    void example(B& b);`,
                             `}`
                         ],
-                        `The Law of Demeter for functions states that any method 
-                        of an object should call only methodsbelonging to:`
+                        `The Law of Demeter for functions states that any method of an object should call only methods belonging to:`
                     ],
                     [`void Demeter::example(B& b) {`],
                     [`    C c;`                     ],

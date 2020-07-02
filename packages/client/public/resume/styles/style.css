@@ -2,7 +2,9 @@ body {
     --primary: rgb(0, 40, 120);
     --secondary: rgb(255, 110, 1);
 
-    font-family: "Times New Roman", sans-serif;
+    font-family: "Quicksand", sans-serif;
+    font-size: 3.2mm;
+
     background-color: rgb(128, 128, 128);
     color: rgb(56, 67, 71);
 }
@@ -15,11 +17,16 @@ h2,
 h3,
 h4,
 h5,
-h6,
-ul {
+h6 {
     margin: 0;
 }
+h1,
+h2,
+h3 {
+    font-family: "Times New Roman", sans-serif;
+}
 ul {
+    margin: 0;
     padding-inline-start: 4mm;
 }
 .page {
@@ -33,7 +40,6 @@ ul {
     width: 210mm;
     height: 297mm;
     padding: 16mm;
-    font-size: 3.6mm;
 }
 header {
     display: flex;
@@ -56,15 +62,21 @@ header h2 {
     font-size: 5.8mm;
 }
 header .pitch {
+    margin-right: 7mm;
     margin-top: 3mm;
-    font-size: 4.5mm;
     font-weight: 700;
     color: var(--primary);
 }
+header .pitch p {
+    margin: 0;
+}
+header .pitch p:not(:last-child) {
+    margin-bottom: 2mm;
+}
 header .contact {
-    align-self: flex-end;
+    align-self: center;
     margin-top: 3mm;
-    font-size: 3.3mm;
+    font-size: 3mm;
 }
 header .contact i {
     color: var(--secondary);

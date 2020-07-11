@@ -1,4 +1,4 @@
-FROM cypress/included:4.9.0
+FROM cypress/included:4.10.0
 
 COPY --from=builder /app /app
 

@@ -22,14 +22,19 @@ h5,
 h6 {
     margin: 0;
 }
-h1,
-h2,
-h3 {
-    font-family: "Times New Roman", sans-serif;
-}
 ul {
     margin: 0;
     padding-inline-start: 4mm;
+}
+ul.no-bullet {
+    list-style: none;
+    padding-inline-start: 0;
+}
+ul.no-bullet li:not(:first-child) {
+    margin-top: 2mm;
+}
+i {
+    color: var(--secondary);
 }
 .page {
     --section-padding: 5mm;
@@ -80,9 +85,6 @@ header .contact {
     margin-top: 3mm;
     font-size: 0.95rem;
 }
-header .contact i {
-    color: var(--secondary);
-}
 main,
 footer {
     margin: 0 calc(-1 * var(--section-padding));
@@ -112,8 +114,8 @@ article > *:not(:first-child) {
     margin-top: 0.7mm;
 }
 article h3 {
-    font-weight: lighter;
-    font-size: 1.8rem;
+    font-weight: 400;
+    font-size: 1.6rem;
     color: var(--primary);
 }
 article h4 {
@@ -123,12 +125,8 @@ article h4 {
 article .period {
     font-size: 0.9rem;
 }
-article.books ul {
-    list-style: none;
-    padding-inline-start: 0;
-}
-article.books ul li:not(:first-child) {
-    margin-top: 2mm;
+article .period i {
+    color: inherit;
 }
 article.books q {
     font-style: italic;
@@ -146,12 +144,6 @@ article.tools span {
     border-bottom: 0.2mm solid #a9a9a9;
     display: inline-block;
 }
-article.projects > * {
-    display: block;
-}
-article.projects > *:not(:first-child) {
-    margin-top: 2mm;
-}
 article.interests {
     display: flex;
     flex-wrap: wrap;
@@ -160,15 +152,15 @@ article.interests > * {
     flex-basis: 45%;
     flex-grow: 1;
 }
-article.interests i {
-    color: var(--secondary);
-}
 .actions {
     position: absolute;
     top: 0;
     right: 0;
     padding: 5mm;
     font-size: 1.6rem;
+}
+.actions i {
+    color: inherit;
 }
 .actions > * {
     padding: 2mm;

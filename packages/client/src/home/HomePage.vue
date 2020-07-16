@@ -62,7 +62,7 @@ $background-color: #4c483c;
     left: 0;
     height: 100%;
     width: 100%;
-    background: url("../assets/images/home/walter.jpg") no-repeat center left;
+    background: url("../assets/images/home/home-0.jpg") no-repeat center left;
     background-size: cover;
 
     @media (max-width: $screen-size-l) {

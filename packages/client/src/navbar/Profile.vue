@@ -1,5 +1,5 @@
 <template>
-    <div class="profile">
+    <div class="profile-main">
         <router-link to="/" class="profileLink">
             <img src="../assets/images/home/profile.jpg" alt="profile image" />
         </router-link>
@@ -8,29 +8,30 @@
 </template>
 
 <script lang="ts">
-export default {
-    name: "Profile",
-};
+import { Vue } from "vue-property-decorator";
+
+export default class Profile extends Vue {}
 </script>
 
 <style lang="scss" scoped>
 @import "src/navbar/navbar";
 
-.profile {
+.profile-main {
     padding: 60px 0;
     text-align: center;
     height: 350px;
 
-    img {
-        display: inline-block;
-        width: 110px;
-        border-radius: 100%;
+    .profileLink {
+        img {
+            display: inline-block;
+            width: 110px;
+            border-radius: 100%;
+        }
     }
 
     h2 {
-        margin-top: 30px;
         color: $navbarColor;
-        justify-content: center;
+        margin-top: 30px;
         font-size: 1.2em;
     }
 }

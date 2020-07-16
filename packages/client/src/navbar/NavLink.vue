@@ -30,8 +30,10 @@ export default class NavLink extends Vue {
     display: flex;
     align-items: center;
 
-    &:hover {
-        background-color: $navbarBackgroundLightLight;
+    @include laptop {
+        &:hover {
+            background-color: $navbarBackgroundLightLight;
+        }
     }
 }
 

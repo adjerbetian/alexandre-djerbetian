@@ -1,14 +1,23 @@
 <template>
     <div class="home">
+        <h1>Alexandre Djerbetian</h1>
         <div class="home-background"></div>
+        <nav>
+            <NavBar />
+        </nav>
     </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+import NavBar from "@/navbar/NavBar.vue";
 
-@Component
+@Component({
+    components: {
+        NavBar,
+    },
+})
 export default class HomePage extends Vue {}
 </script>
 
@@ -23,6 +32,18 @@ $background-color: #4c483c;
     position: relative;
     height: 100vh;
     background: $background-color;
+}
+h1 {
+    @include laptop {
+        display: none;
+    }
+    color: cornsilk;
+    position: relative;
+    z-index: 1;
+
+    @include mobile-xs {
+        font-size: 1.6em;
+    }
 }
 .home-background {
     position: absolute;
@@ -42,6 +63,12 @@ $background-color: #4c483c;
             box-sizing: border-box;
             box-shadow: 0 0 10vh 10vh $background-color inset;
         }
+    }
+}
+nav {
+    position: relative;
+    @include laptop {
+        display: none;
     }
 }
 </style>

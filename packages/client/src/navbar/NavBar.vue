@@ -1,6 +1,6 @@
 <template>
     <div class="navbar">
-        <Profile />
+        <Profile class="profile" />
 
         <div class="menuGroup">
             <h3 class="resume"><NavLink to="/resume">Resume</NavLink></h3>
@@ -51,19 +51,14 @@ export default class NavBar extends Vue {}
 @import "src/navbar/navbar";
 
 .navbar {
-    color: beige;
-    width: $navbarFullWidth;
-    background-color: $navbarBackground;
-    min-height: 100vh;
-    padding: 0 30px 30px;
-    border-right: 1px solid $navbarBackgroundLight;
-
+    color: $navbarColor;
     display: flex;
     flex-direction: column;
 }
 
 .menuGroup {
     margin-bottom: 40px;
+
     h3 {
         padding-left: 15px;
         color: $navbarColor;
@@ -80,5 +75,25 @@ export default class NavBar extends Vue {}
 }
 .footer {
     text-align: center;
+}
+
+@include laptop {
+    .navbar {
+        width: $navbarFullWidth;
+        background-color: $navbarBackground;
+        min-height: 100vh;
+        padding: 0 30px 30px;
+        border-right: 1px solid $navbarBackgroundLight;
+    }
+}
+@include tablet-and-mobile {
+    .navbar {
+        position: absolute;
+        right: 0;
+    }
+
+    .profile {
+        display: none;
+    }
 }
 </style>

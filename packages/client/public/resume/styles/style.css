@@ -37,7 +37,8 @@ i {
     color: var(--secondary);
 }
 .page {
-    --section-padding: 5mm;
+    --section-padding: 2mm;
+    --article-margin: 4mm;
 
     box-shadow: 0 0 10px rgb(50, 50, 50);
     position: relative;
@@ -49,6 +50,7 @@ i {
     padding: 16mm;
 }
 header {
+    margin-bottom: 1.5em;
     display: flex;
     animation: fadeIn 3s ease;
 }
@@ -100,23 +102,27 @@ main > div:first-child {
     flex: 1;
 }
 main > div:last-child {
-    width: 40%;
+    width: 32%;
 }
 section {
     padding: var(--section-padding);
 }
+section.experience {
+    padding-right: 5mm;
+}
 section h2 {
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-transform: uppercase;
     color: var(--primary);
-    border-bottom: 0.7mm solid var(--primary);
+    border-bottom: 0.4mm solid var(--primary);
+    margin-bottom: -2mm;
 }
 article {
-    padding-top: var(--section-padding);
+    margin: var(--article-margin) 0;
 }
-article > *:not(:first-child) {
+article > * {
     margin-top: 0.7mm;
 }
 article h3 {
@@ -133,7 +139,12 @@ article .period {
     font-size: 0.9rem;
 }
 article .period i {
-    color: inherit;
+    color: rgb(172, 172, 172);
+}
+section.experience .period {
+    float: right;
+    width: 26mm;
+    margin-top: 1.6mm;
 }
 article.books q {
     font-style: italic;
@@ -142,14 +153,17 @@ article.books q:before,
 article.books q:after {
     content: "";
 }
-article.tools {
-    padding-top: 3mm;
-}
 article.tools span {
     padding: 1mm;
     margin-top: 0;
     border-bottom: 0.2mm solid #a9a9a9;
     display: inline-block;
+}
+article.projects {
+    display: flex;
+}
+article.projects > * {
+    flex-grow: 1;
 }
 article.interests {
     display: flex;

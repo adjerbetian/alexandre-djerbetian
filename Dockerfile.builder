@@ -8,7 +8,7 @@ COPY packages/e2e/package.json packages/e2e/
 COPY packages/entities/package.json packages/entities/
 COPY packages/micro/package.json packages/micro/
 COPY packages/server/package.json packages/server/
-RUN yarn install
+RUN yarn install --frozen-lockfile
 
 COPY lerna.json tsconfig.build.json tsconfig.json monoExec.sh monoRun.sh ./
 COPY overrides overrides

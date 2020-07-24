@@ -15,7 +15,7 @@
     "compile": "./monoRun.sh compile",
     "clean": "rm -rf node_modules && lerna clean --yes && ./monoExec.sh 'rm -rf dist/'",
     "test": "./monoRun.sh test",
-    "dev-build": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build",
+    "dev-build": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml build",
     "dev-run": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up",
     "prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up --build",
     "e2e": "./e2e.sh build && (./e2e.sh run || ./e2e.sh stop) && ./e2e.sh stop",

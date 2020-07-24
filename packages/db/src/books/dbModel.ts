@@ -32,5 +32,5 @@ export enum Rating {
     Good,
     VeryGood,
     Amazing,
-    ToBeRememberedByHeart
+    ToBeRememberedByHeart,
 }

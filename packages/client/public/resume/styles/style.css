@@ -55,9 +55,10 @@ header {
     animation: fadeIn 3s ease;
 }
 .profile {
-    width: 35mm;
+    width: 30mm;
 }
 .profile img {
+    display: block;
     width: 100%;
     border-radius: 50%;
 }
@@ -82,12 +83,8 @@ header .pitch {
 header .pitch p {
     margin: 0;
 }
-header .pitch p:not(:last-child) {
-    margin-bottom: 2mm;
-}
 header .contact {
     align-self: center;
-    margin-top: 3mm;
     margin-right: -10mm;
     font-size: 0.95rem;
 }
@@ -159,18 +156,14 @@ article.tools span {
     border-bottom: 0.2mm solid #a9a9a9;
     display: inline-block;
 }
-article.projects {
-    display: flex;
-}
-article.projects > * {
-    flex-grow: 1;
+article.projects li > a {
     display: flex;
     align-items: baseline;
 }
 article.projects i {
     min-width: 5mm;
 }
-article.projects .url {
+.url {
     font-size: 0.8rem;
 }
 article.interests {
@@ -178,7 +171,6 @@ article.interests {
     flex-wrap: wrap;
 }
 article.interests > * {
-    flex-basis: 45%;
     flex-grow: 1;
 }
 .actions {

@@ -50,12 +50,12 @@ i {
     padding: 16mm;
 }
 header {
-    margin-bottom: 1.5em;
+    margin-bottom: 2em;
     display: flex;
     animation: fadeIn 3s ease;
 }
 .profile {
-    width: 30mm;
+    width: 33mm;
 }
 .profile img {
     display: block;
@@ -84,7 +84,7 @@ header .pitch p {
     margin: 0;
 }
 header .contact {
-    align-self: center;
+    align-self: flex-end;
     margin-right: -10mm;
     font-size: 0.95rem;
 }
@@ -140,7 +140,6 @@ article .period i {
 }
 section.experience .period {
     float: right;
-    width: 26mm;
     margin-top: 1.6mm;
 }
 article.books q {

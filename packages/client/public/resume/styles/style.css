@@ -74,9 +74,21 @@ header h2 {
     color: var(--secondary);
     font-size: 1.6rem;
 }
+header ul.tags {
+    margin: 2mm 0 0;
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+header ul.tags > li {
+    color: var(--secondary);
+    font-weight: 700;
+    margin: 0 2mm 0 0;
+}
+header ul.tags > li:before {
+    content: "#";
+}
 header .pitch {
-    margin-right: 7mm;
-    margin-top: 3mm;
     font-weight: 700;
     color: var(--primary);
 }
@@ -86,6 +98,7 @@ header .pitch p {
 header .contact {
     align-self: flex-end;
     margin-right: -10mm;
+    margin-left: 2mm;
     font-size: 0.95rem;
 }
 main,

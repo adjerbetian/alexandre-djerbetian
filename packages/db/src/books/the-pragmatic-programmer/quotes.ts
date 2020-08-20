@@ -228,7 +228,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [
-            quoteTags.Structure,
+            quoteTags.Architecture,
             quoteTags.Common,
             quoteTags.CodingHabits,
             quoteTags.Optimization,
@@ -277,7 +277,7 @@ export const quotes: QuoteDBModel[] = [
         `,
         tags: [
             quoteTags.Humor,
-            quoteTags.Structure,
+            quoteTags.Architecture,
             quoteTags.BadCode,
             quoteTags.Efficiency,
             quoteTags.Story,
@@ -326,7 +326,7 @@ export const quotes: QuoteDBModel[] = [
             ${tip("TIP 14", "There Are No Final Decisions")}
         `,
         tags: [
-            quoteTags.Structure,
+            quoteTags.Architecture,
             quoteTags.CodingHabits,
             quoteTags.Abstraction,
             quoteTags.Common,
@@ -608,7 +608,11 @@ export const quotes: QuoteDBModel[] = [
                 exception handling.
             </p>
         `,
-        tags: [quoteTags.ErrorHandling, quoteTags.Structure, quoteTags.Clarity],
+        tags: [
+            quoteTags.ErrorHandling,
+            quoteTags.Architecture,
+            quoteTags.Clarity
+        ],
         rating: Rating.VeryGood
     },
     {
@@ -669,7 +673,7 @@ export const quotes: QuoteDBModel[] = [
                 }
             `)}
         `,
-        tags: [quoteTags.Code, quoteTags.Structure, quoteTags.Common],
+        tags: [quoteTags.Code, quoteTags.Architecture, quoteTags.Common],
         rating: Rating.VeryGood
     },
     {
@@ -708,7 +712,7 @@ export const quotes: QuoteDBModel[] = [
         tags: [
             quoteTags.Definition,
             quoteTags.Code,
-            quoteTags.Structure,
+            quoteTags.Architecture,
             quoteTags.Clarity,
             quoteTags.Dependency,
             quoteTags.OO
@@ -755,7 +759,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [
-            quoteTags.Structure,
+            quoteTags.Architecture,
             quoteTags.Definition,
             quoteTags.Efficiency,
             quoteTags.Dependency
@@ -869,7 +873,7 @@ export const quotes: QuoteDBModel[] = [
                 used.</strong>
             </p>
         `,
-        tags: [quoteTags.Tests, quoteTags.Structure, quoteTags.Efficiency],
+        tags: [quoteTags.Tests, quoteTags.Architecture, quoteTags.Efficiency],
         rating: Rating.Good
     },
     {

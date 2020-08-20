@@ -20,6 +20,7 @@ function fromEntries<T>(iterable: Array<[string, T]>): { [key: string]: T } {
 // prettier-ignore
 export const quoteTags = asQuoteTags({
     Abstraction: "quotes about the level of abstraction",
+    Architecture: "quotes about the higher level structure of the code",
     Behaviour: "quotes about the personal behaviour of a developer",
     BadCode: "quotes about bad code and its consequences",
     Bugs: "quotes about bugs",
@@ -51,7 +52,6 @@ export const quoteTags = asQuoteTags({
     Refactoring: "quotes about refactoring",
     Separation: "quotes about separation of concerns in code",
     Story: "quotes telling a story",
-    Structure: "quotes about the higher level structure of the code",
     TaskSeparation: "quotes about tasks separation to stay focused",
     Team: "quotes about working in a team",
     TechnologySpecific: "quotes with a technology specific part",

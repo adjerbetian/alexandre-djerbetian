@@ -119,7 +119,7 @@ export const quotes: QuoteDBModel[] = [
         `,
         tags: [
             quoteTags.OO,
-            quoteTags.Structure,
+            quoteTags.Architecture,
             quoteTags.Pattern,
             quoteTags.Abstraction
         ],
@@ -225,7 +225,7 @@ export const quotes: QuoteDBModel[] = [
                 again and again in the design patterns.
             </p>
         `,
-        tags: [quoteTags.OO, quoteTags.Definition, quoteTags.Structure],
+        tags: [quoteTags.OO, quoteTags.Definition, quoteTags.Architecture],
         rating: 2
     },
     {
@@ -243,7 +243,7 @@ export const quotes: QuoteDBModel[] = [
                 composition.</strong>
             </p>
         `,
-        tags: [quoteTags.OO, quoteTags.Structure, quoteTags.CodingHabits],
+        tags: [quoteTags.OO, quoteTags.Architecture, quoteTags.CodingHabits],
         rating: 4
     },
     {
@@ -321,7 +321,7 @@ export const quotes: QuoteDBModel[] = [
                 in the Border class, leaving other classes alone.
             </p>
         `,
-        tags: [quoteTags.OO, quoteTags.Pattern, quoteTags.Structure],
+        tags: [quoteTags.OO, quoteTags.Pattern, quoteTags.Architecture],
         rating: 3
     },
     {
@@ -353,7 +353,7 @@ export const quotes: QuoteDBModel[] = [
                 when trading off one design criterion against another.</strong>
             </p>
         `,
-        tags: [quoteTags.OO, quoteTags.Pattern, quoteTags.Structure],
+        tags: [quoteTags.OO, quoteTags.Pattern, quoteTags.Architecture],
         rating: 2
     },
     {

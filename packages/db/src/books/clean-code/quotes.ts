@@ -517,7 +517,7 @@ export const quotes: QuoteDBModel[] = [
                 boundaries of our systems.
             </p>
         `,
-        tags: [quoteTags.Structure],
+        tags: [quoteTags.Architecture],
         rating: 3
     },
     {
@@ -556,7 +556,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [
-            quoteTags.Structure,
+            quoteTags.Architecture,
             quoteTags.Common,
             quoteTags.Code,
             quoteTags.Dependency

@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@alex/entities": "1.0.0",
-    "cypress": "^4.12.1",
+    "cypress": "^5.0.0",
     "cypress-intellij-reporter": "0.0.4",
     "ts-loader": "^8.0.0",
     "typescript": "~3.9.3",

@@ -309,7 +309,7 @@ export const quotes: QuoteDBModel[] = [
         tags: [
             quoteTags.Code,
             quoteTags.Definition,
-            quoteTags.Structure,
+            quoteTags.Architecture,
             quoteTags.TechnologySpecific
         ],
         rating: 3
@@ -331,7 +331,7 @@ export const quotes: QuoteDBModel[] = [
                 only form of code reuse. JavaScript has more and better options.
             </p>
         `,
-        tags: [quoteTags.Structure, quoteTags.TechnologySpecific],
+        tags: [quoteTags.Architecture, quoteTags.TechnologySpecific],
         rating: 1
     }
     // todo: inheritance

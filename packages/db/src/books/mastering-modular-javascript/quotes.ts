@@ -85,7 +85,11 @@ export const quotes: QuoteDBModel[] = [
                 consumers to use the newer one.
             </p>
         `,
-        tags: [quoteTags.Inspiring, quoteTags.Abstraction, quoteTags.Structure],
+        tags: [
+            quoteTags.Inspiring,
+            quoteTags.Abstraction,
+            quoteTags.Architecture
+        ],
         rating: 5
     },
     {
@@ -132,7 +136,7 @@ export const quotes: QuoteDBModel[] = [
                 extensibility.
             </p>
         `,
-        tags: [quoteTags.Definition, quoteTags.Structure],
+        tags: [quoteTags.Definition, quoteTags.Architecture],
         rating: 3
     },
     {
@@ -229,7 +233,7 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Code,
             quoteTags.Common,
             quoteTags.Clarity,
-            quoteTags.Structure
+            quoteTags.Architecture
         ],
         rating: 3
     },
@@ -598,7 +602,7 @@ export const quotes: QuoteDBModel[] = [
                 only much further down the line.
             </p>
         `,
-        tags: [quoteTags.Separation, quoteTags.Structure],
+        tags: [quoteTags.Separation, quoteTags.Architecture],
         rating: 3
     }
 ];

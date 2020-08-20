@@ -5,6 +5,7 @@
         "paths": {
             "@alex/*": ["*/src"]
         },
-        "noEmit": true
+        "noEmit": true,
+        "incremental": false
     }
 }

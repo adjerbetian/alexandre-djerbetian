@@ -55,7 +55,7 @@ header {
     animation: fadeIn 3s ease;
 }
 .profile {
-    width: 33mm;
+    width: 29mm;
 }
 .profile img {
     display: block;
@@ -73,9 +73,10 @@ header h2 {
     font-weight: 600;
     color: var(--secondary);
     font-size: 1.6rem;
+    margin-bottom: 2mm;
 }
 header ul.tags {
-    margin: 2mm 0 0;
+    margin: 0;
     display: flex;
     list-style: none;
     padding: 0;
@@ -98,7 +99,7 @@ header .pitch p {
 header .contact {
     align-self: flex-end;
     margin-right: -10mm;
-    margin-left: 2mm;
+    margin-left: 7mm;
     font-size: 0.95rem;
 }
 main,
@@ -135,6 +136,14 @@ article {
 article > * {
     margin-top: 0.7mm;
 }
+article .head {
+    border-bottom: 0.4mm rgb(229, 229, 229) solid;
+    display: flex;
+    align-items: center;
+}
+article .head h3 {
+    flex: 1;
+}
 article h3 {
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
@@ -150,10 +159,6 @@ article .period {
 }
 article .period i {
     color: rgb(172, 172, 172);
-}
-section.experience .period {
-    float: right;
-    margin-top: 1.6mm;
 }
 article.books q {
     font-style: italic;
@@ -184,6 +189,9 @@ article.interests {
 }
 article.interests > * {
     flex-grow: 1;
+}
+article ul.spaced > li {
+    margin-bottom: 2mm;
 }
 .actions {
     position: absolute;

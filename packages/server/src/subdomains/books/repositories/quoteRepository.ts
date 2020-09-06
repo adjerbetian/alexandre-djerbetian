@@ -15,7 +15,7 @@ export const quoteRepository: QuoteRepository = {
     },
     fetchFromBook(bookId) {
         return getAllQuotes().filter((q) => q.bookId === bookId);
-    }
+    },
 };
 
 function getAllQuotes(): Quote[] {
@@ -29,7 +29,7 @@ function getAllQuotes(): Quote[] {
                 chapterTitle: book.chapters![dbModel.chapter],
                 rating: dbModel.rating,
                 page: `${dbModel.page}`,
-                content: µ.trimCommonIndentation(dbModel.content)
+                content: µ.trimCommonIndentation(dbModel.content),
             })
         )
     );

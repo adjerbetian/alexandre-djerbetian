@@ -8,6 +8,6 @@ export function buildMovieControllers(useCases: MovieUseCases) {
         },
         getMovie(req, res) {
             res.json(useCases.getMovie(req.params.id));
-        }
+        },
     });
 }

@@ -18,7 +18,7 @@ export const books: BookDBModel[] = [
         authors: ["Robert C. Martin"],
         releaseYear: 2011,
         readingYear: 2017,
-        rating: 4.5
+        rating: 4.5,
     },
     {
         id: "clean-architecture",
@@ -26,7 +26,7 @@ export const books: BookDBModel[] = [
         authors: ["Robert C. Martin"],
         releaseYear: 2017,
         readingYear: 2018,
-        rating: 4
+        rating: 4,
     },
     {
         id: "the-software-craftsman",
@@ -34,7 +34,7 @@ export const books: BookDBModel[] = [
         authors: ["Sandro Mancuso Mancuso"],
         releaseYear: 2014,
         readingYear: 2018,
-        rating: 4.5
+        rating: 4.5,
     },
     {
         id: "test-driven-development-by-example",
@@ -42,7 +42,7 @@ export const books: BookDBModel[] = [
         authors: ["Kent Beck"],
         releaseYear: 2002,
         readingYear: 2018,
-        rating: 5
+        rating: 5,
     },
     {
         id: "extreme-programming-explained-embrace-change",
@@ -50,7 +50,7 @@ export const books: BookDBModel[] = [
         authors: ["Kent Beck"],
         releaseYear: 2004,
         readingYear: 2018,
-        rating: 3.5
+        rating: 3.5,
     },
     {
         id: "the-lean-startup",
@@ -58,7 +58,7 @@ export const books: BookDBModel[] = [
         authors: ["Erich Ries"],
         releaseYear: 2011,
         readingYear: 2018,
-        rating: 1.5
+        rating: 1.5,
     },
     {
         id: "scrum-5ed-pour-une-pratique-vivante-de-l-agilite",
@@ -66,7 +66,7 @@ export const books: BookDBModel[] = [
         authors: ["Claude Aubry"],
         releaseYear: 2018,
         readingYear: 2018,
-        rating: 3
+        rating: 3,
     },
     javascriptTheGoodPart,
     refactoring,
@@ -76,5 +76,5 @@ export const books: BookDBModel[] = [
     pairProgrammingIlluminated,
     designPatterns,
     theMythicalManMonth,
-    masteringModularJavascript
+    masteringModularJavascript,
 ];

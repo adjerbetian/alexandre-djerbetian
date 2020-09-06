@@ -12,6 +12,6 @@ export function buildBookUseCases({ bookRepository }: Dependencies) {
         },
         getBook(id: string): Book {
             return bookRepository.fetchById(id);
-        }
+        },
     };
 }

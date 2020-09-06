@@ -25,7 +25,7 @@ import Rating from "./Rating.vue";
 import BookCover from "./Cover.vue";
 
 @Component({
-    components: { Rating, BookCover }
+    components: { Rating, BookCover },
 })
 export default class BookListItem extends Vue {
     @Prop(Object) book!: Book;

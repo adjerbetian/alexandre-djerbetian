@@ -19,6 +19,6 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Optimization],
-        rating: 1
-    }
+        rating: 1,
+    },
 ];

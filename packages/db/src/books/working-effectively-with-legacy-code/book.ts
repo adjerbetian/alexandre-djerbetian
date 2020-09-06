@@ -11,5 +11,5 @@ export const workingEffectivelyWithLegacyCode: BookDBModel = {
     rating: 4,
     notes,
     chapters,
-    quotes
+    quotes,
 };

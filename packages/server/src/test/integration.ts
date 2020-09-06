@@ -9,5 +9,5 @@ export const api = {
         const res = await superTest(app).get(route);
         expect(res.status).to.equal(200);
         return { body: res.body };
-    }
+    },
 };

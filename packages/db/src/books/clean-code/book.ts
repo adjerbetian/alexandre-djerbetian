@@ -11,5 +11,5 @@ export const cleanCode: BookDBModel = {
     rating: 5,
     chapters,
     notes,
-    quotes
+    quotes,
 };

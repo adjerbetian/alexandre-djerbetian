@@ -6,7 +6,7 @@ describe("utils", () => {
         it("should surround the multiple bold texts by b tag", () => {
             expectBoldifyToEqual([
                 "**bold** not bold **bold**",
-                "<b>bold</b> not bold <b>bold</b>"
+                "<b>bold</b> not bold <b>bold</b>",
             ]);
         });
         it("should return the text when there is nothing to boldify", () => {
@@ -32,7 +32,7 @@ describe("utils", () => {
                         <span>not bold</span>
                         <span><b>not bold</b></span>
                     </code>
-                </pre>`
+                </pre>`,
             ]);
         });
 

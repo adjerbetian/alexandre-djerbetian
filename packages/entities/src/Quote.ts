@@ -21,7 +21,7 @@ export const buildQuote = asEntityFactory((dto: QuoteDTO) => {
         },
         getLength() {
             return getTextLength(this.content);
-        }
+        },
     });
 });
 

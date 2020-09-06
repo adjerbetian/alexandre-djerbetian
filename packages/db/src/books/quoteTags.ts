@@ -6,7 +6,7 @@ function asQuoteTags<T extends Record<string, string>>(
     return fromEntries(
         Object.keys(tags).map((name) => [
             name,
-            { name, description: tags[name] }
+            { name, description: tags[name] },
         ])
     ) as any;
 }

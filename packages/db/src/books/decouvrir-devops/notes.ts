@@ -16,5 +16,5 @@ export const notes: NotesDBModel = {
         Je ne pensais pas un jour dire ceci d'un livre, mais si, c'est bien le cas&nbsp;: 
         ce livre n'a absolument rien de bien.
     `,
-    lessGood: `Ce livre est prétentieux et creux.`
+    lessGood: `Ce livre est prétentieux et creux.`,
 };

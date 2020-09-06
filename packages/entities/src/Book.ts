@@ -23,12 +23,12 @@ export const buildBook = asEntityFactory((dto: BookDTO) => {
         notes: Object.freeze({
             pre: dto.notes?.pre,
             good: dto.notes?.good,
-            lessGood: dto.notes?.lessGood
+            lessGood: dto.notes?.lessGood,
         }),
 
         hasNotes() {
             return this.notes.pre || this.notes.good || this.notes.lessGood;
-        }
+        },
     });
 });
 

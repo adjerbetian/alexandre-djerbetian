@@ -11,5 +11,5 @@ export const theMythicalManMonth: BookDBModel = {
     rating: 2,
     notes,
     chapters,
-    quotes
+    quotes,
 };

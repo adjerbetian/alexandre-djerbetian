@@ -26,5 +26,5 @@ export const notes: NotesDBModel = {
         Unfortunately, it looks like this book was not released with care. The book has a lot of printing "*bugs*"
         which are annoying. One page that doesn't continue the text of the previous page, or a paragraph that repeats
         itself, or wrong positioning of the side black box.
-    `
+    `,
 };

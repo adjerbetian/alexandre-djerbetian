@@ -11,5 +11,5 @@ export const pairProgrammingIlluminated: BookDBModel = {
     rating: 2.5,
     notes,
     chapters,
-    quotes
+    quotes,
 };

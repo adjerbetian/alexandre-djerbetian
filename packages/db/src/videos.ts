@@ -23,33 +23,33 @@ export const videos: VideoDBModel[] = [
         moments: [
             {
                 time: "10m35s",
-                content: "where the architecture part starts"
+                content: "where the architecture part starts",
             },
             {
                 time: "27m30s",
-                content: "what about MVC"
+                content: "what about MVC",
             },
             {
                 time: "42m45s",
-                content: "what about the database"
+                content: "what about the database",
             },
             {
                 time: "57m10s",
-                content: `**discussion about tests**`
-            }
-        ]
+                content: `**discussion about tests**`,
+            },
+        ],
     },
     {
         title: "Workflows of Refactoring",
         youtubeId: "vqEg37e4Mkw",
         year: 2014,
-        speaker: "Martin Fowler"
+        speaker: "Martin Fowler",
     },
     {
         title: "Composition vs Inheritance",
         youtubeId: "wfMtDGfHWpA",
         year: 2015,
-        speaker: "Fun Fun Function"
+        speaker: "Fun Fun Function",
     },
     {
         title: "Making Architecture Matter",
@@ -59,13 +59,13 @@ export const videos: VideoDBModel[] = [
         moments: [
             {
                 time: "7m41s",
-                content: "quality vs features or craftsmanship vs economics"
+                content: "quality vs features or craftsmanship vs economics",
             },
             {
                 time: "10m56s",
-                content: "functionality over time depending on architecture"
-            }
-        ]
+                content: "functionality over time depending on architecture",
+            },
+        ],
     },
     {
         title: "The Many Meanings of Event-Driven Architecture",
@@ -75,26 +75,26 @@ export const videos: VideoDBModel[] = [
         moments: [
             {
                 time: "3m18s",
-                content: "**1 - *Events as notifications***"
+                content: "**1 - *Events as notifications***",
             },
             {
                 time: "8m43s",
                 content:
-                    "*events or commands*: a nice discussion about the definitions or events"
+                    "*events or commands*: a nice discussion about the definitions or events",
             },
             {
                 time: "14m55s",
-                content: "**2 - *Event-carried State Transfer***"
+                content: "**2 - *Event-carried State Transfer***",
             },
             {
                 time: "20m53s",
-                content: "**3 - *Event Sourcing***"
+                content: "**3 - *Event Sourcing***",
             },
             {
                 time: "43m35s",
-                content: "**4 - *CQRS***"
-            }
-        ]
+                content: "**4 - *CQRS***",
+            },
+        ],
     },
     {
         title: "Power Use of Value Objects in Domain Driven Design",
@@ -106,7 +106,7 @@ export const videos: VideoDBModel[] = [
             a big chunk of code only with Value Object.
             
             Very practical. 
-        `
+        `,
     },
     {
         title: "3X",
@@ -118,7 +118,7 @@ export const videos: VideoDBModel[] = [
             understanding of a life of a company, from the beginnings as a startup to the success like Facebook.
             Kent Beck also puts into question his own Extreme Programming theory which he says only applies to a
             certain stage of a company life.
-        `
+        `,
     },
     {
         title: "Refactoring: Second Edition",
@@ -132,46 +132,46 @@ export const videos: VideoDBModel[] = [
         moments: [
             {
                 time: "20m50s",
-                content: "Performance vs Refactoring (until 23m18s)"
+                content: "Performance vs Refactoring (until 23m18s)",
             },
             {
                 time: "32m00s",
-                content: "Continuous integration"
+                content: "Continuous integration",
             },
             {
                 time: "36m38s",
-                content: "How to justify refactoring to business people"
-            }
-        ]
+                content: "How to justify refactoring to business people",
+            },
+        ],
     },
     {
         title: "Programmation fonctionnelle",
         youtubeId: "IQ1kDpGeoCk",
         year: 2017,
-        speaker: "Xavier Detant"
+        speaker: "Xavier Detant",
     },
     {
         title: "What Does Tech Excellence Look Like?",
         youtubeId: "Avs70dZ3Vlk",
         year: 2016,
-        speaker: "Martin Fowler"
+        speaker: "Martin Fowler",
     },
     {
         title: "Agile Product Ownership",
         youtubeId: "502ILHjX9EE",
         year: 2012,
-        speaker: "Henrik Kniberg"
+        speaker: "Henrik Kniberg",
     },
     {
         title: "Introduction to Scrum",
         youtubeId: "9TycLR0TqFA",
         year: 2014,
-        speaker: "Uzility"
+        speaker: "Uzility",
     },
     {
         title: "Object-oriented Programming in 7 minutes",
         youtubeId: "pTB0EiLXUC8",
         year: 2018,
-        speaker: "Mosh Hamedani"
-    }
+        speaker: "Mosh Hamedani",
+    },
 ];

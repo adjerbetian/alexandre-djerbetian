@@ -17,11 +17,11 @@ import { api } from "@/utils";
 export default Vue.extend({
     name: "App",
     components: {
-        NavBar
+        NavBar,
     },
     async mounted() {
         await api.ping("/");
-    }
+    },
 });
 </script>
 

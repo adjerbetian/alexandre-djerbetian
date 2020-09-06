@@ -18,7 +18,7 @@ export const chapters = [
     "Appendix B. Bad Parts 109",
     "Appendix C. JSLint 115",
     "Appendix D. Syntax Diagrams 125",
-    "Appendix E. JSON 136"
+    "Appendix E. JSON 136",
 ];
 
 export const quotes: QuoteDBModel[] = [
@@ -40,7 +40,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.History],
-        rating: 3
+        rating: 3,
     },
     {
         id: "javascript-simple-prototype-creation",
@@ -66,7 +66,7 @@ export const quotes: QuoteDBModel[] = [
             `)}
         `,
         tags: [quoteTags.Code, quoteTags.TechnologySpecific],
-        rating: 1
+        rating: 1,
     },
     {
         id: "javascript-closure-definition",
@@ -84,7 +84,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Definition],
-        rating: 2
+        rating: 2,
     },
     {
         id: "the-invocation-pattern",
@@ -220,7 +220,7 @@ export const quotes: QuoteDBModel[] = [
             `)}
         `,
         tags: [quoteTags.Code, quoteTags.TechnologySpecific],
-        rating: 3
+        rating: 3,
     },
     {
         id: "javascript-closure-advanced",
@@ -310,9 +310,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Code,
             quoteTags.Definition,
             quoteTags.Architecture,
-            quoteTags.TechnologySpecific
+            quoteTags.TechnologySpecific,
         ],
-        rating: 3
+        rating: 3,
     },
     {
         id: "javascript-has-better-options-than-classes",
@@ -332,7 +332,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Architecture, quoteTags.TechnologySpecific],
-        rating: 1
-    }
+        rating: 1,
+    },
     // todo: inheritance
 ];

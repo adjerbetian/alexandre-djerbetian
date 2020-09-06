@@ -5,7 +5,7 @@ import {
     pAll,
     sleep,
     toArray,
-    trimCommonIndentation
+    trimCommonIndentation,
 } from "./micro";
 
 const sandbox = createSandbox();

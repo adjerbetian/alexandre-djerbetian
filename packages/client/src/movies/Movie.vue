@@ -13,7 +13,7 @@ import { Movie } from "@alex/entities";
 import { BaseImage } from "@/utils";
 
 @Component({
-    components: { BaseImage }
+    components: { BaseImage },
 })
 export default class MovieComponent extends Vue {
     @Prop(Object)

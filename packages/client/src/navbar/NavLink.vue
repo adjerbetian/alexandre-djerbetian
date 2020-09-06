@@ -10,8 +10,8 @@ import NavIcon from "./NavIcon.vue";
 
 @Component({
     components: {
-        NavIcon
-    }
+        NavIcon,
+    },
 })
 export default class NavLink extends Vue {
     @Prop(String)

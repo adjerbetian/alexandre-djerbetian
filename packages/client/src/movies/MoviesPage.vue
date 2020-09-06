@@ -15,7 +15,7 @@ import { fetchAllMovies } from "./movieService";
 import { Movie } from "@alex/entities";
 
 @Component({
-    components: { MovieComponent }
+    components: { MovieComponent },
 })
 export default class MoviesPage extends Vue {
     movies: Movie[] = [];

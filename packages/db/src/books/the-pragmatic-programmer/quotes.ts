@@ -11,7 +11,7 @@ export const chapters = [
     "BEND, OR BREAK ",
     "WHILE YOU ARE CODING ",
     "BEFORE THE PROJECT ",
-    "PRAGMATIC PROJECTS "
+    "PRAGMATIC PROJECTS ",
 ];
 
 export const quotes: QuoteDBModel[] = [
@@ -42,9 +42,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Humor,
             quoteTags.PersonalHabits,
             quoteTags.Inspiring,
-            quoteTags.Story
+            quoteTags.Story,
         ],
-        rating: Rating.VeryGood
+        rating: Rating.VeryGood,
     },
     {
         id: "the-broken-window",
@@ -140,9 +140,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Inspiring,
             quoteTags.Efficiency,
             quoteTags.Story,
-            quoteTags.Comparison
+            quoteTags.Comparison,
         ],
-        rating: Rating.ToBeRememberedByHeart
+        rating: Rating.ToBeRememberedByHeart,
     },
     {
         id: "bad-code-requires-lots-of-comments",
@@ -157,7 +157,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Clarity, quoteTags.Common, quoteTags.BadCode],
-        rating: Rating.Good
+        rating: Rating.Good,
     },
     {
         id: "the-line-class-example",
@@ -232,9 +232,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Common,
             quoteTags.CodingHabits,
             quoteTags.Optimization,
-            quoteTags.OO
+            quoteTags.OO,
         ],
-        rating: Rating.VeryGood
+        rating: Rating.VeryGood,
     },
     {
         id: "the-helicopter-story",
@@ -282,9 +282,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Efficiency,
             quoteTags.Story,
             quoteTags.Dependency,
-            quoteTags.Comparison
+            quoteTags.Comparison,
         ],
-        rating: Rating.Good
+        rating: Rating.Good,
     },
     {
         id: "there-are-no-final-decisions",
@@ -331,9 +331,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Abstraction,
             quoteTags.Common,
             quoteTags.BadCode,
-            quoteTags.Dependency
+            quoteTags.Dependency,
         ],
-        rating: Rating.VeryGood
+        rating: Rating.VeryGood,
     },
     {
         id: "units-of-duration",
@@ -358,12 +358,12 @@ export const quotes: QuoteDBModel[] = [
                     [`1–15 days`, `days`],
                     [`3–8 weeks`, `weeks`],
                     [`8–30 weeks`, `months`],
-                    [`30+ weeks`, `think hard before giving an estimate`]
+                    [`30+ weeks`, `think hard before giving an estimate`],
                 ]
             )}
         `,
         tags: [quoteTags.Team, quoteTags.Organisation, quoteTags.Behaviour],
-        rating: Rating.Good
+        rating: Rating.Good,
     },
     {
         id: "the-pragmatic-programmer-p72",
@@ -382,9 +382,9 @@ export const quotes: QuoteDBModel[] = [
         tags: [
             quoteTags.PersonalHabits,
             quoteTags.Behaviour,
-            quoteTags.Efficiency
+            quoteTags.Efficiency,
         ],
-        rating: Rating.Interesting
+        rating: Rating.Interesting,
     },
     {
         id: "the-power-of-text",
@@ -404,7 +404,7 @@ export const quotes: QuoteDBModel[] = [
             </ul>
         `,
         tags: [quoteTags.Clarity],
-        rating: Rating.VeryGood
+        rating: Rating.VeryGood,
     },
     {
         id: "where-the-word-bug-comes-from",
@@ -426,9 +426,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.History,
             quoteTags.Bugs,
             quoteTags.Humor,
-            quoteTags.Story
+            quoteTags.Story,
         ],
-        rating: Rating.Interesting
+        rating: Rating.Interesting,
     },
     {
         id: "fix-the-problem-not-the-blame",
@@ -442,7 +442,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Team, quoteTags.Bugs, quoteTags.Behaviour],
-        rating: Rating.Good
+        rating: Rating.Good,
     },
     {
         id: "dont-panic",
@@ -459,7 +459,7 @@ export const quotes: QuoteDBModel[] = [
             ${tip("TIP 25", "Don’t Panic")}
         `,
         tags: [quoteTags.Behaviour, quoteTags.Bugs, quoteTags.Efficiency],
-        rating: Rating.Good
+        rating: Rating.Good,
     },
     {
         id: "rubber-ducking",
@@ -479,7 +479,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Behaviour, quoteTags.Team, quoteTags.Efficiency],
-        rating: Rating.VeryGood
+        rating: Rating.VeryGood,
     },
     {
         id: "pragmatic-paranoia",
@@ -520,9 +520,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Behaviour,
             quoteTags.Team,
             quoteTags.Tests,
-            quoteTags.Comparison
+            quoteTags.Comparison,
         ],
-        rating: Rating.VeryGood
+        rating: Rating.VeryGood,
     },
     {
         id: "leave-assertions-turned-on",
@@ -572,9 +572,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Behaviour,
             quoteTags.Bugs,
             quoteTags.Tests,
-            quoteTags.Efficiency
+            quoteTags.Efficiency,
         ],
-        rating: Rating.Good
+        rating: Rating.Good,
     },
     {
         id: "use-exceptions-for-exceptional-problems",
@@ -611,9 +611,9 @@ export const quotes: QuoteDBModel[] = [
         tags: [
             quoteTags.ErrorHandling,
             quoteTags.Architecture,
-            quoteTags.Clarity
+            quoteTags.Clarity,
         ],
-        rating: Rating.VeryGood
+        rating: Rating.VeryGood,
     },
     {
         id: "finish-what-you-start",
@@ -674,7 +674,7 @@ export const quotes: QuoteDBModel[] = [
             `)}
         `,
         tags: [quoteTags.Code, quoteTags.Architecture, quoteTags.Common],
-        rating: Rating.VeryGood
+        rating: Rating.VeryGood,
     },
     {
         id: "law-of-demeter-for-functions",
@@ -715,9 +715,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Architecture,
             quoteTags.Clarity,
             quoteTags.Dependency,
-            quoteTags.OO
+            quoteTags.OO,
         ],
-        rating: 4
+        rating: 4,
     },
     {
         id: "model-view-controller",
@@ -762,9 +762,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Architecture,
             quoteTags.Definition,
             quoteTags.Efficiency,
-            quoteTags.Dependency
+            quoteTags.Dependency,
         ],
-        rating: Rating.Good
+        rating: Rating.Good,
     },
     {
         id: "be-wary-of-premature-optimization",
@@ -779,7 +779,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Common, quoteTags.Optimization, quoteTags.Efficiency],
-        rating: Rating.Good
+        rating: Rating.Good,
     },
     {
         id: "software-is-more-like-gardening",
@@ -806,9 +806,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Definition,
             quoteTags.Inspiring,
             quoteTags.Story,
-            quoteTags.Comparison
+            quoteTags.Comparison,
         ],
-        rating: Rating.VeryGood
+        rating: Rating.VeryGood,
     },
     {
         id: "refactor-early-refactor-often",
@@ -853,9 +853,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Refactoring,
             quoteTags.PersonalHabits,
             quoteTags.Efficiency,
-            quoteTags.Story
+            quoteTags.Story,
         ],
-        rating: Rating.VeryGood
+        rating: Rating.VeryGood,
     },
     {
         chapter: 6,
@@ -874,7 +874,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Tests, quoteTags.Architecture, quoteTags.Efficiency],
-        rating: Rating.Good
+        rating: Rating.Good,
     },
     {
         id: "quality-is-a-team-issue",
@@ -907,7 +907,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Team, quoteTags.Efficiency],
-        rating: Rating.VeryGood
+        rating: Rating.VeryGood,
     },
     {
         chapter: 8,
@@ -923,8 +923,8 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Tests, quoteTags.Efficiency],
-        rating: Rating.VeryGood
-    }
+        rating: Rating.VeryGood,
+    },
 ];
 
 function tip(title: string, content: string) {
@@ -942,7 +942,7 @@ function tip(title: string, content: string) {
             "border-top": `6px solid ${primary80()}`,
             "border-radius": "10px",
             position: "relative",
-            padding: "7px 25px"
+            padding: "7px 25px",
         });
     }
     function h4Style() {
@@ -953,12 +953,12 @@ function tip(title: string, content: string) {
             "font-size": "12px",
             "background-color": `${primary80()}`,
             padding: "3px 25px",
-            "border-radius": "10px 10px 0 0"
+            "border-radius": "10px 10px 0 0",
         });
     }
     function pStyle() {
         return joinStyles({
-            margin: "0"
+            margin: "0",
         });
     }
 }
@@ -993,18 +993,18 @@ function buildTable(head: string[], body: string[][]) {
         return joinStyles({
             ...centered(),
             "border-top": `2px solid ${primary30()}`,
-            "border-bottom": `2px solid ${primary30()}`
+            "border-bottom": `2px solid ${primary30()}`,
         });
     }
     function headStyle() {
         return joinStyles({
-            "border-bottom": `1px solid ${primary30()}`
+            "border-bottom": `1px solid ${primary30()}`,
         });
     }
     function cellStyle() {
         return joinStyles({
             border: "none",
-            padding: "5px 2px"
+            padding: "5px 2px",
         });
     }
 }
@@ -1013,7 +1013,7 @@ function centered() {
         margin: "25px auto",
         width: "70%",
         "max-width": "100%",
-        "min-width": "min(300px, 100%)"
+        "min-width": "min(300px, 100%)",
     };
 }
 function primary80() {

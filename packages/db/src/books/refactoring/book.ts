@@ -11,5 +11,5 @@ export const refactoring: BookDBModel = {
     rating: 4,
     notes,
     chapters,
-    quotes
+    quotes,
 };

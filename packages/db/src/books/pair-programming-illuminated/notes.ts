@@ -14,5 +14,5 @@ export const notes: NotesDBModel = {
 
         It also lacks real advice on how to practice PP: how much time before switching, how many breaks and how
         often etc. This books is more an academic essay than a inspiring book on how to spread the technique to new comers.
-    `
+    `,
 };

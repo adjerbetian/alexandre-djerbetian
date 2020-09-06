@@ -11,5 +11,5 @@ export const decouvrirDevops: BookDBModel = {
     rating: 0,
     notes,
     chapters,
-    quotes
+    quotes,
 };

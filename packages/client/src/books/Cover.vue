@@ -2,7 +2,7 @@
     <div class="wrapper" :class="{ hover }">
         <div>
             <div class="book-cover">
-                <img :src="coverSrc" :alt="alt" style="visibility: hidden;" />
+                <img :src="coverSrc" :alt="alt" style="visibility: hidden" />
 
                 <img class="cover-page front-page" :src="coverSrc" :alt="alt" />
                 <div class="hard-side"><img :src="coverSrc" :alt="alt" /></div>

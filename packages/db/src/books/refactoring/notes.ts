@@ -17,5 +17,5 @@ export const notes: NotesDBModel = {
         don't bring much value as IDEs natively integrate most of the main ideas today.
         
         But there is a second edition now! And in JS!!
-    `
+    `,
 };

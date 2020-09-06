@@ -15,6 +15,6 @@ export function generateMovie(overrides: Partial<MovieDTO> = {}): Movie {
         title: `movie ${index}`,
         year: 2005,
         youtubeId: `youtube-${index}`,
-        ...overrides
+        ...overrides,
     });
 }

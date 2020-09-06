@@ -21,7 +21,7 @@ export const chapters = [
     "No Silver Bullet—Essence and Accident",
     '"No Silver Bullet" Refired ',
     "Propositions of The Mythical Man-Month: True or False?",
-    "The Mythical Man-Month after 20 Years"
+    "The Mythical Man-Month after 20 Years",
 ];
 
 export const quotes: QuoteDBModel[] = [
@@ -36,7 +36,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Efficiency, quoteTags.Organisation],
-        rating: Rating.Interesting
+        rating: Rating.Interesting,
     },
     {
         id: "poor-estimation-comes-from-assuming-that-all-will-go-well",
@@ -50,7 +50,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Estimation],
-        rating: Rating.Good
+        rating: Rating.Good,
     },
     {
         id: "the-mythical-man-month",
@@ -86,7 +86,7 @@ export const quotes: QuoteDBModel[] = [
             </div>
         `,
         tags: [quoteTags.Estimation],
-        rating: Rating.Good
+        rating: Rating.Good,
     },
     {
         id: "coding-counts-for-only-one-sixth",
@@ -115,7 +115,7 @@ export const quotes: QuoteDBModel[] = [
             </ol>
         `,
         tags: [quoteTags.Estimation],
-        rating: Rating.Interesting
+        rating: Rating.Interesting,
     },
     {
         id: "the-omelette-story",
@@ -137,7 +137,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Comparison],
-        rating: Rating.VeryGood
+        rating: Rating.VeryGood,
     },
     {
         id: "brooks-s-Law",
@@ -152,7 +152,7 @@ export const quotes: QuoteDBModel[] = [
             `)}
         `,
         tags: [quoteTags.Estimation, quoteTags.Business],
-        rating: Rating.Good
+        rating: Rating.Good,
     },
     {
         id: "put-the-managers-back-to-programming",
@@ -185,7 +185,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Business, quoteTags.Efficiency],
-        rating: Rating.Good
+        rating: Rating.Good,
     },
     {
         id: "a-good-workman-is-known-by-his-tools",
@@ -197,7 +197,7 @@ export const quotes: QuoteDBModel[] = [
             `)}
         `,
         tags: [quoteTags.Efficiency, quoteTags.Inspiring],
-        rating: Rating.Interesting
+        rating: Rating.Interesting,
     },
     {
         id: "build-plenty-of-scaffolding",
@@ -212,7 +212,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.CodingHabits],
-        rating: Rating.Interesting
+        rating: Rating.Interesting,
     },
     {
         id: "great-designs-come-from-great-designers",
@@ -243,7 +243,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Business, quoteTags.Team],
-        rating: Rating.Good
+        rating: Rating.Good,
     },
     {
         id: "the-mythical-man-month-p276",
@@ -261,8 +261,8 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Team],
-        rating: Rating.Good
-    }
+        rating: Rating.Good,
+    },
 ];
 
 function statement(text: string) {

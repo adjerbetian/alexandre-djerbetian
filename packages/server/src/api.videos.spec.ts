@@ -16,21 +16,21 @@ describe("videos", () => {
             moments: [
                 {
                     content: "where the architecture part starts",
-                    time: "10m35s"
+                    time: "10m35s",
                 },
                 {
                     content: "what about MVC",
-                    time: "27m30s"
+                    time: "27m30s",
                 },
                 {
                     content: "what about the database",
-                    time: "42m45s"
+                    time: "42m45s",
                 },
                 {
                     content: "**discussion about tests**",
-                    time: "57m10s"
-                }
-            ]
+                    time: "57m10s",
+                },
+            ],
         });
     });
 });

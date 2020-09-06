@@ -40,8 +40,8 @@ import Profile from "@/navbar/Profile.vue";
     components: {
         Profile,
         NavIcon,
-        NavLink
-    }
+        NavLink,
+    },
 })
 export default class NavBar extends Vue {}
 </script>

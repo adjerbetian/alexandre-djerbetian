@@ -10,7 +10,7 @@ const WORDS = [
     "Extreme Programming",
     "Craftsmanship",
     "Agile",
-    "DevOps"
+    "DevOps",
 ];
 
 interface Word {
@@ -37,15 +37,15 @@ export const words = {
                 right,
                 y: generateBetween(yMin, yMax, {
                     excludes: words.all.map((w) => w.position.y),
-                    distance: 6
-                })
+                    distance: 6,
+                }),
             },
-            content: WORDS[counter % WORDS.length]
+            content: WORDS[counter % WORDS.length],
         });
     },
     removeWord() {
         words.all.shift();
-    }
+    },
 };
 
 function generateBetween(

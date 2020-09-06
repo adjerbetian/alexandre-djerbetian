@@ -11,5 +11,5 @@ export const javascriptTheGoodPart: BookDBModel = {
     rating: 2,
     notes,
     chapters,
-    quotes
+    quotes,
 };

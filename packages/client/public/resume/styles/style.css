@@ -121,6 +121,11 @@ section {
 section.experience {
     padding-right: 5mm;
 }
+section.experience article:not(:first-of-type) {
+    margin-top: calc(-1 * var(--article-margin) / 2);
+    padding-top: calc(var(--article-margin) / 2);
+    border-top: 0.4mm rgb(229, 229, 229) solid;
+}
 section h2 {
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
@@ -137,7 +142,6 @@ article > * {
     margin-top: 0.7mm;
 }
 article .head {
-    border-bottom: 0.4mm rgb(229, 229, 229) solid;
     display: flex;
     align-items: center;
 }

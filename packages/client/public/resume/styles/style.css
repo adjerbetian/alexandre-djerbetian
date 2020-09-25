@@ -91,6 +91,7 @@ header ul.tags > li:before {
 }
 header .pitch {
     font-weight: 700;
+    max-width: 390px;
     color: var(--primary);
 }
 header .pitch p {
@@ -98,7 +99,7 @@ header .pitch p {
 }
 header .contact {
     align-self: flex-end;
-    margin-right: -10mm;
+    margin-right: -20mm;
     margin-left: 7mm;
     font-size: 0.95rem;
 }
@@ -157,6 +158,10 @@ article h3 {
 article h4 {
     font-size: 1.2rem;
     color: var(--secondary);
+}
+article .company-description {
+    margin-top: -0.5mm;
+    margin-bottom: 2mm;
 }
 article .period {
     font-size: 0.9rem;

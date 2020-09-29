@@ -23,7 +23,7 @@ import { fetchAllVideos } from "./videoService";
 import VideoComponent from "./Video.vue";
 
 @Component({
-    components: { VideoComponent }
+    components: { VideoComponent },
 })
 export default class VideosPage extends Vue {
     videos: Video[] = [];

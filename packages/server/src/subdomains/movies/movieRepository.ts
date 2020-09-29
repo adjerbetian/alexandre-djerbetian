@@ -12,5 +12,5 @@ export const movieRepository: MovieRepository = {
         if (!dbModel) throw new NotFound(id);
 
         return buildMovie(dbModel);
-    }
+    },
 };

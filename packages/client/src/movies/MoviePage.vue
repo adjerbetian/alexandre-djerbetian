@@ -17,7 +17,7 @@ import { Youtube } from "@/videos";
 import { fetchMovie } from "./movieService";
 
 @Component({
-    components: { Youtube }
+    components: { Youtube },
 })
 export default class MoviesPage extends Vue {
     movie?: Movie | null = null;

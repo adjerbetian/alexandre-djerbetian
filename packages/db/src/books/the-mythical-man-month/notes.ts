@@ -31,5 +31,5 @@ export const notes: NotesDBModel = {
               interesting, and that doesn't glorify the author. I was really pissed while reading it,
               complete loss of time.
             - chapter 18 is useless and unreadable
-    `
+    `,
 };

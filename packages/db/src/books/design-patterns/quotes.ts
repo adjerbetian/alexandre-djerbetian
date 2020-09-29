@@ -9,7 +9,7 @@ export const chapters = [
     "Creational Patterns",
     "Structural Patterns",
     "Behavioral Patterns",
-    "Conclusion"
+    "Conclusion",
 ];
 
 export const quotes: QuoteDBModel[] = [
@@ -33,9 +33,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Pattern,
             quoteTags.Comparison,
             quoteTags.OO,
-            quoteTags.Abstraction
+            quoteTags.Abstraction,
         ],
-        rating: 3
+        rating: 3,
     },
     {
         id: "design-patterns-p16",
@@ -66,7 +66,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.OO, quoteTags.Definition],
-        rating: 3
+        rating: 3,
     },
     {
         id: "design-patterns-p17",
@@ -121,9 +121,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.OO,
             quoteTags.Architecture,
             quoteTags.Pattern,
-            quoteTags.Abstraction
+            quoteTags.Abstraction,
         ],
-        rating: 4
+        rating: 4,
     },
     {
         id: "design-patterns-p18",
@@ -226,7 +226,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.OO, quoteTags.Definition, quoteTags.Architecture],
-        rating: 2
+        rating: 2,
     },
     {
         id: "design-patterns-p20",
@@ -244,7 +244,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.OO, quoteTags.Architecture, quoteTags.CodingHabits],
-        rating: 4
+        rating: 4,
     },
     {
         id: "design-patterns-p20-bis",
@@ -286,7 +286,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.OO, quoteTags.Definition],
-        rating: 4
+        rating: 4,
     },
     {
         id: "design-patterns-p44",
@@ -322,7 +322,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.OO, quoteTags.Pattern, quoteTags.Architecture],
-        rating: 3
+        rating: 3,
     },
     {
         id: "design-patterns-p44-bis",
@@ -336,7 +336,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.OO, quoteTags.Pattern, quoteTags.Definition],
-        rating: 3
+        rating: 3,
     },
     {
         id: "design-patterns-p44-ter",
@@ -354,7 +354,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.OO, quoteTags.Pattern, quoteTags.Architecture],
-        rating: 2
+        rating: 2,
     },
     {
         id: "design-patterns-p328",
@@ -397,7 +397,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.OO, quoteTags.Pattern, quoteTags.Definition],
-        rating: 3
+        rating: 3,
     },
     {
         chapter: 6,
@@ -480,9 +480,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.OO,
             quoteTags.Pattern,
             quoteTags.Definition,
-            quoteTags.Code
+            quoteTags.Code,
         ],
-        rating: 3
+        rating: 3,
     },
     {
         id: "design-patterns-p351",
@@ -498,7 +498,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Pattern, quoteTags.Motivation],
-        rating: 4
+        rating: 4,
     },
     {
         id: "design-patterns-p351-bis",
@@ -512,8 +512,8 @@ export const quotes: QuoteDBModel[] = [
             <h4>A Targe t for Refactoring</h4>
         `,
         tags: [quoteTags.Pattern, quoteTags.Motivation, quoteTags.Inspiring],
-        rating: 4
-    }
+        rating: 4,
+    },
 ];
 
 function tip(content: string) {

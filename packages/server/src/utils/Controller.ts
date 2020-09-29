@@ -1,6 +1,8 @@
 import { Request, Response } from "express";
 
-export function asControllers<T extends { [name: string]: Controller }>(controllers: T): T {
+export function asControllers<T extends { [name: string]: Controller }>(
+    controllers: T
+): T {
     return controllers;
 }
 

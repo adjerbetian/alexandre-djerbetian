@@ -18,7 +18,7 @@ import Youtube from "./Youtube.vue";
 import CommentsComponent from "./Comments.vue";
 
 @Component({
-    components: { Youtube, CommentsComponent }
+    components: { Youtube, CommentsComponent },
 })
 export default class VideoComponent extends Vue {
     @Prop(Object)

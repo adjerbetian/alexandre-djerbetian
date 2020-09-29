@@ -45,7 +45,7 @@ export function buildPromiseObserver(
         {
             isDone() {
                 return done;
-            }
+            },
         }
     );
 }

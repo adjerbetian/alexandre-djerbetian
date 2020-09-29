@@ -10,7 +10,7 @@ COPY packages/micro/package.json packages/micro/
 COPY packages/server/package.json packages/server/
 RUN yarn install --frozen-lockfile
 
-COPY lerna.json tsconfig.build.json tsconfig.json monoExec.sh monoRun.sh ./
+COPY lerna.json tsconfig.build.json tsconfig.base.json monoExec.sh monoRun.sh ./
 COPY overrides overrides
 COPY packages packages
 RUN yarn compile

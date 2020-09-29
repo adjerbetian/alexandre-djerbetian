@@ -6,7 +6,7 @@ export const buildMovie = asEntityFactory((dto: MovieDTO) => {
         title: dto.title,
         youtubeId: dto.youtubeId,
         year: dto.year,
-        direction: dto.direction
+        direction: dto.direction,
     });
 });
 

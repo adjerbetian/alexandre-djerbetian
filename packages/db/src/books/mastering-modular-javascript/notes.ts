@@ -22,7 +22,7 @@ export const notes: NotesDBModel = {
         For example, the book has a whole part on treating long methods by extracting variables or functions,
         flattening callbacks or promise chains etc. Those topics are very important indeed, but they are not
         what we are looking for when reading a book on *modules*. I feel it's off topic.
-    `
+    `,
 };
 
 /*

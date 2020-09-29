@@ -5,6 +5,6 @@ export function buildVideoControllers(useCases: VideoUseCases) {
     return asControllers({
         getAllVideos(req, res) {
             res.json(useCases.getAllVideos());
-        }
+        },
     });
 }

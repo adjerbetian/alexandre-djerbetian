@@ -31,5 +31,5 @@ export const notes: NotesDBModel = {
         as a exercise, as a reader it's super boring and don't bring anything.
 
         Finally, this book is now old, and today's JavaScript can be very different, with ES6 for instance.
-    `
+    `,
 };

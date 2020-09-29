@@ -9,7 +9,7 @@ export const chapters = [
     "Module Design",
     "Shaping Internals",
     "Modular Patterns and Practices",
-    "Development Methodology and Philosophy"
+    "Development Methodology and Philosophy",
 ];
 
 export const quotes: QuoteDBModel[] = [
@@ -27,7 +27,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Clarity, quoteTags.Common],
-        rating: 3
+        rating: 3,
     },
     {
         id:
@@ -47,7 +47,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Optimization, quoteTags.Common, quoteTags.Clarity],
-        rating: 4
+        rating: 4,
     },
     {
         id: "we-should-treat-performance-as-a-feature",
@@ -66,7 +66,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Optimization, quoteTags.Common, quoteTags.Clarity],
-        rating: 4
+        rating: 4,
     },
     {
         id: "a-module-is-only-as-good-as-its-public-interface",
@@ -88,9 +88,9 @@ export const quotes: QuoteDBModel[] = [
         tags: [
             quoteTags.Inspiring,
             quoteTags.Abstraction,
-            quoteTags.Architecture
+            quoteTags.Architecture,
         ],
-        rating: 5
+        rating: 5,
     },
     {
         id: "do-not-reveal-private-properties",
@@ -106,7 +106,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Abstraction, quoteTags.OO, quoteTags.Common],
-        rating: 2
+        rating: 2,
     },
     {
         id: "interfaces-crust",
@@ -137,7 +137,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Definition, quoteTags.Architecture],
-        rating: 3
+        rating: 3,
     },
     {
         id: "interfaces-optional-parameters",
@@ -233,9 +233,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Code,
             quoteTags.Common,
             quoteTags.Clarity,
-            quoteTags.Architecture
+            quoteTags.Architecture,
         ],
-        rating: 3
+        rating: 3,
     },
     {
         id: "interfaces-unambiguity",
@@ -275,7 +275,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Common, quoteTags.Clarity],
-        rating: 3
+        rating: 3,
     },
     {
         id: "use-positive-options",
@@ -294,7 +294,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Naming, quoteTags.Clarity],
-        rating: 3
+        rating: 3,
     },
     {
         id: "the-best-code-is-no-code-at-all",
@@ -313,7 +313,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Business],
-        rating: 2
+        rating: 2,
     },
     {
         id: "abstractions-evolve-in-small-steps",
@@ -344,7 +344,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Abstraction],
-        rating: 3
+        rating: 3,
     },
     {
         id: "do-repeat-yourself-occasionally",
@@ -370,7 +370,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Abstraction],
-        rating: 2
+        rating: 2,
     },
     {
         id: "performance-is-a-feature",
@@ -383,7 +383,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Clarity, quoteTags.Optimization],
-        rating: 4
+        rating: 4,
     },
     {
         id: "readme-driven-development",
@@ -412,7 +412,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Interface, quoteTags.CodingHabits],
-        rating: 2
+        rating: 2,
     },
     {
         id: "complex-code-is-predominantly-shorter-than-it-should-be",
@@ -431,7 +431,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.BadCode, quoteTags.Extraction],
-        rating: 5
+        rating: 5,
     },
     {
         id: "leveraging-immutability",
@@ -478,7 +478,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Code, quoteTags.Common],
-        rating: 4
+        rating: 4,
     },
     {
         id: "isolating-data-and-logic",
@@ -546,7 +546,7 @@ export const quotes: QuoteDBModel[] = [
             `)}
         `,
         tags: [quoteTags.Code, quoteTags.Separation],
-        rating: 3
+        rating: 3,
     },
     {
         chapter: 4,
@@ -603,6 +603,6 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Separation, quoteTags.Architecture],
-        rating: 3
-    }
+        rating: 3,
+    },
 ];

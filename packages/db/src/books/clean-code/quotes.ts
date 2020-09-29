@@ -24,7 +24,7 @@ export const chapters = [
     "Appendix A: Concurrency II",
     "Appendix B: org.jfree.date.SerialDate",
     "Appendix C: Cross References of Heuristics",
-    "Epilogue"
+    "Epilogue",
 ];
 
 export const quotes: QuoteDBModel[] = [
@@ -76,9 +76,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.PersonalHabits,
             quoteTags.Inspiring,
             quoteTags.Efficiency,
-            quoteTags.Comparison
+            quoteTags.Comparison,
         ],
-        rating: 2
+        rating: 2,
     },
     {
         id: "cost-of-bad-code",
@@ -101,7 +101,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.BadCode, quoteTags.Inspiring, quoteTags.Efficiency],
-        rating: 5
+        rating: 5,
     },
     {
         id: "bad-code-is-our-fault",
@@ -125,9 +125,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Motivation,
             quoteTags.Common,
             quoteTags.Inspiring,
-            quoteTags.Efficiency
+            quoteTags.Efficiency,
         ],
-        rating: 5
+        rating: 5,
     },
     {
         id: "take-the-time-to-go-fast",
@@ -156,9 +156,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.CodingHabits,
             quoteTags.PersonalHabits,
             quoteTags.Inspiring,
-            quoteTags.Efficiency
+            quoteTags.Efficiency,
         ],
-        rating: 5
+        rating: 5,
     },
     {
         id: "clean-code-is-like-painting",
@@ -175,7 +175,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.BadCode, quoteTags.Behaviour, quoteTags.Comparison],
-        rating: 4
+        rating: 4,
     },
     {
         id: "clean-code-does-one-thing-well",
@@ -198,9 +198,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.BadCode,
             quoteTags.Clarity,
             quoteTags.Common,
-            quoteTags.Inspiring
+            quoteTags.Inspiring,
         ],
-        rating: 4
+        rating: 4,
     },
     {
         id: "clean-code-reads-like-well-written-prose",
@@ -216,9 +216,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Clarity,
             quoteTags.Definition,
             quoteTags.Inspiring,
-            quoteTags.Comparison
+            quoteTags.Comparison,
         ],
-        rating: 5
+        rating: 5,
     },
     {
         id: "code-without-tests-is-not-clean",
@@ -236,7 +236,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Tests, quoteTags.TDD],
-        rating: 3
+        rating: 3,
     },
     {
         id: "clean-code-read-as-expected",
@@ -250,7 +250,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Clarity, quoteTags.Inspiring],
-        rating: 3
+        rating: 3,
     },
     {
         id: "clean-code-looks-ridiculously-simple",
@@ -264,7 +264,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Clarity, quoteTags.Inspiring],
-        rating: 3
+        rating: 3,
     },
     {
         id: "clean-makes-the-langage-made-for-problem",
@@ -283,7 +283,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Clarity, quoteTags.Inspiring],
-        rating: 2
+        rating: 2,
     },
     {
         id: "if-you-want-your-code-to-be-easy-to-write-make-it-easy-to-read",
@@ -310,7 +310,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Efficiency, quoteTags.Clarity],
-        rating: 3
+        rating: 3,
     },
     {
         id: "the-boy-scout-rule",
@@ -351,9 +351,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Definition,
             quoteTags.Behaviour,
             quoteTags.CodingHabits,
-            quoteTags.Comparison
+            quoteTags.Comparison,
         ],
-        rating: 5
+        rating: 5,
     },
     {
         id: "practice-son-practice",
@@ -372,9 +372,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Behaviour,
             quoteTags.Inspiring,
             quoteTags.Humor,
-            quoteTags.Comparison
+            quoteTags.Comparison,
         ],
-        rating: 3
+        rating: 3,
     },
     {
         id: "good-names-dont-require-comments",
@@ -389,7 +389,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Naming, quoteTags.Clarity],
-        rating: 4
+        rating: 4,
     },
     {
         id: "names-should-reveal-the-intent-explicitly",
@@ -430,7 +430,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Naming, quoteTags.Code],
-        rating: 3
+        rating: 3,
     },
     {
         id: "clarity-is-king",
@@ -443,7 +443,7 @@ export const quotes: QuoteDBModel[] = [
                 and write code that others can understand.
         `,
         tags: [quoteTags.Clarity, quoteTags.Inspiring],
-        rating: 4
+        rating: 4,
     },
     {
         id: "small-and-even-smaller",
@@ -498,9 +498,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Clarity,
             quoteTags.CodingHabits,
             quoteTags.Definition,
-            quoteTags.LongMethod
+            quoteTags.LongMethod,
         ],
-        rating: 4
+        rating: 4,
     },
     {
         id: "boundary-tension",
@@ -518,7 +518,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Architecture],
-        rating: 3
+        rating: 3,
     },
     {
         id: "boundary-interface",
@@ -559,9 +559,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Architecture,
             quoteTags.Common,
             quoteTags.Code,
-            quoteTags.Dependency
+            quoteTags.Dependency,
         ],
-        rating: 3
+        rating: 3,
     },
     {
         id: "learning-tests",
@@ -602,9 +602,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Dependency,
             quoteTags.Tests,
             quoteTags.CodingHabits,
-            quoteTags.Definition
+            quoteTags.Definition,
         ],
-        rating: 4
+        rating: 4,
     },
     {
         id: "the-three-laws-of-tdd",
@@ -642,9 +642,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Tests,
             quoteTags.CodingHabits,
             quoteTags.Definition,
-            quoteTags.TDD
+            quoteTags.TDD,
         ],
-        rating: 3
+        rating: 3,
     },
     {
         id: "keeping-tests-clean",
@@ -727,9 +727,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Tests,
             quoteTags.Clarity,
             quoteTags.BadCode,
-            quoteTags.Story
+            quoteTags.Story,
         ],
-        rating: 5
+        rating: 5,
     },
     {
         id: "tests-give-confidence",
@@ -758,8 +758,8 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Inspiring,
             quoteTags.Tests,
             quoteTags.Clarity,
-            quoteTags.BadCode
+            quoteTags.BadCode,
         ],
-        rating: 5
-    }
+        rating: 5,
+    },
 ];

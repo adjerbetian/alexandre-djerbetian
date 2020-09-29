@@ -7,7 +7,7 @@ export function titled(content: string, title: string) {
     function styles() {
         return joinStyles({
             "border-bottom": "#000 dotted 1px",
-            cursor: "help"
+            cursor: "help",
         });
     }
 }

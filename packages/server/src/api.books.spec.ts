@@ -19,7 +19,7 @@ describe("books", () => {
             title: "Clean Code",
             authors: ["Robert C. Martin"],
             rating: 5,
-            releaseYear: 2008
+            releaseYear: 2008,
         });
         expect(book.notes).not.to.be.undefined;
         expect(book.notes.pre).to.include(

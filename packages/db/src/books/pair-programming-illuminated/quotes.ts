@@ -33,7 +33,7 @@ export const chapters = [
     "Appendix A.  Pair Programming Tutorial",
     "Appendix B.  An Economic Analysis of Pair Programming",
     "Appendix C.  Pair Programming in the Classroom",
-    "Appendix D.  An Introduction to Test Driven Development"
+    "Appendix D.  An Introduction to Test Driven Development",
 ];
 
 export const quotes: QuoteDBModel[] = [
@@ -58,7 +58,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Definition],
-        rating: 3
+        rating: 3,
     },
     {
         id: "effective-pair-programming-is-very-active",
@@ -74,7 +74,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Behaviour, quoteTags.Team],
-        rating: 3
+        rating: 3,
     },
     {
         id: "why-do-pair-programming",
@@ -134,9 +134,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Efficiency,
             quoteTags.Motivation,
             quoteTags.Organisation,
-            quoteTags.Bugs
+            quoteTags.Bugs,
         ],
-        rating: 4
+        rating: 4,
     },
     {
         id: "the-more-complex-the-task-the-greater-the-need-for-two-brains",
@@ -154,7 +154,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Definition],
-        rating: 3
+        rating: 3,
     },
     {
         id: "pair-programming-is-not-for-all",
@@ -171,7 +171,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Team, quoteTags.Behaviour],
-        rating: 4
+        rating: 4,
     },
     {
         id: "pair-programming-is-fun",
@@ -185,7 +185,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Motivation],
-        rating: 4
+        rating: 4,
     },
     {
         id: "pair-programming-prevents-wasting-time-on-mindless-tasks",
@@ -200,7 +200,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Motivation],
-        rating: 2
+        rating: 2,
     },
     {
         id: "strength-in-numbers",
@@ -215,7 +215,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Inspiring],
-        rating: 3
+        rating: 3,
     },
     {
         id: "the-earlier-the-cheaper",
@@ -244,7 +244,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Team],
-        rating: 2
+        rating: 2,
     },
     {
         id: "pair-programming-prevents-indispensable-people",
@@ -267,7 +267,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Team],
-        rating: 4
+        rating: 4,
     },
     {
         id: "organize-and-dont-just-let-do",
@@ -300,7 +300,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Motivation, quoteTags.Team],
-        rating: 3
+        rating: 3,
     },
     {
         id: "raise-your-own-problems",
@@ -315,7 +315,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Inspiring, quoteTags.Behaviour],
-        rating: 3
+        rating: 3,
     },
     {
         id: "dont-use-finger-on-screens",
@@ -330,7 +330,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Behaviour],
-        rating: 3
+        rating: 3,
     },
     {
         id: "rotating-pairs-disseminate-knowledge",
@@ -350,7 +350,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Team, quoteTags.Business],
-        rating: 3
+        rating: 3,
     },
     {
         id: "pair-programming-and-code-reviews",
@@ -370,7 +370,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Team],
-        rating: 3
+        rating: 3,
     },
     {
         id: "xp-and-bduf",
@@ -396,7 +396,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.History],
-        rating: 4
+        rating: 4,
     },
     {
         chapter: 26,
@@ -421,7 +421,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.PairPrograming],
-        rating: 3
+        rating: 3,
     },
     {
         id: "colocated-teams-perform-better",
@@ -438,7 +438,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.PairPrograming],
-        rating: 2
+        rating: 2,
     },
     {
         chapter: 27,
@@ -452,7 +452,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Behaviour],
-        rating: 2
+        rating: 2,
     },
     {
         chapter: 28,
@@ -466,6 +466,6 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Motivation],
-        rating: 4
-    }
+        rating: 4,
+    },
 ];

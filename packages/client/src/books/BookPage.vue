@@ -43,7 +43,7 @@ import Rating from "./Rating.vue";
 import BookCover from "./Cover.vue";
 
 @Component({
-    components: { Rating, BookCover }
+    components: { Rating, BookCover },
 })
 export default class BookPage extends Vue {
     book?: Book | null = null;

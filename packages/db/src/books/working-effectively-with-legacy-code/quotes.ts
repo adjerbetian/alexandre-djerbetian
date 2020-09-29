@@ -29,7 +29,7 @@ export const chapters = [
     "How Do I Know That I'm Not Breaking Anything?",
     "We Feel OverwhelmedIt Isn't Going to Get Any Better",
     "Dependency-Breaking Techniques",
-    "Appendix: Refactoring"
+    "Appendix: Refactoring",
 ];
 
 export const quotes: QuoteDBModel[] = [
@@ -66,7 +66,7 @@ export const quotes: QuoteDBModel[] = [
                 make large changes without tests. It is like doing aerial
                 gymnastics without a net.
             </p>
-        `
+        `,
     },
     {
         id: "dont-minimize-changes-in-code",
@@ -77,7 +77,7 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Refactoring,
             quoteTags.Common,
             quoteTags.CodingHabits,
-            quoteTags.BadCode
+            quoteTags.BadCode,
         ],
         rating: Rating.VeryGood,
         content: `
@@ -132,7 +132,7 @@ export const quotes: QuoteDBModel[] = [
                 will it? After all of that scrutiny, will anyone know that
                 they've gotten it right?
             </p>
-        `
+        `,
     },
     {
         id: "about-edit-and-pray",
@@ -177,7 +177,7 @@ export const quotes: QuoteDBModel[] = [
                 We still apply the same care, but with the feedback we get, we 
                 are able to make changes more carefully.
             </p>
-        `
+        `,
     },
     {
         id: "what-is-a-unit-test",
@@ -223,7 +223,7 @@ export const quotes: QuoteDBModel[] = [
                 use a subset to work with, but I don't mind running them all
                 every couple of hours.</strong>
             </p>
-        `
+        `,
     },
     {
         id: "the-legacy-code-dilemma",
@@ -239,7 +239,7 @@ export const quotes: QuoteDBModel[] = [
                     tests in place, we often have to change code.
                 </p>
             `)}
-        `
+        `,
     },
     {
         id: "breaking-dependencies-can-leave-scars",
@@ -263,7 +263,7 @@ export const quotes: QuoteDBModel[] = [
                     the dependencies, you can heal that scar, too.
                 </p>
             `)}
-        `
+        `,
     },
     {
         id: "seam",
@@ -274,7 +274,7 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Definition,
             quoteTags.Dependency,
             quoteTags.Code,
-            quoteTags.OO
+            quoteTags.OO,
         ],
         rating: Rating.Interesting,
         content: `
@@ -342,7 +342,7 @@ export const quotes: QuoteDBModel[] = [
                 you can often get tests in place more safely than you could 
                 otherwise.
             </p>
-        `
+        `,
     },
     {
         id: "try-no-code-without-tests",
@@ -369,7 +369,7 @@ export const quotes: QuoteDBModel[] = [
                 can see in their faces: "Boy, we aren't going back to that 
                 again."
             </p>
-        `
+        `,
     },
     {
         id: "sprout-method",
@@ -380,7 +380,7 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Architecture,
             quoteTags.CodingHabits,
             quoteTags.LongMethod,
-            quoteTags.Code
+            quoteTags.Code,
         ],
         rating: Rating.VeryGood,
         content: `
@@ -500,7 +500,7 @@ export const quotes: QuoteDBModel[] = [
                 effect is that we end up keeping this method small and we
                 end up with shorter, easier-to-understand methods overall.
             </p>
-        `
+        `,
     },
     {
         id: "static-methods-as-staging-area",
@@ -516,7 +516,7 @@ export const quotes: QuoteDBModel[] = [
                 you can make a new class and move the statics over to the new 
                 class as instance methods</strong>.
             </p>
-        `
+        `,
     },
     {
         id: "sprout-class",
@@ -528,7 +528,7 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.CodingHabits,
             quoteTags.LongMethod,
             quoteTags.Code,
-            quoteTags.OO
+            quoteTags.OO,
         ],
         rating: Rating.VeryGood,
         content: `
@@ -714,7 +714,7 @@ export const quotes: QuoteDBModel[] = [
                 of functionality that we could place into an existing class,
                 but we can't get the class into a test harness.
             </p>
-        `
+        `,
     },
     {
         id: "wrap-method",
@@ -724,7 +724,7 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Architecture,
             quoteTags.CodingHabits,
             quoteTags.LongMethod,
-            quoteTags.Code
+            quoteTags.Code,
         ],
         rating: Rating.VeryGood,
         content: `
@@ -882,7 +882,7 @@ export const quotes: QuoteDBModel[] = [
                 the new feature I'm adding is as important as the work that
                 was there before.
             </p>
-        `
+        `,
     },
     {
         id: "the-hard-part-is-the-initial-set-of-steps",
@@ -892,7 +892,7 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.CodingHabits,
             quoteTags.Inspiring,
             quoteTags.Motivation,
-            quoteTags.Efficiency
+            quoteTags.Efficiency,
         ],
         rating: Rating.Good,
         content: `
@@ -928,7 +928,7 @@ export const quotes: QuoteDBModel[] = [
                 start to break out those 10 or 15 responsibilities in that 
                 wrapped class, it will look far more appropriate.</strong>
             </p>
-        `
+        `,
     },
     {
         id: "breaking-dependencies-and-build-time",
@@ -947,7 +947,7 @@ export const quotes: QuoteDBModel[] = [
                     dramatically.
                 </p>
             `)}
-        `
+        `,
     },
     {
         id: "tdd-lets-us-concentrate-on-one-thing-at-a-time",
@@ -957,7 +957,7 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.TDD,
             quoteTags.Refactoring,
             quoteTags.Efficiency,
-            quoteTags.TaskSeparation
+            quoteTags.TaskSeparation,
         ],
         rating: 3,
         content: `
@@ -977,7 +977,7 @@ export const quotes: QuoteDBModel[] = [
                     remove any duplication between it and the old code.
                 </p>
             `)}
-        `
+        `,
     },
     {
         id: "programming-by-difference",
@@ -989,7 +989,7 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Architecture,
             quoteTags.Code,
             quoteTags.Naming,
-            quoteTags.OO
+            quoteTags.OO,
         ],
         rating: Rating.Amazing,
         content: `
@@ -1238,7 +1238,7 @@ export const quotes: QuoteDBModel[] = [
                     not have considered before.
                 </p>
             `)}
-        `
+        `,
     },
     {
         id: "rename-class",
@@ -1255,7 +1255,7 @@ export const quotes: QuoteDBModel[] = [
                     not have considered before.
                 </p>
             `)}
-        `
+        `,
     },
     {
         id: "liskov-substitution-principle",
@@ -1316,7 +1316,7 @@ export const quotes: QuoteDBModel[] = [
                 normalized hierarchy you don't have to worry about subclasses 
                 overriding behavior they inherited from their superclasses.
             </p>
-        `
+        `,
     },
     {
         id: "pass-null-in-tests",
@@ -1349,7 +1349,7 @@ export const quotes: QuoteDBModel[] = [
                     corrupt memory as they run, and you'll never know.
                 </p>
             `)}
-        `
+        `,
     },
     {
         id: "dont-over-use-interfaces",
@@ -1367,7 +1367,7 @@ export const quotes: QuoteDBModel[] = [
                 there are other possibilities, we should explore them. 
                 Fortunately, there are.
             </p>
-        `
+        `,
     },
     {
         id: "subverting-access-protection",
@@ -1397,7 +1397,7 @@ export const quotes: QuoteDBModel[] = [
                     have gotten too ridiculous.
                 </p>
             `)}
-        `
+        `,
     },
     {
         id: "command-query-separation",
@@ -1407,7 +1407,7 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Clarity,
             quoteTags.Inspiring,
             quoteTags.CodingHabits,
-            quoteTags.Common
+            quoteTags.Common,
         ],
         rating: Rating.VeryGood,
         content: `
@@ -1430,7 +1430,7 @@ export const quotes: QuoteDBModel[] = [
                     without causing some side effect.</strong>
                 </p>
             `)}
-        `
+        `,
     },
     {
         id: "safety-first",
@@ -1445,7 +1445,7 @@ export const quotes: QuoteDBModel[] = [
                 first.</strong> After the tests are in place, you can make the 
                 code much cleaner.
             </p>
-        `
+        `,
     },
     {
         id: "encapsulation-is-a-tool-for-understanding",
@@ -1490,7 +1490,7 @@ export const quotes: QuoteDBModel[] = [
                     for understanding.</strong>
                 </p>
             `)}
-        `
+        `,
     },
     {
         id: "higher-level-tests-should-not-be-a-substitute-for-unit-tests",
@@ -1542,7 +1542,7 @@ export const quotes: QuoteDBModel[] = [
                     place.</strong>
                 </p>
             `)}
-        `
+        `,
     },
     {
         id: "intersection-points-in-tests",
@@ -1613,7 +1613,7 @@ export const quotes: QuoteDBModel[] = [
                 <a href="/quotes/higher-level-tests-should-not-be-a-substitute-for-unit-tests">this one</a>
                 and <a href="/quotes/pinch-point-traps">this one</a>.
             </p>
-        `
+        `,
     },
     {
         id: "pinch-point-traps",
@@ -1665,7 +1665,7 @@ export const quotes: QuoteDBModel[] = [
                 you can delete the tests at the <i>pinch point</i> and let the 
                 tests for each class support your development work.
             </p>
-        `
+        `,
     },
     {
         id: "automated-tests-are-not-for-bug-finding",
@@ -1717,7 +1717,7 @@ export const quotes: QuoteDBModel[] = [
                 finding and fixing all of the bugs our goal, we'll never 
                 finish</strong>.
             </p>
-        `
+        `,
     },
     {
         id: "characterization-tests",
@@ -1749,7 +1749,7 @@ export const quotes: QuoteDBModel[] = [
                 it should do this" or "I think it does that." The tests document 
                 the actual current behavior of the system.
             </p>
-        `
+        `,
     },
     {
         id: "scratch-refactoring",
@@ -1759,7 +1759,7 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Refactoring,
             quoteTags.Definition,
             quoteTags.Architecture,
-            quoteTags.CodingHabits
+            quoteTags.CodingHabits,
         ],
         rating: Rating.VeryGood,
         content: `
@@ -1778,7 +1778,7 @@ export const quotes: QuoteDBModel[] = [
                 just don't check it in again. Throw that code away. This is 
                 called <i>Scratch refactoring</i>.
             </p>
-        `
+        `,
     },
     {
         id: "my-application-has-no-structure",
@@ -1788,7 +1788,7 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Team,
             quoteTags.Architecture,
             quoteTags.BadCode,
-            quoteTags.CodingHabits
+            quoteTags.CodingHabits,
         ],
         rating: Rating.Good,
         content: `
@@ -1868,7 +1868,7 @@ export const quotes: QuoteDBModel[] = [
                 people on track or the other 17 people just make mistakes caused 
                 by unfamiliarity with the big picture.
             </p>
-        `
+        `,
     },
     {
         id: "telling-the-story-of-the-system",
@@ -1935,7 +1935,7 @@ export const quotes: QuoteDBModel[] = [
                 of doing something, the story can be a good way to see which one 
                 will lead to an easier-to-understand system.
             </p>
-        `
+        `,
     },
     {
         id: "code-design-is-never-over",
@@ -1953,7 +1953,7 @@ export const quotes: QuoteDBModel[] = [
                 abstraction. <strong>There is no surer way to make a legacy 
                 system worse.</strong>
             </p>
-        `
+        `,
     },
     {
         id: "test-location",
@@ -2028,7 +2028,7 @@ export const quotes: QuoteDBModel[] = [
                 source. After a period of time working that way, it just feels 
                 normal.
             </p>
-        `
+        `,
     },
     {
         id: "adding-new-behavior",
@@ -2128,7 +2128,7 @@ export const quotes: QuoteDBModel[] = [
                     free(message);
                 }
             `)}
-        `
+        `,
     },
     {
         id: "this-class-is-too-big-and-I-dont-want-it-to-get-any-bigger",
@@ -2138,7 +2138,7 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.CodingHabits,
             quoteTags.Tests,
             quoteTags.LongMethod,
-            quoteTags.Refactoring
+            quoteTags.Refactoring,
         ],
         rating: Rating.VeryGood,
         content: `
@@ -2236,7 +2236,7 @@ export const quotes: QuoteDBModel[] = [
                 method, and so on. <strong>But what we mean by a responsibility 
                 really comes into focus when we talk about main purpose.</strong>
             </p>
-        `
+        `,
     },
     {
         id: "seeing-responsibilities",
@@ -2302,7 +2302,7 @@ export const quotes: QuoteDBModel[] = [
                     in a class, do some scratch refactoring.
                 </p>
             `)}
-        `
+        `,
     },
     {
         id: "big-classes-can-hide-too-much",
@@ -2312,7 +2312,7 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.LongMethod,
             quoteTags.OO,
             quoteTags.Tests,
-            quoteTags.Extraction
+            quoteTags.Extraction,
         ],
         rating: Rating.Amazing,
         content: `
@@ -2327,7 +2327,7 @@ export const quotes: QuoteDBModel[] = [
                 it is because it is part of a separate responsibility. It should 
                 be on another class.</strong>
             </p>
-        `
+        `,
     },
     {
         id: "extract-methods-before-extracting-a-class",
@@ -2338,7 +2338,7 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.OO,
             quoteTags.Dependency,
             quoteTags.Refactoring,
-            quoteTags.Extraction
+            quoteTags.Extraction,
         ],
         rating: Rating.Good,
         content: `
@@ -2360,7 +2360,7 @@ export const quotes: QuoteDBModel[] = [
                 you'll have broken some dependencies on low-level 
                 details.</strong>
             </p>
-        `
+        `,
     },
     {
         id: "deciding-where-to-start",
@@ -2405,7 +2405,7 @@ export const quotes: QuoteDBModel[] = [
                     often it makes the big picture clearer.
                 </p>
             `)}
-        `
+        `,
     },
     {
         id: "abbreviations",
@@ -2435,7 +2435,7 @@ export const quotes: QuoteDBModel[] = [
                     suffix was used for a particular class.
                 </p>
             `)}
-        `
+        `,
     },
     {
         id: "extract-small-pieces",
@@ -2444,7 +2444,7 @@ export const quotes: QuoteDBModel[] = [
         tags: [
             quoteTags.Refactoring,
             quoteTags.Extraction,
-            quoteTags.LongMethod
+            quoteTags.LongMethod,
         ],
         rating: Rating.Good,
         content: `
@@ -2463,7 +2463,7 @@ export const quotes: QuoteDBModel[] = [
                 isn't as safe. It's easier to miss the details, and the details 
                 are what make the code work.
             </p>
-        `
+        `,
     },
     {
         id: "hyperaware-editing",
@@ -2486,7 +2486,7 @@ export const quotes: QuoteDBModel[] = [
                 I'll be able to convince myself later that I've really done what 
                 I set out to do.
             </p>
-        `
+        `,
     },
     {
         id: "single-goal-editing",
@@ -2496,7 +2496,7 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.PairPrograming,
             quoteTags.Efficiency,
             quoteTags.TaskSeparation,
-            quoteTags.Story
+            quoteTags.Story,
         ],
         rating: Rating.VeryGood,
         content: `
@@ -2561,7 +2561,7 @@ export const quotes: QuoteDBModel[] = [
                 things work rather than working very deliberately and really
                 knowing what your code does.
             </p>
-        `
+        `,
     },
     {
         id: "tdd-some-code-outside-of-work",
@@ -2585,7 +2585,7 @@ export const quotes: QuoteDBModel[] = [
                 you'll feel in control of your situation. I've seen it again
                 and again.
             </p>
-        `
+        `,
     },
     {
         id: "responsibilities-rather-than-implementation-details",
@@ -2601,7 +2601,7 @@ export const quotes: QuoteDBModel[] = [
                     to read and easier to maintain.
                 </p>
             `)}
-        `
+        `,
     },
     {
         id: "legacy-code-has-no-abstraction",
@@ -2621,7 +2621,7 @@ export const quotes: QuoteDBModel[] = [
                 targeted toward what you need, your code communicates better and 
                 you are left with a better seam.
             </p>
-        `
+        `,
     },
     {
         id: "safety-first-bis",
@@ -2636,7 +2636,7 @@ export const quotes: QuoteDBModel[] = [
                     you can make invasive changes much more confidently.
                 </p>
             `)}
-        `
+        `,
     },
     {
         id: "break-out-method-object",
@@ -2646,7 +2646,7 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.LongMethod,
             quoteTags.Extraction,
             quoteTags.Refactoring,
-            quoteTags.OO
+            quoteTags.OO,
         ],
         rating: Rating.Interesting,
         content: `
@@ -2663,7 +2663,7 @@ export const quotes: QuoteDBModel[] = [
                 that makes it easier to break dependencies and move the code to 
                 a better state.
             </p>
-        `
+        `,
     },
     {
         id: "the-name-doesnt-have-to-be-perfect",
@@ -2680,7 +2680,7 @@ export const quotes: QuoteDBModel[] = [
                     you can always rename the class later.
                 </p>
             `)}
-        `
+        `,
     },
     {
         id: "preserve-signature-when-copy-paste",
@@ -2689,7 +2689,7 @@ export const quotes: QuoteDBModel[] = [
         tags: [
             quoteTags.Dependency,
             quoteTags.CodingHabits,
-            quoteTags.Refactoring
+            quoteTags.Refactoring,
         ],
         rating: Rating.Good,
         content: `
@@ -2701,7 +2701,7 @@ export const quotes: QuoteDBModel[] = [
                     you have less of a chance of introducing errors.
                 </p>
             `)}
-        `
+        `,
     },
     {
         id: "no-I-prefix-in-interfaces",
@@ -2745,7 +2745,7 @@ export const quotes: QuoteDBModel[] = [
                     follow you.
                 </p>
             `)}
-        `
+        `,
     },
     {
         id: "no-global-mutable-data",
@@ -2766,7 +2766,7 @@ export const quotes: QuoteDBModel[] = [
                 physicists didn't discover “spooky action at a distance”; in 
                 software, we've had it for years.</strong>
             </p>
-        `
+        `,
     },
     {
         id: "superseding",
@@ -2811,8 +2811,8 @@ export const quotes: QuoteDBModel[] = [
                 superseding methods in production code, you can do a quick
                 search to make sure they aren't.
             </p>
-        `
-    }
+        `,
+    },
 ];
 
 function boxed(content: string) {
@@ -2824,7 +2824,7 @@ function boxed(content: string) {
             padding: "5px 10px",
             border: "1px dashed #e5ad99",
             "border-radius": "5px",
-            "margin-bottom": "1.45rem"
+            "margin-bottom": "1.45rem",
         });
     }
 }

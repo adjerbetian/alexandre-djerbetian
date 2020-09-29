@@ -4,7 +4,7 @@ export function buildVideoUseCases({ videoRepository }: Dependencies) {
     return {
         getAllVideos(): Video[] {
             return videoRepository.fetchAll();
-        }
+        },
     };
 }
 

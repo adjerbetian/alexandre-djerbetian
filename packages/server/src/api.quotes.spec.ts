@@ -74,7 +74,7 @@ describe("quotes", () => {
                 chapter: 1,
                 chapterTitle: "Clean Code",
                 page: "14",
-                rating: 5
+                rating: 5,
             });
             expect(res.body.content).to.include(
                 "Leave the campground cleaner than you found it."

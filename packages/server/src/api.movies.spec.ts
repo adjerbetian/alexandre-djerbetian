@@ -10,18 +10,20 @@ describe("movies", () => {
             id: "chaque-homme-doit-inventer-son-chemin",
             title: "Chaque homme doit inventer son chemin",
             year: 2012,
-            youtubeId: "uE2uYQ8dmzQ"
+            youtubeId: "uE2uYQ8dmzQ",
         });
     });
     it("GET /movies/:id", async () => {
-        const res = await api.get("/movies/chaque-homme-doit-inventer-son-chemin");
+        const res = await api.get(
+            "/movies/chaque-homme-doit-inventer-son-chemin"
+        );
 
         expect(res.body).to.deep.equal({
             direction: "Alexandre Djerbetian & Vladimir Kovalevsky",
             id: "chaque-homme-doit-inventer-son-chemin",
             title: "Chaque homme doit inventer son chemin",
             year: 2012,
-            youtubeId: "uE2uYQ8dmzQ"
+            youtubeId: "uE2uYQ8dmzQ",
         });
     });
 });

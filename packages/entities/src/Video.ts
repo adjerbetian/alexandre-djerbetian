@@ -12,14 +12,14 @@ export const buildVideo = asEntityFactory((dto: VideoDTO) => {
             dto.moments.map((m) =>
                 Object.freeze({
                     time: m.time,
-                    content: m.content
+                    content: m.content,
                 })
             )
         ),
 
         isSmall() {
             return !this.comments && this.moments.length === 0;
-        }
+        },
     });
 });
 

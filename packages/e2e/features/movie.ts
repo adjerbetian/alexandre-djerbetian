@@ -31,6 +31,6 @@ function getMovie() {
         id: "chaque-homme-doit-inventer-son-chemin",
         title: "Chaque homme doit inventer son chemin",
         year: 2012,
-        youtubeId: "uE2uYQ8dmzQ"
+        youtubeId: "uE2uYQ8dmzQ",
     });
 }

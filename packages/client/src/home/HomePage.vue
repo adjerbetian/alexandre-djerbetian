@@ -8,7 +8,7 @@
                 :class="{ right: word.position.right }"
                 :key="word.id"
                 :style="{
-                    top: `${word.position.y}%`
+                    top: `${word.position.y}%`,
                 }"
             >
                 {{ word.content }}
@@ -37,7 +37,7 @@ export default class HomePage extends Vue {
         words.addWord({
             right: Math.random() > 0.5,
             yMin: 10,
-            yMax: 70
+            yMax: 70,
         });
         setTimeout(() => words.removeWord(), DURATION);
     }

@@ -11,5 +11,5 @@ export const designPatterns: BookDBModel = {
     rating: 3.5,
     notes,
     chapters,
-    quotes
+    quotes,
 };

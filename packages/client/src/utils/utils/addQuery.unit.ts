@@ -3,14 +3,14 @@ import { addQuery } from "./addQuery";
 describe("addQuery", () => {
     it("should add the value to the query", () => {
         const result = addQuery("http://localhost/path", {
-            book: "refactoring"
+            book: "refactoring",
         });
 
         expect(result).toEqual("http://localhost/path?book=refactoring");
     });
     it("should add the array values to the query", () => {
         const result = addQuery("http://localhost/path", {
-            books: ["refactoring", "clean-code"]
+            books: ["refactoring", "clean-code"],
         });
 
         expect(result).toEqual(

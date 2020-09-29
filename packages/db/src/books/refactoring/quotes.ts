@@ -18,7 +18,7 @@ export const chapters = [
     "Big Refactorings",
     "Refactoring, Reuse, and Reality",
     "Refactoring Tools",
-    "Putting It All Together"
+    "Putting It All Together",
 ];
 
 export const quotes: QuoteDBModel[] = [
@@ -53,9 +53,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Refactoring,
             quoteTags.Clarity,
             quoteTags.CodingHabits,
-            quoteTags.Inspiring
+            quoteTags.Inspiring,
         ],
-        rating: 5
+        rating: 5,
     },
     {
         id: "refactoring-definition",
@@ -72,7 +72,7 @@ export const quotes: QuoteDBModel[] = [
             `)}
         `,
         tags: [quoteTags.Refactoring, quoteTags.Definition],
-        rating: 2
+        rating: 2,
     },
     {
         id: "refactoring-two-hats",
@@ -112,9 +112,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Tests,
             quoteTags.Efficiency,
             quoteTags.TaskSeparation,
-            quoteTags.Common
+            quoteTags.Common,
         ],
-        rating: 5
+        rating: 5,
     },
     {
         id: "Im-just-a-good-programmer-with-great-habits",
@@ -145,9 +145,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Clarity,
             quoteTags.CodingHabits,
             quoteTags.Inspiring,
-            quoteTags.Efficiency
+            quoteTags.Efficiency,
         ],
-        rating: 4
+        rating: 4,
     },
     {
         id: "when-should-you-refactor",
@@ -169,9 +169,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.TaskSeparation,
             quoteTags.CodingHabits,
             quoteTags.Behaviour,
-            quoteTags.Efficiency
+            quoteTags.Efficiency,
         ],
-        rating: 4
+        rating: 4,
     },
     {
         id: "refactor-when-you-need-to-fix-a-bug",
@@ -194,9 +194,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Refactoring,
             quoteTags.Bugs,
             quoteTags.Clarity,
-            quoteTags.CodingHabits
+            quoteTags.CodingHabits,
         ],
-        rating: 4
+        rating: 4,
     },
     {
         id: "refactor-as-you-do-a-code-review",
@@ -216,7 +216,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Team],
-        rating: 2
+        rating: 2,
     },
     {
         id: "why-refactoring-works",
@@ -242,7 +242,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Refactoring, quoteTags.Definition],
-        rating: 3
+        rating: 3,
     },
     {
         id: "refactoring-and-performance",
@@ -348,9 +348,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Common,
             quoteTags.Optimization,
             quoteTags.BadCode,
-            quoteTags.Efficiency
+            quoteTags.Efficiency,
         ],
-        rating: 5
+        rating: 5,
     },
     {
         id: "good-programmers-rarely-write-clean-code-the-first-time",
@@ -368,7 +368,7 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Refactoring, quoteTags.History, quoteTags.Inspiring],
-        rating: 4
+        rating: 4,
     },
     {
         id: "long-methods",
@@ -393,9 +393,9 @@ export const quotes: QuoteDBModel[] = [
         tags: [
             quoteTags.LongMethod,
             quoteTags.Extraction,
-            quoteTags.Refactoring
+            quoteTags.Refactoring,
         ],
-        rating: 4
+        rating: 4,
     },
     {
         id: "extract-method",
@@ -434,9 +434,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Clarity,
             quoteTags.Naming,
             quoteTags.LongMethod,
-            quoteTags.Refactoring
+            quoteTags.Refactoring,
         ],
-        rating: 4
+        rating: 4,
     },
     {
         id: "replace-temp-with-query",
@@ -479,9 +479,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Optimization,
             quoteTags.Code,
             quoteTags.Extraction,
-            quoteTags.Refactoring
+            quoteTags.Refactoring,
         ],
-        rating: 4
+        rating: 4,
     },
     {
         id: "Introduce-explaining-variable",
@@ -523,9 +523,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Clarity,
             quoteTags.Code,
             quoteTags.Extraction,
-            quoteTags.Refactoring
+            quoteTags.Refactoring,
         ],
-        rating: 4
+        rating: 4,
     },
     {
         id: "decompose-conditional",
@@ -583,9 +583,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Clarity,
             quoteTags.Extraction,
             quoteTags.Common,
-            quoteTags.Refactoring
+            quoteTags.Refactoring,
         ],
-        rating: 4
+        rating: 4,
     },
     {
         id: "replace-conditional-with-gard-clauses",
@@ -629,9 +629,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Clarity,
             quoteTags.Common,
             quoteTags.Code,
-            quoteTags.Refactoring
+            quoteTags.Refactoring,
         ],
-        rating: 4
+        rating: 4,
     },
     {
         id: "rename-method-not-right-the-first-time",
@@ -672,9 +672,9 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.LongMethod,
             quoteTags.Clarity,
             quoteTags.CodingHabits,
-            quoteTags.Efficiency
+            quoteTags.Efficiency,
         ],
-        rating: 4
+        rating: 4,
     },
     {
         id: "refactoring-p409",
@@ -776,10 +776,10 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.CodingHabits,
             quoteTags.Behaviour,
             quoteTags.Efficiency,
-            quoteTags.Story
+            quoteTags.Story,
         ],
-        rating: 3
-    }
+        rating: 3,
+    },
 ];
 
 function createTip(message: string) {
@@ -789,7 +789,7 @@ function createTip(message: string) {
         "border-top": "1px solid #ccc",
         "border-bottom": "1px solid #ccc",
         "justify-content": "space-between",
-        padding: `${margin}px`
+        padding: `${margin}px`,
     });
 
     return `

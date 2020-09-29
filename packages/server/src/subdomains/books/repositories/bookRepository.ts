@@ -14,20 +14,20 @@ export const bookRepository: BookRepository = {
         if (!dbModel) throw new NotFound(id);
 
         return buildEntity(dbModel);
-    }
+    },
 };
 
 function buildEntity(dbModel: BookDBModel): Book {
     return buildBook({
         ...dbModel,
-        notes: buildNotes(dbModel.notes)
+        notes: buildNotes(dbModel.notes),
     });
 
     function buildNotes(notes: BookDBModel["notes"]): BookDTO["notes"] {
         return {
             pre: µ.trimCommonIndentation(notes?.pre || ""),
             good: µ.trimCommonIndentation(notes?.good || ""),
-            lessGood: µ.trimCommonIndentation(notes?.lessGood || "")
+            lessGood: µ.trimCommonIndentation(notes?.lessGood || ""),
         };
     }
 }

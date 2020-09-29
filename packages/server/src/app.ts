@@ -4,7 +4,7 @@ import cors from "cors";
 import {
     bookControllers,
     movieControllers,
-    videoControllers
+    videoControllers,
 } from "./subdomains";
 
 export const app = express();

@@ -28,7 +28,7 @@ import Rating from "./Rating.vue";
 import BookListItem from "./BookListItem.vue";
 
 @Component({
-    components: { BookListItem, Rating }
+    components: { BookListItem, Rating },
 })
 export default class BooksPage extends Vue {
     books: Book[] = [];

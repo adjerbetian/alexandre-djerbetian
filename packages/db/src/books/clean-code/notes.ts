@@ -28,5 +28,5 @@ export const notes: NotesDBModel = {
              
             Also, it doesn't mention *premature optimization*, although I think it's one 
             of the main habits that really lead to obscure code.
-    `
+    `,
 };

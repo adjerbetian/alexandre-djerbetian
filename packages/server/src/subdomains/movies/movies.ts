@@ -7,7 +7,7 @@ export function buildMovieUseCases({ movieRepository }: Dependencies) {
         },
         getMovie(id: string): Movie {
             return movieRepository.fetchById(id);
-        }
+        },
     };
 }
 

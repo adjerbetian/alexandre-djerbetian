@@ -19,5 +19,5 @@ export const notes: NotesDBModel = {
 
         Another negative aspect maybe is that the book doesn't address functional patterns that could be used in
         JS for instance.
-    `
+    `,
 };

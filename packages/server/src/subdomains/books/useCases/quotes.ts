@@ -9,7 +9,7 @@ interface Dependencies {
 
 export function buildQuoteUseCases({
     quoteRepository,
-    bookRepository
+    bookRepository,
 }: Dependencies) {
     return {
         getAllQuotes(filters: { limit: number; books: string[] }): Quote[] {
@@ -34,6 +34,6 @@ export function buildQuoteUseCases({
                 .fetchAll()
                 .filter((b) => !_.isEmpty(quoteRepository.fetchFromBook(b.id)))
                 .sort((b1, b2) => (b2.title > b1.title ? -1 : 1));
-        }
+        },
     };
 }

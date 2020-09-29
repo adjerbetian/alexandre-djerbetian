@@ -13,11 +13,11 @@ import {
     faFilm,
     faFile,
     faHeart as fullHeart,
-    faLink
+    faLink,
 } from "@fortawesome/free-solid-svg-icons";
 import {
     faUser,
-    faHeart as emptyHeart
+    faHeart as emptyHeart,
 } from "@fortawesome/free-regular-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 

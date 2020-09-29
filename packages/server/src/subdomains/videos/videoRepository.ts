@@ -10,8 +10,8 @@ export const videoRepository: VideoRepository = {
                 ...dbModel,
                 id: dbModel.youtubeId,
                 comments: µ.trimCommonIndentation(dbModel.comments || ""),
-                moments: dbModel.moments || []
+                moments: dbModel.moments || [],
             })
         );
-    }
+    },
 };

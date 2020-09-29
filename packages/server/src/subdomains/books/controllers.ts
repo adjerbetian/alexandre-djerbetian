@@ -17,12 +17,12 @@ export function buildControllers(domain: Domain) {
             const bookIds = µ.toArray(req.query.books as string | string[]);
             const quotes = domain.getAllQuotes({
                 limit: 10,
-                books: bookIds
+                books: bookIds,
             });
             res.json(quotes);
         },
         getQuote(req, res) {
             res.json(domain.getQuote(req.params.id));
-        }
+        },
     });
 }

@@ -11,5 +11,5 @@ export const masteringModularJavascript: BookDBModel = {
     rating: 3,
     notes,
     chapters,
-    quotes
+    quotes,
 };

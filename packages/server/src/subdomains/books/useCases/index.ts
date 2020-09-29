@@ -9,6 +9,6 @@ export type Domain = ReturnType<typeof buildDomain>;
 export function buildDomain(repositories: Repositories) {
     return {
         ...buildBookUseCases(repositories),
-        ...buildQuoteUseCases(repositories)
+        ...buildQuoteUseCases(repositories),
     };
 }

@@ -34,3 +34,10 @@ export enum Rating {
     Amazing,
     ToBeRememberedByHeart,
 }
+// export enum Rating {
+//     Interesting = "Interesting",
+//     Good = "Good",
+//     VeryGood = "VeryGood",
+//     Amazing = "Amazing",
+//     ToBeRememberedByHeart = "ToBeRememberedByHeart",
+// }

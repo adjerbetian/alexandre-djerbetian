@@ -959,7 +959,7 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Efficiency,
             quoteTags.TaskSeparation,
         ],
-        rating: 3,
+        rating: Rating.Good,
         content: `
             ${boxed(`
                 <h3>TDD and Legacy Code</h3>
@@ -1323,7 +1323,7 @@ export const quotes: QuoteDBModel[] = [
         chapter: 9,
         page: "111",
         tags: [quoteTags.Tests],
-        rating: 1,
+        rating: Rating.VeryGood,
         content: `
             ${boxed(`
                 <h3>Pass Null</h3>

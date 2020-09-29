@@ -1,4 +1,4 @@
-import { QuoteDBModel } from "../dbModel";
+import { QuoteDBModel, Rating } from "../dbModel";
 import { quoteTags } from "../quoteTags";
 
 export const chapters = ["Introduction", "La démarche DevOps enfin expliquée"];
@@ -19,6 +19,6 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Optimization],
-        rating: 1,
+        rating: Rating.VeryGood,
     },
 ];

@@ -1,4 +1,4 @@
-import { QuoteDBModel } from "../dbModel";
+import { QuoteDBModel, Rating } from "../dbModel";
 import { quoteTags } from "../quoteTags";
 import { cpp } from "../utils";
 
@@ -14,9 +14,10 @@ export const chapters = [
 
 export const quotes: QuoteDBModel[] = [
     {
-        id: "design-patterns-p11",
+        id: "ood-and-the-real-world",
         chapter: 1,
         page: "11",
+        rating: Rating.Good,
         content: `
             <p>
                 <strong>[O]bject-oriented designs often end up with classes that
@@ -35,12 +36,12 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.OO,
             quoteTags.Abstraction,
         ],
-        rating: 3,
     },
     {
-        id: "design-patterns-p16",
+        id: "class-versus-interface-inheritance",
         chapter: 1,
         page: "16",
+        rating: Rating.Amazing,
         content: `
             <h3>Class versus Interface Inheritance</h3>
             <p>
@@ -51,7 +52,7 @@ export const quotes: QuoteDBModel[] = [
                 <strong>An object's class defines how the object is 
                 implemented.</strong> The class defines the object's internal 
                 state and the implementation of its operations. In contrast,
-                <strong>an object's type only refers to its interface—the set of
+                <strong>an object's type only refers to its interface — the set of
                 requests to which it can respond.</strong> An object can have 
                 many types, and objects of different classes can have the same type.
             </p>
@@ -66,12 +67,12 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.OO, quoteTags.Definition],
-        rating: 3,
     },
     {
-        id: "design-patterns-p17",
+        id: "programming-to-an-interface-not-an-implementation",
         chapter: 1,
         page: "17",
+        rating: Rating.VeryGood,
         content: `
             <h3>Programming to an Interface, not an Implementation</h3>
             <p>
@@ -123,12 +124,12 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Pattern,
             quoteTags.Abstraction,
         ],
-        rating: 4,
     },
     {
-        id: "design-patterns-p18",
+        id: "inheritance-versus-composition",
         chapter: 1,
         page: "18",
+        rating: Rating.Good,
         content: `
             <h3>Inheritance versus Composition</h3>
             <p>
@@ -226,12 +227,12 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.OO, quoteTags.Definition, quoteTags.Architecture],
-        rating: 2,
     },
     {
-        id: "design-patterns-p20",
+        id: "favor-object-composition-over-class-inheritance",
         chapter: 1,
         page: "20",
+        rating: Rating.VeryGood,
         content: `
             ${tip(`
                 <strong>Favor object composition over class inheritance.</strong>
@@ -244,12 +245,12 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.OO, quoteTags.Architecture, quoteTags.CodingHabits],
-        rating: 4,
     },
     {
         id: "design-patterns-p20-bis",
         chapter: 1,
         page: "20",
+        rating: Rating.VeryGood,
         content: `
             <p>
                 Delegation is a way of making composition as powerful for
@@ -286,12 +287,12 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.OO, quoteTags.Definition],
-        rating: 4,
     },
     {
-        id: "design-patterns-p44",
+        id: "transparent-enclosure",
         chapter: 2,
         page: "44",
+        rating: Rating.Good,
         content: `
             <p>
                 We could add a border to Composition by subclassing it to
@@ -314,20 +315,45 @@ export const quotes: QuoteDBModel[] = [
                 next step is to decide who composes whom. We could have the
                 border contain the glyph, which makes sense given that the
                 border will surround the glyph on the screen. Or we could do
-                the opposite—put the border into the glyph—but then we must
+                the opposite — put the border into the glyph — but then we must
                 make modifications to the corresponding Glyph subclass to
                 make it aware of the border. Our first choice, composing the
                 glyph in the border, keeps the border-drawing code entirely
                 in the Border class, leaving other classes alone.
             </p>
+            <p>
+                What does the Border class look like? The fact that borders have 
+                an appearance suggests they should actually be glyphs; that is, 
+                Border should be a subclass of Glyph. But there's a more 
+                compelling reason for doing this: <strong>Clients shouldn't care 
+                whether glyphs have borders or not.</strong> They should treat 
+                glyphs uniformly. When clients tell a plain, unbordered glyph to 
+                draw itself, it should do so without embellishment. If that glyph 
+                is composed in a border, clients shouldn't have to treat the 
+                border containing the glyph any differently; they just tell it 
+                to draw itself as they told the plain glyph before. This implies 
+                that the Border interface matches the Glyph interface. We 
+                subclass Border from Glyph to guarantee this relationship.
+            </p>
+            <p>
+                All this leads us to the concept of <strong>transparent 
+                enclosure</strong>, which combines the notions of (1) single-child 
+                (or single-component) composition and (2) compatible interfaces.
+                <strong>Clients generally can't tell whether they're dealing with the 
+                component or its enclosure</strong> (i.e., the child's parent), 
+                especially if the enclosure simply delegates all its operations to 
+                its component. But the enclosure can also augment the component's 
+                behavior by doing work of its own before and/or after delegating 
+                an operation.            
+            </p>
         `,
         tags: [quoteTags.OO, quoteTags.Pattern, quoteTags.Architecture],
-        rating: 3,
     },
     {
-        id: "design-patterns-p44-bis",
+        id: "the-singleton-pattern-is-an-improvement-over-global-variables",
         chapter: 2,
         page: "44",
+        rating: Rating.Good,
         content: `
             <p>
                 The Singleton pattern is an improvement over global variables.
@@ -336,12 +362,12 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.OO, quoteTags.Pattern, quoteTags.Definition],
-        rating: 3,
     },
     {
-        id: "design-patterns-p44-ter",
+        id: "knowing-design-patterns-is-about-trading-off",
         chapter: 2,
         page: "44",
+        rating: Rating.Interesting,
         content: `
             <p>
                 Designs that use Abstract Factory, Prototype, or Builder are
@@ -354,12 +380,12 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.OO, quoteTags.Pattern, quoteTags.Architecture],
-        rating: 2,
     },
     {
-        id: "design-patterns-p328",
+        id: "template-methods-and-the-hollywood-principle",
         chapter: 5,
         page: "328",
+        rating: Rating.Good,
         content: `
             <p>
                 <strong>Template methods lead to an inverted control structure
@@ -397,12 +423,12 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.OO, quoteTags.Pattern, quoteTags.Definition],
-        rating: 3,
     },
     {
+        id: "visitor-and-double-dispatch",
         chapter: 6,
         page: "338",
-        id: "design-patterns-p338",
+        rating: Rating.VeryGood,
         content: `
             <h3>Visitor</h3>
             ${cpp(`
@@ -482,12 +508,12 @@ export const quotes: QuoteDBModel[] = [
             quoteTags.Definition,
             quoteTags.Code,
         ],
-        rating: 3,
     },
     {
-        id: "design-patterns-p351",
+        id: "cataloging-design-patterns-is-important",
         chapter: 6,
         page: "351",
+        rating: Rating.VeryGood,
         content: `
             <p>
                 <strong>Cataloging design patterns is important.</strong> It
@@ -498,21 +524,20 @@ export const quotes: QuoteDBModel[] = [
             </p>
         `,
         tags: [quoteTags.Pattern, quoteTags.Motivation],
-        rating: 4,
     },
     {
-        id: "design-patterns-p351-bis",
+        id: "what-to-expect-from-design-patterns",
         chapter: 6,
         page: "351",
+        rating: Rating.VeryGood,
         content: `
             <h3>What to Expect from Design Patterns</h3>
             <h4>A Common Design Vocabulary</h4>
             <h4>A Documentation and Learning Aid</h4>
             <h4>An Adjunct to Existing Methods</h4>
-            <h4>A Targe t for Refactoring</h4>
+            <h4>A Target for Refactoring</h4>
         `,
         tags: [quoteTags.Pattern, quoteTags.Motivation, quoteTags.Inspiring],
-        rating: 4,
     },
 ];
 

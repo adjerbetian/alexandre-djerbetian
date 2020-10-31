@@ -54,9 +54,6 @@ header {
     display: flex;
     animation: fadeIn 3s ease;
 }
-.profile {
-    width: 29mm;
-}
 .profile img {
     display: block;
     width: 100%;

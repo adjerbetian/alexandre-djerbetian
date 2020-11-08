@@ -1,6 +1,6 @@
 import { QuoteDBModel, Rating } from "../dbModel";
 import { quoteTags } from "../quoteTags";
-import { cpp, java, joinStyles, markdown, titled } from "../utils";
+import { cpp, java, joinStyles, markdown, titled } from "../../utils";
 
 export const chapters = [
     "Preface",

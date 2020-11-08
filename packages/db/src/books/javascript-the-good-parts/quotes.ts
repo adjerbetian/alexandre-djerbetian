@@ -1,6 +1,6 @@
 import { QuoteDBModel } from "../dbModel";
 import { quoteTags } from "../quoteTags";
-import { javascript } from "../utils";
+import { javascript } from "../../utils";
 
 export const chapters = [
     "Preface",

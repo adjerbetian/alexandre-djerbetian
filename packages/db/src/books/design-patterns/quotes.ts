@@ -1,6 +1,6 @@
 import { QuoteDBModel, Rating } from "../dbModel";
 import { quoteTags } from "../quoteTags";
-import { cpp } from "../utils";
+import { cpp } from "../../utils";
 
 export const chapters = [
     "Foreword",

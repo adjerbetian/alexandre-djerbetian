@@ -147,3 +147,9 @@ Example:
 - no real private methods
 
 However, factories lose the `instanceof` operator.
+
+## Delete bad tests
+
+Bad tests are worse than no test.
+
+Some people think it's better to keep bad tests, but no, bad tests should be deleted.

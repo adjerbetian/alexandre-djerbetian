@@ -29,7 +29,6 @@ export default Vue.extend({
 @import "./assets/styles/variables";
 
 main {
-    background: url("./assets/images/background.png") fixed;
     margin-left: $navbarFullWidth;
 }
 

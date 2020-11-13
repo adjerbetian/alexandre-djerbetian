@@ -8,7 +8,7 @@ up() {
     compose up
 }
 run() {
-    compose "run -e CYPRESS_RECORD_KEY e2e 'npx cypress run'"
+    compose "run e2e 'npx cypress run'"
     #compose "run -e CYPRESS_RECORD_KEY e2e 'npx cypress run --record true'"
 }
 stop() {

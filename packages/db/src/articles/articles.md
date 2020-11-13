@@ -153,3 +153,32 @@ However, factories lose the `instanceof` operator.
 Bad tests are worse than no test.
 
 Some people think it's better to keep bad tests, but no, bad tests should be deleted.
+
+## Don't put business logic in the client code
+
+This logic should not be in the client
+
+```js
+const moment = require("moment");
+const datesLgUtils = require("lang/dates/utils");
+
+export function computeDisplayedDueDate(step, pathUserTracking) {
+    if (_.isUndefined(step.relativeDate)) { return ""; }
+
+    const { unit, value } = step.relativeDate;
+    if (pathUserTracking.enrollmentDate) {
+        const dueDate = moment(pathUserTracking.enrollmentDate).add(value, unit);
+        return User.getDateFormatter().formatWithAbbreviatedMonth(dueDate);
+    } else {
+        const fullUnits = datesLgUtils.getFullUnits({ quantity: value, unitType: unit });
+        return `${value} ${fullUnits}`;
+    }
+}
+
+export function buildPathDurationLabel({ duration, durationType } = {}) {
+    if (! duration || ! durationType) { return ""; }
+
+    const durationFullUnits = datesLgUtils.getFullUnits({ quantity: duration, unitType: durationType });
+    return `${duration} ${durationFullUnits}`;
+}
+```

@@ -38,8 +38,7 @@ export default class QuoteComponent extends Vue {
 }
 
 .content {
-    border: 1px solid primary(30);
-    border-radius: 15px;
+    @include bordered;
     padding: 20px;
     background-color: $quote-background-color;
     margin: 0;

@@ -41,14 +41,13 @@ export default class BookListItem extends Vue {
 @import "../assets/styles/variables";
 
 .book {
+    @include bordered;
     background-color: white;
-    transition: border-color 0.2s, background-color 0.2s;
-    border: solid 1px primary(30);
-    border-radius: 20px;
+    transition: all 0.2s;
 
     &.hover:hover {
-        background-color: primary(93);
-        border-color: primary(50);
+        border-color: transparent;
+        box-shadow: 0 5px 20px primary(80);
     }
 
     color: inherit;

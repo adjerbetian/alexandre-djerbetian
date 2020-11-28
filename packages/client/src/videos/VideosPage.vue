@@ -49,9 +49,8 @@ $spacing: 10px;
 }
 
 .video {
+    @include bordered;
     margin: $spacing;
-    border: 2px solid $primary;
-    border-radius: 20px;
     padding: 30px;
     background-color: white;
     flex-grow: 1;

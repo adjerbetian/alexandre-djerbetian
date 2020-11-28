@@ -9,6 +9,11 @@
 $primary: primary(30);
 $yellow-light: yellow(90);
 
+@mixin bordered {
+    border: solid 1px primary(85);
+    border-radius: 20px;
+}
+
 $background-color: cornsilk;
 $quote-background-color: white;
 

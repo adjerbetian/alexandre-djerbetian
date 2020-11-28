@@ -129,9 +129,8 @@ aside {
 }
 
 .review {
+    @include bordered;
     background-color: white;
-    border: 1px solid $primary;
-    border-radius: 20px;
 
     padding: 20px;
     margin: 20px 0;

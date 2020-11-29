@@ -23,7 +23,7 @@ describe("books", () => {
         });
         expect(book.notes).not.to.be.undefined;
         expect(book.notes.pre).to.include(
-            "This is the best introduction to coding I've read"
+            "For me, this is the best introduction to coding"
         );
         expect(book.notes.good).to.include(
             "It goes deep into the basics and details of writing good code"

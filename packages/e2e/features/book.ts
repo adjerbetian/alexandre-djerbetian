@@ -26,9 +26,7 @@ describe("Book page", () => {
         cy.contains("h2", "General review")
             .closest(".review")
             .within(() => {
-                cy.contains(
-                    "This is the best introduction to coding I've read"
-                );
+                cy.contains("For me, this is the best introduction to coding");
             });
         cy.contains("h2", "What I especially liked")
             .closest(".review")

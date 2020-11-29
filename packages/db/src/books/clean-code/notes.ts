@@ -2,10 +2,10 @@ import { NotesDBModel } from "../dbModel";
 
 export const notes: NotesDBModel = {
     pre: `
-        This is the best introduction to coding I've read (it's also my first so I might be biased).
-        This is the book that gave me the passion for craftsmanship and, well, *Clean Code*!
+        For me, this is the best introduction to coding (it's also my first so I might be biased).
+        This book gave me the passion for craftsmanship and, well, *Clean Code*!
 
-        I really recommend this book to anyone who codes on a regular basis, from software developers to
+        I strongly recommend it to anyone who codes on a regular basis, from software developers to
         research scientists.
     `,
     good: `

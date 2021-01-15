@@ -5453,10 +5453,10 @@ cyclist@^1.0.1:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
 
-cypress-intellij-reporter@0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/cypress-intellij-reporter/-/cypress-intellij-reporter-0.0.5.tgz#ed56c75ee21d17c4bb47d7c8169f01446e038636"
-  integrity sha512-QTmqGKX/S8vpw70x6co+rdL1vOMFG1Ot3sw+X3mN6Mubq26WcOegncY8arQnBtoPdO5Li6gwqI1IxKLOTt/yCA==
+cypress-intellij-reporter@0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/cypress-intellij-reporter/-/cypress-intellij-reporter-0.0.6.tgz#5c396b6fe0a6fcef3b380ec6e62b9c229d62781c"
+  integrity sha512-KDxeWKKAAGekhg1xmGToSsHDWgogM1hUYakAL4yjKQr9gSI2iyRxcrKlq1/jG4omCbUEY+AZGiiwyKOscY9+Gg==
   dependencies:
     mocha latest
 

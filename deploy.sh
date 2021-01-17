@@ -5,21 +5,6 @@ USER=djerbeti
 IP=world-312.fr.planethoster.net
 HOST="${USER}@${IP}"
 
-syncAllDist() {
-    syncDistOf "micro"
-    syncDistOf "entities"
-    syncDistOf "db"
-    syncDistOf "server"
-    syncDistOf "client"
-}
-syncDistOf() {
-    sync "packages/$1/dist"
-}
-sync() {
-    folder=$1
-    rsync -avz --delete --copy-links -e "ssh -p 5022" "${folder}/" "${HOST}:sites/alexandre/${folder}"
-}
-
 buildClient() {
     yarn bootstrap
     (cd packages/client && NODE_ENV=prod;VUE_APP_SERVER=https://api.djerbetian.com npm run build)
@@ -35,6 +20,25 @@ pullInstallOnServer() {
 INSTALL
 }
 
+syncAllDist() {
+    syncDistOf "micro"
+    syncDistOf "entities"
+    syncDistOf "db"
+    syncDistOf "server"
+    syncDistOf "client"
+}
+syncDistOf() {
+    sync "packages/$1/dist"
+}
+sync() {
+    folder=$1
+    rsync -avz --delete --copy-links -e "ssh -p 5022" "${folder}/" "${HOST}:sites/alexandre/${folder}"
+}
+
+deleteCache() {
+    npx cypress cache prune
+}
+
 restart() {
     ssh -p 5022 "${HOST}" << RESTART
         touch /home/djerbeti/sites/alexandre/tmp/restart.txt
@@ -46,4 +50,5 @@ RESTART
 buildClient
 pullInstallOnServer
 syncAllDist
+deleteCache
 restart

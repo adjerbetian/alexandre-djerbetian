@@ -8,6 +8,10 @@ Le premier point est vrai. Mais certains le compennent alors comme "si je ne par
 
 cf: https://trello.com/c/6Om3udo0/467-plan-pour-am%C3%A9liorer-les-tests#comment-5be4560ad1b7c75eff9e225d
 
+Références : 
+- https://martinfowler.com/bliki/UnitTest.html
+- https://martinfowler.com/bliki/IntegrationTest.html
+- https://martinfowler.com/articles/mocksArentStubs.html
 
 
 

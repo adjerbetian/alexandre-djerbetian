@@ -1,4 +1,4 @@
-import { javascript } from "../../utils";
+import { javascript } from "../../../utils";
 
 export const article = {
     title: "Separate the database",

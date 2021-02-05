@@ -10,13 +10,6 @@ On pouvait aussi créer des objets "fonction" en java: un objet avec une méthod
 La seule grande différence est que les méthodes privées des classes ne peuvent être héritées. Sinon, c'est pareil
 
 
-## Engineers are not developers
-
-Knowing how to write Clean code is not the same 
-as solving problems. One needs both, and it would 
-be wrong to assume that one is superior to the other.
-
-
 ## Do little commits
 
 It forces you to finish what you started. As Kent Beck
@@ -36,8 +29,6 @@ La clarté du code :
 - dire que l'on fait un code clair quand on a le temps, c'est se retrouver avec un code pas maintenable à maintenir
 
 La performance : idem
-
-## On cherche des bons carreleurs, pas des ingénieurs aérospatiaux
 
 ## Never anticipate when coding
 

@@ -21,37 +21,47 @@ const router = new VueRouter({
         {
             path: "/movies",
             name: "Movies",
-            component: () => import("./movies/MoviesPage.vue"),
+            component: async () => import("./movies/MoviesPage.vue"),
         },
         {
             path: "/movies/:id",
             name: "Movie",
-            component: () => import("./movies/MoviePage.vue"),
+            component: async () => import("./movies/MoviePage.vue"),
         },
         {
             path: "/videos",
             name: "Videos",
-            component: () => import("./videos/VideosPage.vue"),
+            component: async () => import("./videos/VideosPage.vue"),
         },
         {
             path: "/books",
             name: "Books",
-            component: () => import("./books/BooksPage.vue"),
+            component: async () => import("./books/BooksPage.vue"),
         },
         {
             path: "/books/:id",
             name: "Book",
-            component: () => import("./books/BookPage.vue"),
+            component: async () => import("./books/BookPage.vue"),
         },
         {
             path: "/quotes",
             name: "Quotes",
-            component: () => import("./quotes/QuotesPage.vue"),
+            component: async () => import("./quotes/QuotesPage.vue"),
         },
         {
             path: "/quotes/:id",
             name: "Quote",
-            component: () => import("./quotes/QuotePage.vue"),
+            component: async () => import("./quotes/QuotePage.vue"),
+        },
+        {
+            path: "/blog",
+            name: "Blog",
+            component: async () => import("./blog/BlogPage.vue"),
+        },
+        {
+            path: "/blog/:id",
+            name: "Blog article",
+            component: async () => import("./blog/ArticlePage.vue"),
         },
     ],
 });

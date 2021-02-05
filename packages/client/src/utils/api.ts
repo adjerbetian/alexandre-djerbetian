@@ -24,7 +24,7 @@ async function doFetch(route: string, options?: Options) {
             handleError(response);
             return response;
         },
-        { max: 10, delay: 300 }
+        { max: 30, delay: 1000 }
     );
 
     function formatUrl(): string {

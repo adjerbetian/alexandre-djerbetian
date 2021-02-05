@@ -80,7 +80,23 @@ export async function retry<T>(
         } catch (err) {
             errors.push(err);
             await sleep(delay);
+            console.log("retrying");
         }
     }
     throw new TooManyRetries(errors);
+}
+
+export function startInterval(f: (...args: any[]) => any, time: number) {
+    let stop = false;
+    void (async function execute() {
+        if (stop) return;
+        await f();
+        setTimeout(execute, time);
+    })();
+
+    return {
+        stop() {
+            stop = true;
+        },
+    };
 }

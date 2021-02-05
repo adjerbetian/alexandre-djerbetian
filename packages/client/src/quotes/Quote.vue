@@ -1,5 +1,5 @@
 <template>
-    <div class="quote" :id="quote.id">
+    <article class="quote" :id="quote.id">
         <blockquote class="content" v-html="content" />
 
         <router-link :to="`/quotes/${quote.id}`" class="caption">
@@ -8,7 +8,7 @@
             <em>{{ quote.chapterTitle }}</em
             >, p{{ quote.page }}
         </router-link>
-    </div>
+    </article>
 </template>
 
 <script lang="ts">

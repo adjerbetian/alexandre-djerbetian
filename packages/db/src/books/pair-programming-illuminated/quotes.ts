@@ -1,5 +1,6 @@
 import { QuoteDBModel } from "../dbModel";
 import { quoteTags } from "../quoteTags";
+import { html } from "../../utils";
 
 export const chapters = [
     "Preface",
@@ -41,20 +42,23 @@ export const quotes: QuoteDBModel[] = [
         chapter: 1,
         page: "3",
         id: "driver-and-navigator",
-        content: `
+        content: html`
             <p>
                 Pair programming is a style of programming in which <i>two</i>
                 programmers work side by side at one computer, continually
                 collaborating on the same design, algorithm, code, or test.
-                <strong>One of the pair, called the <i>driver</i>, is typing at 
-                the computer or writing down a design. The other partner, called
-                the <i>navigator</i>, has many jobs, one of which is to observe 
-                the work of the driver </strong>[...]. The navigator is the 
-                strategic, long-range thinker. Any of us can be guilty of 
-                straying off the path, but a simple, "Can you explain what 
-                you're doing?" from the navigator can bring us back to earth. 
-                The navigator has a much more objective point of view and can 
-                better think strategically about the direction of the work. 
+                <strong>
+                    One of the pair, called the <i>driver</i>, is typing at the
+                    computer or writing down a design. The other partner, called
+                    the <i>navigator</i>, has many jobs, one of which is to
+                    observe the work of the driver
+                </strong>
+                [...]. The navigator is the strategic, long-range thinker. Any
+                of us can be guilty of straying off the path, but a simple, "Can
+                you explain what you're doing?" from the navigator can bring us
+                back to earth. The navigator has a much more objective point of
+                view and can better think strategically about the direction of
+                the work.
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Definition],
@@ -64,13 +68,15 @@ export const quotes: QuoteDBModel[] = [
         id: "effective-pair-programming-is-very-active",
         chapter: 1,
         page: "4",
-        content: `
+        content: html`
             <p>
                 An effective pair programming relationship is very active.
-                <strong>The driver and the navigator communicate, if only 
-                through guttural utterances (as in, "Huh?"), at least every 45 
-                to 60 seconds. It's also very important to switch roles 
-                periodically between the driver and the navigator.</strong>
+                <strong>
+                    The driver and the navigator communicate, if only through
+                    guttural utterances (as in, "Huh?"), at least every 45 to 60
+                    seconds. It's also very important to switch roles
+                    periodically between the driver and the navigator.
+                </strong>
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Behaviour, quoteTags.Team],
@@ -80,14 +86,13 @@ export const quotes: QuoteDBModel[] = [
         id: "why-do-pair-programming",
         chapter: 1,
         page: "4",
-        content: `
+        content: html`
             <p>
-                Now that you know about pair programming, you might be
-                wondering why on earth someone would want to pair. We'll be
-                telling you much more about these reasons throughout the
-                book, but now we will give you a preview of the benefits of
-                pair programming that we've seen, experienced, and heard
-                about.
+                Now that you know about pair programming, you might be wondering
+                why on earth someone would want to pair. We'll be telling you
+                much more about these reasons throughout the book, but now we
+                will give you a preview of the benefits of pair programming that
+                we've seen, experienced, and heard about.
             </p>
             <ol>
                 <li>
@@ -95,32 +100,31 @@ export const quotes: QuoteDBModel[] = [
                     defects.
                 </li>
                 <li>
-                    <strong>Time.</strong> As best we can tell, pairs
-                    produce higher-quality code in about half the time as
-                    individuals. This shortens your cycle time without
-                    impacting your overall budget while giving you superior
-                    quality.
+                    <strong>Time.</strong> As best we can tell, pairs produce
+                    higher-quality code in about half the time as individuals.
+                    This shortens your cycle time without impacting your overall
+                    budget while giving you superior quality.
                 </li>
                 <li>
                     <strong>Morale.</strong> Pair programmers are happier
-                    programmers. This helps job retention because employees
-                    who are having fun are less likely to leave.
+                    programmers. This helps job retention because employees who
+                    are having fun are less likely to leave.
                 </li>
                 <li>
-                    <strong>Trust and Teamwork.</strong> Pair programmers
-                    get to know their teammates much better, which builds
-                    trust and improves teamwork.
+                    <strong>Trust and Teamwork.</strong> Pair programmers get to
+                    know their teammates much better, which builds trust and
+                    improves teamwork.
                 </li>
                 <li>
                     <strong>Knowledge Transfer.</strong> Pair programmers,
-                    particularly those who don't pair with the same person
-                    all the time, know more about the overall system.
+                    particularly those who don't pair with the same person all
+                    the time, know more about the overall system.
                 </li>
                 <li>
-                    <strong>Enhanced learning.</strong> Pairs continually
-                    learn by watching how their partners approach a task,
-                    how they use language capabilities, and how they use the
-                    development tools.
+                    <strong>Enhanced learning.</strong> Pairs continually learn
+                    by watching how their partners approach a task, how they use
+                    language capabilities, and how they use the development
+                    tools.
                 </li>
             </ol>
             <p>
@@ -142,15 +146,18 @@ export const quotes: QuoteDBModel[] = [
         id: "the-more-complex-the-task-the-greater-the-need-for-two-brains",
         chapter: 1,
         page: "9",
-        content: `
+        content: html`
             <p>
                 We use the word <i>programming</i> to include all phases of the
                 development process (design, debugging, testing, and so on), not
                 just coding. So, pair programming would include pair design,
                 pair debugging, pair testing, and so on. [...] We believe people
                 should pair at any time during development, in particular when
-                they are working on something that is complex. <strong>The more 
-                complex the task, the greater the need for two brains.</strong>
+                they are working on something that is complex.
+                <strong>
+                    The more complex the task, the greater the need for two
+                    brains.
+                </strong>
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Definition],
@@ -160,9 +167,9 @@ export const quotes: QuoteDBModel[] = [
         id: "pair-programming-is-not-for-all",
         chapter: 1,
         page: "9",
-        content: `
+        content: html`
             <p>
-                We really believe that no one should be forced to pair program. 
+                We really believe that no one should be forced to pair program.
                 [...]
             </p>
             <p>
@@ -177,7 +184,7 @@ export const quotes: QuoteDBModel[] = [
         id: "pair-programming-is-fun",
         chapter: 2,
         page: "21",
-        content: `
+        content: html`
             <p>
                 In our recent Web survey, we asked, "What have you found
                 beneficial about pair programming?" The single most common
@@ -191,7 +198,7 @@ export const quotes: QuoteDBModel[] = [
         id: "pair-programming-prevents-wasting-time-on-mindless-tasks",
         chapter: 2,
         page: "22",
-        content: `
+        content: html`
             <p>
                 When you're working alone, you can (intentionally or
                 unintentionally) hide in your cube and waste time on mindless
@@ -206,12 +213,14 @@ export const quotes: QuoteDBModel[] = [
         id: "strength-in-numbers",
         chapter: 2,
         page: "27",
-        content: `
+        content: html`
             <p>
                 When we work with someone else, we can piece together enough
-                knowledge to feel confident in what we're doing. <strong>And, 
-                if it looks right to me and it looks right to you — guess what — 
-                it's probably right! Strength in numbers!</strong>
+                knowledge to feel confident in what we're doing.
+                <strong>
+                    And, if it looks right to me and it looks right to you —
+                    guess what — it's probably right! Strength in numbers!
+                </strong>
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Inspiring],
@@ -221,26 +230,27 @@ export const quotes: QuoteDBModel[] = [
         id: "the-earlier-the-cheaper",
         chapter: 2,
         page: "27",
-        content: `
+        content: html`
             <p>
-                Inspections [= Code Reviews] were introduced more than 20
-                years ago as a cost-effective means of detecting and
-                removing defects from software. Results from empirical
-                studies (Fagan 1976) consistently profess the effectiveness
-                of reviews. However, most programmers do not find
-                inspections enjoyable or satisfying. [...]
+                Inspections [= Code Reviews] were introduced more than 20 years
+                ago as a cost-effective means of detecting and removing defects
+                from software. Results from empirical studies (Fagan 1976)
+                consistently profess the effectiveness of reviews. However, most
+                programmers do not find inspections enjoyable or satisfying.
+                [...]
             </p>
             <p>
                 The theory on why inspections are effective is based on the
-                prominent knowledge that <strong>the earlier a defect is found 
-                in a product, the cheaper it is to fix the defect</strong>. 
-                With pair programming, this problem identification occurs
-                on a minute-by-minute basis. [...] These continual reviews
-                outperform traditional, formal reviews in their
-                defect-removal speed. Additionally, they eliminate the
-                programmer's distaste for reviews since the reviews are
-                implicit in what is typically an enjoyable pair-programming
-                session.
+                prominent knowledge that
+                <strong>
+                    the earlier a defect is found in a product, the cheaper it
+                    is to fix the defect</strong
+                >. With pair programming, this problem identification occurs on
+                a minute-by-minute basis. [...] These continual reviews
+                outperform traditional, formal reviews in their defect-removal
+                speed. Additionally, they eliminate the programmer's distaste
+                for reviews since the reviews are implicit in what is typically
+                an enjoyable pair-programming session.
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Team],
@@ -250,20 +260,23 @@ export const quotes: QuoteDBModel[] = [
         id: "pair-programming-prevents-indispensable-people",
         chapter: 4,
         page: "41",
-        content: `
+        content: html`
             <p>
-                Weinberg (1998) has a maxim, "<strong>If a programmer is 
-                indispensable, get rid of him as quickly as possible.</strong>" 
-                His contention is that a project should not be a house of
+                Weinberg (1998) has a maxim, "<strong
+                    >If a programmer is indispensable, get rid of him as quickly
+                    as possible.</strong
+                >" His contention is that a project should not be a house of
                 cards that collapses when a single "key" person is removed.
             </p>
             <p>
-                <strong>With pair programming, the project risk associated with
-                losing this key programmer is reduced</strong> because there 
-                are multiple people familiar with each part of the system. If 
-                a pair works together consistently, then there are two people 
-                familiar with this particular area of the program. If the pairs 
-                rotate, many people can be familiar with each part.
+                <strong>
+                    With pair programming, the project risk associated with
+                    losing this key programmer is reduced
+                </strong>
+                because there are multiple people familiar with each part of the
+                system. If a pair works together consistently, then there are
+                two people familiar with this particular area of the program. If
+                the pairs rotate, many people can be familiar with each part.
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Team],
@@ -273,16 +286,21 @@ export const quotes: QuoteDBModel[] = [
         id: "organize-and-dont-just-let-do",
         chapter: 6,
         page: "51",
-        content: `
+        content: html`
             <p>
                 [Developers] are more satisfied with using software development
-                innovations if [...] <strong>they have decreased process control 
-                in how to use that innovation</strong>. The findings of the 
-                study indicate that in a complex task environment, such as 
-                software development, decreases in personal control can result 
-                in greater satisfaction. <strong>This was a particularly 
-                interesting finding that would discourage an "if you want to 
-                pair, go ahead and pair—I don't care" arrangement</strong>
+                innovations if [...]
+                <strong>
+                    they have decreased process control in how to use that
+                    innovation</strong
+                >. The findings of the study indicate that in a complex task
+                environment, such as software development, decreases in personal
+                control can result in greater satisfaction.
+                <strong>
+                    This was a particularly interesting finding that would
+                    discourage an "if you want to pair, go ahead and pair—I
+                    don't care" arrangement
+                </strong>
                 and encourage a more organized approach of pairing and possibly
                 the rotation of pairs, still giving the employees the freedom to
                 choose when to pair and what to do when they pair. Likewise it
@@ -306,7 +324,7 @@ export const quotes: QuoteDBModel[] = [
         id: "raise-your-own-problems",
         chapter: 4,
         page: "53",
-        content: `
+        content: html`
             <p>
                 In presentations, bring up the negative things you have heard or
                 anticipate what your detractors might say. If you don't bring
@@ -321,12 +339,12 @@ export const quotes: QuoteDBModel[] = [
         id: "dont-use-finger-on-screens",
         chapter: 8,
         page: "71",
-        content: `
+        content: html`
             <h3>One Last Thing</h3>
             <p>
-                The navigator should not point on the screen with a finger.
-                You know how we programmers hate paw prints on our displays!
-                Use a stylus instead.
+                The navigator should not point on the screen with a finger. You
+                know how we programmers hate paw prints on our displays! Use a
+                stylus instead.
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Behaviour],
@@ -336,7 +354,7 @@ export const quotes: QuoteDBModel[] = [
         id: "rotating-pairs-disseminate-knowledge",
         chapter: 9,
         page: "77",
-        content: `
+        content: html`
             <p>
                 Good knowledge management techniques are important for employers
                 and employees alike. Truly, it is not advantageous to have all
@@ -345,8 +363,10 @@ export const quotes: QuoteDBModel[] = [
                 few individuals can be debilitating. And employees like to take
                 some time off without being bothered with technical questions or
                 problems. By rotating pairs, knowledge is disseminated;
-                <strong>employers reduce risk, and employees can relax when out 
-                of the office</strong>.
+                <strong>
+                    employers reduce risk, and employees can relax when out of
+                    the office</strong
+                >.
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Team, quoteTags.Business],
@@ -356,7 +376,7 @@ export const quotes: QuoteDBModel[] = [
         id: "pair-programming-and-code-reviews",
         chapter: 10,
         page: "86",
-        content: `
+        content: html`
             <p>
                 we've heard of several organizations that do not produce
                 life/safety critical systems that have substituted pair reviews
@@ -376,23 +396,26 @@ export const quotes: QuoteDBModel[] = [
         id: "xp-and-bduf",
         chapter: 24,
         page: "174",
-        content: `
+        content: html`
             <p>
                 XP does not produce big design documents before getting started.
                 XP'ers call this BDUF for "big design up front" and believe that
                 the development of these documents is not cost-effective.
-                <strong>The idea here is that software engineers change their 
-                minds about how they will implement something once they try it 
-                and once they get feedback on completed work.</strong>
+                <strong>
+                    The idea here is that software engineers change their minds
+                    about how they will implement something once they try it and
+                    once they get feedback on completed work.
+                </strong>
                 If you skip the documentation step, you will start producing
                 software assets that have value to your customer, not just to
                 your documents. Surely there will be rework and refactoring
                 because of the lack of up-front design, but there will be less
                 time spent reworking and refactoring than would have gone into
-                the BDUF. <strong>In addition, you will have assets, not 
-                paper.</strong> After a release is completed, some XP teams also 
-                create some bare-bones documentation that records what they did 
-                do, not what they planned to do.
+                the BDUF.
+                <strong>In addition, you will have assets, not paper.</strong>
+                After a release is completed, some XP teams also create some
+                bare-bones documentation that records what they did do, not what
+                they planned to do.
             </p>
         `,
         tags: [quoteTags.History],
@@ -402,22 +425,24 @@ export const quotes: QuoteDBModel[] = [
         chapter: 26,
         page: "195",
         id: "pair-programming-is-not-only-with-two-developers",
-        content: `
+        content: html`
             <p>
-                <strong>The pairs don't need to be comprised of two code 
-                developers.</strong> In the scenario in the first chapter, 
-                the privacy expert paired with the Web form designer, ensuring 
-                that the forms did not violate any privacy policies. User 
-                interface specialists or Web page artists/designers can pair 
-                with programmers. (After all, some of us who were given the 
-                ability to program were slighted in the artistic part of the 
-                brain.) Jim Coplien reports, "At Mediagenix, a tester sometimes 
-                pairs with a developer as the tester drives with tests, and the 
-                developer fixes bugs. This makes it possible to circumvent the 
-                project's formal bug reporting bureaucracy, reducing the time to 
-                a stable load" (2002). Last, we've heard many reports of 
-                developers pairing with customers, which has the added advantage 
-                of real-time requirements clarification.
+                <strong>
+                    The pairs don't need to be comprised of two code developers.
+                </strong>
+                In the scenario in the first chapter, the privacy expert paired
+                with the Web form designer, ensuring that the forms did not
+                violate any privacy policies. User interface specialists or Web
+                page artists/designers can pair with programmers. (After all,
+                some of us who were given the ability to program were slighted
+                in the artistic part of the brain.) Jim Coplien reports, "At
+                Mediagenix, a tester sometimes pairs with a developer as the
+                tester drives with tests, and the developer fixes bugs. This
+                makes it possible to circumvent the project's formal bug
+                reporting bureaucracy, reducing the time to a stable load"
+                (2002). Last, we've heard many reports of developers pairing
+                with customers, which has the added advantage of real-time
+                requirements clarification.
             </p>
         `,
         tags: [quoteTags.PairPrograming],
@@ -427,10 +452,12 @@ export const quotes: QuoteDBModel[] = [
         id: "colocated-teams-perform-better",
         chapter: 26,
         page: "197",
-        content: `
+        content: html`
             <p>
                 What if pairs cannot be physically next to each other?
-                <strong>It has been established that distance does matter</strong>
+                <strong>
+                    It has been established that distance does matter
+                </strong>
                 (Olson and Olson 2000); colocated teams perform better.
                 Therefore it is predicted that face-to-face pair programmers
                 will outperform distributed pair programmers in terms of sheer
@@ -444,7 +471,7 @@ export const quotes: QuoteDBModel[] = [
         chapter: 27,
         page: "203",
         id: "take-breaks",
-        content: `
+        content: html`
             <h3>Habit 1: Take breaks</h3>
             <p>
                 [...] At a minimum, each hour stand up, stretch, and look at
@@ -458,11 +485,12 @@ export const quotes: QuoteDBModel[] = [
         chapter: 28,
         page: "211",
         id: "try-pair-programming-first",
-        content: `
+        content: html`
             <p>
-                <strong>[People] are often resistant to trying pair programming 
-                but then are quite enthusiastic once they've actually tried 
-                it.</strong>
+                <strong>
+                    [People] are often resistant to trying pair programming but
+                    then are quite enthusiastic once they've actually tried it.
+                </strong>
             </p>
         `,
         tags: [quoteTags.PairPrograming, quoteTags.Motivation],

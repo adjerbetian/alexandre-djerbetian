@@ -29,6 +29,11 @@ export function javascript(content: string) {
 export function markdown(content: string) {
     return code(content, "markdown");
 }
+export function html(content: TemplateStringsArray, ...placeholders: string[]) {
+    return content.reduce(
+        (result, text, i) => result + placeholders[i - 1] + text
+    );
+}
 
 function code(content: string, lang: string) {
     content = boldify(colorize(µ.trimCommonIndentation(content), lang));

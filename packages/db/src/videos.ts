@@ -169,6 +169,12 @@ export const videos: VideoDBModel[] = [
         speaker: "Uzility",
     },
     {
+        title: "The Most Toxic Person In The Workplace",
+        youtubeId: "ljLlpOAGRsQ",
+        year: 2020,
+        speaker: "Simon Sinek",
+    },
+    {
         title: "Object-oriented Programming in 7 minutes",
         youtubeId: "pTB0EiLXUC8",
         year: 2018,

@@ -41,8 +41,7 @@ export default class BookListItem extends Vue {
 @import "../assets/styles/variables";
 
 .book {
-    @include bordered;
-    background-color: white;
+    @include article;
     transition: all 0.2s;
 
     &.hover:hover {
@@ -54,7 +53,6 @@ export default class BookListItem extends Vue {
 
     display: flex;
     margin: 10px;
-    padding: 20px;
 
     h2 {
         margin-bottom: 0.5rem;

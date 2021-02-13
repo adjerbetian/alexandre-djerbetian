@@ -129,10 +129,7 @@ aside {
 }
 
 .review {
-    @include bordered;
-    background-color: white;
-
-    padding: 20px;
+    @include article;
     margin: 20px 0;
 }
 </style>

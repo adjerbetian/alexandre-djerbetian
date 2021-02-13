@@ -6,13 +6,15 @@ interface Options {
     query?: Query;
 }
 
-export async function get(route: string, options?: Options) {
-    const response = await doFetch(route, options);
-    return response.json();
-}
-export async function ping(route: string) {
-    await doFetch(route);
-}
+export const api = {
+    async get(route: string, options?: Options) {
+        const response = await doFetch(route, options);
+        return response.json();
+    },
+    async ping(route: string) {
+        await doFetch(route);
+    },
+};
 
 async function doFetch(route: string, options?: Options) {
     const response = await fetch(formatUrl());

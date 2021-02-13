@@ -49,10 +49,8 @@ $spacing: 10px;
 }
 
 .video {
-    @include bordered;
+    @include article;
     margin: $spacing;
-    padding: 30px;
-    background-color: white;
     flex-grow: 1;
 
     &.small {

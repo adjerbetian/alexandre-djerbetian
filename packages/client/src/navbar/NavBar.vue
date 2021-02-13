@@ -18,7 +18,7 @@
         <div class="menuGroup">
             <h3>Hobbies</h3>
             <div class="menuItems">
-                <NavLink to="/movies" icon="film">Short movies</NavLink>
+                <NavLink to="/movies">Short movies</NavLink>
             </div>
         </div>
 

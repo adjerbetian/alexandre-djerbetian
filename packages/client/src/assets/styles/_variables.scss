@@ -9,13 +9,8 @@
 $primary: primary(30);
 $yellow-light: yellow(90);
 
-@mixin bordered {
-    border: solid 1px primary(85);
-    border-radius: 20px;
-}
-
 $background-color: cornsilk;
-$quote-background-color: white;
+$article-background-color: white;
 
 $screen-size-xxl: 1600px;
 $screen-size-xl: 1250px;
@@ -26,3 +21,14 @@ $screen-size-xs: 380px;
 
 $navbarSmallWidth: 100px;
 $navbarFullWidth: 270px;
+
+@mixin bordered {
+    border: solid 1px primary(85);
+    border-radius: 20px;
+}
+
+@mixin article {
+    @include bordered;
+    background-color: $article-background-color;
+    padding: 20px;
+}

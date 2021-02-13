@@ -15,7 +15,7 @@
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
 import { Quote } from "@alex/entities";
-import { getImage } from "@/utils/imageService";
+import { imageService } from "@/utils";
 
 @Component
 export default class QuoteComponent extends Vue {
@@ -24,7 +24,7 @@ export default class QuoteComponent extends Vue {
     get content() {
         return this.quote.content.replace(
             /src="([^"]+)"/g,
-            (_, file: string) => `src="${getImage("quotes", file)}"`
+            (_, file: string) => `src="${imageService.getImage("quotes", file)}"`
         );
     }
 }
@@ -38,9 +38,7 @@ export default class QuoteComponent extends Vue {
 }
 
 .content {
-    @include bordered;
-    padding: 20px;
-    background-color: $quote-background-color;
+    @include article;
     margin: 0;
     position: relative;
 

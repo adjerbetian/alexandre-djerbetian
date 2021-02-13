@@ -5,7 +5,7 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
-import { getImage } from "./imageService";
+import { imageService } from "./imageService";
 
 @Component
 export default class BaseImage extends Vue {
@@ -14,7 +14,7 @@ export default class BaseImage extends Vue {
     @Prop(String) name!: string;
 
     get src() {
-        return getImage(this.type, this.name);
+        return imageService.getImage(this.type, this.name);
     }
 }
 </script>

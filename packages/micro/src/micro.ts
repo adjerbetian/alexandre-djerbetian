@@ -63,3 +63,24 @@ export function toArray<T>(query: T | (T | null)[] | null | undefined): T[] {
 
     return query.filter((q): q is T => !!q);
 }
+
+export class TooManyRetries extends Error {
+    constructor(public errors: Error[]) {
+        super();
+    }
+}
+export async function retry<T>(
+    f: () => Promise<T>,
+    { max = 100, delay = 0 }: { max?: number; delay?: number } = {}
+): Promise<T> {
+    const errors: Error[] = [];
+    while (errors.length < max) {
+        try {
+            return await f();
+        } catch (err) {
+            errors.push(err);
+            await sleep(delay);
+        }
+    }
+    throw new TooManyRetries(errors);
+}

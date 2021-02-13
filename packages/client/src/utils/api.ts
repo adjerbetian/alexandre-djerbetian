@@ -1,4 +1,5 @@
 import { addQuery, Query } from "@/utils/utils/addQuery";
+import { µ } from "@alex/micro";
 
 const serverUrl = process.env.VUE_APP_SERVER;
 
@@ -17,9 +18,14 @@ export const api = {
 };
 
 async function doFetch(route: string, options?: Options) {
-    const response = await fetch(formatUrl());
-    handleError(response);
-    return response;
+    return µ.retry(
+        async () => {
+            const response = await fetch(formatUrl());
+            handleError(response);
+            return response;
+        },
+        { max: 10, delay: 300 }
+    );
 
     function formatUrl(): string {
         return addQuery(serverUrl + route, options?.query || {});

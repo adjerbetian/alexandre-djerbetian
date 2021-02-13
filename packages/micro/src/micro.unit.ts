@@ -1,16 +1,14 @@
-import { expect } from "chai";
-import { createSandbox, SinonFakeTimers } from "sinon";
 import {
     buildPromiseObserver,
     pAll,
+    retry,
     sleep,
     toArray,
+    TooManyRetries,
     trimCommonIndentation,
 } from "./micro";
-
-const sandbox = createSandbox();
-
-beforeEach(() => sandbox.restore());
+import { expect, sandbox } from "./test/unit";
+import { SinonFakeTimers } from "sinon";
 
 describe("trimCommonIndentation", () => {
     it("should trim a single line", () => {
@@ -137,4 +135,29 @@ describe("toArray", () => {
         expect(toArray("")).to.deep.equal([]);
         expect(toArray(false)).to.deep.equal([]);
     });
+});
+describe("retry", () => {
+    it("should retry the function as many times as required", async () => {
+        const f = rejectNTimes(3, "result");
+
+        expect(await retry(f)).to.equal("result");
+    });
+    it("should throw if the functions fails more than the max retry", async () => {
+        const f = rejectNTimes(3, "result");
+
+        await expect(retry(f, { max: 3 })).to.be.rejectedWith(TooManyRetries);
+    });
+    it("should not throw when the functions fails less than the max retry", async () => {
+        const f = rejectNTimes(3, "result");
+
+        expect(await retry(f, { max: 4 })).to.equal("result");
+    });
+
+    function rejectNTimes<T>(times: number, result: T) {
+        let counter = 0;
+        return async () => {
+            if (counter++ < times) throw new Error("triggered failure");
+            return result;
+        };
+    }
 });

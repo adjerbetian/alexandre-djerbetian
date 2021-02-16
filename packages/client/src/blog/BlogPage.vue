@@ -9,6 +9,8 @@
         >
             <ArticlePreviewComponent :article="article" />
         </router-link>
+
+        <SubscriptionForm />
     </div>
 </template>
 
@@ -17,10 +19,11 @@ import Vue from "vue";
 import { Component } from "vue-property-decorator";
 import { BlogArticle } from "@alex/entities";
 import ArticlePreviewComponent from "./ArticlePreviewComponent.vue";
+import SubscriptionForm from "./SubscriptionForm.vue";
 import { blogService } from "./blogService";
 
 @Component({
-    components: { ArticlePreviewComponent },
+    components: { ArticlePreviewComponent, SubscriptionForm },
 })
 export default class BlogPage extends Vue {
     articles: BlogArticle[] = [];

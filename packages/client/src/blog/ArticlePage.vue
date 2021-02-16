@@ -1,6 +1,7 @@
 <template>
     <div v-if="article" class="article" :id="article.id">
         <section class="content" v-html="content" />
+        <SubscriptionForm />
     </div>
 </template>
 
@@ -11,8 +12,9 @@ import { BlogArticle } from "@alex/entities";
 import { µ } from "@alex/micro";
 import { imageService } from "@/utils";
 import { blogService } from "./blogService";
+import SubscriptionForm from "./SubscriptionForm.vue";
 
-@Component
+@Component({ components: { SubscriptionForm } })
 export default class ArticlePage extends Vue {
     article: BlogArticle | null = null;
     interval?: ReturnType<typeof µ.startInterval>;

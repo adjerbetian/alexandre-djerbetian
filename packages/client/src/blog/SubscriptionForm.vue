@@ -1,8 +1,31 @@
 <template>
-    <form @submit="onSubmit" class="subscription-form">
-        <input type="email" placeholder="email" v-model="email" required />
-        <input type="submit" value="Subscribe" />
-    </form>
+    <div>
+        <form
+            method="post"
+            class="subscription-form"
+            accept-charset="UTF-8"
+            action="https://www.aweber.com/scripts/addlead.pl"
+        >
+            <div style="display: none">
+                <input type="hidden" name="meta_web_form_id" value="882265854" />
+                <input type="hidden" name="meta_split_id" value="" />
+                <input type="hidden" name="listname" value="awlist5952171" />
+                <input
+                    type="hidden"
+                    name="redirect"
+                    value="https://www.aweber.com/thankyou-coi.htm?m=text"
+                />
+
+                <input type="hidden" name="meta_adtracking" value="Simple" />
+                <input type="hidden" name="meta_message" value="1" />
+                <input type="hidden" name="meta_required" value="email" />
+
+                <input type="hidden" name="meta_tooltip" value="" />
+            </div>
+            <input placeholder="email" type="email" name="email" required />
+            <input type="submit" name="submit" value="Subscribe" />
+        </form>
+    </div>
 </template>
 
 <script lang="ts">
@@ -10,13 +33,7 @@ import Vue from "vue";
 import { Component } from "vue-property-decorator";
 
 @Component
-export default class SubscribeForm extends Vue {
-    email = "";
-
-    async onSubmit(e: Event) {
-        e.preventDefault();
-    }
-}
+export default class SubscribeForm extends Vue {}
 </script>
 
 <style lang="scss" scoped>

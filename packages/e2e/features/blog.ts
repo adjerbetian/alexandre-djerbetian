@@ -4,7 +4,7 @@ describe("Blog page", () => {
         cy.visit("/blog");
     });
 
-    it.skip("should be accessible from the home page", () => {
+    it("should be accessible from the home page", () => {
         cy.visit("/");
 
         cy.contains("Blog").click();

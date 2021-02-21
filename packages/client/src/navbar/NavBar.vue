@@ -9,7 +9,7 @@
         <div class="menuGroup">
             <h3>Coding</h3>
             <div class="menuItems">
-                <NavLink v-if="showBlog" to="/blog">Blog</NavLink>
+                <NavLink to="/blog">Blog</NavLink>
                 <NavLink to="/books">Library</NavLink>
                 <NavLink to="/quotes">Quotes</NavLink>
                 <NavLink to="/videos">Videos</NavLink>
@@ -44,9 +44,7 @@ import Profile from "@/navbar/Profile.vue";
         NavLink,
     },
 })
-export default class NavBar extends Vue {
-    showBlog = process.env.NODE_ENV === "development";
-}
+export default class NavBar extends Vue {}
 </script>
 
 <style lang="scss" scoped>

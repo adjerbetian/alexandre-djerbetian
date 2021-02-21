@@ -3,6 +3,8 @@ services:
   server:
     build:
       dockerfile: packages/server/Dockerfile.prod
+    ports:
+      - "3000:3000"
 
   client:
     build:
@@ -10,4 +12,4 @@ services:
       args:
         - VUE_APP_SERVER=http://localhost:3000
     ports:
-      - "80:80"
+      - "8080:80"

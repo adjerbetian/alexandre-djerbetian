@@ -20,7 +20,6 @@ compose() {
     docker-compose \
         --project-name e2e \
         -f docker-compose.yml \
-        -f docker-compose.prod.yml \
         -f docker-compose.e2e.yml \
         ${command}
 }

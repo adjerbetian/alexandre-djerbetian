@@ -1,7 +1,12 @@
 version: '3'
 services:
+  server:
+    build:
+      dockerfile: packages/server/Dockerfile.prod
+
   client:
     build:
+      dockerfile: packages/client/Dockerfile.prod
       args:
         - VUE_APP_SERVER=http://server:3000
 

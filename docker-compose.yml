@@ -11,8 +11,6 @@ services:
       - builder
     build:
       context: .
-    ports:
-      - "3000:3000"
 
   client:
     depends_on:

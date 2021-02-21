@@ -8,6 +8,8 @@ services:
       - ./packages/db/dist:/app/packages/db/dist
       - ./packages/entities/dist:/app/packages/entities/dist
       - ./packages/micro/dist:/app/packages/micro/dist
+    ports:
+      - "3000:3000"
 
   client:
     build:

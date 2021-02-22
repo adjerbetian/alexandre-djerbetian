@@ -1,47 +1,15 @@
 <template>
     <div class="home">
         <div class="home-background"></div>
-        <transition-group name="fade">
-            <div
-                class="word"
-                v-for="word in words"
-                :class="{ right: word.position.right }"
-                :key="word.id"
-                :style="{
-                    top: `${word.position.y}%`,
-                }"
-            >
-                {{ word.content }}
-            </div>
-        </transition-group>
     </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
-import { words } from "./wordService";
-
-const DELAY = 3000;
-const DURATION = 2.5 * DELAY;
 
 @Component
-export default class HomePage extends Vue {
-    words = words.all;
-
-    mounted() {
-        this.printWord();
-        setInterval(this.printWord, DELAY);
-    }
-    printWord() {
-        words.addWord({
-            right: Math.random() > 0.5,
-            yMin: 10,
-            yMax: 70,
-        });
-        setTimeout(() => words.removeWord(), DURATION);
-    }
-}
+export default class HomePage extends Vue {}
 </script>
 
 <style lang="scss" scoped>
@@ -74,55 +42,6 @@ $background-color: #4c483c;
             box-sizing: border-box;
             box-shadow: 0 0 10vh 10vh $background-color inset;
         }
-    }
-}
-.word {
-    $padding: 50px;
-    $slide: 50px;
-    $duration: 3s;
-
-    position: absolute;
-    color: white;
-    line-height: 0.8em;
-
-    transition: opacity $duration, transform $duration;
-    &.fade-enter,
-    &.fade-leave-to {
-        opacity: 0;
-    }
-    &.fade-enter {
-        transform: translateX(-$slide);
-    }
-
-    @media (min-width: $screen-size-l) {
-        left: $padding;
-
-        &.right {
-            left: unset;
-            right: $padding;
-            text-align: right;
-
-            &.fade-enter {
-                transform: translateX($slide);
-            }
-        }
-    }
-    @media (max-width: $screen-size-l) {
-        right: $padding;
-        text-align: right;
-
-        &.fade-enter {
-            transform: translateX($slide);
-        }
-    }
-    @media (min-width: $screen-size-s) {
-        font-size: 3em;
-    }
-    @media (max-width: $screen-size-s) {
-        font-size: 2em;
-    }
-    @media (max-width: $screen-size-xs) {
-        font-size: 1.5em;
     }
 }
 </style>

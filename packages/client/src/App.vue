@@ -1,6 +1,6 @@
 <template>
     <div class="app">
-        <nav>
+        <nav v-if="isLaptop">
             <NavBar />
         </nav>
         <main>
@@ -22,6 +22,12 @@ export default Vue.extend({
     async mounted() {
         await api.ping("/");
     },
+
+    computed: {
+        isLaptop() {
+            return window.matchMedia("(min-width: 1081px)").matches;
+        },
+    },
 });
 </script>
 
@@ -42,10 +48,6 @@ nav {
     height: 100vh;
     padding: 0;
     overflow-y: auto;
-
-    @include tablet-and-mobile {
-        display: none;
-    }
 }
 
 .page {

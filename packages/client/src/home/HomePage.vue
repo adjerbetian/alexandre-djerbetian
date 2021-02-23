@@ -2,7 +2,8 @@
     <div class="home">
         <h1>Alexandre Djerbetian</h1>
         <div class="home-background"></div>
-        <nav>
+
+        <nav v-if="!isLaptop">
             <NavBar />
         </nav>
     </div>
@@ -18,7 +19,11 @@ import NavBar from "@/navbar/NavBar.vue";
         NavBar,
     },
 })
-export default class HomePage extends Vue {}
+export default class HomePage extends Vue {
+    get isLaptop() {
+        return window.matchMedia("(min-width: 1081px)").matches;
+    }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -67,8 +72,5 @@ h1 {
 }
 nav {
     position: relative;
-    @include laptop {
-        display: none;
-    }
 }
 </style>

@@ -94,10 +94,6 @@ export default class BookPage extends Vue {
 h1 {
     font-variant: small-caps;
     font-size: 52px;
-
-    @media (max-width: $screen-size-s) {
-        text-align: center;
-    }
 }
 
 h2 {

@@ -31,14 +31,8 @@ export default class ArticlePreviewComponent extends Vue {
 
     display: flex;
 
-    @media (max-width: $screen-size-s) {
+    @include mobile {
         flex-direction: column;
-    }
-    @media (min-width: $screen-size-s + 1) {
-        .tile {
-            max-width: 200px;
-            margin-right: 10px;
-        }
     }
 
     .tile {
@@ -46,6 +40,11 @@ export default class ArticlePreviewComponent extends Vue {
             height: 100%;
             width: 100%;
             object-fit: cover;
+        }
+
+        @include tablet-and-laptop {
+            max-width: 200px;
+            margin-right: 10px;
         }
     }
 

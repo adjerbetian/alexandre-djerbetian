@@ -33,23 +33,28 @@ export default class MoviesPage extends Vue {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: -40px;
+    max-width: 1080px;
 
     & > * {
-        margin: 40px;
-        flex: 1 0 40%;
+        display: block;
+        flex: 1 0 35%;
         min-width: 300px;
         max-width: 600px;
     }
-}
 
-@media (max-width: $screen-size-s) {
-    .movies {
+    @include tablet-and-laptop {
+        margin: -40px;
+
+        & > * {
+            margin: 40px;
+        }
+    }
+
+    @include mobile {
         display: block;
         margin: 0;
 
         & > * {
-            display: block;
             margin: 0 0 40px;
         }
     }

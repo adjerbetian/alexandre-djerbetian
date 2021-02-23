@@ -33,7 +33,7 @@ $background-color: #4c483c;
     background: url("../assets/images/home/home-0.jpg") no-repeat center left;
     background-size: cover;
 
-    @media (max-width: $screen-size-l) {
+    @include tablet-and-mobile {
         width: calc(100% + calc(#{$imageHeight} / 2.08));
         left: calc(-#{$imageHeight} / 2.08);
         max-width: $imageHeight;

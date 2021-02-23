@@ -75,7 +75,7 @@ h2 .details {
     min-width: 300px;
 }
 
-@media (max-width: $screen-size-s) {
+@include mobile {
     .youtube {
         min-width: 60%;
     }

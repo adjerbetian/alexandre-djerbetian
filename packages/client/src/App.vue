@@ -30,6 +30,10 @@ export default Vue.extend({
 
 main {
     margin-left: $navbarFullWidth;
+
+    @include tablet-and-mobile {
+        margin: 0;
+    }
 }
 
 nav {
@@ -38,53 +42,22 @@ nav {
     height: 100vh;
     padding: 0;
     overflow-y: auto;
+
+    @include tablet-and-mobile {
+        display: none;
+    }
 }
 
 .page {
     min-height: 100vh;
     padding: 50px;
 
-    @media (max-width: $screen-size-l) {
+    @include tablet-and-mobile {
         padding: 50px 30px;
     }
 
-    @media (max-width: $screen-size-s) {
+    @include mobile {
         padding: 30px 10px;
-    }
-}
-
-.toggleNavbar {
-    display: none;
-}
-
-@media (max-width: $screen-size-l) {
-    main {
-        margin: 0;
-    }
-
-    nav {
-        position: fixed;
-        top: 0;
-        left: -$navbarFullWidth;
-        overflow-y: auto;
-        height: 100vh;
-        transition: left 0.5s;
-        z-index: 1;
-
-        &.show {
-            left: 0;
-        }
-    }
-
-    .toggleNavbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        display: block;
-        padding: 5px 10px;
-        border-radius: 0 0 10px 0;
-        background-color: rgba(255, 255, 255, 0.3);
     }
 }
 </style>

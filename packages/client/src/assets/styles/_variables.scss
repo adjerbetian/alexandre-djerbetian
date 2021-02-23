@@ -32,3 +32,24 @@ $navbarFullWidth: 270px;
     background-color: $article-background-color;
     padding: 20px;
 }
+
+@mixin laptop {
+    @media (min-width: $screen-size-l+1) {
+        @content;
+    }
+}
+@mixin tablet-and-mobile {
+    @media (max-width: $screen-size-l) {
+        @content;
+    }
+}
+@mixin tablet-and-laptop {
+    @media (min-width: $screen-size-s+1) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: $screen-size-s) {
+        @content;
+    }
+}

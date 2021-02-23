@@ -57,6 +57,10 @@ $spacing: 10px;
         width: calc(50% - 2 * #{$spacing});
         min-width: 350px;
         max-width: 100%;
+
+        @media (max-width: $screen-size-xs) {
+            min-width: 70%;
+        }
     }
 }
 </style>

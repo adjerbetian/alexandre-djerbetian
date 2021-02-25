@@ -145,19 +145,11 @@ export const engineersAndDevelopers: BlogArticleDTO = {
         <article>
             <h2>Conclusion</h2>
             <p>
-                Stop hiring people who know how to solve complex problems. They
-                will hurt your code base by solving the wrong problem.
+                Stop hiring people based on how they solve complex problems.
+                They will hurt your code base by solving the wrong problem.
                 <strong>
                     Hire people with passion for simple things done well.
                 </strong>
-            </p>
-            <p>
-                <i>
-                    PS: Don't get me wrong: I'm not advising to never hire
-                    engineers, but to hire people for their love of code craft.
-                    If a candidate is a craftsman
-                    <b>and</b> an engineer, even better!
-                </i>
             </p>
         </article>
         <article>
@@ -224,9 +216,7 @@ export const engineersAndDevelopers: BlogArticleDTO = {
                 </p>
                 <p>
                     See
-                    <a
-                        href="http://localhost:8080/quotes/refactoring-and-performance"
-                    >
+                    <a href="/quotes/refactoring-and-performance">
                         <i>Refactoring and Performance</i>
                     </a>
                     by Martin Fowler for more.

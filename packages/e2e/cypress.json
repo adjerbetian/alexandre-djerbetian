@@ -1,5 +1,5 @@
 {
   "integrationFolder": "features",
-  "baseUrl": "http://localhost",
+  "baseUrl": "http://localhost:8080",
   "projectId": "iwigtu"
 }

@@ -224,9 +224,7 @@ export const engineersAndDevelopers: BlogArticleDTO = {
                 </p>
                 <p>
                     See
-                    <a
-                        href="http://localhost:8080/quotes/refactoring-and-performance"
-                    >
+                    <a href="/quotes/refactoring-and-performance">
                         <i>Refactoring and Performance</i>
                     </a>
                     by Martin Fowler for more.

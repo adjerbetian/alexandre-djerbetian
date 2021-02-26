@@ -22,18 +22,18 @@
     "cypress": "(cd packages/e2e && yarn cypress:open)"
   },
   "dependencies": {
-    "lerna": "^3.20.2"
+    "lerna": "^4.0.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
     "@vue/eslint-config-typescript": "^7.0.0",
     "eslint": "^7.0.0",
-    "eslint-config-prettier": "^7.0.0",
-    "eslint-plugin-chai-friendly": "^0.6.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-chai-friendly": "^0.7.1",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^7.0.0",
     "prettier": "^2.0.5",
-    "typescript": "~4.1.2"
+    "typescript": "~4.3.2"
   }
 }

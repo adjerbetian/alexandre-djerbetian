@@ -12,7 +12,7 @@ buildClient() {
 
 pullInstallOnServer() {
     ssh -p 5022 "${HOST}" << INSTALL
-        source /home/djerbeti/nodevenv/sites/alexandre/10/bin/activate
+        source /home/djerbeti/nodevenv/sites/alexandre/14/bin/activate
         cd /home/djerbeti/sites/alexandre
         git checkout master
         git pull

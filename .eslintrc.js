@@ -3,13 +3,18 @@ module.exports = {
     env: {
         es6: true,
         mocha: true,
-        node: true
+        node: true,
     },
     plugins: ["import"],
-    extends: ["eslint:recommended", "prettier", "plugin:import/errors", "plugin:import/warnings"],
+    extends: [
+        "eslint:recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "prettier",
+    ],
     globals: {
         Atomics: "readonly",
-        SharedArrayBuffer: "readonly"
+        SharedArrayBuffer: "readonly",
     },
     rules: {
         // eslint
@@ -20,7 +25,7 @@ module.exports = {
         // import
         "import/no-unresolved": "error",
         "import/no-cycle": "error",
-        "import/no-unused-modules": "off"
+        "import/no-unused-modules": "off",
     },
     overrides: [
         {
@@ -29,8 +34,7 @@ module.exports = {
             extends: [
                 "plugin:@typescript-eslint/eslint-recommended",
                 "plugin:@typescript-eslint/recommended",
-                "prettier/@typescript-eslint",
-                "plugin:import/typescript"
+                "plugin:import/typescript",
             ],
             rules: {
                 "@typescript-eslint/explicit-module-boundary-types": "off",
@@ -51,8 +55,8 @@ module.exports = {
                 "@typescript-eslint/prefer-string-starts-ends-with": "error",
                 "@typescript-eslint/promise-function-async": "error",
                 "@typescript-eslint/unbound-method": "off",
-                "@typescript-eslint/no-explicit-any": "off"
-            }
-        }
-    ]
+                "@typescript-eslint/no-explicit-any": "off",
+            },
+        },
+    ],
 };

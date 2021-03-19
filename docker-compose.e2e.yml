@@ -1,16 +1,19 @@
 version: '3'
 services:
   server:
+    ipc: host
     build:
       dockerfile: packages/server/Dockerfile.prod
 
   client:
+    ipc: host
     build:
       dockerfile: packages/client/Dockerfile.prod
       args:
-        - VUE_APP_SERVER=http://server:3000
+      - VUE_APP_SERVER=http://server:3000
 
   e2e:
+    ipc: host
     container_name: cypress
     build:
       context: .
@@ -23,4 +26,3 @@ services:
     volumes:
       - ./packages/e2e/cypress:/app/packages/e2e/cypress
       - .git:/app/.git
-    ipc: host

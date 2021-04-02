@@ -933,7 +933,7 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fortawesome/fontawesome-common-types@^0.2.34", "@fortawesome/fontawesome-common-types@^0.2.35":
+"@fortawesome/fontawesome-common-types@^0.2.35":
   version "0.2.35"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.35.tgz#01dd3d054da07a00b764d78748df20daf2b317e9"
   integrity sha512-IHUfxSEDS9dDGqYwIW7wTN6tn/O8E0n5PcAHz9cAaBoZw6UpG20IG/YM3NNLaGPwPqgjBAFjIURzqoQs3rrtuw==
@@ -2853,7 +2853,7 @@
   optionalDependencies:
     vue-loader-v16 "npm:vue-loader@^16.1.0"
 
-"@vue/cli-shared-utils@^4.5.11", "@vue/cli-shared-utils@^4.5.12":
+"@vue/cli-shared-utils@^4.5.12":
   version "4.5.12"
   resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-4.5.12.tgz#0e0693d488336d284ffa658ff33b1ea22927d065"
   integrity sha512-qnIQPJ4XckMoqYh9fJ0Y91QKMIb4Hiibrm9+k4E15QHpk5RaokuOpf10SsOr2NLPCXSWsHOLo3hduZSwHPGY/Q==
@@ -12995,9 +12995,9 @@ simple-swizzle@^0.2.2:
     is-arrayish "^0.3.1"
 
 sinon-chai@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/sinon-chai/-/sinon-chai-3.5.0.tgz#c9a78304b0e15befe57ef68e8a85a00553f5c60e"
-  integrity sha512-IifbusYiQBpUxxFJkR3wTU68xzBN0+bxCScEaKMjBvAQERg6FnTTc1F17rseLb1tjmkJ23730AXpFI0c47FgAg==
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/sinon-chai/-/sinon-chai-3.6.0.tgz#25bd59a37ef8990245e085a40f1f79d6bf023b7a"
+  integrity sha512-bk2h+0xyKnmvazAnc7HE5esttqmCerSMcBtuB2PS2T4tG6x8woXAxZeJaOJWD+8reXHngnXn0RtIbfEW9OTHFg==
 
 sinon@^9.0.2:
   version "9.2.4"

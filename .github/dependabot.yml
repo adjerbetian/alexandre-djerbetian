@@ -1,0 +1,31 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    day: friday
+    timezone: Europe/Paris
+  open-pull-requests-limit: 99
+  ignore:
+  - dependency-name: cypress
+    versions:
+    - ">= 7.1.a, < 7.2"
+  - dependency-name: sass-loader
+    versions:
+    - ">= 11.0.a, < 11.1"
+  - dependency-name: cypress
+    versions:
+    - 6.3.0
+    - 6.5.0
+    - 6.6.0
+    - 7.0.1
+  - dependency-name: "@vue/cli-plugin-router"
+    versions:
+    - 4.5.11
+  - dependency-name: sinon
+    versions:
+    - 10.0.1
+  - dependency-name: vue-property-decorator
+    versions:
+    - 9.1.2

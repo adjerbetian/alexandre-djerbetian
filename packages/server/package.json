@@ -33,7 +33,7 @@
         "chai": "^4.2.0",
         "chai-as-promised": "^7.1.1",
         "eslint-import-resolver-node": "^0.3.3",
-        "eslint-plugin-chai-friendly": "^0.6.0",
+        "eslint-plugin-chai-friendly": "^0.7.1",
         "mocha": "^8.0.1",
         "nodemon": "^2.0.3",
         "sinon": "^10.0.0",

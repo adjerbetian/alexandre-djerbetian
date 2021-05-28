@@ -28,7 +28,7 @@
     "marked": "^2.0.0",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.0.5",
-    "typescript": "~4.2.2",
+    "typescript": "~4.3.2",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.6",
     "vue-property-decorator": "^9.1.2",

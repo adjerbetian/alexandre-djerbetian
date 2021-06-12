@@ -26,7 +26,7 @@
     "highlight.js": "^11.0.1",
     "lodash": "^4.17.15",
     "marked": "^2.0.0",
-    "node-sass": "^5.0.0",
+    "node-sass": "^6.0.0",
     "sass-loader": "^10.0.5",
     "typescript": "~4.3.2",
     "vue": "^2.6.11",

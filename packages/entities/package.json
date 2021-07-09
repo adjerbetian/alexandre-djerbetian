@@ -9,7 +9,7 @@
         "compile": "tsc --project tsconfig.build.json"
     },
     "dependencies": {
-        "@types/node": "^15.0.1",
+        "@types/node": "^16.3.0",
         "typescript": "~4.3.2"
     },
     "devDependencies": {

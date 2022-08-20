@@ -22,7 +22,7 @@ export default defineComponent({
         };
     },
     async mounted() {
-        if (import.meta.env.NODE_ENV === "development") {
+        if (import.meta.env.MODE === "development") {
             this.interval = µ.startInterval(this.loadArticle, 3000);
         } else {
             await this.loadArticle();

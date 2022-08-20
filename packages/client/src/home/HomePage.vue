@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <h1>Alexandre Djerbetian {{ coucou }}</h1>
+        <h1>Alexandre Djerbetian</h1>
         <div class="home-background"></div>
         <nav v-if="!isLaptop">
             <NavBar />
@@ -17,9 +17,6 @@ export default defineComponent({
         NavBar,
     },
     computed: {
-        coucou() {
-            return import.meta.env;
-        },
         isLaptop() {
             return window.matchMedia("(min-width: 1081px)").matches;
         },

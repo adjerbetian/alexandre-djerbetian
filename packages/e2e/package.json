@@ -6,6 +6,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "compile": "tsc",
+    "test": "echo no unit test",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"
   },

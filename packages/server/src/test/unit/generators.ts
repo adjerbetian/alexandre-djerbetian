@@ -1,4 +1,5 @@
-import type { buildMovie, Movie, MovieDTO } from "@alex/entities";
+import type { Movie, MovieDTO } from "@alex/entities";
+import { buildMovie } from "@alex/entities";
 import _ from "lodash";
 
 export const generateIndex = (() => {

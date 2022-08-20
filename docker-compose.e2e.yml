@@ -10,7 +10,7 @@ services:
     build:
       dockerfile: packages/client/Dockerfile.prod
       args:
-      - VUE_APP_SERVER=http://server:3000
+      - VITE_APP_SERVER=http://server:3000
 
   e2e:
     ipc: host

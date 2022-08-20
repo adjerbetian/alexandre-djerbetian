@@ -1,4 +1,4 @@
-import { Movie } from "@alex/entities";
+import type { Movie } from "@alex/entities";
 
 export function buildMovieUseCases({ movieRepository }: Dependencies) {
     return {

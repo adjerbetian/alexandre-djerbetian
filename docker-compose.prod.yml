@@ -10,6 +10,6 @@ services:
     build:
       dockerfile: packages/client/Dockerfile.prod
       args:
-        - VUE_APP_SERVER=http://localhost:3000
+        - VITE_APP_SERVER=http://localhost:3000
     ports:
       - "8080:80"

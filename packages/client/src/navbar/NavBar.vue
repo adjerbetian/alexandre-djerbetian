@@ -24,27 +24,24 @@
         </div>
 
         <div class="footer">
-            <router-link to="/github">
-                <img width="20" src="../assets/images/github.svg" alt="github" />
-            </router-link>
+            <a href="https://github.com/adjerbetian/alexandre-djerbetian">
+                <img width="20" src="/images/github.svg" alt="github" />
+            </a>
         </div>
     </div>
 </template>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
-import NavIcon from "@/navbar/NavIcon.vue";
 import NavLink from "@/navbar/NavLink.vue";
 import Profile from "@/navbar/Profile.vue";
+import { defineComponent } from "vue";
 
-@Component({
+export default defineComponent({
     components: {
         Profile,
-        NavIcon,
         NavLink,
     },
-})
-export default class NavBar extends Vue {}
+});
 </script>
 
 <style lang="scss" scoped>

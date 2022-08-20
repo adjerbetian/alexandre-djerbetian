@@ -1,8 +1,7 @@
 <template>
     <div class="home">
-        <h1>Alexandre Djerbetian</h1>
+        <h1>Alexandre Djerbetian {{ coucou }}</h1>
         <div class="home-background"></div>
-
         <nav v-if="!isLaptop">
             <NavBar />
         </nav>
@@ -10,26 +9,28 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { Component } from "vue-property-decorator";
 import NavBar from "@/navbar/NavBar.vue";
+import { defineComponent } from "vue";
 
-@Component({
+export default defineComponent({
     components: {
         NavBar,
     },
-})
-export default class HomePage extends Vue {
-    get isLaptop() {
-        return window.matchMedia("(min-width: 1081px)").matches;
-    }
-}
+    computed: {
+        coucou() {
+            return import.meta.env;
+        },
+        isLaptop() {
+            return window.matchMedia("(min-width: 1081px)").matches;
+        },
+    },
+});
 </script>
 
 <style lang="scss" scoped>
 @import "../assets/styles/variables";
 
-$imageRatio: 1920 / 1371;
+$imageRatio: calc(1920 / 1371);
 $imageHeight: $imageRatio * 100vh;
 $background-color: #4c483c;
 
@@ -56,7 +57,7 @@ h1 {
     left: 0;
     height: 100%;
     width: 100%;
-    background: url("../assets/images/home/home-0.jpg") no-repeat center left;
+    background: url("/images/home/home-0.jpg") no-repeat center left;
     background-size: cover;
 
     @include tablet-and-mobile {

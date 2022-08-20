@@ -1,4 +1,5 @@
 import { addQuery } from "./addQuery";
+import { describe, it, expect } from "vitest";
 
 describe("addQuery", () => {
     it("should add the value to the query", () => {

@@ -1,5 +1,6 @@
-import { BookDTO, buildBook, buildQuote, QuoteDTO } from "@alex/entities";
 import { api } from "@/utils";
+import type { BookDTO, QuoteDTO } from "@alex/entities";
+import { buildBook, buildQuote } from "@alex/entities";
 
 export async function fetchAll({ books = [] }: { books?: string[] }) {
     const dtos: QuoteDTO[] = await api.get("/quotes", { query: { books } });

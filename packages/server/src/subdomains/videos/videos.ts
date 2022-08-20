@@ -1,4 +1,4 @@
-import { Video } from "@alex/entities";
+import type { Video } from "@alex/entities";
 
 export function buildVideoUseCases({ videoRepository }: Dependencies) {
     return {

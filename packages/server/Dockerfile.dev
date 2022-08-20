@@ -2,4 +2,4 @@ FROM builder
 
 WORKDIR /app/packages/server
 EXPOSE 3000
-CMD [ "yarn", "serve" ]
+CMD [ "npm", "run", "serve" ]

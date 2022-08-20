@@ -1,25 +1,14 @@
 {
-    "compilerOptions": {
-        "target": "esnext",
-        "module": "esnext",
-        "strict": true,
-        "importHelpers": true,
-        "moduleResolution": "node",
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "sourceMap": true,
-        "baseUrl": ".",
-        "types": ["webpack-env", "jest"],
-        "paths": {
-            "@/*": ["src/*"]
-        },
-        "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
-        "experimentalDecorators": true,
-        "noEmit": true
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
     },
-    "include": [
-        "src/**/*.ts",
-        "src/**/*.vue",
-        "tests/**/*.ts"
-    ]
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.vitest.json"
+    }
+  ]
 }

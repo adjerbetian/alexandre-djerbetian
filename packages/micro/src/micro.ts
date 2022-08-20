@@ -78,7 +78,10 @@ export async function retry<T>(
         try {
             return await f();
         } catch (err) {
-            errors.push(err);
+            if (!(err instanceof Error))
+                // eslint-disable-next-line no-ex-assign
+                err = new Error(`Unknown error: ${err}`);
+            errors.push(err as Error);
             await sleep(delay);
             console.log("retrying");
         }

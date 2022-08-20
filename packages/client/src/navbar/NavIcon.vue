@@ -3,13 +3,17 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from "vue-property-decorator";
+import { defineComponent } from "vue";
+import type { PropType } from "vue";
 
-@Component
-export default class NavIcon extends Vue {
-    @Prop({ type: [String, Array] })
-    icon!: string | string[];
-}
+export default defineComponent({
+    props: {
+        icon: {
+            type: Object as PropType<string | string[]>,
+            required: true,
+        },
+    },
+});
 </script>
 
 <style scoped></style>

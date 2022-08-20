@@ -5,18 +5,16 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from "vue-property-decorator";
-import NavIcon from "./NavIcon.vue";
+import { defineComponent } from "vue";
 
-@Component({
-    components: {
-        NavIcon,
+export default defineComponent({
+    props: {
+        to: {
+            type: String,
+            required: true,
+        },
     },
-})
-export default class NavLink extends Vue {
-    @Prop(String)
-    to!: string;
-}
+});
 </script>
 
 <style scoped lang="scss">

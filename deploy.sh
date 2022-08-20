@@ -7,7 +7,7 @@ HOST="${USER}@${IP}"
 
 buildClient() {
     yarn bootstrap
-    (cd packages/client && NODE_ENV=prod;VUE_APP_SERVER=https://api.djerbetian.com npm run build)
+    (cd packages/client && NODE_ENV=prod;VITE_APP_SERVER=https://api.djerbetian.com npm run build)
 }
 
 pullInstallOnServer() {

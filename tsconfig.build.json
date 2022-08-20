@@ -1,11 +1,11 @@
 {
     "compilerOptions": {
         "allowJs": true,
-        "module": "commonjs",
+//        "module": "commonjs",
         "moduleResolution": "node",
-        "target": "ES6",
+        "target": "ES2022",
         "lib": [
-            "es2019"
+            "ES2021"
         ],
         "sourceMap": true,
         "strict": true,

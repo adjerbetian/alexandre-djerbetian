@@ -1,16 +1,16 @@
 <template>
     <div class="profile-main">
         <router-link to="/" class="profileLink">
-            <img src="../assets/images/home/profile.jpg" alt="profile image" />
+            <img src="/images/home/profile.jpg" alt="profile image" />
         </router-link>
         <h2>Alexandre Djerbetian</h2>
     </div>
 </template>
 
 <script lang="ts">
-import { Vue } from "vue-property-decorator";
+import { defineComponent } from "vue";
 
-export default class Profile extends Vue {}
+export default defineComponent({});
 </script>
 
 <style lang="scss" scoped>

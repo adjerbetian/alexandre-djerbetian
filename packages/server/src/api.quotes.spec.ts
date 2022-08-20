@@ -1,5 +1,5 @@
 import { api, expect } from "./test/integration";
-import { QuoteDTO } from "@alex/entities";
+import type { QuoteDTO } from "@alex/entities";
 
 describe("quotes", () => {
     describe("GET /quotes", () => {

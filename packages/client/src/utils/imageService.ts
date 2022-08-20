@@ -3,7 +3,7 @@ export const imageService = {
         if (isRemoteImage()) return name;
         if (!hasExtension()) name += ".jpg";
         // eslint-disable-next-line @typescript-eslint/no-require-imports
-        return require(`../assets/images/${type}/${name}`);
+        return `/images/${type}/${name}`;
 
         function hasExtension() {
             return [".png", ".svg", ".jpg"].some((ext) => name.endsWith(ext));

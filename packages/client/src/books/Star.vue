@@ -1,27 +1,35 @@
 <template>
     <div class="star">
         <div class="full" :style="{ width: width }">
-            <font-awesome-icon :icon="['fas', 'heart']" />
+            <FontAwesomeIcon :icon="['fas', 'heart']" />
         </div>
         <div>
-            <font-awesome-icon :icon="['far', 'heart']" />
+            <FontAwesomeIcon :icon="['far', 'heart']" />
         </div>
     </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop } from "vue-property-decorator";
-import Vue from "vue";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { defineComponent } from "vue";
 
-@Component
-export default class Star extends Vue {
-    @Prop(Number) filling!: number;
-
-    get width() {
-        const width = 1 - Math.pow(1 - this.filling, 1.1);
-        return `${width * 100}%`;
-    }
-}
+export default defineComponent({
+    components: {
+        FontAwesomeIcon,
+    },
+    props: {
+        filling: {
+            type: Number,
+            required: true,
+        },
+    },
+    computed: {
+        width() {
+            const width = 1 - Math.pow(1 - this.filling, 1.1);
+            return `${width * 100}%`;
+        },
+    },
+});
 </script>
 
 <style lang="scss" scoped>

@@ -40,7 +40,7 @@ function code(content: string, lang: string) {
     return `<pre class="code light"><code class="hljs language-${lang}">${content}</code></pre>`;
 }
 function colorize(content: string, lang: string) {
-    return hljs.highlight(lang, content).value;
+    return hljs.highlight(content, { language: lang }).value;
 }
 
 export function boldify(text: string) {

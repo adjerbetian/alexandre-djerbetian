@@ -29,11 +29,9 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { Component } from "vue-property-decorator";
+import { defineComponent } from "vue";
 
-@Component
-export default class SubscribeForm extends Vue {}
+export default defineComponent({});
 </script>
 
 <style lang="scss" scoped>

@@ -1,4 +1,4 @@
-import { Book, Quote } from "@alex/entities";
+import type { Book, Quote } from "@alex/entities";
 
 export interface Repositories {
     bookRepository: BookRepository;

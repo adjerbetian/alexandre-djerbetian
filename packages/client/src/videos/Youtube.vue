@@ -14,14 +14,20 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop } from "vue-property-decorator";
-import Vue from "vue";
+import { defineComponent } from "vue";
 
-@Component
-export default class Youtube extends Vue {
-    @Prop(String) title!: string;
-    @Prop(String) id!: string;
-}
+export default defineComponent({
+    props: {
+        title: {
+            type: String,
+            required: true,
+        },
+        id: {
+            type: String,
+            required: true,
+        },
+    },
+});
 </script>
 
 <style lang="scss" scoped>

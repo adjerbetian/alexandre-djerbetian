@@ -1,5 +1,3 @@
-import { buildMovie } from "@alex/entities";
-
 describe("Movie page", () => {
     const movie = getMovie();
 
@@ -26,11 +24,11 @@ describe("Movie page", () => {
 });
 
 function getMovie() {
-    return buildMovie({
+    return {
         direction: "Alexandre Djerbetian & Vladimir Kovalevsky",
         id: "chaque-homme-doit-inventer-son-chemin",
         title: "Chaque homme doit inventer son chemin",
         year: 2012,
         youtubeId: "uE2uYQ8dmzQ",
-    });
+    };
 }

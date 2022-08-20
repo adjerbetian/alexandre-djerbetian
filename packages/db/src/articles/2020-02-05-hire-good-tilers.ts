@@ -1,5 +1,5 @@
-import { BlogArticleDTO } from "@alex/entities";
 import { html, javascript } from "../utils";
+import type { BlogArticleDTO } from "@alex/entities";
 
 export const engineersAndDevelopers: BlogArticleDTO = {
     id: "hire-good-tilers",

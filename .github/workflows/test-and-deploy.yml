@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 14.x
+      - name: Use Node.js 18.x
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
       - run: chmod +x ./monoExec.sh ./monoRun.sh
-      - run: yarn bootstrap
-      - run: yarn test
+      - run: npm run bootstrap
+      - run: npm test
 
   tests_e2e:
     name: end to end tests

@@ -14,24 +14,31 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { Component, Prop } from "vue-property-decorator";
-import { Book } from "@alex/entities";
 import { imageService } from "@/utils";
+import type { Book } from "@alex/entities";
+import { defineComponent } from "vue";
+import type { PropType } from "vue";
 
-@Component
-export default class BookCover extends Vue {
-    @Prop(Object) book!: Book;
-    @Prop(Boolean) hover!: boolean;
-
-    get coverSrc(): string {
-        return imageService.getImage("books", this.book.id);
-    }
-
-    get alt(): string {
-        return `cover of ${this.book.title}`;
-    }
-}
+export default defineComponent({
+    props: {
+        book: {
+            type: Object as PropType<Book>,
+            required: true,
+        },
+        hover: {
+            type: Boolean,
+            required: true,
+        },
+    },
+    computed: {
+        coverSrc(): string {
+            return imageService.getImage("books", this.book.id);
+        },
+        alt(): string {
+            return `cover of ${this.book.title}`;
+        },
+    },
+});
 </script>
 
 <style lang="scss" scoped>

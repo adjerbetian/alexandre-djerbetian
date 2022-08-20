@@ -20,23 +20,23 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { Component } from "vue-property-decorator";
-import { Book } from "@alex/entities";
-import { fetchAll } from "./bookService";
-import Rating from "./Rating.vue";
 import BookListItem from "./BookListItem.vue";
+import Rating from "./Rating.vue";
+import { fetchAll } from "./bookService";
+import type { Book } from "@alex/entities";
+import { defineComponent } from "vue";
 
-@Component({
+export default defineComponent({
     components: { BookListItem, Rating },
-})
-export default class BooksPage extends Vue {
-    books: Book[] = [];
-
+    data() {
+        return {
+            books: [] as Book[],
+        };
+    },
     async mounted() {
         this.books = (await fetchAll()).sort((b1, b2) => b2.rating - b1.rating);
-    }
-}
+    },
+});
 </script>
 
 <style lang="scss" scoped>

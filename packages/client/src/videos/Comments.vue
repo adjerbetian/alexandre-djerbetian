@@ -17,19 +17,24 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
-import { Video } from "@alex/entities";
 import { textService } from "@/utils";
+import type { Video } from "@alex/entities";
+import type { PropType } from "vue";
+import { defineComponent } from "vue";
 
-@Component
-export default class CommentsComponent extends Vue {
-    @Prop(Object)
-    video!: Video;
-
-    parse(text: string) {
-        return textService.parseInlineText(text);
-    }
-}
+export default defineComponent({
+    props: {
+        video: {
+            type: Object as PropType<Video>,
+            required: true,
+        },
+    },
+    methods: {
+        parse(text: string) {
+            return textService.parseInlineText(text);
+        },
+    },
+});
 </script>
 
 <style lang="scss" scoped></style>

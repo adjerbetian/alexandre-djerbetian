@@ -13,19 +13,24 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop } from "vue-property-decorator";
-import Vue from "vue";
-import { getFillings } from "./rating";
 import Star from "./Star.vue";
+import { getFillings } from "./rating";
+import { defineComponent } from "vue";
 
-@Component({ components: { Star } })
-export default class RatingComponent extends Vue {
-    @Prop(Number) rating!: number;
-
-    get fillings(): number[] {
-        return getFillings(this.rating);
-    }
-}
+export default defineComponent({
+    components: { Star },
+    props: {
+        rating: {
+            type: Number,
+            required: true,
+        },
+    },
+    computed: {
+        fillings(): number[] {
+            return getFillings(this.rating);
+        },
+    },
+});
 </script>
 
 <style lang="scss" scoped>

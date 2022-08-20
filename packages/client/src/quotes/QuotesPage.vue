@@ -29,38 +29,43 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { µ } from "@alex/micro";
-import { Component } from "vue-property-decorator";
-import { Book, Quote } from "@alex/entities";
-import * as quoteService from "./quoteService";
 import QuoteComponent from "./Quote.vue";
+import * as quoteService from "./quoteService";
+import type { Book, Quote } from "@alex/entities";
+import { µ } from "@alex/micro";
+import { defineComponent } from "vue";
 
-@Component({ components: { QuoteComponent } })
-export default class QuotesPage extends Vue {
-    quotes: Quote[] = [];
-    books: Book[] = [];
-    bookFilters: string[] = [];
+export default defineComponent({
+    components: { QuoteComponent },
+    data() {
+        return {
+            quotes: [] as Quote[],
+            books: [] as Book[],
+            bookFilters: [] as string[],
+        };
+    },
 
     async mounted() {
         this.books = await quoteService.fetchAllBooks();
 
         await this.initFiltersFromSearchQuery();
         this.$watch("$route.query.books", this.initFiltersFromSearchQuery);
-    }
-    async initFiltersFromSearchQuery() {
-        this.bookFilters.length = 0;
-        this.bookFilters.push(...µ.toArray(this.$route.query.books));
-        await this.refreshQuotes();
-    }
-    async onFilterUpdate() {
-        await this.refreshQuotes();
-        await this.$router.push({ query: { books: this.bookFilters } });
-    }
-    async refreshQuotes() {
-        this.quotes = await quoteService.fetchAll({ books: this.bookFilters });
-    }
-}
+    },
+    methods: {
+        async initFiltersFromSearchQuery() {
+            this.bookFilters.length = 0;
+            this.bookFilters.push(...µ.toArray(this.$route.query.books));
+            await this.refreshQuotes();
+        },
+        async onFilterUpdate() {
+            await this.refreshQuotes();
+            await this.$router.push({ query: { books: this.bookFilters } });
+        },
+        async refreshQuotes() {
+            this.quotes = await quoteService.fetchAll({ books: this.bookFilters });
+        },
+    },
+});
 </script>
 
 <style lang="scss" scoped>

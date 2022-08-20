@@ -1,5 +1,6 @@
-import { buildMovie, MovieDTO } from "@alex/entities";
 import { api } from "@/utils";
+import type { MovieDTO } from "@alex/entities";
+import { buildMovie } from "@alex/entities";
 
 export async function fetchAllMovies() {
     const dtos: MovieDTO[] = await api.get("/movies");

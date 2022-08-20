@@ -8,17 +8,22 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
-import { Movie } from "@alex/entities";
 import { BaseImage } from "@/utils";
+import type { Movie } from "@alex/entities";
+import type { PropType } from "vue";
+import { defineComponent } from "vue";
 
-@Component({
-    components: { BaseImage },
-})
-export default class MovieComponent extends Vue {
-    @Prop(Object)
-    movie!: Movie;
-}
+export default defineComponent({
+    components: {
+        BaseImage,
+    },
+    props: {
+        movie: {
+            type: Object as PropType<Movie>,
+            required: true,
+        },
+    },
+});
 </script>
 
 <style lang="scss" scoped>

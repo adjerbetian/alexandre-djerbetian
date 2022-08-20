@@ -4,19 +4,30 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from "vue-property-decorator";
 import { imageService } from "./imageService";
+import { defineComponent } from "vue";
 
-@Component
-export default class BaseImage extends Vue {
-    @Prop(String) type!: string;
-    @Prop(String) alt!: string;
-    @Prop(String) name!: string;
-
-    get src() {
-        return imageService.getImage(this.type, this.name);
-    }
-}
+export default defineComponent({
+    props: {
+        type: {
+            type: String,
+            required: true,
+        },
+        alt: {
+            type: String,
+            required: true,
+        },
+        name: {
+            type: String,
+            required: true,
+        },
+    },
+    computed: {
+        src() {
+            return imageService.getImage(this.type, this.name);
+        },
+    },
+});
 </script>
 
 <style lang="scss" scoped></style>

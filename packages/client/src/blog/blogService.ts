@@ -1,5 +1,6 @@
-import { BlogArticleDTO, buildBlogArticle } from "@alex/entities";
 import { api } from "@/utils";
+import type { BlogArticleDTO } from "@alex/entities";
+import { buildBlogArticle } from "@alex/entities";
 
 export const blogService = {
     async fetchAllArticles(): Promise<BlogArticleDTO[]> {

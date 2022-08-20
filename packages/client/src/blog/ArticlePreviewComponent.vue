@@ -8,19 +8,24 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { Component, Prop } from "vue-property-decorator";
-import { BlogArticle } from "@alex/entities";
 import { imageService } from "@/utils";
+import type { BlogArticle } from "@alex/entities";
+import { defineComponent } from "vue";
+import type { PropType } from "vue";
 
-@Component
-export default class ArticlePreviewComponent extends Vue {
-    @Prop(Object) article!: BlogArticle;
-
-    get image() {
-        return imageService.getImage("blog", this.article.cover);
-    }
-}
+export default defineComponent({
+    props: {
+        article: {
+            type: Object as PropType<BlogArticle>,
+            required: true,
+        },
+    },
+    computed: {
+        image() {
+            return imageService.getImage("blog", this.article.cover);
+        },
+    },
+});
 </script>
 
 <style lang="scss" scoped>
@@ -48,10 +53,8 @@ export default class ArticlePreviewComponent extends Vue {
         }
     }
 
-    .content /deep/ {
-        h3 {
-            color: $primary;
-        }
+    .content :deep(h3) {
+        color: $primary;
     }
 }
 </style>

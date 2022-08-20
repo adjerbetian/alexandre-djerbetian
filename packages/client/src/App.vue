@@ -10,11 +10,11 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import { api } from "./utils";
 import { NavBar } from "@/navbar";
-import { api } from "@/utils";
+import { defineComponent } from "vue";
 
-export default Vue.extend({
+export default defineComponent({
     name: "App",
     components: {
         NavBar,
@@ -22,7 +22,6 @@ export default Vue.extend({
     async mounted() {
         await api.ping("/");
     },
-
     computed: {
         isLaptop() {
             return window.matchMedia("(min-width: 1081px)").matches;

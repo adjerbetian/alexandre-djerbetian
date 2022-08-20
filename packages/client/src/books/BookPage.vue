@@ -3,7 +3,7 @@
         <h1 class="when-small">{{ book.title }}</h1>
 
         <aside>
-            <BookCover :book="book" />
+            <BookCover :book="book" :hover="false" />
             <Rating class="rating" :rating="book.rating" />
             <div class="author">
                 <strong>{{ authorWording }}:</strong>
@@ -17,53 +17,62 @@
 
             <div class="review">
                 <h2>General review</h2>
-                <div v-html="parse(book.notes.pre)"></div>
+                <div v-html="generalReview"></div>
             </div>
 
             <div class="review">
                 <h2>What I especially liked</h2>
-                <div v-html="parse(book.notes.good)"></div>
+                <div v-html="goodReview"></div>
             </div>
 
             <div class="review">
                 <h2>What I liked less</h2>
-                <div v-html="parse(book.notes.lessGood)"></div>
+                <div v-html="lessGoodReview"></div>
             </div>
         </div>
     </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { Component } from "vue-property-decorator";
-import { Book } from "@alex/entities";
-import { textService } from "@/utils";
-import { fetchBook } from "./bookService";
-import Rating from "./Rating.vue";
 import BookCover from "./Cover.vue";
+import Rating from "./Rating.vue";
+import { fetchBook } from "./bookService";
+import { textService, validationService } from "@/utils";
+import type { Book } from "@alex/entities";
+import { defineComponent } from "vue";
 
-@Component({
+export default defineComponent({
     components: { Rating, BookCover },
-})
-export default class BookPage extends Vue {
-    book?: Book | null = null;
-
+    data() {
+        return {
+            book: null as Book | null,
+        };
+    },
     async mounted() {
+        validationService.assertIsId(this.$route.params.id);
         await this.fetchBook(this.$route.params.id);
-    }
-    async fetchBook(id: string) {
-        this.book = await fetchBook(id);
-    }
-
-    get authorWording() {
-        const nAuthors = this.book?.authors.length || 0;
-        return nAuthors > 1 ? "Authors" : "Author";
-    }
-
-    parse(text: string): string {
-        return textService.parseText(text);
-    }
-}
+    },
+    computed: {
+        generalReview() {
+            return textService.parseText(this.book?.notes.pre || "No review");
+        },
+        goodReview() {
+            return textService.parseText(this.book?.notes.good || "No review");
+        },
+        lessGoodReview() {
+            return textService.parseText(this.book?.notes.lessGood || "No review");
+        },
+        authorWording() {
+            const nAuthors = this.book?.authors.length || 0;
+            return nAuthors > 1 ? "Authors" : "Author";
+        },
+    },
+    methods: {
+        async fetchBook(id: string) {
+            this.book = await fetchBook(id);
+        },
+    },
+});
 </script>
 
 <style lang="scss" scoped>

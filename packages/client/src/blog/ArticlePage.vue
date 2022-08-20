@@ -6,42 +6,46 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { Component } from "vue-property-decorator";
-import { BlogArticle } from "@alex/entities";
-import { µ } from "@alex/micro";
-import { imageService } from "@/utils";
-import { blogService } from "./blogService";
 import SubscriptionForm from "./SubscriptionForm.vue";
+import { blogService } from "./blogService";
+import { imageService, validationService } from "@/utils";
+import type { BlogArticle } from "@alex/entities";
+import { µ } from "@alex/micro";
+import { defineComponent } from "vue";
 
-@Component({ components: { SubscriptionForm } })
-export default class ArticlePage extends Vue {
-    article: BlogArticle | null = null;
-    interval?: ReturnType<typeof µ.startInterval>;
-
+export default defineComponent({
+    components: { SubscriptionForm },
+    data() {
+        return {
+            article: null as BlogArticle | null,
+            interval: undefined as ReturnType<typeof µ.startInterval> | undefined,
+        };
+    },
     async mounted() {
-        if (process.env.NODE_ENV === "development") {
+        if (import.meta.env.NODE_ENV === "development") {
             this.interval = µ.startInterval(this.loadArticle, 3000);
         } else {
             await this.loadArticle();
         }
-    }
-
-    beforeDestroy() {
+    },
+    beforeUnmount() {
         this.interval?.stop();
-    }
-
-    async loadArticle() {
-        this.article = await blogService.fetchArticle(this.$route.params.id);
-    }
-
-    get content() {
-        return this.article?.content.replace(
-            /src="([^"]+)"/g,
-            (_, file: string) => `src="${imageService.getImage("blog", file)}"`
-        );
-    }
-}
+    },
+    computed: {
+        content() {
+            return this.article?.content.replace(
+                /src="([^"]+)"/g,
+                (_, file: string) => `src="${imageService.getImage("blog", file)}"`
+            );
+        },
+    },
+    methods: {
+        async loadArticle() {
+            validationService.assertIsId(this.$route.params.id);
+            this.article = await blogService.fetchArticle(this.$route.params.id);
+        },
+    },
+});
 </script>
 
 <style lang="scss" scoped>
@@ -52,7 +56,7 @@ export default class ArticlePage extends Vue {
     max-width: 900px;
     font-size: 1.2em;
 
-    /deep/ {
+    :deep {
         header {
             h1 {
                 text-align: center;

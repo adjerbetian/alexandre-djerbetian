@@ -1,7 +1,7 @@
-import { buildMovie } from "@alex/entities";
-import * as db from "@alex/db";
-import { MovieRepository } from "./movies";
 import { NotFound } from "../../utils";
+import { MovieRepository } from "./movies";
+import * as db from "@alex/db";
+import { buildMovie } from "@alex/entities";
 
 export const movieRepository: MovieRepository = {
     fetchAll() {

@@ -12,22 +12,26 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
-import { Video } from "@alex/entities";
-import Youtube from "./Youtube.vue";
 import CommentsComponent from "./Comments.vue";
+import Youtube from "./Youtube.vue";
+import type { Video } from "@alex/entities";
+import type { PropType } from "vue";
+import { defineComponent } from "vue";
 
-@Component({
+export default defineComponent({
     components: { Youtube, CommentsComponent },
-})
-export default class VideoComponent extends Vue {
-    @Prop(Object)
-    video!: Video;
-
-    get isSmall() {
-        return !this.video.comments && this.video.moments.length === 0;
-    }
-}
+    props: {
+        video: {
+            type: Object as PropType<Video>,
+            required: true,
+        },
+    },
+    computed: {
+        isSmall() {
+            return !this.video.comments && this.video.moments.length === 0;
+        },
+    },
+});
 </script>
 
 <style lang="scss" scoped>

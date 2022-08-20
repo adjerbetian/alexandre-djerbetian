@@ -1,9 +1,9 @@
 FROM builder as build-stage
-ARG VUE_APP_SERVER
+ARG VITE_APP_SERVER
 
 WORKDIR /app/packages/client
-ENV VUE_APP_SERVER "$VUE_APP_SERVER"
-RUN yarn build
+ENV VITE_APP_SERVER "$VITE_APP_SERVER"
+RUN npm run build
 
 ###
 

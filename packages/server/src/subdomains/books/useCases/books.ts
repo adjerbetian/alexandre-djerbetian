@@ -1,5 +1,5 @@
-import { Book } from "@alex/entities";
 import { BookRepository } from "./repositories";
+import type { Book } from "@alex/entities";
 
 interface Dependencies {
     bookRepository: BookRepository;

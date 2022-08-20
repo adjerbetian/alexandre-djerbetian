@@ -1,6 +1,6 @@
-import _ from "lodash";
-import { Quote } from "@alex/entities";
 import { BookRepository, QuoteRepository } from "./repositories";
+import type { Quote } from "@alex/entities";
+import _ from "lodash";
 
 interface Dependencies {
     quoteRepository: QuoteRepository;

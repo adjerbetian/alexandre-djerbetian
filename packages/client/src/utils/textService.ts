@@ -1,4 +1,4 @@
-import marked from "marked";
+import { marked } from "marked";
 
 export const textService = {
     parseInlineText(text: string) {

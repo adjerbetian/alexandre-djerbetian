@@ -1,7 +1,7 @@
-import { buildBlogArticle } from "@alex/entities";
-import * as db from "@alex/db";
-import { BlogRepository } from "./blog";
 import { NotFound } from "../../utils";
+import { BlogRepository } from "./blog";
+import * as db from "@alex/db";
+import { buildBlogArticle } from "@alex/entities";
 
 export const blogRepository: BlogRepository = {
     fetchAllArticles() {

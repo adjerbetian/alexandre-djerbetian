@@ -8,22 +8,24 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { Component } from "vue-property-decorator";
 import MovieComponent from "./Movie.vue";
 import { fetchAllMovies } from "./movieService";
-import { Movie } from "@alex/entities";
+import type { Movie } from "@alex/entities";
+import { defineComponent } from "vue";
 
-@Component({
-    components: { MovieComponent },
-})
-export default class MoviesPage extends Vue {
-    movies: Movie[] = [];
-
+export default defineComponent({
+    components: {
+        MovieComponent,
+    },
+    data() {
+        return {
+            movies: [] as Movie[],
+        };
+    },
     async mounted() {
         this.movies = await fetchAllMovies();
-    }
-}
+    },
+});
 </script>
 
 <style lang="scss" scoped>

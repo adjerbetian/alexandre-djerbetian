@@ -1,4 +1,4 @@
-import { BlogArticle } from "@alex/entities";
+import type { BlogArticle } from "@alex/entities";
 
 export function buildBlogUseCases({ blogRepository }: Dependencies) {
     return {

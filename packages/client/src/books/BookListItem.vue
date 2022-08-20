@@ -17,24 +17,32 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { Component, Prop } from "vue-property-decorator";
-import { Book } from "@alex/entities";
-import { imageService } from "@/utils";
-import Rating from "./Rating.vue";
 import BookCover from "./Cover.vue";
+import Rating from "./Rating.vue";
+import { imageService } from "@/utils";
+import type { Book } from "@alex/entities";
+import { defineComponent } from "vue";
+import type { PropType } from "vue";
 
-@Component({
+export default defineComponent({
     components: { Rating, BookCover },
-})
-export default class BookListItem extends Vue {
-    @Prop(Object) book!: Book;
-    hover = false;
-
-    get cover(): string {
-        return imageService.getImage("books", this.book.id);
-    }
-}
+    props: {
+        book: {
+            type: Object as PropType<Book>,
+            required: true,
+        },
+    },
+    data() {
+        return {
+            hover: false,
+        };
+    },
+    computed: {
+        cover(): string {
+            return imageService.getImage("books", this.book.id);
+        },
+    },
+});
 </script>
 
 <style lang="scss" scoped>

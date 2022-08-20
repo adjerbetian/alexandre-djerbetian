@@ -16,22 +16,22 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { Component } from "vue-property-decorator";
-import { Video } from "@alex/entities";
-import { fetchAllVideos } from "./videoService";
 import VideoComponent from "./Video.vue";
+import { fetchAllVideos } from "./videoService";
+import type { Video } from "@alex/entities";
+import { defineComponent } from "vue";
 
-@Component({
+export default defineComponent({
     components: { VideoComponent },
-})
-export default class VideosPage extends Vue {
-    videos: Video[] = [];
-
+    data() {
+        return {
+            videos: [] as Video[],
+        };
+    },
     async mounted() {
         this.videos = await fetchAllVideos();
-    }
-}
+    },
+});
 </script>
 
 <style lang="scss" scoped>

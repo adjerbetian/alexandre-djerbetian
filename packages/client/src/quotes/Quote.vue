@@ -12,22 +12,27 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { Component, Prop } from "vue-property-decorator";
-import { Quote } from "@alex/entities";
 import { imageService } from "@/utils";
+import type { Quote } from "@alex/entities";
+import { defineComponent } from "vue";
+import type { PropType } from "vue";
 
-@Component
-export default class QuoteComponent extends Vue {
-    @Prop(Object) quote!: Quote;
-
-    get content() {
-        return this.quote.content.replace(
-            /src="([^"]+)"/g,
-            (_, file: string) => `src="${imageService.getImage("quotes", file)}"`
-        );
-    }
-}
+export default defineComponent({
+    props: {
+        quote: {
+            type: Object as PropType<Quote>,
+            required: true,
+        },
+    },
+    computed: {
+        content() {
+            return this.quote.content.replace(
+                /src="([^"]+)"/g,
+                (_, file: string) => `src="${imageService.getImage("quotes", file)}"`
+            );
+        },
+    },
+});
 </script>
 
 <style lang="scss" scoped>

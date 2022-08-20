@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:18
 
 WORKDIR /app
 COPY packages/entities/package.json packages/entities/
@@ -7,10 +7,10 @@ COPY packages/db/package.json packages/db/
 COPY packages/server/package.json packages/server/
 COPY packages/client/package.json packages/client/
 COPY packages/e2e/package.json packages/e2e/
-COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile
+COPY package.json package-lock.json ./
+RUN npm ci
 
 COPY lerna.json tsconfig.build.json tsconfig.base.json monoExec.sh monoRun.sh ./
 COPY overrides overrides
 COPY packages packages
-RUN yarn compile
+RUN npm run compile

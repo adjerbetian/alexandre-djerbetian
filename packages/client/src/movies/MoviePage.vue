@@ -10,25 +10,31 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { Movie } from "@alex/entities";
-import { Component } from "vue-property-decorator";
-import { Youtube } from "@/videos";
 import { fetchMovie } from "./movieService";
+import { validationService } from "@/utils";
+import { Youtube } from "@/videos";
+import type { Movie } from "@alex/entities";
+import { defineComponent } from "vue";
 
-@Component({
-    components: { Youtube },
-})
-export default class MoviesPage extends Vue {
-    movie?: Movie | null = null;
-
+export default defineComponent({
+    components: {
+        Youtube,
+    },
+    data() {
+        return {
+            movie: null as Movie | null,
+        };
+    },
     async mounted() {
+        validationService.assertIsId(this.$route.params.id);
         await this.fetchMovie(this.$route.params.id);
-    }
-    async fetchMovie(id: string) {
-        this.movie = await fetchMovie(id);
-    }
-}
+    },
+    methods: {
+        async fetchMovie(id: string) {
+            this.movie = await fetchMovie(id);
+        },
+    },
+});
 </script>
 
 <style lang="scss" scoped>

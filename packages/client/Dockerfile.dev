@@ -2,4 +2,4 @@ FROM builder
 
 WORKDIR /app/packages/client
 EXPOSE 8080
-CMD [ "yarn", "serve" ]
+CMD [ "npm", "run", "dev" ]

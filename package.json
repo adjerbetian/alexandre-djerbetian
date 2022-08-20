@@ -5,35 +5,50 @@
   "private": true,
   "license": "MIT",
   "workspaces": [
-    "packages/*"
+    "packages/micro",
+    "packages/entities",
+    "packages/db",
+    "packages/server",
+    "packages/client",
+    "packages/e2e"
   ],
   "scripts": {
-    "bootstrap": "yarn install --silent && yarn install:overrides && yarn compile",
-    "install:overrides": "yarn install:overrides:mocha",
+    "bootstrap": "npm ci && npm run install:overrides && npm run compile",
+    "install:overrides": "npm run install:overrides:mocha",
     "install:overrides:mocha": "wget -O overrides/mocha/index.d.ts https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/mocha/index.d.ts",
     "build": "./monoRun.sh build",
-    "compile": "./monoRun.sh compile",
+    "compile": "npm run compile -ws",
     "clean": "rm -rf node_modules && lerna clean --yes && ./monoExec.sh 'rm -rf dist/'",
-    "test": "./monoRun.sh test",
+    "test": "npm test -ws",
     "dev-build": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml build",
     "dev-run": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up",
     "prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up --build",
     "e2e": "./e2e.sh build && (./e2e.sh run || ./e2e.sh stop) && ./e2e.sh stop",
-    "cypress": "(cd packages/e2e && yarn cypress:open)"
+    "cypress:open": "npm run -w @alex/e2e cypress:open",
+    "cypress:run": "npm run -w @alex/e2e cypress:run"
   },
   "dependencies": {
-    "lerna": "^4.0.0"
+    "@alex/db": "^1.0.0",
+    "@types/chai": "^4.3.3",
+    "@types/mocha": "^9.1.1",
+    "@types/sinon": "^10.0.13",
+    "chai": "^4.3.6",
+    "lerna": "^5.4.3",
+    "mocha": "^10.0.0",
+    "sinon": "^14.0.0",
+    "ts-node": "^10.9.1"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.3.0",
-    "@typescript-eslint/parser": "^4.3.0",
-    "@vue/eslint-config-typescript": "^7.0.0",
-    "eslint": "^7.0.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-chai-friendly": "^0.7.1",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-vue": "^7.0.0",
-    "prettier": "^2.0.5",
-    "typescript": "~4.3.2"
+    "@trivago/prettier-plugin-sort-imports": "^3.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "@vue/eslint-config-typescript": "^11.0.0",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-vue": "^9.3.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
   }
 }

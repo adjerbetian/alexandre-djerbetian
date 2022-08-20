@@ -1,23 +1,15 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
 import { HomePage } from "./home";
+import { createRouter, createWebHistory } from "vue-router";
 
-Vue.use(VueRouter);
-
-const router = new VueRouter({
-    mode: "history",
-    base: process.env.BASE_URL,
+const router = createRouter({
+    history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
             path: "/",
             name: "Home",
             component: HomePage,
         },
-        redirection("/resume", "/resume"),
-        redirection(
-            "/github",
-            "https://github.com/adjerbetian/alexandre-djerbetian"
-        ),
+        redirection("/resume", "/resume/index.html"),
         {
             path: "/movies",
             name: "Movies",
@@ -71,6 +63,7 @@ export default router;
 function redirection(alias: string, route: string) {
     return {
         path: alias,
+        component: HomePage,
         beforeEnter() {
             window.location.href = route;
         },

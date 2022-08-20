@@ -1,7 +1,8 @@
-import { addQuery, Query } from "@/utils/utils/addQuery";
+import { addQuery } from "@/utils/utils/addQuery";
+import type { Query } from "@/utils/utils/addQuery";
 import { µ } from "@alex/micro";
 
-const serverUrl = process.env.VUE_APP_SERVER;
+const serverUrl = import.meta.env.VITE_APP_SERVER;
 
 interface Options {
     query?: Query;
